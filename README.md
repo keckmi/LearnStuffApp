@@ -1,6 +1,5 @@
 # LearnStuffApp
 
-von mir selbst  
 inspiriert durch Coding in Flow, Multiple Choice Quiz App mit SQLite Integration  
 Part 1: https://www.youtube.com/watch?v=PiCZQg4mhBQ&list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQO7&index=1&t=525s  
 Playlist: https://www.youtube.com/playlist?list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQO7  
