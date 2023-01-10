@@ -1,5 +1,42 @@
 # LearnStuffApp
 
+von mir selbst
+inspiriert durch Coding in Flow, Multiple Choice Quiz App mit SQLite Integration
+Part 1: https://www.youtube.com/watch?v=PiCZQg4mhBQ&list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQO7&index=1&t=525s
+Playlist: https://www.youtube.com/playlist?list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQO7
+
+## Installation
+
+download von gitlab
+öffnen in android studio
+
+usb debugging auf handy in den entwickleroptionen aktivieren
+...Öffne die Einstellungen-App.
+...Scrolle nach unten bis zum Abschnitt Telefoninfo. ...
+...Rufe die Softwareinformationen auf.
+...Hier findest Du ein Eintrag Buildnummer. ...
+...Nachdem Du einige Male auf die Buildnummer gedrückt hast, folgt die Bestätigung „Der Entwicklermodus wurde aktiviert“.
+...nun findest du die entwickleroptionen unter einstellungen > system > erweitert > entwickleroptionen 
+...hier kannst du das usb-debugging aktivieren
+...(dies kann bei deinem handy von meinem abweichen, falls das bei dir nicht so ist, findest du bestimmt im internet hilfe)
+...(dazu könntest du den handy namen und/oder die genaue modelbezeichnung und/oder den namen deines handybetriebssystems,)
+...(die du in den einstellungen > telefoninfo findest zusammen mit "entwickleroptionen aktivieren" suchen)
+
+handy in usb loch stecken
+nun finde ich in meinen benachrichtigungen 
+...(die ich öffnen kann, indem ich von ganz oben am handy bildschirm nach unten streich)
+die meldung: Gerät wird über USB aufgeladen, für weitere Optionen tippen, die ich antippe
+in folgender auswahl wähle ich PTP
+ich werde gefragt ob ich USB-Debugging erlauben möchte, was ich bestätige
+
+in android studio ändert sich die Anzeige in dem länglichen kästchen mit runden ecken,
+das etwas rechts oben von der Bildschirmmitte ist, von "no Devices" entweder direkt zu dem namen deines handys
+oder zu "Device". Vielleicht kannst du etwas nachhelfen, indem du auf das kästchen klickst.
+klicke nun auf das grüne dreieck rechts neben dem kästchen.
+
+nach einigen Momenten sollte nun die App auf deinem Handy erscheinen.
+Sie müsste sich nun außerdem auch unter deinen Apps befinden.
+Du kannst das Handy nun von deinem Computer trennen.
 
 
 ## Getting started
