@@ -100,8 +100,8 @@ public class MainActivity2 extends AppCompatActivity {
         btn1 = findViewById(R.id.button1);
         //btnGetLernfeld = findViewById(R.id.btnGetLernfeld);
 
-        if (Questions[currentQuestionNumber].getOption3().equals("")) {cbs[2].setVisibility(View.INVISIBLE);}
-        if (Questions[currentQuestionNumber].getOption4().equals("")) {cbs[3].setVisibility(View.INVISIBLE);}
+        if (Questions[currentQuestionNumber].getOption3().equals("")) {cbs[2].setVisibility(CheckBox.INVISIBLE);}
+        if (Questions[currentQuestionNumber].getOption4().equals("")) {cbs[3].setVisibility(CheckBox.INVISIBLE);}
         if (Questions[currentQuestionNumber].getOption5().equals("")) {cbs[4].setVisibility(CheckBox.INVISIBLE);}
         if (Questions[currentQuestionNumber].getOption6().equals("")) {cbs[5].setVisibility(CheckBox.INVISIBLE);}
 
@@ -169,6 +169,11 @@ public class MainActivity2 extends AppCompatActivity {
             questionCount++;
             textViewQuestionCount.setText("Question: " + questionCount + "/" + Questions.length);
             txtQuestion.setText(Questions[currentQuestionNumber].getQuestion());
+
+            if (Questions[currentQuestionNumber].getOption3().equals("")) {cbs[2].setVisibility(CheckBox.INVISIBLE);}
+            if (Questions[currentQuestionNumber].getOption4().equals("")) {cbs[3].setVisibility(CheckBox.INVISIBLE);}
+            if (Questions[currentQuestionNumber].getOption5().equals("")) {cbs[4].setVisibility(CheckBox.INVISIBLE);}
+            if (Questions[currentQuestionNumber].getOption6().equals("")) {cbs[5].setVisibility(CheckBox.INVISIBLE);}
 
             //TODO: Optionenarrays machen!
             cbs[0].setText(Questions[currentQuestionNumber].getOption1());
