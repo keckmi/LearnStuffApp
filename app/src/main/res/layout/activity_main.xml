@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:padding="40dp"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="-20dp"
+        android:layout_marginEnd="0dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/learnstuffapp_logo_byschriftgeneratoreu" />
+
+    <TextView
+        android:id="@+id/txtWhere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageViewLogo"
+        android:layout_centerInParent="true"
+        android:text="Hello World!"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorMyOrange"/>
+
+    <Button
+        android:id="@+id/btnLernfeld2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnLernfeld3"
+        android:layout_centerInParent="true"
+        android:background="@drawable/btn_bg1"
+        android:text="Lernfeld 2" />
+
+    <Button
+        android:id="@+id/btnLernfeld3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnLernfeld4"
+        android:layout_centerInParent="true"
+        android:background="@drawable/btn_bg1"
+        android:layout_marginTop="30px"
+        android:text="Lernfeld 3" />
+
+    <Button
+        android:id="@+id/btnLernfeld4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnLernfeld6"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30px"
+        android:background="@drawable/btn_bg1"
+        android:text="Lernfeld 4" />
+
+    <Button
+        android:id="@+id/btnLernfeld6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnLernfeld7"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30px"
+        android:background="@drawable/btn_bg1"
+        android:text="Lernfeld 6" />
+
+    <Button
+        android:id="@+id/btnLernfeld7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btnLernfeld9"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30px"
+        android:background="@drawable/btn_bg1"
+        android:text="Lernfeld 7" />
+
+    <Button
+        android:id="@+id/btnLernfeld9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30px"
+        android:layout_marginBottom="5px"
+        android:background="@drawable/btn_bg1"
+        android:text="Lernfeld 9" />
+
+</RelativeLayout>
