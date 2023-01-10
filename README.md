@@ -61,7 +61,7 @@ new Question ("Frage", "Antwortoption1", "Antwortoption2", "", "", "", "", answe
 hinzufügbar, wobei mindestens zwei Antwortoptionen gegeben sein sollten  
 maximal sind sechs gebbar, wobei für jede die leer bleibt "", zu schreiben ist.  
 im anschluss sollte nicht vergessen werden in die [...] von answers[...] oder answersLF[...] eine nummer zu schreiben  
-...
+...  
 jedem Lernfeld entspricht ein  
 private static boolean answersLF[][] = { {...}, {...}, ... }  
 bspw: dem Lernfeld 2 der private static boolean answers[][] = { {...}, {...}, ... }  
@@ -73,24 +73,24 @@ die reihenfolge ist zu beachten:
 lautet die new Question ("Frage", "Antwortoption1", "Antwortoption2", "", "", "", "", answersLF[...])  
 und ist die Antwortoption1 richtig und die Antwortoption2 falsch,  
 hat das private static boolean answersLF[][] = { {...}, {...}, ... , {true, false, false, false, false, false} } zu lauten  
-...
+...  
 nun zurück zur nummer, die nicht vergessen werden sollte in die answers[...] oder answersLF[...] geschrieben zu werden  
 diese entspricht der stelle an der die { ... } mit den informationen welche antworten richtig sind  
 in dem klammersorium aller dieser dieses Lernfeldes steht.  
 befindet sie sich an dritter stelle: private static boolean answersLF[][] = { {...}, {...}, {true, false, false, false, false, false} },  
 ist diese die 2. !hier wird bei 0 angefangen zu zählen!  
 answers[...] oder answersLF[...] wäre hier also answers[2] oder answersLF[2]  
-...
+...  
 ich kann empfehlen die Liste einfach so weiter fortzusetzen  
 dabei also je die nächst folgende nummer zu verwenden  
-...
+...  
 wobei anzumerken wäre, dass erweiterungen von mir folgen,  
 die entsprechende Änderungen zur Folge haben könnten  
 wenn ich bspw die neuen Quizfragen 20-30 des Lernfeldes 2 hinzufüge  
 du sieh dir runter lädtst,  
 aber zuvor bereits neue Quizfragen 20-40 selber hinzugefügt hast  
 müssen die einen oder anderen umnummerriert werden  
-...
+...  
 wobei nazumerken werde, dass ich möglicherweise noch auf eine bessere  
 idee komme diesen leichtfertigen murks zu programmieren  
 ich habe nur auf die schnelle fertig werden wollen,  
