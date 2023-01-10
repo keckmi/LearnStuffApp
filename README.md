@@ -98,7 +98,7 @@ da ich das programm zum lernen für die zwischenprüfung nutzen will, die bald i
 
 ## Ausblick und Feedback
 
-Ich würde eine Datenbank anschließen, die über ein geeignetes Frontend füllbar ist.
+Ich würde eine Datenbank anschließen, die über ein geeignetes Frontend füllbar ist.  
 Diese würde die Fachbegriffe und Quizfragen, die direkt im Code stehen, was ein Graus ist, ersetzen.  
 
 Von Rol Kam kam die Idee für ein Karteikartenbox System, bei dem die Fachbegriffe,   
