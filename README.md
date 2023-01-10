@@ -38,6 +38,77 @@ nach einigen Momenten sollte nun die App auf deinem Handy erscheinen.
 Sie müsste sich nun außerdem auch unter deinen Apps befinden.  
 Du kannst das Handy nun von deinem Computer trennen.  
 
+## Lernstoff hinzufügen
+
+Fachbegriff hinzufügen:  
+Javadatei "Terms" öffnen,  
+zum entsprechenden Lernfeld scrollen  
+jedem Lernfeld entspricht ein  
+public static Term[] termsLF = { ... };  
+bspw: dem Lernfeld 2 der public static Term[] termsLF2 = { ... }  
+innerhalb dieser { ... }:  
+new Term("Fachbegriffsbezeichnung", "Fachbegriffsbeschreibung")  
+hinzufügbar, wobei zeilenumbrüche als \n und abschnitte als \n\n zu schreiben sind  
+
+Quizfrage hinzufügen:  
+Javadatei Schoolstuff öffnen,  
+zum entsprechenden Lernfeld scrollen  
+jedem Lernfeld entspricht ein  
+private static Question[] questionsLF = { .. }  
+bspw: dem Lernfeld 2 der private static Question[] questionsLF2 = { ... }  
+innerhalb dieser { ... }:  
+new Question ("Frage", "Antwortoption1", "Antwortoption2", "", "", "", "", answersLF[...])  
+hinzufügbar, wobei mindestens zwei Antwortoptionen gegeben sein sollten  
+maximal sind sechs gebbar, wobei für jede die leer bleibt "", zu schreiben ist.  
+im anschluss sollte nicht vergessen werden in die [...] von answers[...] oder answersLF[...] eine nummer zu schreiben  
+...
+jedem Lernfeld entspricht ein  
+private static boolean answersLF[][] = { {...}, {...}, ... }  
+bspw: dem Lernfeld 2 der private static boolean answers[][] = { {...}, {...}, ... }  
+bspw: dem Lernfeld 3 der private static boolean answersLF3[][] = { {...}, {...}, ... }  
+innerhalb dieser { ... } in diesen { ... }:  
+ist je richtiger antwortoption ein "true" und je falscher antwortoption ein "false" zu schreiben  
+gibt es weniger antwortoptionen als sechs, sind für die leeren antwortoptionen "false" zu schreiben  
+die reihenfolge ist zu beachten:  
+lautet die new Question ("Frage", "Antwortoption1", "Antwortoption2", "", "", "", "", answersLF[...])  
+und ist die Antwortoption1 richtig und die Antwortoption2 falsch,  
+hat das private static boolean answersLF[][] = { {...}, {...}, ... , {true, false, false, false, false, false} } zu lauten  
+...
+nun zurück zur nummer, die nicht vergessen werden sollte in die answers[...] oder answersLF[...] geschrieben zu werden  
+diese entspricht der stelle an der die { ... } mit den informationen welche antworten richtig sind  
+in dem klammersorium aller dieser dieses Lernfeldes steht.  
+befindet sie sich an dritter stelle: private static boolean answersLF[][] = { {...}, {...}, {true, false, false, false, false, false} },  
+ist diese die 2. !hier wird bei 0 angefangen zu zählen!  
+answers[...] oder answersLF[...] wäre hier also answers[2] oder answersLF[2]  
+...
+ich kann empfehlen die Liste einfach so weiter fortzusetzen  
+dabei also je die nächst folgende nummer zu verwenden  
+...
+wobei anzumerken wäre, dass erweiterungen von mir folgen,  
+die entsprechende Änderungen zur Folge haben könnten  
+wenn ich bspw die neuen Quizfragen 20-30 des Lernfeldes 2 hinzufüge  
+du sieh dir runter lädtst,  
+aber zuvor bereits neue Quizfragen 20-40 selber hinzugefügt hast  
+müssen die einen oder anderen umnummerriert werden  
+...
+wobei nazumerken werde, dass ich möglicherweise noch auf eine bessere  
+idee komme diesen leichtfertigen murks zu programmieren  
+ich habe nur auf die schnelle fertig werden wollen,  
+da ich das programm zum lernen für die zwischenprüfung nutzen will, die bald ist  
+
+## Ausblick und Feedback
+
+Ich würde eine Datenbank anschließen, die über ein geeignetes Frontend füllbar ist.
+Diese würde die Fachbegriffe und Quizfragen, die direkt im Code stehen, was ein Graus ist, ersetzen.  
+
+Von Rol Kam kam die Idee für ein Karteikartenbox System, bei dem die Fachbegriffe,   
+die bereits oft genug richtig beantwortet werden konnten nicht mehr, oder selten vorkommen,  
+solche die seltener richtig beantwortet wurden hingegen "nach vorne rutschen", also öfter angezeigt werden,  
+die Überprüfung, ob man den Fachbegriff konnte, sollte durch Selbstkontrolle erfolgen.  
+Ich würde diese Idee auch gerne hinzufügen.  
+
+Weitere Ideen von dir nehme ich gerne.
+
 
 ## Getting started
 
