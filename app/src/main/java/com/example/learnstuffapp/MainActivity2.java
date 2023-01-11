@@ -42,6 +42,7 @@ public class MainActivity2 extends AppCompatActivity {
     private final Question[] questionsLF4 = Schoolstuff.getQuestionsLF4();
     private final Question[] questionsLF6 = Schoolstuff.getQuestionsLF6();
     private final Question[] questionsLF7 = Schoolstuff.getQuestionsLF7();
+    private final Question[] questionsLF9 = Schoolstuff.getQuestionsLF9();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -72,6 +73,9 @@ public class MainActivity2 extends AppCompatActivity {
             case "7":
                 Questions = questionsLF7;
                 btnTitleLF.setText("LF 7: Cyberphysische Systeme ergänzen");
+            case "9":
+                Questions = questionsLF9;
+                btnTitleLF.setText("LF 9: Netzwerkbereitstellung nach unterschiedlichen Unternehmensanforderungen unterscheiden");
         }
 
         List<Question> questionsList = Arrays.asList(Questions);

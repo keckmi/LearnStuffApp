@@ -29,10 +29,10 @@ public class Schoolstuff {
                     "Option 1", "Option 2", "", "", "", "", answers[5]),
             new Question("Lineare Tastatur",
                     "Umschaltpunkt nicht spürbar", "Umschaltpunkt definiert spürbares klickgeräusch", "durchgehend gleiches Druckgefühl",
-                    "Druckgefühl variiert", null, null, answers[6]),
+                    "Druckgefühl variiert", "", "", answers[6]),
             new Question("Lineare Tastatur",
                     "Schaltweg: <2mm (schnell, kürzer)", "Schaltweg >2 (langsamer, länger)", "Bereich: Gaming",
-                    "Bereich: Büro", null, null, answers[7]),
+                    "Bereich: Büro", "", "", answers[7]),
             new Question("Taktil Tastatur",
                     "Umschaltpunkt nicht spürbar", "Umschaltpunkt definiert spürbares klickgeräusch", "Schaltweg < 2mm",
                     "Schaltweg > 2mm", "Berreich: Gaming", "Bereich: Büro", answers[8]),
@@ -49,7 +49,7 @@ public class Schoolstuff {
             new Question("OLED Monitor",
                     "höhere Auslösung", "niedrigere Auflösung", "energiesparsamer", "mehr energieverbrauch", "hoher Kontrast", "Kontrast geringer", answers[13]),
             new Question("OLED Monitor",
-                    "perfekte Kanten", "runde Kanten", "höhere max Helligkeit", "geringere Helligkeit", null, null, answers[14]),
+                    "perfekte Kanten", "runde Kanten", "höhere max Helligkeit", "geringere Helligkeit", "", "", answers[14]),
             new Question("ACM",
                     "adaptive contrast management", "absolute competition moment", "anpassung von kontrast in sehr hellen / dunklen Szenen", "erpassung von totalen wettbewerben", null, null, answers[15]),
             new Question("Monitor Standart",
@@ -82,7 +82,7 @@ public class Schoolstuff {
                     "Aufgrund hoher Kosten für die Verlegung über lange Strecken werden meist sehr hochwertige Fasern vergraben",
                     "Kunststofffasern sind für kurze Strecken (z.B. im Pkw) gut geeignet",
                     "Kunststofffasern sind scheu und verstecken sich oft im Busch wenn sich Menschen nähern",
-                    null, null, answersLF3[2]
+                    "", "", answersLF3[2]
             ),
             new Question("IPv6",
                     "IPv4 und IPv6 können mithilfe geeigneter Mechanismen (z.B: Tunnelmechanismus) parallel betrieben werden",
@@ -104,7 +104,7 @@ public class Schoolstuff {
                     "Ein Hauptgrund für die Entwicklung von IPv6 ist die Erweiterung des Adressraums",
                     "IPv6 hat 2^128 Möglichkeiten zur Bildung von Adressen",
                     "IPv6 hat 3^256 Möglichkeiten zur Bildung von Adressen",
-                    null, answersLF3[5]),
+                    "", answersLF3[5]),
             new Question("IPv6",
                     "Bei mehreren Blockfolgen aus Nullen wird längere ersetzt",
                     "Bei mehreren Blockfolgen aus Nullen wird kürzere ersetzt",
@@ -142,7 +142,7 @@ public class Schoolstuff {
                     "21 Widerspruchsrecht","21 Einlagerecht",  "22 Ausgaberecht", answersLF4[6]),
             new Question("DSGVO",
                     "22 Automatisierte Werbegeschenke einschließlich Wunscherfüllung ", "22 Automatisierte Entscheidungen im Einzellfall einschließlich Profiling,", "23 Beschränkung der Rechte unverhältnismäßig",
-                    "23 Beschränkungen der Rechte verhältnismäßig in besonderen Fällen",null,  null, answersLF4[7]),
+                    "23 Beschränkungen der Rechte verhältnismäßig in besonderen Fällen","",  "", answersLF4[7]),
     };
 
     private static boolean answersLF6[][] = {{true, false, true, false, false, true}, {false, true, true, false, false, true}, {false, true, true, false, false, false},
@@ -167,7 +167,7 @@ public class Schoolstuff {
             new Question("Software Lebenszyklus",
                     "5 Infostand Elektromarkt", "5 Helpdesk, Service Desk", "6 Kontrolle", "6 Überprüfung", "7 Reparatur", "7 Anpassung",   answersLF6[1]),
             new Question("Software Lebenszyklus",
-                    "8 Austausch", "8 Ersatz", "9 Entsorgung",  "10 Wegwurf", null, null, answersLF6[2]),
+                    "8 Austausch", "8 Ersatz", "9 Entsorgung",  "10 Wegwurf", "", "", answersLF6[2]),
             new Question("Einflüsse Servicebereitstellung",
                     "Verwendungszweck", "Haarfarbe",
                     "Ressourcen", "Lieblingslied",
@@ -301,6 +301,13 @@ public class Schoolstuff {
             new Question("Testquestion2", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
     };
 
+    private static boolean answersLF9[][] = {{true, false, true, false, false, true},{true, false, true, false, false, true}};
+
+    private static Question[] questionsLF9 = {
+            new Question("Testquestion", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
+            new Question("Testquestion2", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
+    };
+
 
 
     public static boolean[][] getAnswers() {
@@ -381,6 +388,14 @@ public class Schoolstuff {
 
     public static void setQuestionsLF7(Question[] questionsLF7) {
         Schoolstuff.questionsLF7 = questionsLF7;
+    }
+
+    public static Question[] getQuestionsLF9() {
+        return questionsLF9;
+    }
+
+    public static void setQuestionsLF9(Question[] questionsLF9) {
+        Schoolstuff.questionsLF9 = questionsLF9;
     }
 
 
