@@ -16,6 +16,16 @@ public class MainMainActivity extends AppCompatActivity {
 
         Button btnAufdecken = findViewById(R.id.btnAufdecken);
         Button btnLQuiz = findViewById(R.id.btnQuiz);
+        Button btnLexikon = findViewById(R.id.btnTerms);
+
+        btnLexikon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainMainActivity.this, MainActivity.class);
+                i.putExtra(MainActivity.WHERE, "LEXIKON");
+                startActivity(i);
+            }
+        });
 
         btnAufdecken.setOnClickListener(new View.OnClickListener() {
             @Override
