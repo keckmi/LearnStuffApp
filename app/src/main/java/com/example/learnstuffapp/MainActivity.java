@@ -33,6 +33,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = null;
+                if (intent.getStringExtra(WHERE).equals("LEXIKON")) {
+                    i = new Intent(MainActivity.this, TermListActivity.class);
+                    i.putExtra(TermActivity.LERNFELD, "2");}
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
@@ -45,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = null;
+                if (intent.getStringExtra(WHERE).equals("LEXIKON")) {
+                    i = new Intent(MainActivity.this, TermListActivity.class);
+                    i.putExtra(TermActivity.LERNFELD, "3");}
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
@@ -57,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = null;
+                if (intent.getStringExtra(WHERE).equals("LEXIKON")) {
+                    i = new Intent(MainActivity.this, TermListActivity.class);
+                    i.putExtra(TermActivity.LERNFELD, "4");}
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
@@ -69,6 +78,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = null;
+                if (intent.getStringExtra(WHERE).equals("LEXIKON")) {
+                    i = new Intent(MainActivity.this, TermListActivity.class);
+                    i.putExtra(TermActivity.LERNFELD, "6");}
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
@@ -81,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = null;
+                if (intent.getStringExtra(WHERE).equals("LEXIKON")) {
+                    i = new Intent(MainActivity.this, TermListActivity.class);
+                    i.putExtra(TermActivity.LERNFELD, "7");}
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
@@ -93,6 +108,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = null;
+                if (intent.getStringExtra(WHERE).equals("LEXIKON")) {
+                    i = new Intent(MainActivity.this, TermListActivity.class);
+                    i.putExtra(TermActivity.LERNFELD, "9");}
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {

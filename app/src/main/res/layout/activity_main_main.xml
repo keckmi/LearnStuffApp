@@ -19,11 +19,21 @@
         android:src="@drawable/learnstuffapp_logo_byschriftgeneratoreu" />
 
     <Button
-        android:id="@+id/btnAufdecken"
+        android:id="@+id/btnTerms"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:background="@drawable/btn_bg1"
+        android:text="Lexikon" />
+
+    <Button
+        android:id="@+id/btnAufdecken"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTerms"
+        android:layout_centerInParent="true"
+        android:background="@drawable/btn_bg1"
+        android:layout_marginTop="30px"
         android:text="Aufdecken" />
 
     <Button
