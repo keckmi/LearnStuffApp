@@ -29,20 +29,27 @@
         android:id="@+id/txtTerm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btnTitleChapter"
+        android:layout_below="@id/btnTitleChapter"
         android:layout_centerInParent="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="16dp"
         android:text="Term"
         android:textSize="20sp"
         android:textStyle="bold" />
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/txtTerm"
+        android:layout_marginTop="16dp">
+
     <TextView
         android:id="@+id/txtContent"
-        android:layout_marginBottom="30dp"
-        android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
+        android:layout_marginBottom="30dp"
         android:text="Content" />
+
+    </ScrollView>
 
 </RelativeLayout>
