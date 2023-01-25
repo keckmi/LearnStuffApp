@@ -2,127 +2,187 @@ package com.example.learnstuffapp;
 
 public class Terms {
 
-    private static Term[] termsLF2 = {
-            new Term("Green-IT",
-                    "Hardware umweltfreundlich\nArbeitsplätze flexibel umweltgerecht\nEnergiekosten sparen\nLieferant sollte Altgeräte mitnehmen\n" +
-                    "Software energiesparsam\nMitarbeiterberatung zur Umweltfreundlichkeit\nVerbrauchsmaterial sparen"),
-            new Term("Wie veränderte sich der Arbeitsplatz?",
-                    "Ergonomische Möbel\nFlexible Arbeitszeit\nweniger Papiergebrauch\nDrucker als Bildschirme\n"+
+    private static String[] kapitelLFYetUnpost = {"▼ Kapitel noch einzufügen"};
+
+    private static String [] kapitelLF1 = {"Die eigene Rolle im Betrieb beschreiben", "Den Ausbildungsbetrieb beschreiben",
+            "Das Marktumfeld des Ausbildungsbetriebes beschreiben", "Den Ausbildungsbetrieb präsentieren"};
+
+    private static String[] kapitelLF2 = {"▼ Eine Einführung in die IT für Arbeitsplätze geben", "▼ Das Leistungsportfolio im Ausbildungsbetrieb präsentieren",
+            "▼ Auswahlkriterien zu IT-Produkten allgemein unterscheiden", "▼ Komponenten eines Arbeitsplatzcomputers unterscheiden",
+            "▼ Kundenanforderungen im Leistungsprozess berücksichtigen und Projektmanagement vorbereiten", "▼ Badarfs- und Andorderungsnanalysen durchführen",
+            "▼ Pflichtenheft erstellen", "▼ Angebote und Stundensätze kalkulieren und die Rendite berücksichtigen",
+            "▼ Angebotsvergleiche bei Beschaffungsmaßnahmen durchführen", "▼ Lieferung, Installation und Übergabe vornehmen"};
+
+    private static Term[][] termsLF2 = {
+
+            {//Eine Einführung in die IT für Arbeitsplätze geben
+                /*new Term("Kompetenzen","Eigenverantwortung,\n Fachkompetenz,\n soziale Komptenz,\n Zielgerichtet"),*/
+                new Term("Teamarbeit: Heterogene - Homogene Teams",
+                    "Heterogene Teams:\nOXAI OXAI OXAI OXAI\nHomogene Teams:\nOOOO XXXX AAAA IIII"),
+                new Term("Generalist", "der kann von allem etwas"),
+                new Term("Spezialist", "der kann etwas besonderst gut"),
+                new Term("Konfiguration",
+                    "Zusammenstellung, Einstellung & Abstimmung von Komponenten, Geräten und Programmen in Bezug auf die Anwendung"),
+                new Term("Technologische Entwicklung",
+                    "Windows7->Windows10\nDiskettenlaufwerk->USB-Speicherstick\nLAN->WLAN\nKabel->Funk\nDiskette->CD\nMicrosoft Office->Open Office\n" +
+                    "VGA->HDMI\nSATA->SSD\nEin-Kern-Prozessor->Mehr-Kern\nAlgorythmus->KI\nLochkarten->Maus,Tastatur"),
+                //Kreuzworträtsel ABB S.92
+            },
+            {//Das Leistungsportfolio im Ausbildungsbetrieb präsentieren
+                new Term("Wie veränderte sich der Arbeitsplatz?",
+                    "Arbeitsplatztausch\nErgonomische Möbel\nFlexible Arbeitszeit\nweniger Papiergebrauch\n"+
                     "Mehr (Eigen)Verantwortung\nDatentausch per Funk\nvirtuelle Konferenzräume\n"+
                     "Projektteam mit Gruppenleiter hat von jedem Berreich einen\nBerreiche sind bspw: Planer, Entwickler, Verknüpfer, Tester, Kundenkontakt\n"+
                     "früher wanderte Projekt langsam von Abteilung zu Abteilung\nAbteilungen und ihre Leiter gibt es so nicht mehr\n"),
-            new Term("Generalist",
-                    "der kann von allem etwas"),
-            new Term("Spezialist",
-                    "der kann etwas besonderst gut"),
-            new Term("Kompetenzen",
-                    "Eigenverantwortung,\n Fachkompetenz,\n soziale Komptenz,\n Zielgerichtet"),
-            new Term("Marktgängige Systeme",
+                new Term("Marktgängige Systeme",
                     "All in One, Mini-PC(Tower), Big Tower-PC, Device, Desktop-PC, AI, Embedded System, Firmware, IoT, Internet Of Things, LAN, Notebook, On-Premise, Open Source,\n" +
-                            "Portable Apps, Proprietäre Software (herstellergebunden, eigenständig, speziell), Server Smart Home, Spezifikation, Standartsystem, Stick-PC, Smart Table, Smartphone,\n" +
-                            "Thin-CLient, WLAN, Workstation, zero-Client "),
-            new Term("nach welchen Mängelarten werden Kundenreklamationen sortiert?",
-                    "SM - Sachmanel,\n R - Rechtsmangel,\n Erkennbarkeit,\n Außmaß\n MORE DETAILS COULD BE ADDED..."),
-            new Term("Motherboard",
+                    "Portable Apps, Proprietäre Software (herstellergebunden, eigenständig, speziell), Server Smart Home, Spezifikation, Standartsystem, Stick-PC, Smart Table, Smartphone,\n" +
+                    "Thin-CLient, WLAN, Workstation, zero-Client "),
+                //Präsentieren ABB S.95, Aufg6
+            },
+            {//Auswahlkriterien zu IT-Produkten allgemein unterscheidenn
+                new Term("nach welchen Mängelarten werden Kundenreklamationen sortiert?",
+                    "SM - Sachmanel:\n  Q - Qualität\n  M - Quantität\n  A - Artmangel\nR - Rechtsmangel\n" +
+                    "Erkennbarkeit:\n  O - offen\n  V - versteckt\n  AV - arglistig verschwiegen\n" +
+                    "Außmaß:\n  G - geringfügig\n  E - erheblich\n  B - behebbar\n  nicht behebbar (bzw. nur durch Neulieferung)"),
+                new Term("Was muss bei Lieferungen eingehalten werden?",
+                    "Standarts\nNormen\nFormfaktoren\nMarken\nReklamation zu Unrecht\nAufgabe: Siehe ABB S.98"),
+                new Term("Green-IT",
+                    "Hardware umweltfreundlich\nArbeitsplätze flexibel umweltgerecht\nEnergiekosten sparen\nLieferant sollte Altgeräte mitnehmen\n" +
+                    "Software energiesparsam\nMitarbeiterberatung zur Umweltfreundlichkeit\nVerbrauchsmaterial sparen\nMehr ABB S.98"),
+            },
+            {//Komponenten eines Arbeitsplatzcomputers unterscheiden
+                new Term("Motherboard",
                     " Input/Output Anschlüsse,\n CPU Sockel für Prozessor,\n RAM Slots für Arbeitsspeicher\n"+
                     "SATA Anschlüsse für Festplatten,\n Laufwerken,\n PCIe 3.0 für Pheripherie  z.B: Grafikkarte, WLAN Adapter, Sensoren, Schnittstellenkarte"),
-            new Term("Wann sind mehr Prozessorkerne von Vorteil?",
-                    "Mehr Kerne bringen Vorteil wenn Aufgabe teilbar ist\n"),
-            new Term("Eigenschaften an denen Prozessoren verglichen werden können",
-                    "Taktfreuquenz,\n Kern Anzahl,\n Hyperthreading,\n Übertaktbar,\n Preis,\n TDP (Energieverbrauch),\n Speicher\n"),
-            new Term("PCI - PCIe",
+                new Term("PCI - PCIe",
                     "R PCI - Peripherial Component Interconnect\nDas e in PCIe steht für express\n"+
                     "Bei PCI parallele Leitungen hängen miteinander, sind gemeinsam steuerbar\nBei PCIe Leitungen eletrisch unabhängig von einander und einzeln steuerbar"),
-            new Term("Platinen",
-                    "Haben mehrere Ebenen übereinander,\n Metal wird drauf gedampft, Kunststoff darüber,\n tragen elektrische Bauteile"),
-            new Term("RAM",
-                    "gelöscht bei PC aus"),
-            new Term("Festplatte HDD",
-                    "Hard Disk Drive\nseit 80ern\ndrehgeschwindigkeit/min 5400 - 7200,\n aus Alu oder Glas mit (Halb)metall-legierung, magnetisiert mit Stromimpulsen,\n" +
-                    "größen: 2,5 & 3,5 Zoll,\n längere Lebenserwartung als SSD,\n Kostengünstiger als SSD\n"),
-            new Term("NTFS",
-                    "proprietäres Dateisystem von Microsoft, viele Fstpl sind damit vorformatiert"),
-            new Term("Cache",
+                new Term("Platinen",
+                        "Haben mehrere Ebenen übereinander,\n Metal wird drauf gedampft, Kunststoff darüber,\n tragen elektrische Bauteile"),
+                new Term("Prozessorvergleichseigenschaften",
+                    "Taktfreuquenz,\n Kern Anzahl,\n Hyperthreading,\n Übertaktbar,\n Preis,\n TDP (Energieverbrauch),\n Speicher\n"),
+                new Term("Wann sind mehr Prozessorkerne von Vorteil?",
+                    "Mehr Kerne bringen Vorteil wenn Aufgabe teilbar ist\n"),
+                new Term("Cache",
                     "Zwischenspeicher zwischen CPU (Prozessor) und RAM (Arbeitsspeicher)\n"+
                     "Cache-Level:\nL1 ist der kleinste und schnellste,\nL2 größer und langsamer jedoch schneller als RAM,\n L3 dient Datenabgleich der Caches und Cores"),
-            new Term("Festplatten Einsatzbereiche & Bau/Speicherarten",
+                new Term("Prozessorenparallelisierungstechniken:",
+                    "Siehe ABB S.104"),
+                //Weitere mögliche Terms/Quizfragen ABB S.103
+                new Term("RAM", "gelöscht bei PC aus"),
+                new Term("Arbeitsspeichervergleichseigenschaften",
+                    "Speicherkapazität\nAnzahl Speichermodule\nTaktfrequenz\nLatenzen\nDatenübertragungsrate\nEnergieverbrauch\nBeispiele ABB S.105"),
+                new Term("passenden Arbeitsspeicher auswählen",
+                    "Siehe ABB S.105"),
+                new Term("P = U * I", "P = Leistung (Watt), I = Stromstärke (Ampere), U  = Spannung (Volt)"),
+                new Term("Netzteil", "TO BE CONTINUED..."),
+                //PUI Rechnungen und Netzteile ABB S.106f
+                new Term("Festplatte HDD",
+                    "Hard Disk Drive\nseit 80ern\ndrehgeschwindigkeit/min 5400 - 7200,\n aus Alu oder Glas mit (Halb)metall-legierung, magnetisiert mit Stromimpulsen,\n" +
+                    "größen: 2,5 & 3,5 Zoll,\n längere Lebenserwartung als SSD,\n Kostengünstiger als SSD\n"),
+                new Term("Festplattenvergleichseigenschaften",
+                    "Typ\nBauart\nSpeicherkapazität\nFormfaktor\nSchnitstelle\nCache\nÜbertragungsrate\nUmdrehung\nWatt\nCent/GB\nBeispiele ABB S.107"),
+                new Term("SSDvergleichseigenschaften",
+                    "Technologie\nVerwendungszweck\nKapazität\nLesen\nSchreiben\nFormfaktor\nSchnittstelle\nBeispiele siehe ABB S.1ß8"),
+                new Term("NTFS",
+                    "proprietäres Dateisystem von Microsoft, viele Fstpl sind damit vorformatiert"),
+                new Term("Festplatten Einsatzbereiche & Bau/Speicherarten",
                     "Einsatzbereiche:\n Intern, Extern, Laptop, NAS, WLAN, USB-St, Gehäuse\n" +
                     "Bau/Speicherarten:\n HDD (Magnetscheibe),\n SSD (flash/Halbleiter),\n SSHD (beides/Hybrid),\n USB Sticks (Flash/Halbleiter),"),
-            new Term("M.2 Format",
-                    "kleiner 40 oder 80mm"),
-            new Term("Schnitstellen",
-                    "PATA, SATA, SCSi, USB"),
-            new Term("NAS",
-                    "Network Attached Storrage System,\n File Server,\n Alternative: Cloud-System,\n (für später:) RAID-Verbund ,? LAN, DAS\n"),
-            new Term("WLAN Festplatten",
-                    "haben eingebauten Akku"),
-            new Term("Datentransferrate",
-                    "interner Anschluss entscheidend, Standart: STA M.2 von 150 - 600 MB/s\n"+
-                    "CALCULATION METHOD FOLLOWS..."),
-            new Term("Partition",
-                    "Datenbereich einer Festplatte"),
-            new Term("P = U * I",
-                    "P = Leistung (Watt), I = Stromstärke (Ampere), U  = Spannung (Volt)"),
-            new Term("Netzteil",
-                    "TO BE CONTINUED..."),
-            new Term ("Lineare Tastatur",
+                new Term("M.2 Format", "kleiner 40 oder 80mm"),
+                new Term("Schnitstellen", "PATA, SATA, SCSi, USB"),
+                new Term("NAS", "Network Attached Storrage System,\n File Server,\n Alternative: Cloud-System,\n (für später:) RAID-Verbund ,? LAN, DAS\n"),
+                new Term("WLAN Festplatten", "haben eingebauten Akku"),
+                new Term("Datentransferrate", "interner Anschluss entscheidend, Standart: STA M.2 von 150 - 600 MB/s\n"+ "CALCULATION METHOD FOLLOWS..."),
+                new Term("Partition", "Datenbereich einer Festplatte"),
+                //Festplatten Rechnungen ABB S.109
+                //Wetere mögliche Terms/Quizfragen ABB S.110
+                new Term ("Lineare Tastatur",
                     "Umschaltpunkt nicht spürbar\nUmschaltpunkt definiert spürbares klickgeräusch\ndurchgehend gleiches Druckgefühl"+
                     "Schaltweg: <2mm (schnell, kürzer)\nBereich: Gaming"),
-            new Term ("Taktil Tastatur", "Umschaltpunkt definiert spürbares klickgeräusch\nSchaltweg > 2mm\nBerreich: Gaming\nBereich: Büro"),
-            new Term("Tastatur Leistungskriterien",
-                   "Haltbarkeit\nmax Tastenschläge bspw: 50 Mio Standart\nTastananzahl\nporgrammierbare Tasten\nSchaltpunkt\nKompatibilität"+
-                   "Trackpad/point\nBeleuchtung\nErgonomie\nReinigung\nHygiene"),
-            new Term("OLED Monitor",
-                   "organic light emitting diodes\nverschiedene organische Halbleiterschichten werden angestromt und leuchten\nteuer\ndünner\nperfekte Kanten\nhöhere max Helligkeit"),
-            new Term("ACM",
-                   "adaptive contrast management\nanpassung von kontrast in sehr hellen / dunklen Szenen"),
-            new Term("Monitor Standarts & Eigenschaften",
-                   "24-27 Zoll\n1920x1080 Full HD\n1-5ms Reaktionszeit\nMHL-Port: Mobilelink\nHalterungen (VESA Standarts)"+
-                    "Leistungsuafnahme 30W Betrieb, 05 W Standbye\nKontrastverhältnis: 1000-3000\nBildhelligkeit Candela cd/m^3 250-370\nAbstand zum Bildschirm: min 50cm"),
-            new Term("Monitor Panel (Display, eigentlich Leuchtfläche) Standart - High-End",
-                   "Standart: TN\nStandart: VA\nVideo-High-End-PC: IPS\nVideo-High-End-PC: PVA\nVideo-High-End-PC: MVA"),
-            new Term("Tilt, Swivel & Pivot",
+                new Term ("Taktil Tastatur", "Umschaltpunkt definiert spürbares klickgeräusch\nSchaltweg > 2mm\nBerreich: Gaming\nBereich: Büro"),
+                new Term("Tastatur Leistungskriterien",
+                    "Haltbarkeit\nmax Tastenschläge bspw: 50 Mio Standart\nTastananzahl\nporgrammierbare Tasten\nSchaltpunkt\nKompatibilität"+
+                    "Trackpad/point\nBeleuchtung\nErgonomie\nReinigung\nHygiene"),
+                new Term("Monitor Standarts & Eigenschaften",
+                    "24-27 Zoll\n1920x1080 Full HD\n1-5ms Reaktionszeit\nMHL-Port: Mobilelink\nHalterungen (VESA Standarts)"+
+                    "Leistungsuafnahme: schlecht: 30W Betrieb, gut: 05 W Standbye\nKontrastverhältnis: 1000-3000\nBildhelligkeit Candela cd/m^3 250-370\nAbstand zum Bildschirm: min 50cm\n"+
+                    "guter Blickwinkel = 160-180°\nPanel: Standart: TN, VA, High-End: IPS, PVA, MVA"),
+                new Term("ACM",
+                    "adaptive contrast management\nanpassung von kontrast in sehr hellen / dunklen Szenen"),
+                new Term("Tilt, Swivel & Pivot",
                     "Tilt-Eigenschaften: horizontale Neigung,\n Swivel: vertikale Drehbarkeit,\n Pivot: höhenverstellbar horizontale Drehbarkeit"),
-            new Term("LCD","Liquid Crystal Technology\nVerarbeitungsart: Thin-Film-Transistor-Tec(TFT)\n"+
+                new Term("OLED Monitor",
+                    "organic light emitting diodes\nverschiedene organische Halbleiterschichten werden angestromt und leuchten\nteuer\ndünner\nperfekte Kanten\nhöhere max Helligkeit"),
+                new Term("LCD","Liquid Crystal Technology\nVerarbeitungsart: Thin-Film-Transistor-Tec(TFT)\n"+
                     "Flüssigkristalle\neinnzelne Bildpunkte (Pixel), je 3 Farbfilter RGB, werden rückseitig beleuchtet (siehe nochmal buch) direkt beleuchtet oder indirekt?, unterschied zu LED (schwarz  dunkler)"),
-            new Term("LED", "light emitting Diodes\ndirekt licht in RGB, restliche Farben durch Überlagerung"),
-            new Term("Drucker Arten Beispiele",
-                    "Tintenstrahl, Laser, Abteilung, Arbeitsplattz, Mobil"),
-            new Term("Tintenstrahl Drucker",
-                    "(+) Druckfarben Qualität und Leuchtkraft, Zwischentöne Farbverläufe, leise kein Lüfter, billig\n" +
-                            "(-) Druckkosten, langsam, nicht wasserfest, kratzer "),
-            new Term("Bubble Jet Verfahren",
-                    " Druckknopf hat Kammer hinter winziger Öffnung aus der Tinte durch Erhitzen herausgeespritzt wird"),
-            new Term("Piezo-Verfahren",
-                    " durch Blättchenverformung durch eletrische Spannung,\n Name von: Piezo Kristall"),
-            new Term("Laser-strahl Drucker",
-                    "Abbild auf elektrisch geladener Bildtrommel wird elektrisch entladen. Toner (Pulver, Kohlenstoffverbidnung) wird von diesen Stellen angezogen.\n" +
-                    "Bildtrommel presst auf Papier. Erhitzung. Abdruck auf Papier.\n" +
-                    "(+)schnell, leise, schrift, Abbild, billiger Druck, wisch&kratzfest, Farbqualität, Tinte trocknet nicht ein, seltener Nachfüllen, robust, wartungarm  \n" +
-                    "(-)Aufwärmzeit <20sec, kann Ozon (bei Tonerfixierung) und Feinstaub verteilen"),
-            new Term("LED Drucker", "LEDs statt Laser - billiger, stabiler"),
-            new Term("Dublexdruck", "beidseitiger Druck"),
-            new Term("Matrixdrucker (Nadeldrucker)",
-                    "Nadelmatrix gabs vor Tintenstrahl, Vorteile: Durchschläge druckbar (Das was du auf oberes Papier schreibst, ist auch auf dem Papier darunter deutlich lesbar)"),
-            new Term("Drucker Leistungskriterien",
-                    "Endverarbeitungsmöglichkeiten z.B: Lochen Falten Heften,\n Papiersorten größen gewicht,\n Druckgeschwindigkeit,\n Zuverlässigkeit,\n" +
-                    "Druckmodi,\n Papierkasetten,\n Fassungsvermögen,\n Kosten,\n Ökologie,\n Stromverbrauch,\n Anschlüsse,\n Scan,\n Fax"),
-            new Term("Druckkostenvergleiche",
-                    "Verbrauchskosten =\n Seiten insgesamt * Verbrauchskosten je Seite (in Cent?) / 100\n" +
-                            "Personalkosten = \n" +
-                            "Druckkosteneinsparungen ABB S121 "),
-            new Term("Scanner Arten",
-                    "Flachbrett,\n Dokumenten,\n Mobil,\n Abteilung,\n Desktop"),
-            new Term("Rollout Produktauslieferung",
-                    "1. Planung auf Grundlage der Kundenanforderungen:\n1.1 Rollout-Konzept erstellen mit Überischten Terminen,\n 1.2 Kalkulation der Arbeiten und Ressourcen die es bedarf,\n 1.3 Bereitstellung des Projektleiters und der Techniker\n" +
-                    "2. Bestellung und Konfiguaration\n 2.1 Bestellung Geräte und passender Software,\n 2.2 Lageranlieferungsorganisation,\n 2.3 Lieferungskontrolle,\n 2.4 Geräte-vorinstallation & konfigauration,\n Begleitdokumentenerstellung\n" +
-                    "3. Anlieferung und Installation\n 3.1 Gerätelieferung, 3.2 Aufbau an vorhergesehenen Standorten,\n 3.3 Installation und Inventarisierung,\n 3.4 Inbetriebnahme und Funktionstests,\n" +
-                    "3.5 Unterstützung IT-Abteilung bei Geräteeinbindung in Unternehmensnetzwerk,\n 3.6 Nutzereinweisung 3.7 Altgerätedeinstallation\n" +
-                    "4. Elektronische Dokumentation\n" +
-                    "4.1 Übergrabeprotokolle,\n 4.2 Konfigurationsseiten,\n 4.3 Rolloutauswertung,\n 4.4 Übergabe aller Dokumente als elektronische Dokumentation\n" +
-                    "5. Entsorgung von Altgeräten und Verpackungen\n 5.1 Protokollierung "),
-
+                new Term("LED", "light emitting Diodes\ndirekt licht in RGB, restliche Farben durch Überlagerung"),
+                //Monitoranschlüsse ABB  S.110
+                //Monitorsichrprüfung ABB S.112f
+                //Weiteres Wissen, mögliche Terms/Quizfragen ABB S.111
+                //Monitor Rechnung ABB S.113f
+                //Idealer Monitorarbeitsplatz ABB S.114ff
+                new Term("Drucker Arten Beispiele",
+                        "Tintenstrahl, Laser, Abteilung, Arbeitsplattz, Mobil"),
+                new Term("Tintenstrahl Drucker",
+                        "(+) Druckfarben Qualität und Leuchtkraft, Zwischentöne Farbverläufe, leise kein Lüfter, billig\n" +
+                                "(-) Druckkosten, langsam, nicht wasserfest, kratzer "),
+                new Term("Bubble Jet Verfahren",
+                        " Druckknopf hat Kammer hinter winziger Öffnung aus der Tinte durch Erhitzen herausgeespritzt wird"),
+                new Term("Piezo-Verfahren",
+                        " durch Blättchenverformung durch eletrische Spannung,\n Name von: Piezo Kristall"),
+                new Term("Laser-strahl Drucker",
+                        "Abbild auf elektrisch geladener Bildtrommel wird elektrisch entladen. Toner (Pulver, Kohlenstoffverbidnung) wird von diesen Stellen angezogen.\n" +
+                                "Bildtrommel presst auf Papier. Erhitzung. Abdruck auf Papier.\n" +
+                                "(+)schnell, leise, schrift, Abbild, billiger Druck, wisch&kratzfest, Farbqualität, Tinte trocknet nicht ein, seltener Nachfüllen, robust, wartungarm  \n" +
+                                "(-)Aufwärmzeit <20sec, kann Ozon (bei Tonerfixierung) und Feinstaub verteilen"),
+                new Term("LED Drucker", "LEDs statt Laser - billiger, stabiler"),
+                new Term("Dublexdruck", "beidseitiger Druck"),
+                new Term("Matrixdrucker (Nadeldrucker)",
+                        "Nadelmatrix gabs vor Tintenstrahl, Vorteile: Durchschläge druckbar (Das was du auf oberes Papier schreibst, ist auch auf dem Papier darunter deutlich lesbar)"),
+                new Term("Drucker Leistungskriterien",
+                        "Endverarbeitungsmöglichkeiten z.B: Lochen Falten Heften,\n Papiersorten größen gewicht,\n Druckgeschwindigkeit,\n Zuverlässigkeit,\n" +
+                                "Druckmodi,\n Papierkasetten,\n Fassungsvermögen,\n Kosten,\n Ökologie,\n Stromverbrauch,\n Anschlüsse,\n Scan,\n Fax"),
+                new Term("Druckkostenvergleiche",
+                        "Verbrauchskosten =\n Seiten insgesamt * Verbrauchskosten je Seite (in Cent?) / 100\n" +
+                                "Personalkosten = \n" +
+                                "Druckkosteneinsparungen ABB S121 "),
+                new Term("Scanner Arten",
+                        "Flachbrett,\n Dokumenten,\n Mobil,\n Abteilung,\n Desktop"),
+            },
+            {//Kundenanforderungen im Leistungsprozess berücksichtigen und Projektmanagement vorbereiten",
+                new Term("Keine Fachbegriffe",
+                        "Zu diesem Kapitel sind hier keine Fachbegriffe"),
+            },
+            {// Badarfs- und Andorderungsnanalysen durchführen",
+                new Term("Keine Fachbegriffe",
+                        "Zu diesem Kapitel sind hier keine Fachbegriffe"),
+            },
+            {// Pflichtenheft erstellen
+                new Term("Keine Fachbegriffe",
+                        "Zu diesem Kapitel sind hier keine Fachbegriffe"),
+            },
+            {// Angebote und Stundensätze kalkulieren und die Rendite berücksichtigen",
+                new Term("Keine Fachbegriffe",
+                        "Zu diesem Kapitel sind hier keine Fachbegriffe"),
+            },
+            {// Angebotsvergleiche bei Beschaffungsmaßnahmen durchführen
+                new Term("Keine Fachbegriffe",
+                        "Zu diesem Kapitel sind hier keine Fachbegriffe"),
+            },
+            {//Lieferung, Installation und Übergabe vornehmen
+                new Term("Rollout Produktauslieferung",
+                        "1. Planung auf Grundlage der Kundenanforderungen:\n1.1 Rollout-Konzept erstellen mit Überischten Terminen,\n 1.2 Kalkulation der Arbeiten und Ressourcen die es bedarf,\n 1.3 Bereitstellung des Projektleiters und der Techniker\n" +
+                        "2. Bestellung und Konfiguaration\n 2.1 Bestellung Geräte und passender Software,\n 2.2 Lageranlieferungsorganisation,\n 2.3 Lieferungskontrolle,\n 2.4 Geräte-vorinstallation & konfigauration,\n Begleitdokumentenerstellung\n" +
+                        "3. Anlieferung und Installation\n 3.1 Gerätelieferung, 3.2 Aufbau an vorhergesehenen Standorten,\n 3.3 Installation und Inventarisierung,\n 3.4 Inbetriebnahme und Funktionstests,\n" +
+                        "3.5 Unterstützung IT-Abteilung bei Geräteeinbindung in Unternehmensnetzwerk,\n 3.6 Nutzereinweisung 3.7 Altgerätedeinstallation\n" +
+                        "4. Elektronische Dokumentation\n" +
+                        "4.1 Übergrabeprotokolle,\n 4.2 Konfigurationsseiten,\n 4.3 Rolloutauswertung,\n 4.4 Übergabe aller Dokumente als elektronische Dokumentation\n" +
+                        "5. Entsorgung von Altgeräten und Verpackungen\n 5.1 Protokollierung ")
+            }
     };
+
     private static Term[] termsLF3 = {
             new Term("properietär","waren die ersten Rechnerverbindungen,\n d.h: Systeme unterschiedlicher Hersteller, unkompatibel"),
             new Term("ISO","International Organisation for Standartisation"),
@@ -550,12 +610,14 @@ public class Terms {
             "lokale (klassische) Vernetzung (LAN),\n Cloud Computing (virtuelle Vernetzung),\n geschmischte/hybride Vernetzung (LAN-Cloud)"),
     };
 
-    public static Term[] getTermsLF2() {
+    public static String[] getKapitelLFYetUnpost() {return kapitelLFYetUnpost;}
+
+    public static Term[][] getTermsLF2() {
         return termsLF2;
     }
 
-    public static void setTermsLF2(Term[] termsLF2) {
-        Terms.termsLF2 = termsLF2;
+    public static String[] getKapitelLF2() {
+        return kapitelLF2;
     }
 
     public static Term[] getTermsLF3() {
