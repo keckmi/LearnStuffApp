@@ -12,16 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.firebase.storage.FileDownloadTask;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.StorageReference;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.Locale;
-
 public class TermActivity extends AppCompatActivity {
 
     public static final String LERNFELD = "LERNFELD";
@@ -42,8 +32,6 @@ public class TermActivity extends AppCompatActivity {
     private final Term[] termsLF7 = Terms.getTermsLF7();
     private final Term[] termsLF8 = Terms.getTermsLF8();
     private final Term[] termsLF9 = Terms.getTermsLF9();
-
-    private StorageReference storageReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
