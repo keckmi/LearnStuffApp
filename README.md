@@ -1,10 +1,10 @@
 # News
-more terms and questions are added from time to time
+more terms and questions are added from time to time  
 
-05 February: pics added to zuschlags, rückwärts & gewinnkalkulation
-25 January: chapters to new main function "Lexicon", yet not all posted in,
-will be slowly done trugh learning process for next exam till end of april,
-17 January: new main function "Lexicon"
+05 February: pics added to zuschlags, rückwärts & gewinnkalkulation  
+25 January: chapters to new main function "Lexicon", yet not all posted in,  
+will be slowly done trugh learning process for next exam till end of april,  
+17 January: new main function "Lexicon"  
 
 # LearnStuffApp
 
