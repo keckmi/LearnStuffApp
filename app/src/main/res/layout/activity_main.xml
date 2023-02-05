@@ -29,64 +29,148 @@
         android:textStyle="bold"
         android:textColor="@color/colorMyOrange"/>
 
-    <Button
-        android:id="@+id/btnLernfeld2"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btnLernfeld3"
-        android:layout_centerInParent="true"
-        android:background="@drawable/btn_bg1"
-        android:text="Lernfeld 2" />
+        android:layout_centerInParent="true">
 
-    <Button
-        android:id="@+id/btnLernfeld3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/btnLernfeld4"
-        android:layout_centerInParent="true"
-        android:background="@drawable/btn_bg1"
-        android:layout_marginTop="30px"
-        android:text="Lernfeld 3" />
+        <Button
+            android:id="@+id/btnLernfeld1"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:text="Lernfeld 1"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"/>
 
-    <Button
-        android:id="@+id/btnLernfeld4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/btnLernfeld6"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30px"
-        android:background="@drawable/btn_bg1"
-        android:text="Lernfeld 4" />
+        <Button
+            android:id="@+id/btnLernfeld2"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:text="Lernfeld 2"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/btnLernfeld6"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btnLernfeld7"
         android:layout_centerInParent="true"
-        android:layout_marginTop="30px"
-        android:background="@drawable/btn_bg1"
-        android:text="Lernfeld 6" />
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/linearLayout1">
 
-    <Button
-        android:id="@+id/btnLernfeld7"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/btnLernfeld9"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="30px"
-        android:background="@drawable/btn_bg1"
-        android:text="Lernfeld 7" />
+        <Button
+            android:id="@+id/btnLernfeld3"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:text="Lernfeld 3"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"
+            android:layout_below="@id/btnLernfeld2"/>
 
-    <Button
-        android:id="@+id/btnLernfeld9"
-        android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btnLernfeld4"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:text="Lernfeld 4"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginTop="30px"
-        android:layout_marginBottom="5px"
-        android:background="@drawable/btn_bg1"
-        android:text="Lernfeld 9" />
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/linearLayout2">
+
+        <Button
+            android:id="@+id/btnLernfeld5"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:text="Lernfeld 5"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"
+            android:layout_below="@id/btnLernfeld2"/>
+
+        <Button
+            android:id="@+id/btnLernfeld6"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:text="Lernfeld 6"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/linearLayout3">
+
+        <Button
+            android:id="@+id/btnLernfeld7"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:text="Lernfeld 7"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"
+            android:layout_below="@id/btnLernfeld2"/>
+
+        <Button
+            android:id="@+id/btnLernfeld8"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:text="Lernfeld 8"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/linearLayout4">
+
+        <Button
+            android:id="@+id/btnLernfeld9"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:text="Lernfeld 9"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"
+            android:layout_below="@id/btnLernfeld2"/>
+
+        <Button
+            android:id="@+id/btnLernfeld10"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:text="#"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"
+            android:layout_below="@id/btnLernfeld2"/>
+
+    </LinearLayout>
 
 </RelativeLayout>
