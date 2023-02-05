@@ -2,12 +2,27 @@ package com.example.learnstuffapp;
 
 public class Schoolstuff {
 
+    private static boolean answersLF1 [][] = {{true, false, false, false, false, false}, {false, true, false, false, false, false},{false, true, false, false, false, false},{true,false,false,false,false,false},{false, true, false, false, false, false},
+            {true, false, false, false, false, false},{false, true, false, false, false, false},{true, false, false, false, false, false},{true, false, false, false, false, false},{true, false, false, false, false, false}};
+
+    private static Question[] questionsLF1 = {
+        new Question("Ein Organigramm zeigt den Leistungsaufbau eines Unternehmens","richtig","falsch", "","","","", answersLF1[0]),
+        new Question("Eine Instanz ist die Geschäftsleitung des Unternehmens", "richtig", "falsch", "", "","","", answersLF1[1]),
+        new Question("Ein integriertes Management bedeutet die Integration der unteren Leistungsebene", "richtig", "falsch", "","","","", answersLF1[2]),
+        new Question("Ein Profitcenter ist eine Division im Unternehmen mit eigener Verantwortung","richtig","falsch","","","","",answersLF1[3]),
+        new Question("Eine Stabstelle ist eine Ausbilderstelle im Unternehmen","richtig","falsch","","","","",answersLF1[4]),
+        new Question("Beim Mehrliniensystem hat ein Mitarbeit mehrere unterschiedliche Aufgaben","richtig","falsch","","","","", answersLF1[5]),
+        new Question("Eine Matrixorganisation ist weniger für Projektarbeit geeignet","richtig","falsch","","","","",answersLF1[6]),
+        new Question("Ein Vorteil des Einliniensystems sind die klaren Zuständigkeiten","richtig","falsch","","","","",answersLF1[7]),
+        new Question("Eine Stabstelle gehört zwar zur Leistungsstelle, hat aber i.d.R. nichts zu entscheiden","richtig","falsch","","","","",answersLF1[8]),
+        new Question("Ein Nachtteil des Einliniensystems ist eine mögliche Überlastung von Instanzen","richtig","falsch","","","","",answersLF1[9])
+    };
     private static boolean answers[][] = {{true, true, false, false, true, true}, {true, false, true, false, true, false}, {true, false, true, true, false, false},
             {false, true, true, false, false, true}, {true, false, true, true, false, true}, {true, false, false, false, false, false}, {true, false, true, false, false, false},
             {true, false, true, false, false, false}, {false, true, false, true, false, true}, {true, false, true, false, true, true}, {/*10:*/false, true, false, true, false, false},
             {false, true, true, true, true, true}, {true, false, true, false, true, false}, {true, false, true, false, true, false}, {true, false, true, false, false, false}, {true, false, true, false, false, false},
-            {false, true, false, true, true, false}, {true, true, false, true, true, true}};
-
+            {false, true, false, true, true, false}, {true, true, false, true, true, true},
+            /*2.8*/{true, false, false, false, false, false}, {false, true, false, false, false, false}};
     private static Question[] questionsLF2 = {
             new Question("Green-IT",
                     "Hardware umweltfreundlich", "Arbeitsplätze flexibel umweltgerecht", "Computer auf Toilette",
@@ -56,11 +71,12 @@ public class Schoolstuff {
                     "20-25 Zoll", "24-27 Zoll", "1280x720 HD", "1920x1080 Full HD", "1-5ms Reaktionszeit", "4-8ms Reaktionszeit", answers[16]),
             new Question("Monitor Panel (Display, eigentlich Leuchtfläche) Standart ",
                     "Standart: TN","Standrt VA" ,"Standart: BU", "Video-High-End-PC: IPS", "Video-High-End-PC: PVA","Video-High-End-PC: MVA", answers[17]),
+            new Question("Mit der Zuschlagskalkulation werden rechnerisch Angebotspreise entsprechend den Einstandspreisen, Handlungskosten und sonstigen Konditionen ermittelt",
+                    "richtig", "falsch" ,"", "", "","", answers[18]),
+            new Question("Je höher der Lieferrabatt, desto höher der Bezugspreis", "richtig", "falsch" ,"", "", "","", answers[19]),
     };
-
     private static boolean answersLF3[][] = {{false, false, true, false, true, true}, {true, false, false, false, false, false}, {false, true, true, false, false, false},
             {true, false, false, true, true, true}, {false, true, false, false, true, true}, {false, true, true, true, false, false}, {true, false, true, false, true, true}};
-
     private static Question[] questionsLF3 = {
             new Question("Strukturelle Verkabelung",
                     "Zimmerverkabelung, Sekundärverkabelung, Lichtwellenleiter, Kupferkabel",
@@ -113,10 +129,8 @@ public class Schoolstuff {
                     "BEAF:0776:00A0:E222:D000:0012:0000:0000 -> BEAF:776:A0:E22:D000:12::",
                     "A21B:C756:0000:0000:1234:0000:0000:01AB -> A21B:C756:1234:0:0:1AB", answersLF3[6]),
     };
-
     private static boolean answersLF4[][] = {{true, false, false, true, true, false}, {true, false, false, true, false, true}, {true, false, true, false, true, false},
             {true, false, false, false, true, false}, {false, true, true, false, true, true}, {true, false, false, true, false, true}, {true, false, true, true, false, false}, {false, true, false ,true, false, false}};
-
     private static Question[] questionsLF4 = {
             new Question("Sicherheitsfragen IT-Unternehmen",
                     "Verantwortungszuweisung", "Sicherheitswesten", "Stahlkappenschuhe","Berechtigungsvergabe",
@@ -160,7 +174,6 @@ public class Schoolstuff {
             /*Kundenzufriedenheit*/{true, false, true, false, true, true}, {false, true, true, false, true, true}, {false, true, false, true, true, false}, {true, false, false, true, true, false}, {true, false, true, false, true, true},
             /*Mitarbeiteranforderungen*/{false, true, false, true, false, true}, {true, false, true, false, true, false}, {true, false, false, true, false, true}
     };
-
     private static Question[] questionsLF6 = {
             new Question("Software Lebenszyklus",
                     "1 Beratung", "1 Begutachtung", "2 Beschaffung", "2 Besorgung", "3 Verfügungstellung", "3 Bereitstellung", answersLF6[0]),
@@ -293,107 +306,102 @@ public class Schoolstuff {
                     "häufige Probleme: Käfer in Hardware und fehlender Netzanschluss", "häufige Probleme: falsche Schlüsse & Hintergrund des Problems wird nicht erkannt", answersLF6[38]),
 
     };
-
     private static boolean answersLF7[][] = {{true, false, true, false, false, true},{true, false, true, false, false, true}};
-
     private static Question[] questionsLF7 = {
             new Question("Testquestion", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
             new Question("Testquestion2", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
     };
 
-    private static boolean answersLF9[][] = {{true, false, true, false, false, true},{true, false, true, false, false, true}};
+    private static boolean answersLF8[][] = {{true, false, true, false, false, true},{true, false, true, false, false, true}};
 
+    private static Question[] questionsLF8 = {
+            new Question("Testquestion", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
+            new Question("Testquestion2", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
+    };
+    private static boolean answersLF9[][] = {{true, false, true, false, false, true},{true, false, true, false, false, true}};
     private static Question[] questionsLF9 = {
             new Question("Testquestion", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
             new Question("Testquestion2", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
     };
 
+    public static boolean[][] getAnswersLF1() {
+        return answersLF1;
+    }
 
-
+    public static Question[] getQuestionsLF1() {
+        return questionsLF1;
+    }
     public static boolean[][] getAnswers() {
         return answers;
     }
-
     public static void setAnswers(boolean[][] answers) {
         Schoolstuff.answers = answers;
     }
-
     public static Question[] getQuestionsLF2() {
         return questionsLF2;
     }
-
     public static void setQuestionsLF2(Question[] questionsLF2) {
         Schoolstuff.questionsLF2 = questionsLF2;
     }
-
     public static boolean[][] getAnswersLF3() {
         return answersLF3;
     }
-
     public static void setAnswersLF3(boolean[][] answersLF3) {
         Schoolstuff.answersLF3 = answersLF3;
     }
-
     public static Question[] getQuestionsLF3() {
         return questionsLF3;
     }
-
     public static void setQuestionsLF3(Question[] questionsLF3) {
         Schoolstuff.questionsLF3 = questionsLF3;
     }
-
     public static boolean[][] getAnswersLF4() {
         return answersLF4;
     }
-
     public static void setAnswersLF4(boolean[][] answersLF4) {
         Schoolstuff.answersLF4 = answersLF4;
     }
-
     public static Question[] getQuestionsLF4() {
         return questionsLF4;
     }
-
     public static void setQuestionsLF4(Question[] questionsLF4) {
         Schoolstuff.questionsLF4 = questionsLF4;
     }
-
     public static boolean[][] getAnswersLF6() {
         return answersLF6;
     }
-
     public static void setAnswersLF6(boolean[][] answersLF6) {
         Schoolstuff.answersLF6 = answersLF6;
     }
-
     public static Question[] getQuestionsLF6() {
         return questionsLF6;
     }
-
     public static void setQuestionsLF6(Question[] questionsLF6) {
         Schoolstuff.questionsLF6 = questionsLF6;
     }
-
     public static boolean[][] getAnswersLF7() {
         return answersLF7;
     }
-
     public static void setAnswersLF7(boolean[][] answersLF7) {
         Schoolstuff.answersLF7 = answersLF7;
     }
-
     public static Question[] getQuestionsLF7() {
         return questionsLF7;
     }
-
     public static void setQuestionsLF7(Question[] questionsLF7) {
         Schoolstuff.questionsLF7 = questionsLF7;
     }
 
+    public static boolean[][] getAnswersLF8() {
+        return answersLF8;
+    }
+
+    public static Question[] getQuestionsLF8() {
+        return questionsLF8;
+    }
     public static Question[] getQuestionsLF9() {
         return questionsLF9;
     }
-
     public static void setQuestionsLF9(Question[] questionsLF9) {
         Schoolstuff.questionsLF9 = questionsLF9;
     }

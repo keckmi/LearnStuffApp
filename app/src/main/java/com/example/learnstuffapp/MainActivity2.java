@@ -42,6 +42,8 @@ public class MainActivity2 extends AppCompatActivity {
     private final Question[] questionsLF4 = Schoolstuff.getQuestionsLF4();
     private final Question[] questionsLF6 = Schoolstuff.getQuestionsLF6();
     private final Question[] questionsLF7 = Schoolstuff.getQuestionsLF7();
+
+    private final Question[] questionsLF8 = Schoolstuff.getQuestionsLF8();
     private final Question[] questionsLF9 = Schoolstuff.getQuestionsLF9();
 
     @Override
@@ -55,6 +57,10 @@ public class MainActivity2 extends AppCompatActivity {
         lernfeld_string = intent.getStringExtra(LERNFELD);
         String currentLernfeld = lernfeld_string; //z.B: 2, 3
         switch (currentLernfeld) {
+            case "1":
+                Questions = questionsLF2;
+                btnTitleLF.setText("LF 1: Das Unternehmen und die eigene Rolle im Betrieb beschreiben");
+                break;
             case "2":
                 Questions = questionsLF2;
                 break;
@@ -73,6 +79,9 @@ public class MainActivity2 extends AppCompatActivity {
             case "7":
                 Questions = questionsLF7;
                 btnTitleLF.setText("LF 7: Cyberphysische Systeme ergänzen");
+            case "8":
+                Questions = questionsLF8;
+                btnTitleLF.setText("LF 8: Daten systemübergreifend bereitstellen");
             case "9":
                 Questions = questionsLF9;
                 btnTitleLF.setText("LF 9: Netzwerkbereitstellung nach unterschiedlichen Unternehmensanforderungen unterscheiden");

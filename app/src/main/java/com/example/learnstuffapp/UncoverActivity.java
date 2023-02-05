@@ -15,12 +15,17 @@ public class UncoverActivity extends AppCompatActivity {
 
     public static final String LERNFELD = "LERNFELD";
     private String lernfeld_string;
+    Term[][] terms2D;
     Term[] terms;
-    private final Term[] termsLF2 = Terms.getTermsLF2();
-    private final Term[] termsLF3 = Terms.getTermsLF3();
+
+    private final Term[][] termsLF1 = Terms.getTermsLF1();
+    private final Term[][] termsLF2 = Terms.getTermsLF2();
+    private final Term[][] termsLF3 = Terms.getTermsLF3();
     private final Term[] termsLF4 = Terms.getTermsLF4();
     private final Term[] termsLF6 = Terms.getTermsLF6();
     private final Term[] termsLF7 = Terms.getTermsLF7();
+
+    private final Term[] termsLF8 = Terms.getTermsLF8();
     private final Term[] termsLF9 = Terms.getTermsLF9();
     private TextView txtTerm;
     private Button btnAufdecken;
@@ -47,11 +52,15 @@ public class UncoverActivity extends AppCompatActivity {
         lernfeld_string = intent.getStringExtra(LERNFELD);
         String currentLernfeld = lernfeld_string;
         switch (currentLernfeld) {
+            case "1":
+                terms2D = termsLF1;
+                btnTitleLF.setText("LF 1: Das Unternehmen und die eigene Rolle im Betrieb beschreiben");
+                break;
             case "2":
-                terms = termsLF2;
+                terms2D = termsLF2;
                 break;
             case "3":
-                terms = termsLF3;
+                terms2D = termsLF3;
                 btnTitleLF.setText("LF 3: Clients in Rechnernetzwerke einbinden");
                 break;
             case "4":
@@ -65,6 +74,10 @@ public class UncoverActivity extends AppCompatActivity {
             case "7":
                 terms = termsLF7;
                 btnTitleLF.setText("LF 7: Cyberphysische Systeme ergänzen");
+                break;
+            case "8":
+                terms = termsLF8;
+                btnTitleLF.setText("LF 8: Daten systemübergreifend bereitstellen");
                 break;
             case "9":
                 terms = termsLF9;

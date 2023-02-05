@@ -19,16 +19,33 @@ public class MainActivity extends AppCompatActivity {
 
         TextView txtWhere = findViewById(R.id.txtWhere);
 
+        Button btnLernfeld1 = findViewById(R.id.btnLernfeld1);
         Button btnLernfeld2 = findViewById(R.id.btnLernfeld2);
         Button btnLernfeld3 = findViewById(R.id.btnLernfeld3);
         Button btnLernfeld4 = findViewById(R.id.btnLernfeld4);
         Button btnLernfeld6 = findViewById(R.id.btnLernfeld6);
         Button btnLernfeld7 = findViewById(R.id.btnLernfeld7);
+        Button btnLernfeld8 = findViewById(R.id.btnLernfeld8);
         Button btnLernfeld9 = findViewById(R.id.btnLernfeld9);
 
         Intent intent = getIntent();
         txtWhere.setText(intent.getStringExtra(WHERE));
 
+        btnLernfeld1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = null;
+                if (intent.getStringExtra(WHERE).equals("LEXIKON")) {
+                    i = new Intent(MainActivity.this, TermListActivity.class);
+                    i.putExtra(TermActivity.LERNFELD, "1");}
+                if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
+                    i = new Intent(MainActivity.this, UncoverActivity.class);}
+                if (intent.getStringExtra(WHERE).equals("QUIZ")) {
+                    i = new Intent(MainActivity.this, MainActivity2.class);}
+                i.putExtra(MainActivity2.LERNFELD, "1");
+                startActivity(i);
+            }
+        });
         btnLernfeld2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,6 +118,22 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
                     i = new Intent(MainActivity.this, MainActivity2.class);}
                 i.putExtra(MainActivity2.LERNFELD, "7");
+                startActivity(i);
+            }
+        });
+
+        btnLernfeld8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = null;
+                if (intent.getStringExtra(WHERE).equals("LEXIKON")) {
+                    i = new Intent(MainActivity.this, TermListActivity.class);
+                    i.putExtra(TermActivity.LERNFELD, "8");}
+                if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
+                    i = new Intent(MainActivity.this, UncoverActivity.class);}
+                if (intent.getStringExtra(WHERE).equals("QUIZ")) {
+                    i = new Intent(MainActivity.this, MainActivity2.class);}
+                i.putExtra(MainActivity2.LERNFELD, "8");
                 startActivity(i);
             }
         });
