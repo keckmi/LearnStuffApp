@@ -102,5 +102,17 @@ public class TermActivity extends AppCompatActivity {
         if (term.equals("Gewinnkalkulation")) {
             imgView.setImageResource(R.drawable.gewinnkalkulation);
         }
+        if (term.equals("Nutzwertanalyse")) {
+            imgView.setImageResource(R.drawable.nutzwertanalyse);
+        }
+        if (term.equals("Druckkostenvergleich")) {
+            imgView.setImageResource(R.drawable.druckkostenvergleich2);
+        }
+        if (term.equals("Darlehen")) {
+            imgView.setImageResource(R.drawable.darlehen);
+        }
+        if (term.equals("Netzplantechnik")) {
+            imgView.setImageResource(R.drawable.netzplantechnik2);
+        }
     }
 }
