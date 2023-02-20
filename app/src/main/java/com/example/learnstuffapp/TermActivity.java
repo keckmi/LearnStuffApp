@@ -95,24 +95,31 @@ public class TermActivity extends AppCompatActivity {
     private void setPicIfIs(String term) {
         if (term.equals("Zuschlagskalkulation")) {
             imgView.setImageResource(R.drawable.zuschlagskalkulation);
+            imgView.getLayoutParams().height=1000;
         }
         if (term.equals("Rückwärtskalkulation")) {
             imgView.setImageResource(R.drawable.rueckwaertskalkulation);
+            imgView.getLayoutParams().height=1000;
         }
         if (term.equals("Gewinnkalkulation")) {
             imgView.setImageResource(R.drawable.gewinnkalkulation);
+            imgView.getLayoutParams().height=1000;
         }
         if (term.equals("Nutzwertanalyse")) {
             imgView.setImageResource(R.drawable.nutzwertanalyse);
+            imgView.getLayoutParams().height=1000;
         }
         if (term.equals("Druckkostenvergleich")) {
             imgView.setImageResource(R.drawable.druckkostenvergleich2);
+            imgView.getLayoutParams().height=800;
         }
         if (term.equals("Darlehen")) {
             imgView.setImageResource(R.drawable.darlehen);
+            imgView.getLayoutParams().height=1000;
         }
         if (term.equals("Netzplantechnik")) {
             imgView.setImageResource(R.drawable.netzplantechnik2);
+            imgView.getLayoutParams().height=1000;
         }
     }
 }

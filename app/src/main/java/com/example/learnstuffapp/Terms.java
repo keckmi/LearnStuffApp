@@ -235,10 +235,14 @@ public class Terms {
                 new Term("Drucker Leistungskriterien",
                         "Endverarbeitungsmöglichkeiten z.B: Lochen Falten Heften,\n Papiersorten größen gewicht,\n Druckgeschwindigkeit,\n Zuverlässigkeit,\n" +
                         "Druckmodi,\n Papierkasetten,\n Fassungsvermögen,\n Kosten,\n Ökologie,\n Stromverbrauch,\n Anschlüsse,\n Scan,\n Fax"),
-                new Term("Druckkostenvergleiche",
+                new Term("Druckkostenvergleich",
                         "Verbrauchskosten =\n Seiten insgesamt * Verbrauchskosten je Seite (in Cent?) / 100\n" +
                         "Personalkosten = \n" +
-                        "Druckkosteneinsparungen ABB S121 "),
+                        "Druckkosteneinsparungen ABB S121"), /*"\n\n"+
+                        "Anzahl Papierfüllungen = Papierfach Blatt / Seitenzahl insgesamt\nVerbrauchskosten = Seitenzahl insgs * Verbrk je Seite (Cent) / 100\n"+
+                        "Geräte und Verbrauchskosten = Verbrauchskosten + Gerätekosten\nPersonalkosten Papierwechsel(PW) = ((AnzahlPW * ZeitPW) / 60) * Stundensatz\n"+
+                        "Personalkosten Papierfüllungen ((AnzahlPF * ZeitPF) / 60) * Stundensatz\nPersonalkosten = Personalkosten PW + Personalkosten PF\n"+
+                        "Gesamtkosten = Geräte und Verbrauchskosten + Personalkosten"),*/
                 new Term("Scanner Arten",
                         "Flachbrett,\n Dokumenten,\n Mobil,\n Abteilung,\n Desktop"),
             },
@@ -253,8 +257,12 @@ public class Terms {
                         "Zu diesem Kapitel sind hier keine Fachbegriffe"),
             },
             {// Pflichtenheft erstellen
-                new Term("Keine Fachbegriffe 2.7",
-                        "Zu diesem Kapitel sind hier keine Fachbegriffe"),
+                new Term("Darlehen",""),
+                        /*"Rechenwege:\n\nFälligkeitsdarlehen:\nZinsen(Euro) = Schuld A.d.J * (Zinsen in % = 8 / 100)\n"+
+                        "Kreditrate = Zinsen (Euro) + Tilgung E.d.J.\nRestschuld E.d.J. = Schuld A.d.J. + Zinsen (Euro) - Tilgung E.d.J\n\n"+
+                        "Ratendarlehen:\nTilgung E.d.J. = Schuld A.d.J. / 3\n\n"+
+                        "Annunitätendarlehen:\nTilgung E.d.J. = 1+2.Jahr: Kreditrate - Zinsen(E), 3.Jahr: Schuld A.d.J.\n"+
+                        "Kreditrate = 1+2.Jahr: = Annunität, 3.Jahr: Zinsen(E) + Tilgung E.d.J."),*/
             },
             {// Angebote und Stundensätze kalkulieren und die Rendite berücksichtigen",
                 new Term("Keine Fachbegriffe 2.8",
@@ -279,8 +287,25 @@ public class Terms {
                         "c) Brutto-Stundensatz (incl 19% USt.)\n54,40 * 1,19 = 64,74"),
                     new Term("Zuschlagskalkulation",
                         "von Listeneinkaufspreis bis Listenverkaufspreis\nbeinhaltet: Bezugskalkulation (bis Bezugspreis)\n& Verkaufskalkulation (bis Listenverkaufspreis)\n\n"+
-                        "Bild einfügen"),
-                    new Term("Rückwärtskalkulation", "bei Kundenpreisvorgabe\n\nBild einfügen"),
+                        "Bild einfügen \n\n"+
+                        "Liefererskonto = Lieferant gewährt Nachlass bei Zahlung vor vereinbartem Zahlungsziel\nBezugskosten = Verpackung, Frachtgebühren, Transportversicherung, Zoll\n"+
+                        "Handlungskosten = Angebotszusammenstellung, Raum, Lager, Personal, Werbung, Verpackung, Abschreibungen, Verwaltung, Steuern & sonstige Gebühren\n"+
+                        "Kundenskonto = Verkäufr gewährt Nachlass bei Zahlung vor bestimmten kurzfristigen Zahlungsziel\nVertreterprovision = bekommt Verkäufer für Verkauf\n\n"+
+                        "Listeneinkaufspreis\n-Lieferrabatt = Listeneinkaufspreis * Lieferrabatt(%)\n=Zieleinkaufspreis = Listeineinkaufspreis - Lieferrabatt($)\n-Liefererskonto($) = Zieleinkaufspreis * Liefererskonto(%)\n"+
+                        "=Bareinkaufspreis = Zieleinkaufspreis - Liefererskonto($)\n+Bezugskosten\n=Bezugspreis = Bareinkaufspreis + Bezugskosten\n+Handlungskosten($) = Bezugspreis * Handlungskosten(%)\n"+
+                        "=Selbstkosten = Bezugspreis + Handlungskosten($)\n+Gewinnzuschlag($) = Selbstkosten * Gewinnzuschlage(%)\n=Barverkaufspreis = Selbstkosten + Gewinnzuschlag($)\n"+
+                        "+Kundenskonto($) = Barverkaufspreis * Kundenskonto(%) / (1 - Kundenskonto($) - Vertreterprovision(%))\n=Vertreterprovision($) = Berverkaufspreis * Vertreterprovision(%) / (1 - Kundenskonto(%) - Vertreterprovision(%))\n"+
+                        "=Zielverkaufspreis = Barverkaufspreis + Kundenskonto($) + Vertreterprovision($)\n+Kundenrabatt($) = Zielverkaufspreis * Kundenrabatt(%) / (1 - Kundenrabatt(%))\n"+
+                        "=Listenverkaufspreis = Zielverkaufspreis + Kundenrabatt($)\n+Umsatzsteuer($) = Listenverkaufspreis * Umsatzsteuer(%)\n=Listen-VK incl. MWSt = Listenverkaufspreis + Umsatzsteuer"),
+                    new Term("Rückwärtskalkulation", "bei Kundenpreisvorgabe\n\nBild einfügen\n\n"+
+                        "Listenverkaufspreis = Zieleinkaufspreis + Lieferrabatt($)\n-Lieferrabatt($) = Zieleinkaufspreis / (1 - Lieferrabatt(%)) * Lieferrrabatt(%)\n"+
+                        "=Zieleinkaufspreis = Bareinkaufspreis * Liefererskonto\n-Liefererskonto($) = Bareinkaufspreis / (1 - Liefererskonto(%)) * Liefererskonto(%)\n"+
+                        "=Bareinkaufspreis = handlungskosten($) - Bezugskosten\n+Bezugskosten\n=Bezugspreis = Selbstkosten - Handlungskosten($)\n"+
+                        "+Handlungskosten($) = Selbstkosten / (1 + Handlungskosten(%)) * Handlungskosten(%)\n=Selbstkosten = Barverkaufspreis - Gewinnzuschlag($)\n"+
+                        "+Gewinnzuschlag($) = Barverkaufspreis / (1 + Gewinnzuschlag(%)) * gewinnzuschlag(%))\n=Barverkaufspreis = Zielverkaufspreis - Vertreterprovision($) - Kundenskonto($)\n"+
+                        "+Kundenskonto($) = Zielverkaufspreis * Kundenskonto(%)\n+Vertreterprovision($) = Zielverkaufspreis * Vertreterprovision(%)\n"+
+                        "=Zielverkaufspreis = Listenverkaufspreis * Kundenrabatt($)\n+Kundenrabatt($) = Listenverkaufspreis * Kundenrabatt(%)\n=Listenverkaufspreis = Listen-VK incl. MWSt - Umsatzsteuer($)\n"+
+                        "+Umsatzsteuer = Listen-VK incl. MWSt / 1,19 * Umsatzsteuer(%)\n=Listen-VK incl. MWSt = Listen-VK incl. MWSt"),
                     new Term("Gewinnkalkulation","zur Gewinnberechnung durch Auftragnehmer\n\nBild einfügen"),
                     new Term("Lieferskonto Kunden","darf abgezogen werden / wird erlassen,\n wenn in einer bestimmten Zeitfrist gekauft wird"),
                     new Term("Akquise","Bie Kunden um Produkt werben,\n Kunde beraten, unterhalten,\nungeldliche Arbeit (unproduktiv)"),
@@ -295,6 +320,7 @@ public class Terms {
 
             },
             {// Angebotsvergleiche bei Beschaffungsmaßnahmen durchführen
+                new Term("Nutzwertanalyse",""),
                 new Term("ABC-Analyse", "Produkteinteilung nach Nutzwert\nA = bestes\num zu wissen in welche mehr Zeit gesteckt werden sollte"),
                 new Term("XYZ-Analyse", "Berücksichtigt Kontext\nzB Badehosen werden besser im Sommer verkauft"),
                 new Term("Marktpreis","Preis kann auf Markt höher ausfallen als in Kalkulation\n"+
@@ -598,6 +624,12 @@ public class Terms {
                     "14 Informationspflicht wenn Daten nicht bei der betroffenen Peerson erhoben wurden\n15 Auskunftsrecht der betroffenen Person\n16 Recht auf Berichtigung\n"+
                     "17 Recht auf Löschung, Vergessenwerden\n18 Recht Einschränkung der Verarbeitung\n19 Mitteilungspflicht im Zsmh mit Berichtigung, Löschung, Einschränkung\n"+
                     "20 Recht auf Datenübertragbarkeit\n21 Widerspruchsrecht\n22 Automatisierte Entscheidungen im Einzellfall einschließlich Profiling\n23 Beschränkungen der Rechte verhältnismäßig in besonderen Fällen"),
+    };
+    private static Term[] termsLF5 = {
+            new Term("Operatoren",
+                    "Arithmetisch\n+, -, *, /, %\n\nVergleichs\n==, !=, >, >=, <, <=\n\nLogisch\n!, &&, ||\n\nZuweisung\n=, +=, -=, *=, /=, %=\n\nIkrement/Dekrement\n++, --,\n\nBitweise\n&, |"),
+            new Term("Kontrollstrukturen",
+                    "Sequenzen, Verzweigungen"),
     };
     private static Term[] termsLF6 = {
             new Term("Software Lebenszyklus",
