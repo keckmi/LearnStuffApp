@@ -17,6 +17,9 @@ public class Learnfield {
             case "4":
                 learnfield = "LF 4: Schutzbedarfsanalyse im eigenen Arbeitsbereich durchführen";
                 break;
+            case "5":
+                learnfield = "LF 5: Software zur Verwaltung von Daten anpassen";
+                break;
             case "6":
                 learnfield = "LF 6: Serviceanfragen bearbeiten";
                 break;

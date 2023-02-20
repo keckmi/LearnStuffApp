@@ -19,6 +19,12 @@ public class Terms {
             "▼ Selbstständig die Integration von Clients in ein Netzwerk planen und druchführen", "▼ Die Netzwerkfunktion der Clients prüfen und warten",
             "▼ Netzwerkkomponenten auswählen und konfigurieren", "▼ Grundlage der Daten- und Netzwerksicherheit beschreiben"};
 
+    private static String [] kapitelLF5 = {"▼ Das Umfeld der Softwareentwicklung analysieren", "▼ Grundlagen zur Verwaltung von Daten in IT-Systemen eläutern",
+            "▼ Den Prozess der Softwareentwicklung analysieren", "▼ Den Prozess der Anforderungsspezifikation und des Softwareentwurfs beschreiben",
+            "▼ Einfache Anwendungen in Python implementieren", "▼ Auf Dateien in Anwendungen zugreifen",
+            "▼ Die Verwaltung von Daten mithilfe von Datenbanken planen und umsetzen", "▼ Software testen und dokumentieren"};
+
+
     private static Term[][] termsLF1 = {
               {//Die Eigene Rolle im Betrieb beschreiben
                   new Term("Keine Fachbegriffe 1.1", "Für dieses Kapitel noch keine Fachbegriffe"),
@@ -626,10 +632,33 @@ public class Terms {
                     "20 Recht auf Datenübertragbarkeit\n21 Widerspruchsrecht\n22 Automatisierte Entscheidungen im Einzellfall einschließlich Profiling\n23 Beschränkungen der Rechte verhältnismäßig in besonderen Fällen"),
     };
     private static Term[] termsLF5 = {
+            new Term("PrSp Ranglisten","RedMonk = Stackoverflow-Hashtags & GitHub-Projekte\n\nToibe-Index = Suchanfragen Google & Wiki & YouTube"+
+                    "\"Sprache + Programming\"\n\nPYPL = Suchanfragen Google & Wiki & YouTube \"+tutorial\""),
+            new Term("PrSp Generationen","S.502\n\n1.Gen: Maschinensprache 0001 1010 0011\n<-> Compiler, Interpreter <->\n2. Gen: Assemblersprache mov ds, ax\n\n"+
+                    "3.Gen: Problemorientierte/höhere prozedurale PrSp\nz1=1,5\nsumme=float(z1)+...\nprint(summe)\n\n4.Gen: Deklarative, objektorientierte\n\nDatenbank PrSp\nSQl, Natural\nSELCT * FROM artikel\n\n"+
+                    "5.Gen: Sprachen der künstlichen Intelligenz"),
+            new Term("PrSp Typen","Prozedurale zB C\nLogische zB Prolog\nFunktionale zB LISP\nObjektorientierte zB C++, Java"),
+            new Term("Warum Java?","Kostenlos\nKlare, relativ leicht zu lernende Syntax\nPlattformunabhängig\nOpen-Source-Code\nIm Unternehmensbereich sehr beliebt\nUniversell anwendbar"),
+            new Term("Pr Werkzeuge","Texteditor\nGUI Editor\nCompiler\nInterpreter\nAssembler\nDebugger\nVersionsverwaltung\n"+
+                    "IDE Integrated Development Environment zB IntelliJ (Pr zum Pr schreiben) integrierte Entwicklungsumgebung"),
+            new Term("IntelliJ bedienen","1.Ordner anlegen\n\n2.IntelliJ starten\n\nNeues Projekt anlegen\n\nQuelltext eingeben\n\nProgramm starten"),
+            new Term("Datentypen","Datentyp, Beschreibung, Größe, Wertebereich, Beispiel\n\n"+"Standartdatentypen:\n\n"+
+                    "byte, ganze zahlen, 1 Byte, -128...127, 3\n\nshort, ganze zahlen, 2 Byte, -32768...32767,-3456\n\nint, ganze zahlen, 4 Byte, +/- 2^31, 34673\n\n"+
+                    "long, ganze zahlen, 8 Byte, +/- 2^63\n\nboolean, wahrheitswert, -, true/false\n\nchar, alphanumerische zeichen, 2 Byte, unicode zeichen, 'A' '/u004I'\n\n"+
+                    "float, fließkomma zahlen, 4 Byte, mx ca 3*10^38, 2.45\n\ndouble, fließkomma zahlen, 8 Byte\n\nAus Klassen Bibliotheken:\n\nString, \"Hello\"\n\nScanner\n\n"+
+                    "Selbstgeschriebene Datentypen (Klassen)\n\nInteger-Datentypen (byte, short, int, long)\nganze Zahlen (mit Vorzeichen)\nimmer genaue Darstellung (innerhalb Wertebereich)\n"+
+                    "keine Rundungsfehler (innerhalb Wertebereich)\nkeine Überlaufkontrolle\nDivision durch 0: ArithmetikException\n\nGleitkomma/Fließkomma-Datentyp (float, double)\n"+
+                    "nicht jede Zahl kann genau dargestellt werden\nRundungsfehler können auftreten\nPunkt statt Komma verwenden\nExponentialschreibweise möglich: 4,56*10^3 wird als 4*56e3 geschrieben\n"+
+                    "keineÜberlaufkontrolle\nDivision durch 0: keine Exception, Ergebnis lautet Infinity, bzw. -Infinity"),
             new Term("Operatoren",
                     "Arithmetisch\n+, -, *, /, %\n\nVergleichs\n==, !=, >, >=, <, <=\n\nLogisch\n!, &&, ||\n\nZuweisung\n=, +=, -=, *=, /=, %=\n\nIkrement/Dekrement\n++, --,\n\nBitweise\n&, |"),
             new Term("Kontrollstrukturen",
                     "Sequenzen, Verzweigungen"),
+            new Term("Struktogramm","Bilder einfügen"),
+            new Term("if-Anweisungen","empty yet..."),
+            new Term("Zahlensysteme","Binär->Deizmal\n(1010 1101)_2 = 173\n2^7*1 + 2^6*0 + 2^5*1 + 2^4*0 + 2^3*1 + 2^2*1 + 2^1*0 + 2^0*1\n128 + 32 + 8 + 4 + 1\n\n"+
+                    "Binär->Hexadezimal\n(1010 1101)_2 = AD\n4er päckle machen\n1010 = 2^3 + 2^1 = 8 + 2 = 10 = A\n1101 = 2^3 + 2^2 + 2^0 = 8 + 4+ 1 = 13 = D\n\n"+
+                    "Binär->Oktal\n(1010 1101)_2 = 255\n3er päckle machen\n010 = 2^1 = 2\n101 = 2^2 + 2^0 = 4 + 1 = 5\n101 = 2^2 + 2^0 = 4 + 1 = 5"),
     };
     private static Term[] termsLF6 = {
             new Term("Software Lebenszyklus",
@@ -866,16 +895,19 @@ public class Terms {
     };
 
     public static String[] getKapitelLFYetUnpost() {return kapitelLFYetUnpost;}
-
     public static String[] getKapitelLF1() {return kapitelLF1;}
     public static String[] getKapitelLF2() {return kapitelLF2;}
+    public static String[] getKapitelLF3() {return kapitelLF3;}
+    public static String[] getKapitelLF5() {return kapitelLF5;}
 
     public static Term[][] getTermsLF1() {return termsLF1;}
     public static Term[][] getTermsLF2() {return termsLF2;}
-    public static String[] getKapitelLF3() {return kapitelLF3;}
     public static Term[][] getTermsLF3() {return termsLF3;}
     public static Term[] getTermsLF4() {
         return termsLF4;
+    }
+    public static Term[] getTermsLF5() {
+        return termsLF5;
     }
     public static Term[] getTermsLF6() {
         return termsLF6;

@@ -14,7 +14,6 @@ import java.util.List;
 public class UncoverActivity extends AppCompatActivity {
 
     public static final String LERNFELD = "LERNFELD";
-    private String lernfeld_string;
     Term[][] terms2D;
     Term[] terms;
 
@@ -23,6 +22,7 @@ public class UncoverActivity extends AppCompatActivity {
     private final Term[][] termsLF3 = Terms.getTermsLF3();
     private final Term[] termsLF4 = Terms.getTermsLF4();
     private final Term[] termsLF6 = Terms.getTermsLF6();
+    private final Term[] termsLF5 = Terms.getTermsLF5();
     private final Term[] termsLF7 = Terms.getTermsLF7();
 
     private final Term[] termsLF8 = Terms.getTermsLF8();
@@ -49,45 +49,28 @@ public class UncoverActivity extends AppCompatActivity {
         btnNext.setVisibility(Button.INVISIBLE);
 
         Intent intent = getIntent();
-        lernfeld_string = intent.getStringExtra(LERNFELD);
-        String currentLernfeld = lernfeld_string;
-        switch (currentLernfeld) {
-            case "1":
-                terms2D = termsLF1;
-                btnTitleLF.setText("LF 1: Das Unternehmen und die eigene Rolle im Betrieb beschreiben");
-                break;
-            case "2":
-                terms2D = termsLF2;
-                break;
-            case "3":
-                terms2D = termsLF3;
-                btnTitleLF.setText("LF 3: Clients in Rechnernetzwerke einbinden");
-                break;
-            case "4":
-                terms = termsLF4;
-                btnTitleLF.setText("LF 4: Schutzbedarfsanalyse im eigenen Arbeitsbereich durchführen");
-                break;
-            case "6":
-                terms = termsLF6;
-                btnTitleLF.setText("LF 6: Serviceanfragen bearbeiten");
-                break;
-            case "7":
-                terms = termsLF7;
-                btnTitleLF.setText("LF 7: Cyberphysische Systeme ergänzen");
-                break;
-            case "8":
-                terms = termsLF8;
-                btnTitleLF.setText("LF 8: Daten systemübergreifend bereitstellen");
-                break;
-            case "9":
-                terms = termsLF9;
-                btnTitleLF.setText("LF 9: Netzwerkbereitstellung nach unterschiedlichen Unternehmensanforderungen unterscheiden");
-                break;
+        String lernfeld = intent.getStringExtra(LERNFELD);
+        btnTitleLF.setText(Learnfield.getLearnfieldTitleByNumber(lernfeld));
+        switch (lernfeld) {
+            case "1": terms2D = termsLF1;break;
+            case "2": terms2D = termsLF2;break;
+            case "3": terms2D = termsLF3;break;
+            case "4": terms = termsLF4; break;
+            case "5": terms = termsLF5; break;
+            case "6": terms = termsLF6; break;
+            case "7": terms = termsLF7; break;
+            case "8": terms = termsLF8; break;
+            case "9": terms = termsLF9; break;
         }
 
-        txtTerm.setText(terms[0].getTerm());
+        if (lernfeld.equals("1") || lernfeld.equals("2") || lernfeld.equals("3")){
+            txtTerm.setText(terms2D[0][0].getTerm());
+            txtContent.setText(terms2D[0][0].getContent());
+        } else {
+            txtTerm.setText(terms[0].getTerm());
+            txtContent.setText(terms[0].getContent());
+        }
 
-        txtContent.setText(terms[0].getContent());
 
         btnAufdecken.setOnClickListener(new View.OnClickListener() {
             @Override

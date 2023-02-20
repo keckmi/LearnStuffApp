@@ -37,9 +37,11 @@ public class MainActivity2 extends AppCompatActivity {
     Question[] Questions;
     private int currentQuestionNumber = 0;
     private int questionCount = 1;
+    private final Question[] questionsLF1 = Schoolstuff.getQuestionsLF1();
     private final Question[] questionsLF2 = Schoolstuff.getQuestionsLF2();
     private final Question[] questionsLF3 = Schoolstuff.getQuestionsLF3();
     private final Question[] questionsLF4 = Schoolstuff.getQuestionsLF4();
+    private final Question[] questionsLF5 = Schoolstuff.getQuestionsLF5();
     private final Question[] questionsLF6 = Schoolstuff.getQuestionsLF6();
     private final Question[] questionsLF7 = Schoolstuff.getQuestionsLF7();
 
@@ -54,37 +56,18 @@ public class MainActivity2 extends AppCompatActivity {
 
         btnTitleLF = findViewById(R.id.btnTitleLF);
         Intent intent = getIntent();
-        lernfeld_string = intent.getStringExtra(LERNFELD);
-        String currentLernfeld = lernfeld_string; //z.B: 2, 3
-        switch (currentLernfeld) {
-            case "1":
-                Questions = questionsLF2;
-                btnTitleLF.setText("LF 1: Das Unternehmen und die eigene Rolle im Betrieb beschreiben");
-                break;
-            case "2":
-                Questions = questionsLF2;
-                break;
-            case "3":
-                Questions = questionsLF3;
-                btnTitleLF.setText("LF 3: Clients in Rechnernetzwerke einbinden");
-                break;
-            case "4":
-                Questions = questionsLF4;
-                btnTitleLF.setText("LF 4: Schutzbedarfsanalyse im eigenen Arbeitsbereich durchführen");
-                break;
-            case "6":
-                Questions = questionsLF6;
-                btnTitleLF.setText("LF 6: Serviceanfragen bearbeiten");
-                break;
-            case "7":
-                Questions = questionsLF7;
-                btnTitleLF.setText("LF 7: Cyberphysische Systeme ergänzen");
-            case "8":
-                Questions = questionsLF8;
-                btnTitleLF.setText("LF 8: Daten systemübergreifend bereitstellen");
-            case "9":
-                Questions = questionsLF9;
-                btnTitleLF.setText("LF 9: Netzwerkbereitstellung nach unterschiedlichen Unternehmensanforderungen unterscheiden");
+        String lernfeld = intent.getStringExtra(LERNFELD);
+        btnTitleLF.setText(Learnfield.getLearnfieldTitleByNumber(lernfeld));
+        switch (lernfeld) {
+            case "1": Questions = questionsLF1; break;
+            case "2": Questions = questionsLF2; break;
+            case "3": Questions = questionsLF3; break;
+            case "4": Questions = questionsLF4; break;
+            case "5": Questions = questionsLF5; break;
+            case "6": Questions = questionsLF6; break;
+            case "7": Questions = questionsLF7; break;
+            case "8": Questions = questionsLF8; break;
+            case "9": Questions = questionsLF9; break;
         }
 
         List<Question> questionsList = Arrays.asList(Questions);

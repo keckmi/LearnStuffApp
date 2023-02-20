@@ -159,6 +159,12 @@ public class Schoolstuff {
                     "23 Beschränkungen der Rechte verhältnismäßig in besonderen Fällen","",  "", answersLF4[7]),
     };
 
+    private static boolean answersLF5[][] = {{true, false, true, false, false, true},{true, false, true, false, false, true}};
+    private static Question[] questionsLF5 = {
+            new Question("Testquestion", "Option A", "Option B", "Option C", "", "",  "", answersLF5[0]),
+            new Question("Testquestion2", "Option A", "Option B", "Option C", "", "",  "", answersLF5[0]),
+    };
+
     private static boolean answersLF6[][] = {{true, false, true, false, false, true}, {false, true, true, false, false, true}, {false, true, true, false, false, false},
             /*Einflüsse Servicebereitstellung*/ {true, false, true, false, true, false}, {true, false, true, false, true, false}, {true, false, true, false, true, false}, {true, false, true, false, true, false}, {true, false, true, false, true, false},
             /*Servicearten*/ {true, false, true, false, true, false}, {true, false, true, false, true, false}, {true, false, true, false, true, false}, {true, false, true, false, true, false},
@@ -367,6 +373,13 @@ public class Schoolstuff {
     public static void setQuestionsLF4(Question[] questionsLF4) {
         Schoolstuff.questionsLF4 = questionsLF4;
     }
+    public static boolean[][] getAnswersLF5() {
+        return answersLF5;
+    }
+    public static Question[] getQuestionsLF5() {
+        return questionsLF5;
+    }
+
     public static boolean[][] getAnswersLF6() {
         return answersLF6;
     }

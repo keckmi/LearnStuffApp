@@ -35,6 +35,7 @@ public class TermListActivity extends AppCompatActivity {
     private final Term[][] termsLF2 = Terms.getTermsLF2();
     private final Term[][] termsLF3 = Terms.getTermsLF3();
     private final Term[] termsLF4 = Terms.getTermsLF4();
+    private final Term[] termsLF5 = Terms.getTermsLF5();
     private final Term[] termsLF6 = Terms.getTermsLF6();
     private final Term[] termsLF7 = Terms.getTermsLF7();
     private final Term[] termsLF8 = Terms.getTermsLF8();
@@ -76,6 +77,7 @@ public class TermListActivity extends AppCompatActivity {
             case "3":
                 kapitelLF = kapitelLF3; break;
             case "4":
+            case "5":
             case "6":
             case "7":
             case "8":
@@ -211,6 +213,7 @@ public class TermListActivity extends AppCompatActivity {
             case "2": terms2D = termsLF2; break;
             case "3": terms2D = termsLF3; break;
             case "4": terms = termsLF4; break;
+            case "5": terms = termsLF5; break;
             case "6": terms = termsLF6; break;
             case "7": terms = termsLF7; break;
             case "8": terms = termsLF8; break;
