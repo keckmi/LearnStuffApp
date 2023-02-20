@@ -106,6 +106,8 @@ da ich das programm zum lernen für die zwischenprüfung nutzen will, die bald i
 
 ## Ausblick und Feedback
 
+Auswahl Lernfelder 1 - 3 in Rubrik Aufdecken schmieren ab   
+
 Ich würde eine Datenbank anschließen, die über ein geeignetes Frontend füllbar ist.  
 Diese würde die Fachbegriffe und Quizfragen, die direkt im Code stehen, was ein Graus ist, ersetzen.  
 
