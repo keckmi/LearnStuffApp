@@ -1,4 +1,4 @@
-# News
+## News
 more terms and questions are added from time to time  
 
 18 February: pics added to druckkostenvergleich, netzplantechnik, darlehen & nutzwertanalyse  
