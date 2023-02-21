@@ -625,11 +625,25 @@ public class Terms {
                     "Reaktion auf Verletzung der Sicherheitsvorgaben durch Informationssicherheitsbeauftragten ISB\nPseudonymisierung & Verschlüsselung personen bezogener Daten, Vertraulichkeit Integrität Verfügbarkeit\n"+
                     "Belastbarkeit in zsmh mit ihrer Verarbeitung auf Dauer sicher zu stellen, Rasche wiederherstellung bei Zwischenfall\nRegeln überprüfen Evaluierung Berwertung der Wirksamkeit\n"+
                     "Schnutzniveau nach Wert (Schadenspotential) Berücksichtigen: Technischer Stand, Kosten, Umfang, Umstände, Risiko\nZugang nur auf Verantwortung Verantwortlicher außer Verpflichtung nach Recht EU bzw EU-Staat"),
-            new Term("DSGVO",
+            new Term("DSGVO","S. 398 unten\n\n"+
                     "12 Transparente Information, Kommunikation und Modalitäten zur Ausübung der Rechte\n13 Informationspflicht bei Erhebung von personenbezogenen Daten\n"+
                     "14 Informationspflicht wenn Daten nicht bei der betroffenen Peerson erhoben wurden\n15 Auskunftsrecht der betroffenen Person\n16 Recht auf Berichtigung\n"+
                     "17 Recht auf Löschung, Vergessenwerden\n18 Recht Einschränkung der Verarbeitung\n19 Mitteilungspflicht im Zsmh mit Berichtigung, Löschung, Einschränkung\n"+
-                    "20 Recht auf Datenübertragbarkeit\n21 Widerspruchsrecht\n22 Automatisierte Entscheidungen im Einzellfall einschließlich Profiling\n23 Beschränkungen der Rechte verhältnismäßig in besonderen Fällen"),
+                    "20 Recht auf Datenübertragbarkeit\n21 Widerspruchsrecht\n22 Automatisierte Entscheidungen im Einzellfall einschließlich Profiling\n23 Beschränkungen der Rechte verhältnismäßig in besonderen Fällen\n\n"+
+                    "Prinzipien der Verarbeitung personenbezogener Daten gemäß Art. 5 Abs. 1 DSGVO (Verstoßbeispiele)\nRechtmäßigkeit, Verarbeitung nach Treu und Glauben,\n Transparenz (Identitätsdiebstahl)\nZweckbindung\n"+
+                    "Datenminimierung (es wurde nicht ganz gekürzt)\nRichtigkeit (es wurde verfälscht)\nSpeicherbegrenzung (es wurde zu lange gespeichert)\nIntegrität, Vertraulichkeit (soziale Medien: eingeschränkte Daten werden weitergegeben oder intern weiter ausgewertet)"),
+            new Term("Urheberrecht","yet to be upgraded\nABB S.226f (In Ordner1) scan?"),
+            new Term("Schutzziele","Beschreiben Sie in Kurzform Gefährdungen, die die Schutzziele \"Verfügbarkeit\", \"Vertraulichkeit\" und \"Integrität\" betreffen und geben Sie passende Auswirkungen und passende Maßnahmen an\n\n"+
+                    "Schutzziele nach BSI und Art. 32 DSGVO\nA) Gefährdungen, die Schutzziele betreffen\nB) Auswirkungen bei Verlust von Schutzzielen\nC) Maßnahmen gegen Verlust der Schutzziele\n\n"+
+                    "1) Verlust Verfügbarkeit von Informationen personenbezogener Daten und Zielobjekten\nA) Stromausfall, Passwort vergessen, Serverausfall, Kabel unterbrochen, Brand/Wasser, Datenträgerausfall, Cyberangriff\n"+
+                    "B) Kunden können ihre KOnten nicht aufrufen, Mitarbeiter können Kundendaten nicht verarbeiten, C) Stromausfall durch USV beheben, Passwort aufschreiben, hochwertige Geräte + OS kaufen, warten, redudante Hardware einrichten\n"+
+                    "Serverüberwachung, Backup / RAID\n\n2) Verlust der Vertraulichkeit von Informationen personenbezogener Daten auf IT-Systemen\nA) Datenraub, Hacker, Phishing (Fakeseite), Identitätsraub (socialengineering), böser Admin kopiert Daten\n"+
+                    "B) Kunden haben Angst ihre Dateien diesem Anbieter nicht weiter anvertrauen zu können\n C) Firewall, Türschloss, VPN, Antivirus Software, Zugangsprotokoll, Daten verschlüsseln\n\n"+
+                    "3) Verlust der Integrität (Korrektheit von Informationen)\nA) Softwarefehler, Speicherfehler, Datenerhebungsfehler, kriminelle Eingriffe, Fehler bei Synchronisierung redudant gspeicherter Daten\n"+
+                    "B) Kunden arbeiten mit falschen Daten weiter und bekommen so Probleme\nC) Updates überprüfungen, ausgebildete Programmierer, Plausibilitätsprüfung, Prüfroutinen bei Erfassung"),
+            new Term("Verschlüsselungen","asymetrische Verschlüsselung\npublic key, private key\n\nsymetrische Verschlüsselung\nzB AES, DES, Triple-DES\neinfacher, weniger rechenzeit\nwie bekomme ich key zum partner\n"+
+                    "hybride Verschlüsselung\nKombination aus beiden\nzB https-Protokoll (=Kommunikation Server<->Browser)\nsymetrischer Schlüssel wird asymetrisch übertragen\n(kann nur mit private key geöffnet werden)\n\n"+
+                    "Zertifikatstelle(https):\nAnfragen und Schlüssel zertifizeiren lassen\n\nRing of Trust:\nNetzwerk aus Leuten die key bestätigen"),
     };
     private static Term[] termsLF5 = {
             new Term("PrSp Ranglisten","RedMonk = Stackoverflow-Hashtags & GitHub-Projekte\n\nToibe-Index = Suchanfragen Google & Wiki & YouTube"+
@@ -658,7 +672,31 @@ public class Terms {
             new Term("if-Anweisungen","empty yet..."),
             new Term("Zahlensysteme","Binär->Deizmal\n(1010 1101)_2 = 173\n2^7*1 + 2^6*0 + 2^5*1 + 2^4*0 + 2^3*1 + 2^2*1 + 2^1*0 + 2^0*1\n128 + 32 + 8 + 4 + 1\n\n"+
                     "Binär->Hexadezimal\n(1010 1101)_2 = AD\n4er päckle machen\n1010 = 2^3 + 2^1 = 8 + 2 = 10 = A\n1101 = 2^3 + 2^2 + 2^0 = 8 + 4+ 1 = 13 = D\n\n"+
-                    "Binär->Oktal\n(1010 1101)_2 = 255\n3er päckle machen\n010 = 2^1 = 2\n101 = 2^2 + 2^0 = 4 + 1 = 5\n101 = 2^2 + 2^0 = 4 + 1 = 5"),
+                    "Binär->Oktal\n(1010 1101)_2 = 255\n3er päckle machen\n010 = 2^1 = 2\n101 = 2^2 + 2^0 = 4 + 1 = 5\n101 = 2^2 + 2^0 = 4 + 1 = 5\n\n\n"+
+                    "Dezimal->Binär\n(123)_10\n123 / 2 = 61 R 1\n 61 / 2 = 30 R 1\n 30 / 2 = 15 R 0\n 15 / 2 = 7 R 1\n  7 / 2 = 3 R 1\n  3 / 2 = 1 R 1\n  1 / 2 = 0 R 1\numgekehrt aufschreiben\n"+
+                    "(123)_10 = (1111011)_2\n\n"+
+                    "Dezimal->Hexadezimal\n(674)_10\n674 / 16 = 42 R 2\n 42 / 16 = 2 R 10\n   2 / 16 = 0 R 2\ndez 2 = hex 2, 10 = A, 2 = 2\numgekehrt aufschreiben\n(674)_10 = (2A2)_16\n\n\n"+
+                    "Potenzen von 2\n1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536, 131072\n\n"+
+                    "Potenzen von 16\n16^0=1, 16^1=16, 256, 4096, 65535\n\n\n"+
+                    "Okt Dez Hex  Bin\n  0   0   0  0000\n  1   1   1  0001\n  2   2   2  0010\n  3   3   3  0011\n  4   4   4  0100\n  5   5   5  0101\n  6   6   6  0110\n  7   7   7  0111\n"+
+                    " 10   8   8  1000\n 11   9   9  1001\n 12  10   A  1010\n 13  11   B  1011\n 14  12   C  1100\n 15  13   D  1101\n 15  13   D  1101\n 16  14   E  1110\n 20  16  10 10000\n\n\n"+
+                    "Hexadezimal->Dezimal\n(FADE)_16\nE*1 + D*16 + A*256 + F*4096\n14*1 + 13*16 + 10*256 + 15*4096\n"),
+            new Term("Dateien In/Out/Update","Dateien Eingabe\n\nPrintwriter pw = new PrintWriter(\"neueDatei.txt\");\npw.println(eingabe);\npw.close()\n\n"+
+                    "Dateien Ausgabe\n\nScanner sc = new Scanner(new FileReader(\"neueDatei.txt\"));\nString s1 = sc.next();\n//sc.nextLine();\n//while(sc.hasNext(){\n)//while(sc.hasNextLine()){\nSystem.out.println(s1)\n\n"+
+                    "Dateien bearbeiten\n\ntry {PrintWriter pw = new PrintWriter(new FileWriter(\"neueDatei.txt\",[append:]true));\npw.append(\"hallo!\");\npw.close();\n"+
+                    "} catch(IOException){ e.printStackTrace();}"),
+            new Term("RegEx","String RegEx = \"[0-9]+\"\n//das + bedeutet eine oder mehrere (hier: von den zahlen 1-9)\n//replace all [^A-ZÖÜÄ_]\n"+
+                    "Pattern p = Pattern.compile(RegEx);\nMatcher matcher = p.matcher(s)\n//while(!p.matcher(eingabe).matches()){\n//sout(\"Bitte um Zahl\");\n//eingabe = sc.nextLine()}\n"+
+                    "while(matcher.find()){counter++}"),
+            new Term("Parse","String zu int\nint a = Integer.parseInt(String)\n\nInt zu String\nint a = 5;\nString s = \"\";\ns = s + a"),
+            new Term("Iteration", "Wiederholung"),
+            new Term("Sortierverfahren","yet to be posted..."),
+            new Term("Recursion","Selbstaufruf\nÜbungen Beispiele beifügbar (ABB Ordner2)"),
+            new Term("ERM","Entity-Relationship-Modell\n\nGrafisches Hilfsmittel für den Datenbankentwurf\nUnabhängig vom Datenbankmodell\nGrundbausteine:\n-Entities (=Objekt, Datensatz, Zeile in einer Tabelle)\n"+
+                    "Relationships (=Beziehungen)\nBeide haben Attribute (=Eigenschaften) bestehend aus Attributname und Wert\nDer Wertebereich eines Attributes wird als Domäne (domain)\n"+
+                    "Beispiele:\nEntitäten: Mitarbeiter-Schmid, 2, 5\nEntitätsmenge: {Mitarbeiter-Schmidth, Mitarbeiter-Müller}, {2, 5}\nEntity-Typ: Mitarbeiter, Integer\n\nRelationenschreibweise:\n"+
+                    "Personen(PersNr, Name, ..., Geburtsort, Einstelldatum)\nVor der Klammer = Tabellenname\nIn der Klammer: alle Spalten\n\nGrafische Darstellung: Bild einfügen"),
+
     };
     private static Term[] termsLF6 = {
             new Term("Software Lebenszyklus",
