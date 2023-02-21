@@ -1,5 +1,5 @@
 ## News
-more terms and questions are added from time to time  
+*more terms and questions are added from time to time*  
 
 18 February: pics added to druckkostenvergleich, netzplantechnik, darlehen & nutzwertanalyse  
 05 February: pics added to zuschlags, rückwärts & gewinnkalkulation  
@@ -48,7 +48,20 @@ Du kannst das Handy nun von deinem Computer trennen.
 
 ## Lernstoff hinzufügen
 
-Fachbegriff hinzufügen:  
+**Bild hinzufügen:**  
+bisher nur eines je fachbegriff vorgesehen  
+Bildname sollte nur kleinbuchstaben, keine leerzeichen haben  
+Bild kopieren nach: res: drawable   
+Javadatei TermActivity öffnen,  
+runterscrollen bis zur methode private void setPicIfIs(String term)  
+eine der if-anweisungs-blöcke kopieren und einfügen  
+namen des fachbegriffes des bild erhalten soll in ("...") schreiben,  
+und name des Bildes in zweiter zeile nach R.drawable.,  
+sowie höhe des Bildes in die dritte zeile
+(wenn höhenangabe die des bildes bei max breite übersteigt,  
+wird es nicht gestreckt, sondern es entsteht freier raum ober und unterhalb)  
+
+**Fachbegriff hinzufügen:**  
 Javadatei "Terms" öffnen,  
 zum entsprechenden Lernfeld scrollen  
 jedem Lernfeld entspricht ein  
@@ -58,7 +71,7 @@ innerhalb dieser { ... }:
 new Term("Fachbegriffsbezeichnung", "Fachbegriffsbeschreibung")  
 hinzufügbar, wobei zeilenumbrüche als \n und abschnitte als \n\n zu schreiben sind  
 
-Quizfrage hinzufügen:  
+**Quizfrage hinzufügen:**  
 Javadatei Schoolstuff öffnen,  
 zum entsprechenden Lernfeld scrollen  
 jedem Lernfeld entspricht ein  
@@ -69,7 +82,7 @@ new Question ("Frage", "Antwortoption1", "Antwortoption2", "", "", "", "", answe
 hinzufügbar, wobei mindestens zwei Antwortoptionen gegeben sein sollten  
 maximal sind sechs gebbar, wobei für jede die leer bleibt "", zu schreiben ist.  
 im anschluss sollte nicht vergessen werden in die [...] von answers[...] oder answersLF[...] eine nummer zu schreiben  
-...  
+  
 jedem Lernfeld entspricht ein  
 private static boolean answersLF[][] = { {...}, {...}, ... }  
 bspw: dem Lernfeld 2 der private static boolean answers[][] = { {...}, {...}, ... }  
@@ -81,24 +94,24 @@ die reihenfolge ist zu beachten:
 lautet die new Question ("Frage", "Antwortoption1", "Antwortoption2", "", "", "", "", answersLF[...])  
 und ist die Antwortoption1 richtig und die Antwortoption2 falsch,  
 hat das private static boolean answersLF[][] = { {...}, {...}, ... , {true, false, false, false, false, false} } zu lauten  
-...  
+  
 nun zurück zur nummer, die nicht vergessen werden sollte in die answers[...] oder answersLF[...] geschrieben zu werden  
 diese entspricht der stelle an der die { ... } mit den informationen welche antworten richtig sind  
 in dem klammersorium aller dieser dieses Lernfeldes steht.  
 befindet sie sich an dritter stelle: private static boolean answersLF[][] = { {...}, {...}, {true, false, false, false, false, false} },  
 ist diese die 2. !hier wird bei 0 angefangen zu zählen!  
 answers[...] oder answersLF[...] wäre hier also answers[2] oder answersLF[2]  
-...  
+  
 ich kann empfehlen die Liste einfach so weiter fortzusetzen  
 dabei also je die nächst folgende nummer zu verwenden  
-...  
+  
 wobei anzumerken wäre, dass erweiterungen von mir folgen,  
 die entsprechende Änderungen zur Folge haben könnten  
 wenn ich bspw die neuen Quizfragen 20-30 des Lernfeldes 2 hinzufüge  
 du sieh dir runter lädtst,  
 aber zuvor bereits neue Quizfragen 20-40 selber hinzugefügt hast  
 müssen die einen oder anderen umnummerriert werden  
-...  
+  
 wobei nazumerken werde, dass ich möglicherweise noch auf eine bessere  
 idee komme diesen leichtfertigen murks zu programmieren  
 ich habe nur auf die schnelle fertig werden wollen,  
