@@ -245,6 +245,7 @@ public class TermListActivity extends AppCompatActivity {
             case "2": terms2D = termsLF2; break;
             case "3": terms2D = termsLF3; break;
             case "4":
+            case "5":
             case "6":
             case "7":
             case "8":
