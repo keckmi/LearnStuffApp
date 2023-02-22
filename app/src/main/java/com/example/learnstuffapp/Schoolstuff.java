@@ -3,7 +3,7 @@ package com.example.learnstuffapp;
 public class Schoolstuff {
 
     private static boolean answersLF1 [][] = {{true, false, false, false, false, false}, {false, true, false, false, false, false},{false, true, false, false, false, false},{true,false,false,false,false,false},{false, true, false, false, false, false},
-            {true, false, false, false, false, false},{false, true, false, false, false, false},{true, false, false, false, false, false},{true, false, false, false, false, false},{true, false, false, false, false, false}};
+            {false, true, false, false, false, false},{false, true, false, false, false, false},{true, false, false, false, false, false},{true, false, false, false, false, false},{true, false, false, false, false, false}};
 
     private static Question[] questionsLF1 = {
         new Question("Ein Organigramm zeigt den Leistungsaufbau eines Unternehmens","richtig","falsch", "","","","", answersLF1[0]),
