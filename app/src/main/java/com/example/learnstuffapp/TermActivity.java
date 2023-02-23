@@ -123,5 +123,17 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.netzplantechnik2);
             imgView.getLayoutParams().height=1000;
         }
+        if (term.equals("Organigramm")) {
+            imgView.setImageResource(R.drawable.organigramm);
+            imgView.getLayoutParams().height=800;
+        }
+        if (term.equals("ERM")) {
+            imgView.setImageResource(R.drawable.erm);
+            imgView.getLayoutParams().height=800;
+        }
+        if (term.equals("ERM Notations")) {
+            imgView.setImageResource(R.drawable.erm_notations);
+            imgView.getLayoutParams().height=1000;
+        }
     }
 }

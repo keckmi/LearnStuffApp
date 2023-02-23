@@ -36,7 +36,7 @@ public class Terms {
                   new Term("Keine Fachbegriffe 1.2", "Für dieses Kapitel noch keine Fachbegriffe"),
               },
               {//Die Eigene Rolle im Betrieb beschreiben
-                  new Term("Organigram",
+                  new Term("Organigramm",
                       "Buch S.65-73 - Bilder einfügen?\n" + "ABB S.54 - Bild einfügen?\n" +
                       "ABB S.53 + Ordner 2 - Bild einfügen?\n" + "Stabstelle: \"Keine Weisungsbefugnis\" in Elipse"),
                   new Term("Aufbau & Ablauforganisation","S.66\n" +
@@ -696,6 +696,7 @@ public class Terms {
                     "Relationships (=Beziehungen)\nBeide haben Attribute (=Eigenschaften) bestehend aus Attributname und Wert\nDer Wertebereich eines Attributes wird als Domäne (domain)\n"+
                     "Beispiele:\nEntitäten: Mitarbeiter-Schmid, 2, 5\nEntitätsmenge: {Mitarbeiter-Schmidth, Mitarbeiter-Müller}, {2, 5}\nEntity-Typ: Mitarbeiter, Integer\n\nRelationenschreibweise:\n"+
                     "Personen(PersNr, Name, ..., Geburtsort, Einstelldatum)\nVor der Klammer = Tabellenname\nIn der Klammer: alle Spalten\n\nGrafische Darstellung: Bild einfügen"),
+            new Term("ERM Notations","von  diesem bild alle fälle ableitbar?"),
 
     };
     private static Term[] termsLF6 = {
