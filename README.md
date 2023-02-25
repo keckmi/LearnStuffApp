@@ -16,7 +16,7 @@ Playlist: https://www.youtube.com/playlist?list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQ
 
 ## Installation
 
-download von gitlab  
+download von github  
 öffnen in android studio  
 
 usb debugging auf handy in den entwickleroptionen aktivieren  
