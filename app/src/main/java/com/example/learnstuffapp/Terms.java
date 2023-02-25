@@ -690,7 +690,7 @@ public class Terms {
                     "while(matcher.find()){counter++}"),
             new Term("Parse","String zu int\nint a = Integer.parseInt(String)\n\nInt zu String\nint a = 5;\nString s = \"\";\ns = s + a"),
             new Term("Iteration", "Wiederholung"),
-            new Term("Sortierverfahren","yet to be posted..."),
+            new Term("Sortierverfahren",""),
             new Term("Recursion","Selbstaufruf\nÜbungen Beispiele beifügbar (ABB Ordner2)"),
             new Term("ERM","Entity-Relationship-Modell\n\nGrafisches Hilfsmittel für den Datenbankentwurf\nUnabhängig vom Datenbankmodell\nGrundbausteine:\n-Entities (=Objekt, Datensatz, Zeile in einer Tabelle)\n"+
                     "Relationships (=Beziehungen)\nBeide haben Attribute (=Eigenschaften) bestehend aus Attributname und Wert\nDer Wertebereich eines Attributes wird als Domäne (domain)\n"+

@@ -135,5 +135,10 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.erm_notations);
             imgView.getLayoutParams().height=1000;
         }
+        if (term.equals("Sortierverfahren")) {
+            imgView.setImageResource(R.drawable.sortieralgorythmen);
+            imgView.getLayoutParams().height=3000;
+        }
+
     }
 }
