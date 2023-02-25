@@ -24,7 +24,7 @@ public class TermActivity extends AppCompatActivity {
     TextView txtContent;
     ImageView imgView;
 
-    private final Term[][] termsLF1 = Terms.getTermsLF2();
+    private final Term[][] termsLF1 = Terms.getTermsLF1();
     private final Term[][] termsLF2 = Terms.getTermsLF2();
     private final Term[][] termsLF3 = Terms.getTermsLF3();
     private final Term[] termsLF4 = Terms.getTermsLF4();
