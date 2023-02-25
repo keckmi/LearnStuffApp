@@ -16,6 +16,14 @@ Playlist: https://www.youtube.com/playlist?list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQ
 
 ## Installation
 
+!Github ist nicht Origin Git!  
+Das Projekt wurde von GitLab hierher importiert.  
+Dies gelang ein Mal. Dann wusste ich nicht wie ich die Commits von Gitlab nach Github importieren könnte,  
+also aktualisierte ich das Projekt auf GitHub manuell Datei für Datei, wobei ich die ganzen Kleindateien,  
+die sonst immer bei Commits dabei sind, wegließ. Ich weis nicht, ob dies Auswirkungen auf die Funktionalität  
+der Programmes hat. Ich werde das womöglich irgendwann mal Testen. Bis dahin habe ich bereits den Tipp erhalten,  
+das Projekt auf GitHub über die GitHub GUI von der ich zum ersten Mal hörte zu aktualiesieren, was ich zu tun gedenke.  
+
 download von github  
 öffnen in android studio  
 
