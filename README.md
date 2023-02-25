@@ -1,8 +1,8 @@
 ## News
 *more terms and questions are added from time to time*  
 
-23 February: pics added to organigramm, erm & erm notations  
-18 February: pics added to druckkostenvergleich, netzplantechnik, darlehen & nutzwertanalyse  
+25 February: lexicon lf1 term content abscence fixed  
+23, 18 & 05 February: pics added to organigramm, erm & erm notations, druckkostenvergleich, netzplantechnik,darlehen & nutzwertanalyse, zuschlags, rückwärts & gewinnkalkulation   
 05 February: pics added to zuschlags, rückwärts & gewinnkalkulation  
 25 January: chapters to new main function "Lexicon", yet not all posted in,  
 will be slowly done trugh learning process for next exam till end of april,  
