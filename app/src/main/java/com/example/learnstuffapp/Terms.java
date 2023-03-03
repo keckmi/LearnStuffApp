@@ -370,6 +370,7 @@ public class Terms {
                             "Site to Site: Firmenstandort -> Firmenstandort\n" + "End to End: Rechner -> Rechner z.B: User installiert etwas auf PC in Firma"),
             },
             {//Hauptbestandteile von Computernetzen unterscheiden
+                    new Term("Provider","Internetvertragspartner\nzB Telecom, 1&1, Vodafone\nIPS = Internet Service Provider"),
                     new Term("VPN", "Virtual Priate Network\n" + "Authenzität, Vertraulichkeit, Integrität\n" + "Tunnel = verschlüsselte Übertragungsstrecke\n" + "Ziel IP auch verschlüsselbar"),
                     new Term("Peer to Peer <-> Client-Server Netzwerk", "Peer to Peer - PC-PC, jeder ist gleichberechtigt, Direktverbdinung, Physikalisch: LAN-Kabel, WLAN, Logisch: IP-tunnerling (VPN) (z.B: Musiktauschportal)\n\n" +
                             "Client-Server Netzwerk - Clients nutzen Dienste und Ressourcen (Speicher, Webserver,...), Server stellt Dienste zur Verfügung: file-, mail-, print-, Web-Server..."),
@@ -564,7 +565,11 @@ public class Terms {
                             "Verbidnung 1 - Port 50\nVerbindung 3 - Port 51"),
             },
             {//Selbstständig die Integration von Clients in ein Netzwerk planen und druchführen
-                    new Term("DHCP Protokoll", "Dynamic Host Config Protocoll\nVerteilt die Ip_Konfiguration an Rechner im Netz\nIP Adressen automatisch konfigurieren\n\n"+
+                new Term("IPv4 Config","IP-Adresse: 192.168.0.44\nSubnetzmaske: 255.255.255.0\nStandartgateway: 192.168.0.2\n"+
+                            "DNS-Serveradresse: automatisch beziehen"),
+                new Term("IPCONFIG","Terminalbefehl\nalle Konfigrationen aller Netzwerke anzeigen"),
+                new Term("NSLOOKUP","ap adresse von domain bekommen & anderst herum\nLSLOOKUP für linux?"),
+                new Term("DHCP Protokoll", "Dynamic Host Config Protocoll\nVerteilt die Ip_Konfiguration an Rechner im Netz\nIP Adressen automatisch konfigurieren\n\n"+
                             "DHCP-Discover - DHCP Gerät schickt DHCP Aufdeckungs-Nachricht\n" +
                             "DHCP-Offer - DHCP Server antwortet mit Offerte\n" +
                             "DHCP-Request - DHCP Gerät sendet Anfrage\n" +
@@ -582,7 +587,8 @@ public class Terms {
                             "möglich sind TCP oder UDP Protokolle"),
             },
             {//Die Netzwerkfunktion der Clients prüfen und warten
-                    new Term("DNS", "Domain Name Service:\n Übersetzung URL -> IP Adresse\n(OSI 7)\n\n"+
+                new Term("PING","zB PING 192.178.01\noder: PING www.google.de\nsendet Pakete\num erreicbarkeit prüfen\nund dauer"),
+                new Term("DNS", "Domain Name Service:\n Übersetzung URL -> IP Adresse\n(OSI 7)\n\n"+
                             "Name Auflösung . domain Paulinenpflege.de\n" + "(DNS-Abfrage) =^ 139.119.81.86 öffentl IP-Adr"),
             },
             {//Netzwerkkomponenten auswählen und konfigurieren
