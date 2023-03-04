@@ -139,6 +139,14 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.sortieralgorythmen);
             imgView.getLayoutParams().height=3000;
         }
+        if (term.equals("3-Stufige Verkabelungshierarchie")) {
+            imgView.setImageResource(R.drawable.drei_stufige_verkabelungshierarchie);
+            imgView.getLayoutParams().height=600;
+        }
+        if (term.equals("Internet Netzwerk Aufbau")) {
+            imgView.setImageResource(R.drawable.internet_netzwerk_aufbau);
+            imgView.getLayoutParams().height=1300;
+        }
 
     }
 }

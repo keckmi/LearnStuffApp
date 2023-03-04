@@ -410,10 +410,10 @@ public class Terms {
                             "Ring-Topologie\n" + "+weniger Schnittstellen als Stern, -höhere Bandbreitenanforderungen als Stern\n\n" +
                             "Baum-Topologie\n" + "Ausfall Endgerät („Blatts“) harmlos, erweiterbar, auch auf große Entfernungen, -Ausfall VerteilerGerät (Strukturinnern) hat Folgeausfälle,"),
                     new Term("3-Stufige Verkabelungshierarchie",
-                            "Geländeverkabelung (Primärverkabelung):\nSV Standortverteiler|x|Router---LWL(meist mehrere 100m, max 150m)---\n" +
-                            "Gebäudeverkabelung (Sekundärverkabelung):\nGV Gebäudeverteiler|x|Router,Switch(wenn nicht so viele)---Ausfallsicherung(av)---GV2---LWL,Patch(>100m, max 500m)---\n" +
-                            "Etagenverkabelung (Tertiärverkabelung): Sterntopologie, EV Etagenverteiler|x|Switch---av---EV2--av--EV3---av---EV---(LWL),Patch(<100m)---\n" +
-                            "TA Technischer ANschluss --- Endgerät\n\n stattdessen Bild einfügen"),
+                            "Geländeverkabelung (Primärverkabelung):\nSV Standortverteiler\n|x| Router\n---LWL(meist mehrere 100m, max 150m)---\n\n" +
+                            "Gebäudeverkabelung (Sekundärverkabelung):\nGV Gebäudeverteiler\n|x| Router/Switch(wenn nicht so viele)\n---LWL,Patch(>100m, max 500m)---\n\n" +
+                            "Etagenverkabelung (Tertiärverkabelung): Sterntopologie,\n EV Etagenverteiler\n|x|Switch\n---(LWL),Patch,Kupfer(<100m)---\n\n" +
+                            "TA Technischer Anschluss\n---Endgerät"),
                     new Term("Strukturelle Verkabelung",
                             "Campusverkabelung, Primärverkabelung, Lichtwellenleiter\nStockwertsverteilung, Sekundärverkabelung, Lichtwellenleiter, Kupferkabel" +
                             "EV Etagenverteiler, Etagenverkabelung, Primärverkabelung, Lichtwellenleiter"),
@@ -541,13 +541,7 @@ public class Terms {
                                     "\n" +
                                     "Time-Server:\n" +
                                     "Lease-Time: Config nur für Lease-Time gültig"),
-                    new Term("Internet Netzwerk Aufbau",
-                            "               O Internet\n" +
-                                    "öffentliche IP-|\n" +
-                                    "               O-Router Por\n" +
-                                    "private IP __/ | \n" +
-                                    "            /  |  \n" +
-                                    "   Rechner O   O   O"),
+                    new Term("Internet Netzwerk Aufbau", ""),
                     new Term("IPv6",
                             "IPv4 und IPv6 können mithilfe geeigneter Mechanismen (z.B: Tunnelmechanismus) parallel betrieben werden" +
                             "A:B:C:D:E:F:1:2 ist eine gültige IPv6 Adresse\nWindows 10 unterstützt IPv6\nFührende Nullen in einem Block von 4 Hexadezimal-Ziffern können weggelassen werden. Bsp: 002B -> 2B" +
