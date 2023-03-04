@@ -9,25 +9,14 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ab87b4-d96f-4f0f-913c-d4d0396b017d" name="Changes" comment="checkboxes invisible if question answer option is empty">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.3.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+    <list default="true" id="43ab87b4-d96f-4f0f-913c-d4d0396b017d" name="Changes" comment="pics add">
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/LearnStuffApp.app.androidTest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/LearnStuffApp.app.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/LearnStuffApp.app.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/app/LearnStuffApp.app.unitTest.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/learnstuffapp/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/learnstuffapp/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/learnstuffapp/MainMainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/learnstuffapp/MainMainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/learnstuffapp/UncoverActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/learnstuffapp/UncoverActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main_main.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +26,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[51a596d1]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -60,8 +49,17 @@
       </state>
     </system>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="layoutResourceFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SET_USER_NAME_GLOBALLY" value="false" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -74,20 +72,29 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectId" id="2JEDahkQhp5FusWX1Hczoq7HrYS" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.cidr.known.project.marker" value="true" />
-    <property name="cidr.known.project.marker" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="memory.settings.postsync.last.time.stamp" value="1673964456358" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_directory_selection": "C:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/drawable",
+    "last_opened_file_path": "C:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/drawable"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\AndroidStudioProjects\LearnStuffApp\app\src\main\res\drawable" />
+      <recent name="C:\Users\Michael\AndroidStudioProjects\LearnStuffApp\app\src\main\res\layout" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
       <recent name="$PROJECT_DIR$/app/src/main/java/com/example/learnstuffapp" />
@@ -96,6 +103,7 @@
       <recent name="com.example.learnstuffapp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Michael\AndroidStudioProjects\LearnStuffApp\app\src\main\res\drawable" />
       <recent name="C:\Users\Michael\AndroidStudioProjects\LearnStuffApp\app\src\main\res\drawable-v24" />
     </key>
     <key name="android.template.-1123386370">
@@ -115,6 +123,7 @@
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ALL_USERS" value="false" />
       <option name="ALWAYS_INSTALL_WITH_PM" value="false" />
+      <option name="CLEAR_APP_STORAGE" value="false" />
       <option name="DYNAMIC_FEATURES_DISABLED_LIST" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
@@ -218,7 +227,133 @@
       <option name="project" value="LOCAL" />
       <updated>1673345067318</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new main function &quot;Lexikon&quot;">
+      <created>1673965098448</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1673965098448</updated>
+    </task>
+    <task id="LOCAL-00007" summary="chapters to new main function &quot;Lexikon&quot;, yet not all posted in, will ne slowly done trugh learning process for next exam till end of april, crashing when clicking on notice about chapters yet to post in in chapter spinner">
+      <created>1674636976448</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1674636976448</updated>
+    </task>
+    <task id="LOCAL-00008" summary="chapters to new main function &quot;Lexicon&quot;, yet not all posted in, will ne slowly done trugh learning process for next exam till end of april, crashing when clicking on notice about chapters yet to post in in chapter spinner">
+      <created>1674637082509</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1674637082509</updated>
+    </task>
+    <task id="LOCAL-00009" summary="nix eigentlich">
+      <created>1674639813044</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1674639813044</updated>
+    </task>
+    <task id="LOCAL-00010" summary="new terms and questions in Learnfield2">
+      <created>1674735577409</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1674735577409</updated>
+    </task>
+    <task id="LOCAL-00011" summary="chapters &amp; new terms in Learnfield3">
+      <created>1675007739334</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1675007739334</updated>
+    </task>
+    <task id="LOCAL-00012" summary="23.4.2 +terms LF1&amp;8 +qests LF1, spinner crash fixed">
+      <created>1675522545083</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1675522545083</updated>
+    </task>
+    <task id="LOCAL-00013" summary="pics to 3 terms">
+      <created>1675615682362</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1675615682362</updated>
+    </task>
+    <task id="LOCAL-00014" summary="pics to 4 terms">
+      <created>1676726389146</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1676726389146</updated>
+    </task>
+    <task id="LOCAL-00015" summary="termcontent &amp; img in scrollview">
+      <created>1676886659778</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1676886659778</updated>
+    </task>
+    <task id="LOCAL-00016" summary="lf5 added">
+      <created>1676905413370</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1676905413370</updated>
+    </task>
+    <task id="LOCAL-00017" summary="more terms">
+      <created>1676989398108</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1676989398108</updated>
+    </task>
+    <task id="LOCAL-00018" summary="correction of a question">
+      <created>1677059326369</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1677059326369</updated>
+    </task>
+    <task id="LOCAL-00019" summary="fix lf5 add">
+      <created>1677059770793</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1677059770793</updated>
+    </task>
+    <task id="LOCAL-00020" summary="pics to 3 terms added">
+      <created>1677177577838</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1677177577838</updated>
+    </task>
+    <task id="LOCAL-00021" summary="pic add">
+      <created>1677329960915</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1677329960915</updated>
+    </task>
+    <task id="LOCAL-00022" summary="terms add">
+      <created>1677879053043</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1677879053043</updated>
+    </task>
+    <task id="LOCAL-00023" summary="pics add">
+      <created>1677918978975</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1677918978975</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -234,12 +369,29 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="checkboxes invisible if question answer option is empty" />
     <MESSAGE value="breaks because usage of null instead of empty string in Schoolstuff.java repaired" />
-    <option name="LAST_COMMIT_MESSAGE" value="breaks because usage of null instead of empty string in Schoolstuff.java repaired" />
+    <MESSAGE value="new main function &quot;Lexikon&quot;" />
+    <MESSAGE value="chapters to new main function &quot;Lexikon&quot;, yet not all posted in, will ne slowly done trugh learning process for next exam till end of april, crashing when clicking on notice about chapters yet to post in in chapter spinner" />
+    <MESSAGE value="chapters to new main function &quot;Lexicon&quot;, yet not all posted in, will ne slowly done trugh learning process for next exam till end of april, crashing when clicking on notice about chapters yet to post in in chapter spinner" />
+    <MESSAGE value="nix eigentlich" />
+    <MESSAGE value="new terms and questions in Learnfield2" />
+    <MESSAGE value="chapters &amp; new terms in Learnfield3" />
+    <MESSAGE value="23.4.2 +terms LF1&amp;8 +qests LF1, spinner crash fixed" />
+    <MESSAGE value="pics to 3 terms" />
+    <MESSAGE value="pics to 4 terms" />
+    <MESSAGE value="termcontent &amp; img in scrollview" />
+    <MESSAGE value="lf5 added" />
+    <MESSAGE value="more terms" />
+    <MESSAGE value="correction of a question" />
+    <MESSAGE value="fix lf5 add" />
+    <MESSAGE value="pics to 3 terms added" />
+    <MESSAGE value="pic add" />
+    <MESSAGE value="terms add" />
+    <MESSAGE value="pics add" />
+    <option name="LAST_COMMIT_MESSAGE" value="pics add" />
   </component>
 </project>
