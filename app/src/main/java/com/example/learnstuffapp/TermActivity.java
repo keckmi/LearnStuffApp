@@ -95,6 +95,10 @@ public class TermActivity extends AppCompatActivity {
     }
 
     private void setPicIfIs(String term) {
+        if (term.equals("Handelskalkulation")) {
+            imgView.setImageResource(R.drawable.handelskalkulation);
+            imgView.getLayoutParams().height=2000;
+        }
         if (term.equals("Zuschlagskalkulation")) {
             imgView.setImageResource(R.drawable.zuschlagskalkulation);
             imgView.getLayoutParams().height=1000;

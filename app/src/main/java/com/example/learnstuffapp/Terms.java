@@ -141,6 +141,21 @@ public class Terms {
                 new Term("Motherboard",
                     " Input/Output Anschlüsse,\n CPU Sockel für Prozessor,\n RAM Slots für Arbeitsspeicher\n"+
                     "SATA Anschlüsse für Festplatten,\n Laufwerken,\n PCIe 3.0 für Pheripherie  z.B: Grafikkarte, WLAN Adapter, Sensoren, Schnittstellenkarte"),
+                new Term("IC Integrierter Schaltkreis","Ein integrierter Schaltkreis, auch integrierte Schaltung (englisch integrated circuit, kurz IC;"+
+                    "die Buchstaben werden einzeln gesprochen: [ʔiː] [t͡seː] bzw. veraltet IS) ist eine auf einem dünnen, meist einige Millimeter großen Plättchen" +
+                    "aus Halbleiter-Material aufgebrachte elektronische Schaltung. Sie wird manchmal auch als Festkörperschaltkreis oder monolithischer Schaltkreis" +
+                    "(englisch solid-state circuit bzw. monolithic integrated circuit) bezeichnet. Dieser Chip (englisch Die) ist meist zum Schutz und zur einfacheren" +
+                    "Kontaktierung in einem mehrfach größeren Chipgehäuse eingekapselt. Ein IC enthält typischerweise eine Kombination von zahlreichen miteinander"+
+                    "elektrisch verbundenen elektronischen Halbleiterbauelementen wie Transistoren, Dioden und/oder weiteren aktiven und passiven Bauelementen.\n" +
+                    "\n" + "Integrierte Schaltkreise können heutzutage Schaltungen mit vielen Milliarden elektronischen Bauelementen (insbesondere Transistoren) umfassen," +
+                    "so dass auch hochkomplexe Schaltungen wie Mikroprozessoren und Speicherchips auf wenige Quadratmillimeter kleinen Halbleiterplättchen untergebracht" +
+                    "werden können. Seit Anfang der 1990er Jahre werden die Mikrostrukturen dieser Elemente schon im Nanometer-Bereich gefertigt.[1] Die rechteckigen" +
+                    "Halbleiterplättchen werden Chip genannt (auch schon im Rohzustand), insbesondere zusammen mit dem aufgebrachten elektronischen Schaltkreis auch Mikrochip." +
+                    "Die Herstellung von ICs erfolgt in eigenen Halbleiter-Fabriken in absolut staubfreien Reinräumen und umfasst eine Vielzahl von Prozessschritten physikalischer" +
+                    "und chemischer Art. Da generell die Leistungsfähigkeit von Mikroprozessoren und Speicherchips mit kleiner werdenden Strukturen auf dem Chip zunimmt," +
+                    "bewegt sich deren Miniaturisierung oft an der Grenze des technisch und physikalisch Machbaren. Es existieren jedoch auch zahlreiche," +
+                    "insbesondere standardisierte ICs wie Logikbausteine und Operationsverstärker, wo dies nur eine geringe Rolle spielt – so enthalten die Logik-Chips der weit verbreiteten," +
+                    "bereits seit den 1970ern hergestellten 74xx-Serie nur eine Anzahl Transistoren im ein- oder zweistelligen Bereich. "),
                 new Term("PCI - PCIe",
                     "R PCI - Peripherial Component Interconnect\nDas e in PCIe steht für express\n"+
                     "Bei PCI parallele Leitungen hängen miteinander, sind gemeinsam steuerbar\nBei PCIe Leitungen eletrisch unabhängig von einander und einzeln steuerbar"),
@@ -279,8 +294,7 @@ public class Terms {
                         +"Handlungskostensatz (HKS in %) =\n Handlungskosten * 100 / Wareneinsatz\n\n"+"Ermitteln Sie HK und HKaufschlagsatz in %.\nEs wurden IT-Systeme netto für 64 000 Euro eingekauft"+
                         "und diese bar für 110 000 Euro verkauft.\nEs wird mit einem Gewinnaufschlag von 10% kalkuliert.\n\nWareneinsatz(Einkaufspreis incl Bezugskosten): 64 000\n+Handlungskostenaufschlag: 56,25%: 36 000\n"+
                         "=Selbstkosten 100 000\n+Gewinnaufschlag: 10%: 10 000 (110 000/110*10)\n=Umsatzerlöse bar aus Wareneinsatz lt. GuV: 110 000 "),
-                    new Term("Handelskalkulation",
-                        "Bild ABB S.145 einfügen"),
+                    new Term("Handelskalkulation", ""),
                     new Term("Stundensatzkalkulation",
                         "Gesamtarbeitszeit umzulegen auf produktive Zeit.\nBei einer Stunde Fahrt und einer Stunde Arbeit,\n"+
                         "ist Fahrt in Arbeitsstundenpreis einzurechnen\n\nSelbstkostensatz =\nSelbstkosten (wenn keine Materialkosten etc = Bruttogehalt) / "+
@@ -398,7 +412,7 @@ public class Terms {
                                     "c = Co * NVP, c = s/t, c=Co/n, V=s/t"),
             },
             {//Netzwerkstrukturen, -komponenten, -standarts, und -modelle unterscheiden
-                    new Term("On Premise <-> Off Premise","On Premise:\n Firmendaten im eigenen Haus:\n (+) max Kontrolle, Datenzugriff ohne Internet, Keine Weitergabe an Dritte. \n" +
+                    new Term("On <-> Off Premise","On Premise:\n Firmendaten im eigenen Haus:\n (+) max Kontrolle, Datenzugriff ohne Internet, Keine Weitergabe an Dritte. \n" +
                             "(-) Eigenverantwortung, Mehrarbeit, Verfügbarkeit, Wartung, Updates und Backup obliegen dem Unternehmen, Höhere Kosten, betrieb lokaler Rechenzentren\n\n" +
                             "Off Premise:\n Cloud Lösung:\n (+) günstig, kein eigenes Personal Serverkomponenten Software, flexible Skalierbar, Komponenten zuwählbar, Räumliche Unabhängigkeit durch Datenzugriff via Internetverbindung,\n" +
                             "Zugriff auf fachliches Know-How, Betrieb Backup Wartung und Updates durch Spezialisten\n" +
@@ -586,11 +600,18 @@ public class Terms {
                             "Name Auflösung . domain Paulinenpflege.de\n" + "(DNS-Abfrage) =^ 139.119.81.86 öffentl IP-Adr"),
             },
             {//Netzwerkkomponenten auswählen und konfigurieren
-                    new Term("AP Accespoint (Beacon):",
+                    new Term("AP Accesspoint (Beacon)",
                             "muss nicht immer Router sein, kann auch Hub(Verstärker) sein.\n" +
                             "WLAN benutzt Frequenzbänder bei 2,4 5 & 60 GHz.\n" +
                             "IOS ist ein Betriebssystem für Router.\n" +
-                            "SoHo-Roter werden meist mit Linux Betriebssystemen betrieben."),
+                            "SoHo-Roter werden meist mit Linux Betriebssystemen betrieben.\n\n"+
+                            "Sicherheitsaspekte Konfiguration\n"+
+                            "Eigene Anmeldedaten für Admin-Account\nWPA2 als Verschlüsselungsverfahren wählen (WPA & WEP sind veraltet)\n"+
+                            "WLAN Passwort (Pre-Shared-Key PSK) aus möglichst vielen verschiedenen zufälligen Zeichen wählen (für WPA2 bisher nur"+
+                            "brute force und wörterbuchangriffe bekannt)\nNicht identifizierbaren (auf sich zurückführbaren) Netzwerknamen"+
+                            "(Service Set Identifier SSID) oder diesen abschalten\nAutomatische Firmware aktualisierung einschalten\n"+
+                            "WPS deaktivieren (Funktion die Verbindung ohne Passwort direkt per Knopfdruck eines Knopfes am AccessPoint und einer"+
+                            "Entsprechung im Handy ermöglicht)\nNetzwerkgeräte ausschalten, wenn sie nicht genutzt werden"),
                     new Term("WLAN", "802.11xx - OSI 1 & 2\n" +
                             "Wireless AP übernimmt Routers Aufgabe, der Clients ind Netzwerk einbindet.\n" +
                             "Beacons (kleine Datenpakete) in Intervallen gesendet (übl: 10x je Sec), an allen Stationen in Empfangsbereich.\n" +
