@@ -324,10 +324,15 @@ public class Schoolstuff {
             new Question("Testquestion", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
             new Question("Testquestion2", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
     };
-    private static boolean answersLF9[][] = {{true, false, true, false, false, true},{true, false, true, false, false, true}};
+    private static boolean answersLF9[][] = {{false, true, false, false, true, false},{false, true, true, true, false, false},{false, false, true, false, false, false},{true, false, true, false, true, false}, {false, true, false, true, false, true}};
     private static Question[] questionsLF9 = {
-            new Question("Testquestion", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
-            new Question("Testquestion2", "Option A", "Option B", "Option C", "", "",  "", answersLF7[0]),
+            new Question("Was ist ein Repeater?", "Ein Gerät, das Geräusche, das es hört, wiederholt", "Signalverstärker", "Ein Programm, dass auf Onlinemarktplätzen bietet", "mit Mikrofon und Lautsprecher", "Sowohl mit Kupfer als auch mit Glasfaser und WLAN",  "reine Software", answersLF9[0]),
+            new Question("Was trifft für einen Router zu?", "Überwiegendes Vorkommen in saftigen Tälern", "Datenpaket Weiterleitung zwischen Netzwerken zum nächsten Router", "Verbinden Netzwerke und Lenken Datenverkehr mittels Routing Tabelle", "Überwinden Höhen und Tiefen durch Rollen im Schlaf", "",  "", answersLF9[1]),
+            new Question("Welches Beipiel passt zu einem Router?","Windhose umkreist einen Kiesel","Namenhafte Persönlichkeit kennt sich nicht aus","Internetseitenaufruf erzeugt Datenpaket mit Anfrage, versendet es von PC von Router zu Router durch Internet bis Zielserver, dessen Adresse im Header ist. Zielserver nutzt Absenderadresse als Zieladresse","","","", answersLF9[2]),
+            new Question("Was trifft für einen Router zu?","Router identifizieren ihre Ports, ihre Netze & Broadcastdomänen.","Router piepsen bei Feindkontakt","Sie speichern Geräte die bei einem Broadcast auf einem Port erreicht werden können.","Sie versenden E-Mails",
+                    "Wenn die Zieladresse nicht in eigenen Netzen ist, wird die Anfrage an den nächsten Router geschickt.","Wenn Sie sich verlaufen, drehen Sie um",answersLF9[3]),
+            new Question("Welche Router Arten gibt es?","Napalesicher Kurzrouter", "Heimrouter / SoHo Router", "Kongolesischer Weichrouter", "Edge-Router", "Isländischer Brummrouter", "Virtueller Router", answersLF9[4]),
+
     };
 
     public static boolean[][] getAnswersLF1() {

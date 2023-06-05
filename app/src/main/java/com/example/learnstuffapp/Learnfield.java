@@ -32,6 +32,9 @@ public class Learnfield {
             case "9":
                 learnfield = "LF 9: Netzwerkbereitstellung nach unterschiedlichen Unternehmensanforderungen unterscheiden";
                 break;
+            case "10":
+                learnfield = "Wirtschaftskunde";
+                break;
         }
         return learnfield;
     }

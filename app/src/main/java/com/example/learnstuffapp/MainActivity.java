@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         Button btnLernfeld7 = findViewById(R.id.btnLernfeld7);
         Button btnLernfeld8 = findViewById(R.id.btnLernfeld8);
         Button btnLernfeld9 = findViewById(R.id.btnLernfeld9);
+        Button btnLernfeld10 = findViewById(R.id.btnLernfeld10);
 
         Intent intent = getIntent();
         txtWhere.setText(intent.getStringExtra(WHERE));
@@ -165,6 +166,21 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
                     i = new Intent(MainActivity.this, MainActivity2.class);}
                 i.putExtra(MainActivity2.LERNFELD, "9");
+                startActivity(i);
+            }
+        });
+        btnLernfeld10.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = null;
+                if (intent.getStringExtra(WHERE).equals("LEXIKON")) {
+                    i = new Intent(MainActivity.this, TermListActivity.class);
+                    i.putExtra(TermActivity.LERNFELD, "10");}
+                if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
+                    i = new Intent(MainActivity.this, UncoverActivity.class);}
+                if (intent.getStringExtra(WHERE).equals("QUIZ")) {
+                    i = new Intent(MainActivity.this, MainActivity2.class);}
+                i.putExtra(MainActivity2.LERNFELD, "10");
                 startActivity(i);
             }
         });

@@ -952,6 +952,74 @@ public class Terms {
             "Rechenzentren,\n Digitale Infrastrukturen,\n Netzwerke,\n virtuelle Netze,\n Sicherheitssysteme,\n Technische IT-Services,\n IT-System-Betreuungen"),
         new Term("Betriebsmodelle",
             "lokale (klassische) Vernetzung (LAN),\n Cloud Computing (virtuelle Vernetzung),\n geschmischte/hybride Vernetzung (LAN-Cloud)"),
+        new Term("Repeater",
+            "Signalverstärker empfangen schwaches Signal, breiten es auf und senden es.\n Sowohl mit Kupfer als auch mit Glasfaser und WLAN\n"+
+                "WLAN-Repeater bsp: über großes Firmengelände oder mehrere km"),
+        new Term("Router",
+                "Datenpaket Weiterleitung zwischen Netzwerken zum nächsten Router.\n Verbinden Netzwerke und Lenken Datenverkehr mittels Routing Tabelle\n\n"+
+                "Bsp: Internetseitenaufruf erzeugt Datenpaket mit Anfrage, versendet es von PC von Router zu Router durch Internet bis Zielserver, dessen Adresse im Header ist." +
+                "Zielserver nutzt Absenderadresse als Zieladresse \n\nRouter identifizieren ihre Ports, ihre Netze & Broadcastdomänen.\n Sie speichern Geräte die bei einem Broadcast"+
+                "auf einem Port erreicht werden können.\nWenn die Zieladresse nicht in eigenen Netzen ist, wird die Anfrage an den nächsten Router geschickt.\n\n"+
+                "Heimrouter - Heimnetze - häufig mit... \nInternet, Firewall, AcessPoint, Telefonanalage, Media-Server, Switch, Jugendschutzfilter (siehe auch SoHo (Small Office/Home Office) Router)\n\n"+
+                "Edge-Router - Firmennetze<->Internet/Partnernetze - \nHöhere Performance \n\nvirtuelle Router - \nVerwendung in Software Defined WANs"),
+        new Term("Gateway",
+                "Oberbegriff; \nNetzwerkkomponenten, die Verbindung zwischen 2 Netzen herstellen \n\nHub - OSI 1, \nVerteiler von Netzwerkdaten, empfangen Daten, senden an alle Ports\n\n"+
+                "Bridge - OSI 2, \nverbindet Netzwerksegmente, teilen Netze in mehrere Kollisionsdomäne auf. Da alle Netzwerkkarten mit CSMA/CD arbeiten, sollte die Kommunikationslast aller Geräte"+
+                "micht zu hoch sein. Anderfalls müssen einzelne Komponenten mit dem Senden zu lange warten. \n\n"+
+                "PowerLAN bzw. Powerline Adapter, OSI 1, \nverwenden 230V Stromleitungen von Gebäuden zur Datenübertragung. 2 Stück notwendig für Start und Endpunkt. Geeignet für Räume ohne Netzwerkdosen."+
+                "Es gibt eine zunehmende Dämpfung je mehr Verteiler zwischen dem Start und dem Endpunkt sind und je länger die Stromleitung ist. Man sollte Geräte von dem gleichen Hersteller verwenden."+
+                "Dabei kommt es zu Übertragungsraten von bis zu 1200 MBit/s \n\n"+
+                "Layer3 Gateways - \nwerden auc als Router bezeichnet. Stellen Verbindung zwischen Subnetzen her. LTE-Router stellen ein lokales Netz (WLAN) bereit und verbinden dieses auf dem"+
+                "4G-LTE-Netz. LTE-Router gibt es u.a. für den mobilen Einsatz \n\n"+
+                "NAT-Gateways - \nAufgabe der Network Adress Translation bei IPv4 Netzwerken \n\n"+
+                "Proxy - OSI 5-7 \nempfangen Nachrichten als Stellvertreter, analysieren diese und leiten sie ggf weiter an den eigentlichen Server. Bekannte Proxy-Server sind: SIP-, FTP-, E-Mail- und http-Proxy."+
+                "Sie werden als Sicherheitskomponente für Anfragen aus dem Internet in die Demilitarized Zone (DMZ) zwischen geschaltet \n\n"+
+                "VPN Gateways - OSI 2,3 \nerlauben sicheren ZUgriff auf Firmennetz. VPN Server wird dazu in Firmennetz bereitgestellt, z.B. als Teil einer Firewall oder eines Routers oder Open Source Server z.B. WireGuard"),
+        new Term("Server Software",
+                "Sie sollen Server Software und die Möglichkeit zur Virtualisierung von Servern kennen. \n\n"+
+                "Server Virtualisierung Vorteile: \nHardwareabhängigkeit entfällt, \nbeliebige Skalierbarkeit zB CPU-Kerne, Speicher, \nMehrere virtualisierte Server/Maschinen (VM) können auf einer Hardware laufen \n\n"+
+                "Überprovisionierung \nmehr virtuelle CPU-Kerne an VMs verteilt, als physikalisch vorhanden -> einer VM wird CPU-Zeit \"gestohlen\", weil andere VM unter Volllast läuft \n\n"+
+                "Container \nleichtgewichtige VM, kein eigenes Betriebssystem, nutzen Betriebssysteme des Wirts, enthält Binärdaten: App incl Bibliotheken,\n"+
+                "Bsp: Docker, CRI-O, Kata Containers. Mit ihnen lässt sich über Orchestrierungsplatform zB Kubernetes hochskalierbare Server Software betreiben \n\n"+
+                "VM - \nBetriebssystem + App auf emulierter Hardware \nBetriebsysystem + App laufen in einer isolierten Umgebung, können nur auf zugeteilte Ressourcen zugreifen \n"+
+                "Mehrere können parallel laufen, Grenzen sind Ressourcen der PC Hardware, \nEin Hypervisor betreibt die VMs \n\n"+
+                "Container - \nein Prozess wird isoliert zB eine Datenbank, ein Webserver, \nnutzen Betriebssystem des Wirts, \nMehrere können parallel laufen, Grenzen sind Ressorucen der Hardware/VM, \n"+
+                "Eine Containerumgebung betreibt sie, \nDa Wirtressourcenverschwendung -> weniger CPU-, Speicher & Festplatte \n\n"+
+                "Hypervisor - \nSoftware die Computerhardware emuliert. Sie ermöglicht parallele Installation mehrerer Betriebssysteme. Sie kommt bei VMs zum Einsatz.\n"+
+                "Typ 1 - Bare Metal - läuft direkt auf HW \n Typ 2 - Hosted - läuft auf einem Betriebssystem, Gastsystem läuft als Prozess auf dem Wirt \n\n"+
+                "Verwaltungssoftware - Administration von VMs & Containers (siehe Bild) \n\n"+
+                "VM Administration Funktionen\n Snapshots, Rollbacks - aktuellen Zustand sichern, falls updates fehlschlagen, auf Rollbacks klicken für Wiederherstellung. by Copy-on-Wirte Verfahren dauer das genau einen Mausklick lange.\n"+
+                "Start, Stop, Neustart(Boot) - von virtuellen Servern/Containern. Ist die Management Software online, ist dies von überall möglich."),
+    };
+    private static Term[] termsLF10 = {
+            new Term("AGBs",
+                    "Regeln und Pflichten von Käufer und Verkäufer. \n\nWie sie zu sein haben steht hier: Bürgerliches Gestzbuch (BGB). \n\nSie werden von Verkäufer selbst oder von einem Anwalt in seinem Auftrag geschrieben. \n\n"+
+                    "Bsp: Verkäufer muss Käufer auf AGB hinweisen,\nAGB muss gut lesbar und verständlich sein, \nPreiserhöhung innerhalb von 4 Monaten verboten \nNachbesserungen müssen kostenlos sein, \n"+
+                    "überraschende Klauseln (=Abmachungen) sind verboten, \ndie gesetzliche Fristen dürfen nicht verkürzt werden (zB 2 Jahre Gewährleistung ist Pflicht)"),
+            new Term("Haftung","Verpflichtung einer Person den Schaden zu ersetzen, den sie durch eigenes Verschulden verursacht hat. \n\nHaftungsgründe: \n1) Haftung aus Verträgen \n"+
+                    "zB Kaufvertrag - Wenn Käufer nicht zahlt oder Verkäufer Scheiße liefert \nzB private Haftungsversicherung - Lisa fällt vom Rad weil Steffen Sie übersieht \n"+
+                    "2) Produkthaftung \nzB ein neuer TV explodiert nach 2h \n3)Unerlaubte Handlung \nist gegen das Gesetz. Wenn man eine andere Person mit Absicht schädigt: Eigentum, Gesundheit, Körper, Freiheit \n"+
+                    "Kinder bis 7: nicht deliktfähig \n7-18: bedingt deliktfähig \nab 18: deliktfähig"),
+            new Term("Sparen - Ratenkauf","Sparen Vorteile: \nZinsen, \nBilliger: Keine Gebühren, keine Zinsen \nNachteile: \nWarten"+
+                    "Ratenkauf Vorteile: \nKeine Wartezeit \nNachteile: \nregelmäßige Ratenzahlung, \nTeuer: Zinsen, Gebühren,\n Wenn Sache vor Ende der Ratenzahlung kaputt geht, muss man weiter zahlen. \n"+
+                    "Auch bei unvorhergesehenen Kosten."),
+            new Term("Ratenkauf","Muss man immer schriftlich machen. \n\nKann man 2 Wochen land wiederrufen \n(schreiben, dass man ihn doch nicht haben will:)" +
+                    "auf Postkarte, brief (spätestens am 14t Tag bei Post(Poststempel))) Beweis für rechtzeitiges Verschicken auch durch Einschreiben (Empfasngsbestätigung) möglich \n\n"+
+                    "Ratenkaufvertrag hat \n1. Barzahlungspreis \n2. Anzahl monatlicher Rate \n3. Wann und wie sind diese zu bezahlen \n4.Ratenpreis (Teilzahlungspreis): Diesen Preis muss man bei Ratenkauf insgesamt zahlen" +
+                    "\n5. effektiver Jahreszins: Mehrkosten Ratenkauf als Barzahlung (Sofortzahlung) in % \n6. Höhe monatlicher Raten"),
+            new Term("Warenkennzeichnung","Lebensmittelkennzeichnungsverordnung \nInhaltsstoffe haben auf Verpackung zu stehen \n\nVerbraucherinformationsgesetz \n"+
+                    "Wenn Firma Verbraucher getäuscht / verdorbene Lebensmittel verkauft, müssen Behörden informieren \nSelbstnacvhfrage bei Behörden möglich"+
+                    " (zB Pestizidbelastung Gemüse / Allergika in Shampoo) \n\nEichgesetz \nAlte Waggen / Messbecher müssen regelmäßig geprüft werden, ob sie richtig wiegen oder ob das Maß noch stimmt (Eichung)"+
+                    " \n\nTextilkennzeichnungsgesetz \nAus was ist der Stoff? (bei Textilien) zB 80% Baumolle, 20% Polyamid \n\nEU-Güteklasse \nViele landwirtschaftliche Produkte in Eu sind eingeteilt"+
+                    "nach größe, Gewicht und Qualität in Güte / Handelsklassen. \n\nPreisangabeverordnung \nPreis hat auf Waren angegeben zu sein (Preisschild). Gilt für alle Waren im Geschäft und in den Schaufenstern"+
+                    "\n\nGütezeichen \ndürfen Hersteller nur nutzen wenn Waren einen vorgeschriebenen Qualitätsstandart haben zB reine Schurwolle, in Dutschland geprüfte Markenware, "+
+                    "Bio nach EG-Öko Verordnung \n\nPrüfzeichen \nsollen festgelegten Sicherheitsstandart garantieren (=Waren mit diesem Zeichen sind geprüft und sicher)"+
+                    "zB gprüfte Sicherheit GS, CE Europäisch Gemeinsch für Produkte in EU, Verband deutscher Elektriker \n\nUmweltzeichen \nfür Produkte die besonderst umweltfreundlich sind zB Blauer Engel"),
+            new Term("Verbaucherschutzgesetze","Wettbewerbsrechtliche Regelungen:\nGesetz gegen den unlauteren Wettbewerb\nKartellgesetz - Verbietet Kartelle + martkbeherschende"+
+                    "Unternehmenszusammenschlüsse (zB mehrere Firmen sprechen Preise ab)\n->Verbraucher sollen bei Kaufentscheidung nciht wettbewerbswidrig beeinflusst werden\n\n"+
+                    "Gesetze zum Schutz der Verbraucher:\nProdukthaftungsgesetz - Hersteller haften für Fehlerhafte Produkte\nBürgerliches Gesetzbuch - Es regelt: \nVerbraucherkredite"+
+                    "(schützt vor Fallen bei Kreditverträgen)\nFernabsatzgeschäfte (schützt bei Bestellung im Versandhandel)\nHaustürgeschäfte(schützt bei Verträgen an der Haustür)\n"+
+                    "Allgemeine Geschäftsbedingungen (schützt vor Kleingedrucktem)"),
     };
 
     public static String[] getKapitelLFYetUnpost() {return kapitelLFYetUnpost;}
@@ -980,6 +1048,9 @@ public class Terms {
     }
     public static Term[] getTermsLF9() {
         return termsLF9;
+    }
+    public static Term[] getTermsLF10() {
+        return termsLF10;
     }
 
 }

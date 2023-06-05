@@ -40,6 +40,7 @@ public class TermListActivity extends AppCompatActivity {
     private final Term[] termsLF7 = Terms.getTermsLF7();
     private final Term[] termsLF8 = Terms.getTermsLF8();
     private final Term[] termsLF9 = Terms.getTermsLF9();
+    private final Term[] termsLF10 = Terms.getTermsLF10();
 
     //VERÄNDERUNG
 
@@ -82,6 +83,7 @@ public class TermListActivity extends AppCompatActivity {
             case "7":
             case "8":
             case "9":
+            case "10":
                 kapitelLF = kapitelLFYetUnpost; break;
         }
 
@@ -218,6 +220,7 @@ public class TermListActivity extends AppCompatActivity {
             case "7": terms = termsLF7; break;
             case "8": terms = termsLF8; break;
             case "9": terms = termsLF9; break;
+            case "10": terms = termsLF10; break;
             default:
                 throw new IllegalStateException("Unexpected value: " + lernfeld);
         }
