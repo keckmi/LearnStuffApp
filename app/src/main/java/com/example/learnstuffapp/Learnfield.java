@@ -35,6 +35,9 @@ public class Learnfield {
             case "10":
                 learnfield = "Wirtschaftskunde";
                 break;
+            case "11":
+                learnfield = "Gemeinschaftskunde";
+                break;
         }
         return learnfield;
     }

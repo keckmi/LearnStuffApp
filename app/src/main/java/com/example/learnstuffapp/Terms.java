@@ -1020,6 +1020,94 @@ public class Terms {
                     "Gesetze zum Schutz der Verbraucher:\nProdukthaftungsgesetz - Hersteller haften für Fehlerhafte Produkte\nBürgerliches Gesetzbuch - Es regelt: \nVerbraucherkredite"+
                     "(schützt vor Fallen bei Kreditverträgen)\nFernabsatzgeschäfte (schützt bei Bestellung im Versandhandel)\nHaustürgeschäfte(schützt bei Verträgen an der Haustür)\n"+
                     "Allgemeine Geschäftsbedingungen (schützt vor Kleingedrucktem)"),
+            new Term("Zahlungsarten","Barzahlung \nHalbbare Zahlung - Einer benutzt Konto zB Nachname, Scheck \nBargeldlose Zahlung - Beide nutzen Konto zB Überweisung \n"),
+            new Term("Girokonto",
+                    "Vorraussetzungen:\n 18 und voll geschäftsfähig,\n sonst (für jugendl):\n beide Eltern unterschreiben,\n darf nicht überzogen werden,\n EC-Karte nur wenn Eltern zustimmen\n\n"+
+                    "Unterscheidungsmerkmale:\n hohe/niedrige Guthabenzinsen,\nhohe/niedrige Überziehungszinsen\nhohe/niedrige Kontoführungsgebühren/Kosten für Service (Gebühren für Kontoauszüge, Daueraufträge, Homebanking, ...\n\n)"+
+                    "IBAN - International Bank Account Number\nBIC - Bank Identifier Code\nBuchungsdatum - wann kam das Geld auf das Konto? / wann wurde es abgebucht?\n"+
+                    "Buchungstext - Grund / Erklärung für Überweisung\nSoll - Schuldbetrag (=Minus Betrag)\nHaben - Das Guthaben (=Plus Betrag)\nAlter Saldo - Geldbetrag, der beim letzten"+
+                    "Kontoauszug auf Konto war\nNeuer Saldo - Geldbetrag der jetzt auf Konto ist\nKontoführungsgebühren - für Verwaltung & Buchungsbearbeitung"),
+            new Term("Dauerauftrag","Überweisungsart 1\n\nAbsender gibt Bank Auftrag aztomatisch jede Woche/Monat immer selben Geldbetrag zu senden an selben Empfänger zur selben Zeit bis auf Wiederruf\n\n"+
+                    "zB Miete, Zeitungsbbonnement, Vereinsbetrag"),
+            new Term("Lastschriftverfahren","Überweisungsart 2\n\nAbsender erlaubt Zahlungsempfänger schriftlich von seinem Konto abzubuchen, einmalig oder öfters, selbe oder"+
+                    "unterschiedliche Summen, zu Selben oder unterschiedlichen Zeiten\n\nzB Heizungsrechnung, Stromrechnung, Telefonrechnung"),
+            new Term("Onlinebanking","mit Computer & Internetzugang, enstprechende Software von Bank\nPIN, TAN\n50% der Erwachsenen haben Onlinekonto, aber 50% aller sind misstrauisch, haben Zweifel an der Sicherheit\n\n"+
+                    "Vorteile:\njederzeit\nOnlinekonto günstiger\nBanken benötigen weniger Mitarbeiter\n\nNachteile:\nunsicher (phishing),\nkeine direkte / persönliche Beratung"),
+            new Term("Phishing","(Password Fishing)\n\nFakemails mit Links zu Fakeseiten wie bspw Amazon, Ebay, mit dem Ziel, dass du dich dort \"einloggst\" um Anmeldedaten abnzugreifen"+
+                    "\n\nErkennbar an:\n unpersönlicher Anrede (echter Name nicht bekannt)\nAndorderungen einzuloggen dringend (womöglich mit Drohung verbunden)\n"+
+                    "Direktlink zur Login Seite\nflasche Spreche\n\nVerhaltensregeln:\nMisstrauen bei Aufforderungen zum sofortigen Haneln\nNicht auf Links in verdächtigen Mails klicken\n"+
+                    "Auf Anbieterseite über Sicherheitsmerkmale informieren\nVerdächtige Mails an Anbieter weiterleiten"),
+            new Term("Kredite","Dispositionskredit:\nKonto überziehen\nschnnell Rechnung bezahlen\nKredithöhe mit Bank klären\nÜberziehungszinsen\n\nRatenkredit:"+
+                    "bei höheren Beträgen\nKreditvertrag: Inhalt:\nKreditnehmer, -geber, Zinsen, Bearbeitungsgebühren, Laufzeit, Höhe der Raten\nSicherheiten zu geben:\n"+
+                    "Nachweis über regelmäßiges Einkommen, Hypothek, Bürgerschaft Lohnabtretung\nMonatliche Zahlung"),
+            new Term("Sparen","Regeln (zuerst überlegen für beste Sparform):\nWie viel Geld habe ich?\nWie viel kann ich sparen?\nfür was möchte ich sparen?\n\n"+
+                    "3 Entscheidungsmerkmale:\nErtrag: Wie viel Zinsen oder Gewinn gibt es?\nSicherheit: bekomme ich mein Geld wieder zurück?\nVerfügbarkeit: Wie lange muss ich anlgegen, wie schnell bekomm ichs zurück?"+
+                    "\n\nAb bestimmter Summe sollten Sparformen gemsicht werden\n\nSparmotive:\nZwecksparen, für bestimmte Sache, Wunsch\nVorsorgesparen, für bestimmte Zeit, zB Notzeit, Rente, Kinder\n"+
+                    "Vermögensbildung, für Eigentum, Reichtum (bringt Zinsen), zB Haus"),
+            new Term("Kreditkarte","Kunde legt sie vor. Sie wird mit spezifischem Gerät gelesen & eine Rechnung wird gedruckt. Kunde unterschreibt Rechnung & bekommt Quittung. Damit kann er Zahlung kontrollieren"+
+                    "\n\nDer Händler bekommt Rechnungsbetrag von der Kreditgesellschaft nach einem vereinbartem Abrechnungszeitraum (zB monatlich).\n Er schickt der Kreditkartengesellschaft die Abrechnung über alle"+
+                    "Rechnungen.\nDie Kreditkartengesellschaft hat eine Einzugsermächtigung. Sie lässt den Gesamtbetrag von dem Girokonto des Karteninhabers abbuchen"),
+    };
+    private static Term[] termsLF11 = {
+            new Term("Inflation",
+                    "Preise steigen -> Geld weniger wert\n\nWeimarer Republik musste Kosten Weltkrieg 1, der durch Schulden finanziert wurde, zurück zahlen, durch Gelddruck.\n"+
+                    "Französiche und Belgische Truppen marschierten ins Ruhrgebiet ein\nDer passive Widerstand wurde durch Gelddruck bezahlt.\n\n1 Ei = 800 RM, 1/2 Jahr später: 320 Milliarden RM\n"+
+                    "1 Milch = 1440 RM, 1/2 Jahre später: 360 Milliarden RM\n1 Kg Kartoffeln = 5000 RM, 1/2 Jahre später: 90 Milliarden RM\n\nReichsmark ersetzt durch Mark\nStabilisiert durch US-Kredite"+
+                    "\n-> Konkjunkturelle Blüte Goldene Zwanziger\n\nFolgen des Crash: Großbanken wurden zahlungsunfähig,\nUnternehmen gingen bankrott\nviele Menschen wurden arbeitslos (1932: 6Mio)\n\n"+
+                    "Reaktion der Bevölkerung:\nNotverordnungen, Sparsamkeit"),
+            new Term("Probleme Weimarer Republik","Weltwirtschaftskrise und Inflation: \nExistenzängste, hohe Arbeitslosigkeit\n\ninstabile politische Lage:\nPutschversuche,\n"+
+                    "Demokratie noch nicht etabliert\nbürgerkriegsähnliche Zustände\n\nDer verlorene Weltkrieg:\ntraumatisierte Menschen (Soldaten)\nVersailler Vertrag: Reperationszahlungen,"+
+                    "Gebietsabtretung, Abrüstung, wirtschaftliche Einschränkungen"),
+            new Term("Weimarer Republik","Grundprinzipien:\nArt(1)\n->Deutsches Reich ist eine Republik\nDie Staatsgewalt geht vom Volke aus\n(Prinzipien der Volkssouveränität in Verfassung festgelegt)\n\n"+
+                    "Bürger wählen:\nLandesparlamente, Reichstag, Reichspräsident (Ersatzkaiser)\n\nBürger können nicht wählen:\nReichsrat, Reichskanzler*, Reichgericht*\n*werden vom Reichspräsident ernannt\n\n"+
+                    "Reichstag kann Reichsminister und Reichskanzler Vertrauen entziehen\n\nVergleich mit BRD:\nBundeskanzler von Volk gewählt (Volk hat direkten Einfluss auf Regierungsbildung)\n"+
+                    "Bundespräsident hat wenig Macht bzw. nur repräsdentative FUnktion und wird von der Bundesversammlung und nicht direkt vom Volk gewählt"),
+            new Term("Erziehung Nationalsozialismus","Jugend wichtig, da:\nMachterhalt, gibt Ideologie weiter an nächste Generation, Zukunft der Gesellschaft, leicht beeinflussbar\n\n"+
+                    "Jugend möglichst wenig Zeit zu Hause:\nEinfluss der Eltern verringern, viel Zeit in nationalsozialistischen Gruppen, zur ideologischen Schulung & bediengungslosen Folgschaft von Führer und Staat\n\n"+
+                    "Jungen: Kriegsvorbereitung, Rassenlehre, Ideologische Schulung (Ziel -> treuer, gehorsamer Nationalsozialist)\nMädchen: Mutterrolle, Selbstdisziplin, Pflichterfüllung, Unterordnung vor Mann"),
+            new Term("Gründung BRD","Westliche Allierte gründeten Bundes Republik Deutschland (BRD)\n\nUneinigkeit des Siegermächte -> 2 Staaten\n\n"+
+                    "Vorgaben, die die Deutschen zu erfüllen hatten:\nDie Militärgouverneure frt westlichen Allierten beauftragten die 11 Ministerpräsidenten: Sie sollen eine gesetzgebende Versammlung einberufen"+
+                    "und demokratischen und föderativen Staat gründen"),
+            new Term("Wehrhafte Demokratie","soll vor Feinden schützen und vor Diktaturwiederentstehung\n\nArtikel 1: Die Würde ist unantastbar\nsteht ganz vorne im Grundgesetz, damit sich der Nationalsozialismus\n"+
+                    "nicht wiederholt.\nDie Würde eines Menschen kann auch durch Anspucken, Beleidigung, Schläge oder Zwang gegen den Willen verletzt werden\n\n"+
+                    "Demoktatieschutz vor Feinden durch:\n\nArtikel1: \n(1) Würde, \n(2) Menschnrechte, \n(3) Grundrechte\n\nArtikel20: \n(1) BRD: demoktatisch, sozial, \n(2) Staatsgewalt vom Volk, \n(3) Gesetz und Recht bindend"+
+                    "\n(4) Recht auf Widerstand \n\nArtikel79: (3) [...] das was in den Arikeln 1 und 20 steht, darf nicht geändert werden\n\nweiterer Schutz:\n\nArtikel5: (2) Kunst, Wissenschaft, Forschung und Lehren frei "+
+                    "aber an Grundgesetz(GG) halten\n\nArtikel9: (2) Vereinigungs und Koalitionsfreiheit, eingeschränkt bei Gründung zum alleinigen Zweck der Straftat, Verstoß gegen das GG oder einer Richtung gegen die Völkerverständigung\n\n"+
+                    "Artikel18: Wenn man das GG zB die Pressefreiheit nutzt, um die freiheitliche demokratische Grundordnung zu bekämpfen, dann verwirkt man seine Grundrechte. Das kann aber nur das Verfassungsgericht beschließen, zB Fake News\n\n"+
+                    "Artikel21: (2) Eine politische Partei kann verboten werden, wenn sie die demokratisch freiheitliche Grundordnung bekämpft und abschaffen will zB AFD\n\n"+
+                    "Das Grundgesetz ist so ausgerichtet, dass keine Diktatur auf legalem Weg eingerichtet werden kann, kein verbrechen gegen die Menschlichkeit soll vom Staat ausgehen\n"+
+                    "Erinnerung, dass Frieden wichtig, deswegen bis heute immer erinnern."),
+            new Term("DDR & Wiedervereinigung","Deutschland wurde in 2 Staaten geteilt, weil sich die Allierten nicht einigen konnten.\n\nDie Westallierten wollten schnell politischen und witschaftlichen"+
+                    "Wiederaufbau, während die Sovietunion Reperationen für die erlittenen Kriegsschäden forderte\n\nDefinition Sozialismus: alle Menschen werden gleich behandelt. Sie haben gute Arbeitsbedingungen. "+
+                    "Wirtschaft (Privateigentum an Produktionsmittel + Prozess) ist verstaatlicht \n\nAlle Bürger über 18 Jahren konnten zwar die Volkskammer (Parlament der DDR) wählen"+
+                    ", allerdings war die Volkskammer schon von der (SED) vorbestimmt. Die Bürger konnten nur zustimmen oder ablehnen. Das Politbüro hatte in fast allen Angelegenheit das Sagen gehabt und bestimmte"+
+                    "alle wichtige Ämter bzw. Positionen in der DDR. So gesehen ist DDR nur Scheindemokratie. Zwar mit Wahlen aber vorher festgelegten Ergebnissen."),
+            new Term("Einwohnerzahl DDR","->Diagramm\n\njährliche kontinuierliche Abnahme von 1949 -> 1961\n"),
+            new Term("Flüchtlinge DDR","->Diagramm\n\nvon 1949 -> 1961\nca/avg 300 000 (2,5 Mio gesamt)\n\nViele Jugendliche sahen keine Zukunft in der DDR\n"+
+                    "oft aus politischen Gründen (eigene Meinung haben) oder wirtschaftlichen Gründen (guten Job selbst auswählen) oder beides, viele hatten Verwandte im Westen.\n+" +
+                    "Für den Staar bedeutete dies enorme verluste an menschlichem Potential\n\nmögliche Gegenmaßnamen:\nbessere Arbeitsbedingungen, höhere Löhne, mehr individuelle Freiheit,"+
+                    "Problem: dieses System praktisch kaum demokratisch\n\nEs wurde eine streng bewachte Grenze errichtet, kaum überwindbar. Besonderst sichtbar: In Berlin (durch Mauer getrennt)\n"+
+                    "Grenzer sollten Flcuhtversuche verhindern: Schißerlaubnis, viele Todesopfer auf Grenzstreifen\nGrenzanlagen erinnerten Menschen eher an Freiheitsbeschränkungen als an Schutz vor westlichen Einflüssen"),
+            new Term("Kalter Krieg","Konfrontation zwischen West & Otmächten 49-89, ohne dass ein Schuss abgefeuert wurde, sonst wäre es ein heißer Krieg geworden bis hin zur Atombombe. "+
+                    "Biede standen sich militärisch hoch gerüstet gegenüber."),
+            new Term("Eisener Vorhang","Ablehnung östlicher kommunistischer Länder gegen westliche, Grenze durch Europa, besodnerst durch Deutschland (BRD $ DDR)"),
+            new Term("Stasi","Ministeriumfür Staatssicherheit: Geheimdienst der DDR: für Machtsicherung der SED-Partei, Überwachung, Bestrafung jener, die lautzweifeln"),
+            new Term("IM","inoffizieller Mitarbeiter der Stasi, freiwillig oder gezwungen, der Stasi Infos zu liefern und Menschen beeinflussen, 189 000 IMs vor Mauerfall"),
+            new Term("Extremismus","lat.: extremus = das äußerste\n\nAbgrenzung von einem bestehenden Thema, einer Gruppe, einem Standart, Gesellschaftsordnung.\nVerbidnung oft mit Gewalt"+
+                    "gegen Menschen oder Einrichtungen bis hin zur Völkerunterdrückung\nRechts-,Links- & islamischer Extremismus\n\nWichtig für Leben in einer Gesellschaft:\n"+
+                    "Bedürfniss elitären Gruppe anzugehören, starkes Gemeinschaftsgefühl in Gruppe ohne Diskriminierung. Orientierung an konkreten Dingen, Werten & Mustern, Anerkennung und"+
+                    "gemeinser Ziele, Sinnhaftigkeit des eigenen Handelns"),
+            new Term("Motive Linksradikalisierung","Unzufriedenheit über politsche Lage,\n Glaube an Elite die Poleteriat zum besseren Leben verhilft,\n fehlende berufliche und schulische Erfolge,\n "+
+                    "internationale Konflikte und Verstöße gegen die Menschen und Bürgerrechte,\n Drang und Abenteuer"),
+            new Term("radikal - extrem","erstes missachtet nicht demokratische Verfassung oder Grundrechte. jeder Bürger hat Recht auf radikale konstruktive Gedanken"),
+            new Term("Linksextremismus","eigene Interpretation von Freiheit & Gleichheit, vorallem im Hinblick auf wirtschaftliche & soziale Gleichheit & die Ablehnung "+
+                    "des Kapitalismus"),
+            new Term("Rechtsextremismus","eigenes Volk steht über allen anderen Völkern. Einzelner hat dem Volk zu dienen, Rassismus Führerkult, Einzelner gehört ethnisch &"+
+                    " kulturell dem Volk an"),
+            new Term("Islamischer Extremismus","Nur die Religion des Islam ist die wahre Religion, \nAusrichtung + Befolgung der islamischern Regeln (Koran)\n"+
+                    "Einheit von Religion & Staat, \nAblehnung westlicher Gesellschaftsordnungen"),
+
+
     };
 
     public static String[] getKapitelLFYetUnpost() {return kapitelLFYetUnpost;}
@@ -1052,5 +1140,6 @@ public class Terms {
     public static Term[] getTermsLF10() {
         return termsLF10;
     }
+    public static Term[] getTermsLF11() { return termsLF11; }
 
 }

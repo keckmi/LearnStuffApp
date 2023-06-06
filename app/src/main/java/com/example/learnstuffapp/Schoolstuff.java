@@ -334,6 +334,19 @@ public class Schoolstuff {
             new Question("Welche Router Arten gibt es?","Napalesicher Kurzrouter", "Heimrouter / SoHo Router", "Kongolesischer Weichrouter", "Edge-Router", "Isländischer Brummrouter", "Virtueller Router", answersLF9[4]),
 
     };
+    private static boolean answersLF10[][] = {{false, true, false, false, false, false},{false, true, false, true, false, true},{false, true, true, false, true, false}};
+    private static Question[] questionsLF10 = {
+            new Question("Was trifft auf AGBs zu?", "Käufer muss Verkäufer auf AGB hinweisen", "Verkäufer muss Käufer auf AGB hinweisen", "Niemand muss niemanden auf AGB hinweisen", "Die AGB muss selber auf sich hinweisen", "Das Hinweisen muss die AGB beinhalten",  "Der Inhalt der AGB muss ein Hinweis sein", answersLF10[0]),
+            new Question("Was trifft auf AGBs zu?", "AGB darf geschrieben werden, wie man will", "AGB muss gut lesbar und verständlich sein", "Preiserhöhung innerhalb von 2 Monaten verboten", "Preiserhöhung innerhalb von 4 Monaten verboten", "Nachbesserungen dürfen was kosten",  "Nachbesserungen müssen kostenlos sein", answersLF10[1]),
+            new Question("Was trifft auf AGBs zu?","andrehen weiterer Abmachungen durch rafinierte Klauseln gestattet","überraschende Klauseln (=Abmachungen) sind verboten","trickreiche anfügungen durch unerwartete klauseln unter der bedingung gestattet, dass sie lustig sind","die gesetzliche fristen werden durch jene in den AGB ersetzt",
+                    "die gesetzlichen fristen dürfen nicht verkürzt werden (zB 2 Jahre Gewährleistung ist Pflicht)","ungesetzliche fristen sind besonderst beachtenswert", /*answersLF9[2]*/new boolean[]{false, true, true, false, true, false}),
+    };
+    private static boolean answersLF11[][] = {{true, false, false, true, false, false},{true, true, true, false, false, false}};
+    private static Question[] questionsLF11 = {
+            new Question("Was ist Inflation?", "Preise steigen", "Bevölkerung nimmt zu", "Umsiedelung", "Geld verliert an Wert", "Teppiche fangen an zu fliegen",  "Regen nimmt zu", answersLF11[0]),
+            new Question("Folgen des Crash nach dem 1.WK?", "Großbanken wurden zahlungsunfähig", "Unternehmen gingen bankrott", "viele Mitarbeiter wurden arbeitslos (1932: 6Mio)",
+                    "Kanaldeckel nahmen zu", "Die Geister klarten auf",  "Es gab viel zu Lachen", new boolean[]{true, true, true, false, false, false}),
+    };
 
     public static boolean[][] getAnswersLF1() {
         return answersLF1;
@@ -420,9 +433,9 @@ public class Schoolstuff {
     public static Question[] getQuestionsLF9() {
         return questionsLF9;
     }
-    public static void setQuestionsLF9(Question[] questionsLF9) {
-        Schoolstuff.questionsLF9 = questionsLF9;
-    }
+    public static Question[] getQuestionsLF10() {return questionsLF10;}
+    public static Question[] getQuestionsLF11() {return questionsLF11;}
+
 
 
 

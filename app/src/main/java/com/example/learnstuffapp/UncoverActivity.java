@@ -26,6 +26,8 @@ public class UncoverActivity extends AppCompatActivity {
     private final Term[] termsLF7 = Terms.getTermsLF7();
     private final Term[] termsLF8 = Terms.getTermsLF8();
     private final Term[] termsLF9 = Terms.getTermsLF9();
+    private final Term[] termsLF10 = Terms.getTermsLF10();
+    private final Term[] termsLF11 = Terms.getTermsLF11();
     private TextView txtTerm;
     private Button btnAufdecken;
     private TextView txtContent;
@@ -60,6 +62,8 @@ public class UncoverActivity extends AppCompatActivity {
             case "7": terms = termsLF7; break;
             case "8": terms = termsLF8; break;
             case "9": terms = termsLF9; break;
+            case "10": terms = termsLF10; break;
+            case "11": terms = termsLF11; break;
         }
 
         if (lernfeld.equals("1") || lernfeld.equals("2") || lernfeld.equals("3")){

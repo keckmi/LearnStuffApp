@@ -47,6 +47,8 @@ public class MainActivity2 extends AppCompatActivity {
 
     private final Question[] questionsLF8 = Schoolstuff.getQuestionsLF8();
     private final Question[] questionsLF9 = Schoolstuff.getQuestionsLF9();
+    private final Question[] questionsLF10 = Schoolstuff.getQuestionsLF10();
+    private final Question[] questionsLF11 = Schoolstuff.getQuestionsLF11();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,6 +70,8 @@ public class MainActivity2 extends AppCompatActivity {
             case "7": Questions = questionsLF7; break;
             case "8": Questions = questionsLF8; break;
             case "9": Questions = questionsLF9; break;
+            case "10": Questions = questionsLF10; break;
+            case "11": Questions = questionsLF11; break;
         }
 
         List<Question> questionsList = Arrays.asList(Questions);
@@ -165,6 +169,11 @@ public class MainActivity2 extends AppCompatActivity {
             questionCount++;
             textViewQuestionCount.setText("Question: " + questionCount + "/" + Questions.length);
             txtQuestion.setText(Questions[currentQuestionNumber].getQuestion());
+
+            cbs[2].setVisibility(CheckBox.VISIBLE);
+            cbs[3].setVisibility(CheckBox.VISIBLE);
+            cbs[4].setVisibility(CheckBox.VISIBLE);
+            cbs[5].setVisibility(CheckBox.VISIBLE);
 
             if (Questions[currentQuestionNumber].getOption3().equals("")) {cbs[2].setVisibility(CheckBox.INVISIBLE);}
             if (Questions[currentQuestionNumber].getOption4().equals("")) {cbs[3].setVisibility(CheckBox.INVISIBLE);}
