@@ -34,7 +34,8 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true">
+        android:layout_centerInParent="true"
+        android:layout_above="@id/linearLayout2">
 
         <Button
             android:id="@+id/btnLernfeld1"
@@ -61,8 +62,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_marginTop="5dp"
-        android:layout_below="@id/linearLayout1">
+        android:layout_marginTop="5dp">
 
         <Button
             android:id="@+id/btnLernfeld3"
@@ -166,7 +166,38 @@
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_marginLeft="5dp"
-            android:text="Wirtschaftkunde"
+            android:text="Wirtschafts\nkunde"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"
+            android:layout_below="@id/btnLernfeld2"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/linearLayout5">
+
+        <Button
+            android:id="@+id/btnLernfeld11"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="5dp"
+            android:text="Gemeinschafts\nkunde"
+            android:layout_weight="1.0"
+            android:background="@drawable/btn_bg1"
+            android:layout_below="@id/btnLernfeld2"/>
+
+        <Button
+            android:id="@+id/btnLernfeld12"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="5dp"
+            android:text="#"
             android:layout_weight="1.0"
             android:background="@drawable/btn_bg1"
             android:layout_below="@id/btnLernfeld2"/>
