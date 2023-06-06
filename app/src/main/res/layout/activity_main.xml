@@ -166,7 +166,7 @@
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_marginLeft="5dp"
-            android:text="#"
+            android:text="Wirtschaftkunde"
             android:layout_weight="1.0"
             android:background="@drawable/btn_bg1"
             android:layout_below="@id/btnLernfeld2"/>
