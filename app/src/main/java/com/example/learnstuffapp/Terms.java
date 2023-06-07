@@ -989,7 +989,33 @@ public class Terms {
                 "Typ 1 - Bare Metal - läuft direkt auf HW \n Typ 2 - Hosted - läuft auf einem Betriebssystem, Gastsystem läuft als Prozess auf dem Wirt \n\n"+
                 "Verwaltungssoftware - Administration von VMs & Containers (siehe Bild) \n\n"+
                 "VM Administration Funktionen\n Snapshots, Rollbacks - aktuellen Zustand sichern, falls updates fehlschlagen, auf Rollbacks klicken für Wiederherstellung. by Copy-on-Wirte Verfahren dauer das genau einen Mausklick lange.\n"+
-                "Start, Stop, Neustart(Boot) - von virtuellen Servern/Containern. Ist die Management Software online, ist dies von überall möglich."),
+                "Start, Stop, Neustart(Boot) - von virtuellen Servern/Containern. Ist die Management Software online, ist dies von überall möglich."+
+                "Virtualisierung Vorteile:\nUnabhängig von Server Hardware, wenn sich die Hardware des Servers, auf dem die VM läuft, ändert, bleibt die virtuelle Hardware dieselbe" +
+                "Serverkonsolidierung: Mehrere physikalische Server können als VMs auf einer Server HW installiert werden. -> Energie und Platz Ersparnis\n"+
+                "Höhere Verfügbarkeit: weniger Hardware = weniger Ausfall.\nSchnelle Bereitstellung. Virtuelle Ressourcen sind deutlich schneller Verfügbar als HW-Ressourcen.\n"+
+                "Ressourcenengpässe sind per Konfiguration im laufenden Betrieb behebbar.\n\n"+
+                "Virtualisierung Nachteile:\nKnow-how erforderlich Inbetriebnahme physikalischer Geräte zwar anschaulich, doch Cloud-Admis müssen sich in Konfiguration virtueller Rechenzentren einarbeiten. "+
+                "Jeder VM/Container Typ hat eigene Werkzeuge. \nSingle Point of Failure: Wird einziges Bare Metal genutzt, dann fallen beim Ausfall dieser HW alle VMs aus." +
+                "Cluster sollen daher über mehrere Bare Metal verteilt laufen.\n\n"+
+                "Viertualisierung kommt heute überall zum Einsatz. Sie ermöglicht optimale Hardwareauslastung, geringe Betriebskosten, einheitliche Handhabung von Ausfällen (Failover) "+
+                "und bessere Sicherheitskonzepte.\n\n"+
+                "Bsp Einheitliches Failover: \nMindestens 2 Bare Metals und ein RAID6 - oder ein RAID10 - Verbund stellen sicher, dass beim Ausfall einer Hardware alle VMs weiterlaufen "+
+                "bzw. ausgefallene VMs nachgestartet werden. Zur Kompensation eines ganzen Rechenzentrums kann entsprechende Cloud-SW über mehrere Rechenzentren eingesetzt werden. "+
+                "Welche App in welcher VM läuft ist beim Ausfall einer Festplatte, CPU, eines Speichers oder Netzwerkkarte unerheblich."),
+        new Term("Server Hardware",
+                "Dedicated Server / Bare Metal\n"+ "gemieteter physikalischer Server wird nur von diesem Kunden genutzt\n\n"+
+                "Technische Anforderungen: \nCPU / Anzahl Kerne, Speicher, Anzahl IPv4/IPv6 Adressen / Failover IP, Reserve-DNS, DDoS-Schutz, Firewall, vSwitch"+
+                "Datenübertragungsrate, RAID-Level, Dedizierte GPU, Images / Software, Import eigener Images, uneingeschränkter Traffic, Back-Up, KVM\n\n\n"+
+                "Virtual Dedicated Server (VDS)\nKunde mietet bestimmte Ressourcen (eines Servers), die Anzahl der wählbaren Parameter ist kleiner\n"+
+                "Technische Anforderungen: \nAnzahl Kerne, Speicher, NVMe-SSD/SSD, Datenübertragungsrate, uneingeschränkter Traffic, Images / Software, Import eigener Images, Back-Up\n\n"+
+                "Keine Überprovisionierung (Im Gegensatz zu VPS)\n\nHohe Sicherheit erreicht der Kunde durch 2-Faktor Authentifizierung.\n\n\n"+
+                "Virtual Private Server (VPS)\n"+"Kunde mietet VM, mit WebControlPanel. Mehrere Kunden teilen sich vorhandene physikalische CPU-Kerne\n\n"+
+                "Technische Anforderungen: \nAnzahl virtueller Kerne (vCPU), Speicher, SSD, Datenübertragungsrate, uneingeschränkter Traffic, Images / Software, Import eigener Images, Back-Up Speicher\n\n\n"+
+                "Network Attached Storage (NAS) \nDateiserver, betrieben im eigenen Netzwerk"+
+                "\n\nEs gibt welche für Rechenzentren (optimiert auf höchste Schreib/Lese/Übertragungsraten) und welche für kleinere und mittlere Netzwerke, nicht im 19\" Format,"+
+                "sondern im (Mini-)Towergehäuse incl Webserver für Betrieb ServerApps & VMs (auf dem NAS)\n\n"+
+                "Technische Anforderungen:\nBauform, Kapazität, RAID-Level, Filesystem, Netzwerkanbindung, Verschlüsselungsmodul, Schreib und Lesegeschwindigkeit,"+
+                "Redundantes Netzteil, VM Unterstützung"),
     };
     private static Term[] termsLF10 = {
             new Term("AGBs",
@@ -1106,6 +1132,12 @@ public class Terms {
                     " kulturell dem Volk an"),
             new Term("Islamischer Extremismus","Nur die Religion des Islam ist die wahre Religion, \nAusrichtung + Befolgung der islamischern Regeln (Koran)\n"+
                     "Einheit von Religion & Staat, \nAblehnung westlicher Gesellschaftsordnungen"),
+            new Term("Populismus","moralisch reines, homogenes Volk <-> unmoralische korrupte Elite (EU, Politiker anderer Parteien, Medien)\nletztere gehören nicht zum Volk\n" +
+                    "Populisten bezeichnen sich als Representanten des Volkes. Nur sie wüssten, was das Volk wirklich will. Sie schüren Angst und greifen emotionale Themen auf.\n" +
+                    "Fakten spielen untergeordnete Rolle. So werden Feindbilder geschaffen \n\n5 Goldene Regeln des Populismus: \nböse Elite oben, Volk unten \nMinderheiten spielen keine Rolle \nwir sind die Einzigen, die das Volk vertreten \n" +
+                    "Leuten Angst machen \nSündenbock \n\nWoher Stimmen: \ngute Parolen, Frust, rassistischer Stadtteil, -weil es mir nicht gut geht, soll es anderen auch nicht \n\n"+
+                    "Umgang: \nkonkrete politische Lösungen verlangen \nzu inhaltlichen Diskussionen auffordern \nEigene, weitere politische Themen vorschlagen"),
+
 
 
     };

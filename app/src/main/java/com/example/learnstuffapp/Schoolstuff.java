@@ -341,11 +341,18 @@ public class Schoolstuff {
             new Question("Was trifft auf AGBs zu?","andrehen weiterer Abmachungen durch rafinierte Klauseln gestattet","überraschende Klauseln (=Abmachungen) sind verboten","trickreiche anfügungen durch unerwartete klauseln unter der bedingung gestattet, dass sie lustig sind","die gesetzliche fristen werden durch jene in den AGB ersetzt",
                     "die gesetzlichen fristen dürfen nicht verkürzt werden (zB 2 Jahre Gewährleistung ist Pflicht)","ungesetzliche fristen sind besonderst beachtenswert", /*answersLF9[2]*/new boolean[]{false, true, true, false, true, false}),
     };
-    private static boolean answersLF11[][] = {{true, false, false, true, false, false},{true, true, true, false, false, false}};
+    private static boolean answersLF11[][] = {/*0-5*/{true, false, false, true, false, false},{true, true, true, false, false, false},{false, false, true, false, true, false},{true, true, false, false, true, false},{true, false, false, true, false, false},{false, true, true, false, true, false},
+                                            /*6-10*/{false, true, false, false, false, false},{true, false, true, true, false, true}};
     private static Question[] questionsLF11 = {
             new Question("Was ist Inflation?", "Preise steigen", "Bevölkerung nimmt zu", "Umsiedelung", "Geld verliert an Wert", "Teppiche fangen an zu fliegen",  "Regen nimmt zu", answersLF11[0]),
             new Question("Folgen des Crash nach dem 1.WK?", "Großbanken wurden zahlungsunfähig", "Unternehmen gingen bankrott", "viele Mitarbeiter wurden arbeitslos (1932: 6Mio)",
                     "Kanaldeckel nahmen zu", "Die Geister klarten auf",  "Es gab viel zu Lachen", new boolean[]{true, true, true, false, false, false}),
+            new Question("Bevölkerungsreaktion auf Crash nach WK1","Völlerei","Wanderlust","Sparsamkeit","Erleuchtung","Notverordnungen","Erotik",answersLF11[2]),
+            new Question("Probleme Weimarer Republik","Weltwirtschaftskrise und Inflation","instabile politische Lage", "Humbuk und Klamauk","Der verlorene Weltkrieg", "Versailler Vertrag", "Emsländer Vereinbarung", answersLF11[3]),
+            new Question("Unterpunkte Weltwirtschaftskrise Inflation Weimarer Republik","Existenzängste", "lange Weile", "Faule Eier", "hohe Arbeitslosigkeit", "Straßenmusiker", "Einfallslosigkeit", answersLF11[4]),
+            new Question("Unterpunkte instabile politische Lage Weimarer Republik","Mehrheit für Anarchie","Putschversuche", "Demokratie noch nicht etabliert", "Maiskolbenpartei rebelliert", "bürgerkriegsähnliche Zustände","Seismische Aktivitäten nehmen zu", answersLF11[5]),
+            new Question("Unterpunkt Problem verlorener Weltkrieg Weimarer Republik", "Himbeerkuchenmangel", "traumatisierte Menschen (Soldaten)","","","","", answersLF11[6]),
+            new Question("Unterpunkte Problem Versailler Vertrag Weimarer Republik", "Reperationszahlungen", "Unzucht", "Gebietsabtretung", "Abrüstung", "Bigotterie","wirtschaftliche Einschränkungen", answersLF11[7]),
     };
 
     public static boolean[][] getAnswersLF1() {
