@@ -1,12 +1,12 @@
 ## News
 *more terms and questions are added from time to time*  
 
+6 Jun: gemeinschaftskunde added  
+5 Jun: Bug: Checkboxes invisible reset fail in quiz fixed, new terms'n'quiz to lf9 and wirtschaftskunde added  
 25 February: lexicon lf1 term content abscence fixed  
 23, 18 & 05 February: pics added to organigramm, erm & erm notations, druckkostenvergleich, netzplantechnik,darlehen & nutzwertanalyse, zuschlags, rückwärts & gewinnkalkulation   
 05 February: pics added to zuschlags, rückwärts & gewinnkalkulation  
 25 January: chapters to new main function "Lexicon", yet not all posted in,  
-will be slowly done trugh learning process for next exam till end of april,  
-17 January: new main function "Lexicon"  
 
 # LearnStuffApp
 
@@ -15,14 +15,6 @@ Part 1: https://www.youtube.com/watch?v=PiCZQg4mhBQ&list=PLrnPJCHvNZuDCyg4Usq2gH
 Playlist: https://www.youtube.com/playlist?list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQO7  
 
 ## Installation
-
-!Github ist nicht Origin Git!  
-Das Projekt wurde von GitLab hierher importiert.  
-Dies gelang ein Mal. Dann wusste ich nicht wie ich die Commits von Gitlab nach Github importieren könnte,  
-also aktualisierte ich das Projekt auf GitHub manuell Datei für Datei, wobei ich die ganzen Kleindateien,  
-die sonst immer bei Commits dabei sind, wegließ. Ich weis nicht, ob dies Auswirkungen auf die Funktionalität  
-der Programmes hat. Ich werde das womöglich irgendwann mal Testen. Bis dahin habe ich bereits den Tipp erhalten,  
-das Projekt auf GitHub über die GitHub GUI von der ich zum ersten Mal hörte zu aktualiesieren, was ich zu tun gedenke.  
 
 download von github  
 öffnen in android studio  
