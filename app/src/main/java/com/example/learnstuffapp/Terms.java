@@ -1135,11 +1135,22 @@ public class Terms {
             new Term("Populismus","moralisch reines, homogenes Volk <-> unmoralische korrupte Elite (EU, Politiker anderer Parteien, Medien)\nletztere gehören nicht zum Volk\n" +
                     "Populisten bezeichnen sich als Representanten des Volkes. Nur sie wüssten, was das Volk wirklich will. Sie schüren Angst und greifen emotionale Themen auf.\n" +
                     "Fakten spielen untergeordnete Rolle. So werden Feindbilder geschaffen \n\n5 Goldene Regeln des Populismus: \nböse Elite oben, Volk unten \nMinderheiten spielen keine Rolle \nwir sind die Einzigen, die das Volk vertreten \n" +
-                    "Leuten Angst machen \nSündenbock \n\nWoher Stimmen: \ngute Parolen, Frust, rassistischer Stadtteil, -weil es mir nicht gut geht, soll es anderen auch nicht \n\n"+
-                    "Umgang: \nkonkrete politische Lösungen verlangen \nzu inhaltlichen Diskussionen auffordern \nEigene, weitere politische Themen vorschlagen"),
-
-
-
+                    "Leuten Angst machen und einfache Lösungen versprechen\nSündenbock gebraucht, am besten Minderheiten\n\nWoher Stimmen: \ngute Parolen, Frust, rassistischer Stadtteil, -weil es mir nicht gut geht, soll es anderen auch nicht \n\n"+
+                    "und die Medien:\nstecken mit Elite unter einer Decke\nDaten und Fakten spielen keine Rolle\nMenschenverachtende Zitate und Posts sind Taktik zur Provokation, Tabubruch"+
+                    "für größeren Wahlerfolg\n\n"+  "Umgang: \nkonkrete politische Lösungen verlangen \nzu inhaltlichen Diskussionen auffordern \nEigene, weitere politische Themen vorschlagen\n\n"+
+                    "Umgang für Pateien:\nDaten und Fakten liefern,\n Transparenz\nLösungen anbieten, Unfähigkeit / Schwäche der Populisten aufzeigen\n\n"+
+                    "Umgang für Bürger:\nsich nicht von Gefühlen der Populisten leiten lassen\nRuhig, sachlich bleiben, nicht empört sein\n"+
+                    "Gründllich informieren und Daten & Fakten überprüfen\nKritisch nachfragen zB nach konkreten Lösungen\nhier informieren: forum-streitkultur.de/sieben-gegenstrategien.de\n\n"+
+                    "Umgang für Medien: sachlich und differenziert informieren\n\nUmgang (Maßnahhmen) für Regierung:\nSozialstaat ausbauen,\n"+
+                    "Parteien unter Umständen verbieten,\nAuf Einhaltung des Grundgesetzes & der Grundrechte achten\neinfache Sprache,\n Bildung ausbauen\n"+
+                    "Straftaten in sozialen Netzwerken ausbauen,\nStraftaten in sozialen Netzwerken verfolgen / verurteilen lassen"),
+            new Term("Populismus - Extremismus","Extremismus lehnt Demokratie ab (abschaffen)\nRechtsextremisten wollen Diktatur\nLiinksextremisten wollen Anarchie, Sozialismus oder Kommunismus"+
+                    "Extremisten versuchen Staat mit Gewalt zu stürzen\n\nPopulisten aktzeptieren Demokratie, versuchen darin an Macht zu kommen"),
+            new Term("Linksdemokraten","kritisch gegen Kapitalismus, Marktwirtschat, Globalismus, Neoliberalismus\n\n"+
+                    "achten freiheitlich demokratische Grundordnung (Verfassung)\nkeine Gewalt zum Zieldurchsatz\n"),
+            new Term("Rechtsdemokraten","zwischen konservativ und rechtspopulistisch\n\nAnsicht:\n Menschen sind verschieden,\n"+
+                    "Aktzeptanz gesellschaftlicher Ungleicheiten, wenn sie aus fairem Wettbewerb entstehen,\n\nAufrechterhaltung traditioneller gesellschaftlicher Ordnung\n"+
+                    "Ablehnung politisch geführter aktiver Gesellschaftsveränderung (zB Genderspreche)"),
     };
 
     public static String[] getKapitelLFYetUnpost() {return kapitelLFYetUnpost;}
