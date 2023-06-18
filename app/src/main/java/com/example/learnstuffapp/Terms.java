@@ -1075,6 +1075,38 @@ public class Terms {
                     "Rechnungen.\nDie Kreditkartengesellschaft hat eine Einzugsermächtigung. Sie lässt den Gesamtbetrag von dem Girokonto des Karteninhabers abbuchen"),
     };
     private static Term[] termsLF11 = {
+            new Term("Kaiserreich","1848\n Revolutionsversuche, hinterlassen Spuren in der Gesellschaft\n\n"+
+                    "1871\n Reichsgründung mit dem preußischen König als Kaiser\n\n"+
+                    "1870 - 1871\n Deutsch-Französicher Krieg\n Wachsendes Nationalgefühl der deutschen Bevölkerung\n\n"+
+                    "Im Vorwort der Verfassung wird mit keinem Wort das deutsche Volk erwähnt.\n"+
+                    "Das Deutsche Reich wird von den herrschenden Königen und Herzögen gegründet. Das Volk tritt hierbei nicht in Erscheinung.\n\n"+
+                    "Wahlberechtigt: alle Männer > 25 Jahre.\nDer Bundesrat wird durch Bundesstaaten (Herzögen) bstimmt.\n"+
+                    "Ihm steht vor: Reichskanzler, vom Kaiser bestimmt, Mitglied des Reichstages.\n"+
+                    "Der Reichstag ist vom Kaiser, der ihn einberuft, eröffnet und schließen kann und vom Bundesrat abhängig.\n"+
+                    "Um ein Gesetz zustande zu bringen, muss sowohl im Reichstag, als auch im Bundesrat eine Mehrheit dafür zuStande kommen"+
+                    " und der Kaiser muss zustimmen. \nDamit kann nicht allein der Wille des Bevölkerung zu einer Gesetzänderung führen, "+
+                    "sondern nur Zusammenarbeit von Gewählten (Reichstag) und bestimmten (Bundesrat) Delegierten"),
+            new Term ("Kaisers Parlament","Der Kaiser äußerte sich abschätzig gegenüber dem Parlament\n"+
+                    "So zeigt sich auch ein abschätziges Verhältnis zum Volk, dessen Vertreter im Parlament sitzen.\n"+
+                    "Symbolisch ist, dass er siche gegen die Inschrift \"Dem Deutschen Volke\" auf dem Parlamentsgebäude"+
+                    "sträubte"),
+            new Term("Nachkriegslage","deutsche Verbündete kapitulierten. \nEnde September 1918 war der Krieg verloren."+
+                    "Es waren keine feindlichen Truppen im Lande.\nEs wurde über einen Frieden verhandelt. \n"+
+                    "Später entwickelte sich eine Inflation. \nStraßenschlachten um politische Richtung des Landes durch Freikorps, "+
+                    "die sich aus Kriegsheimkehrern bildeten.\n\"1918: Matrosen und Soldaten Aufstand: Befehlsverweigerung.\n"+
+                    "1920: Kapp Putsch. \nWeimarer Republik hatte 20 Regierungen in 14 Jahren, weil keine Person die absolute Mehrheit hatte. \n"+
+                    "Versailler Vertrag wurde als Demütigung empfunden. \nKaiser hat abgedankt und politische Lehre hinterlassen."+
+                    "Er wurde von Regierung auf Bevölkerungsdruck wegen Kriegsverlust dazu gezwungen. \nSchwierige politische Situation\nMilitärpropaganda"+
+                    "sorgt dafür, dass die Deutschen sich nicht wie Verlierer fühlen\n\n"+
+                    "Ziele Siegermächte: \nSicherheit durch Dauerhafte Schwächung Deutschlands \nDeutschland musste Land abtreten \n"+
+                    "Reperaturkosten bezahlen \nSchuld für den Krieg eingestehen \ndauerhaften Frieden \nSie wollten Deutschland zur Zustimmung zwingen \n\n"+
+                    "Kriegsschuld: Auch wenn Deutschland eine entscheidende Rolle spielte, war der Krieg letztendlich eher eine Folge der Eskalation einer "+
+                    "Politik des kalkulierten Kriegsrisikos"),
+            new Term("Weimar","Die Stadt galt, anders als Berlin, als sicher (keine Straßenschlachten).\n"+
+                    "Sie liegt in der Mitte des Reiches.\nSie hatte einen Versammlungsort: das Theater.\nSie war militärisch einfach zu sichern"),
+            new Term("Neu in WR","In der Weimarer Republik stammten die Politiker nicht nur aus dem Adel"+
+                    "oder Militär, sondern auch aus dem Volk selbst.\n Außerdem bekamen Frauen nun mehr Rechte zB das Wahlrecht\n"+
+                    "und können auch selbst Teil des Parlamentes werden"),
             new Term("Inflation",
                     "Preise steigen -> Geld weniger wert\n\nWeimarer Republik musste Kosten Weltkrieg 1, der durch Schulden finanziert wurde, zurück zahlen, durch Gelddruck.\n"+
                     "Französiche und Belgische Truppen marschierten ins Ruhrgebiet ein\nDer passive Widerstand wurde durch Gelddruck bezahlt.\n\n1 Ei = 800 RM, 1/2 Jahr später: 320 Milliarden RM\n"+
