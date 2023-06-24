@@ -1018,6 +1018,22 @@ public class Terms {
                 "Redundantes Netzteil, VM Unterstützung"),
     };
     private static Term[] termsLF10 = {
+            new Term("Stiftung Warentest", "Unabhängige Testinstitution, \nseit 1964, \ngegründet von Bundesrepublik Deutschland, \n\n"+
+                    "Finanzierung: 86% Verkauf Publikationen und Informationen, 14 % Bundesmittel, \n\n"+
+                    "Produkteinkauf: anonym, Auswahl durch Marktanalytiker, \n\nPrüfung von: Produkten & Dienstleistungen, \n\n"+
+                    "Testort: in Laboren zusammenarbeitenden Testinstitutionen weltweit"),
+            new Term("Verbraucherberatungsstellen","Auffgaben: \nBeratung (zB Recht, Geräte) \nInfobereitstellung (zb über Energieverbrauch, Preisvergleich)"),
+            new Term("Gesetz gegen unlauteren Wettbewerb","verbietet: \nKonkurenz bedrohen / schlecht machen \nLockvogelangebote / Versprechen nicht einhalten \n"+
+                    "falsche Angaben über Waren (Preis, Herkunft) machen, \nsittenwidrige Werbung (zB Belästigung auf Straße / Telefon) \n"+
+                    "fremde Warenzeichen / Firmenzeichen benutzen, \nunbestellte Waren zuschicken, \nirreführende Angaben"),
+            new Term("Haustürgeschäfte","Außerhalb von Geschäftsräumen geschlossenen Verträge \n\nWiderruf: \ninnerhalb von 14 Tagen (bei Erhalt deutlicher"+
+                    "Widerrufsbelehrung und deren gesonderten Unterschrift, \nsonst 1 Jahr und 14 Tage, \ngar nicht bei: Bagatellgeschäft (>40 Euro), notarieller Vertragsbeurkundung, "+
+                    "wenn Vertreter von Kunde selbst bestellt wurde \n\nWo? \nHaustür durch Klingeln, Fußgängerzone durch Ansprache"),
+            new Term("Fernabsatzgeschäft","Vertrag zwischen Unternehmen und Verbraucher über Warenlieferungen oder Dienstleistungen unter ausschließlicher Verwendung "+
+                    "von Fernkommunikationsmitteln \n(Vertragsverhandlungsabschluss per Internet, E-Mail, Brief, FAX, Katalog / Telefon) \n\n"+
+                    "Widerrufsdauer: 14 Tage, oder 1 Monat (bei unerlaubten Werbeanrufen), oder 1 Jahr und 14 Tage (ohne Widerrufsmöglichkeitsbelehrung) "+
+                    "Warum Wiederrufsrecht: Weil Ware nicht persönlich betrachtet werden kann \nWann nicht: Speisen & Getränken zB Pizzaservice, entsiegelte Video Video Audio und Software Träger, "+
+                    "Hygieneartikel wie Kosmetik etc, Maßanfertigungen wie Maßanzüge etc, Lebensmittel \n\nkommt zustande durch Lieferung nach Bestellung, \nAngeboot im Internet ist keines, sondern Anpreisung"),
             new Term("AGBs",
                     "Regeln und Pflichten von Käufer und Verkäufer. \n\nWie sie zu sein haben steht hier: Bürgerliches Gestzbuch (BGB). \n\nSie werden von Verkäufer selbst oder von einem Anwalt in seinem Auftrag geschrieben. \n\n"+
                     "Bsp: Verkäufer muss Käufer auf AGB hinweisen,\nAGB muss gut lesbar und verständlich sein, \nPreiserhöhung innerhalb von 4 Monaten verboten \nNachbesserungen müssen kostenlos sein, \n"+
@@ -1073,6 +1089,21 @@ public class Terms {
             new Term("Kreditkarte","Kunde legt sie vor. Sie wird mit spezifischem Gerät gelesen & eine Rechnung wird gedruckt. Kunde unterschreibt Rechnung & bekommt Quittung. Damit kann er Zahlung kontrollieren"+
                     "\n\nDer Händler bekommt Rechnungsbetrag von der Kreditgesellschaft nach einem vereinbartem Abrechnungszeitraum (zB monatlich).\n Er schickt der Kreditkartengesellschaft die Abrechnung über alle"+
                     "Rechnungen.\nDie Kreditkartengesellschaft hat eine Einzugsermächtigung. Sie lässt den Gesamtbetrag von dem Girokonto des Karteninhabers abbuchen"),
+            new Term("Sparformen","\n" + "1) Erklärung\n" + "2) Verfügbarkeit des Geldes\n" + "3) Sicherheit\n" + "4) Ertrag (~Gewinn)"+
+                    "\n\nSparbuch\n" + "1) Wenn ich Geld habe, dann bringe ich dieses Geld zur Bank und zahle es ein. Für das gesparte Geld bekomme ich Zinsen\n" +
+                    "2) Kleine Bträge: immer, Mehr als 1500/2000 Euro: 3 Monate (Kündigungsfrist), \n" + "3) Hoch\n" + "4) niedrig bis 1%"+
+                    "\n\nSparbrief\n" + "1) Ich kaufe ihn bei einer Bank und zahle es ein. Für das gesparte Geld bekomme ich Zinsen.\n" +
+                    "2) 4 - 8 Jahre fest angelegt (=ich bekomme mein Geld erst wieder nach 4 - 8 Jahren)\n" + "3) Hoch\n" + "4) etwas höher als beim Sparbuch"+
+                    "\n\nVersicherungssparen\n" + "1) Ich bezahle regelmäßig Geld. Wenn ich alt bin, bekomme ich dieses Geld + Zinsen ausbezhalt. Wenn ich vorher sterbe dann bekommt die Familie das gesamte Geld schon vorher\n" +
+                    "2) feste Laufzeit (Ich bekomme mein Geld zB nach 30 jahren wieder)\n" + "3) Hoch\n" + "4) hoch / niederig je nach Vertrag & Sparförderung"+
+                    "\n\nBausparen \n" + "1) Ich bezahle regelmäßig Geld. Nach einer bestimmten Zeit kann ein Darlehen (=einen Kredit) mit niedrigen Zinsen bekommen.\n" +
+                    "2) abhängig von Mindestsparsumme und Mindestsparzeit\n" + "3) Hoch\n" + "4) hoch / niedrig je nach Vertrag und Sparförderung"+
+                    "\n\nWertpapiere\n" + "\n" + "Festverzinsliche Wertpapiere\n" + "1) Ich kaufe zB einen pfandbrief und bekomme am Ende der Laufzeit das Gled + Zinsen. Ich kann den Pfandbrief weiterverkaufen.\n" +
+                    "2) immer\n" + "3) Hoch\n" + "4) hoch (ich bekomme feste Zinsen & Sparförderung)"+
+                    "\n\nAktien\n" + "1) Ich kaufe eine Urkunde und werde Teil einer Firma. Ich bekomme Dividenden oder kann die Aktie gewinnbringend verkaufen.\n" +
+                    "2) immer\n" + "3) niedrig\n" + "4) hoch / niedrig je nach Kurs und Sparförderung"+
+                    "\n\nInvestmentfonds \n" + "1) Ich zahle gemeinsam mit anderen in einen großen Topf. Die Investmentgesellschaft investiert mein Geld.\n" +
+                    "2) immer\n" + "3) je nach Fonds-Anteilen hoch / niedrig4\n" + "4) hoch / niedrig ja nach Fonds-Anteilen bzw. Aktienkurs & Sparförderung"),
     };
     private static Term[] termsLF11 = {
             new Term("Kaiserreich","1848\n Revolutionsversuche, hinterlassen Spuren in der Gesellschaft\n\n"+
@@ -1135,7 +1166,7 @@ public class Terms {
                     "Artikel21: (2) Eine politische Partei kann verboten werden, wenn sie die demokratisch freiheitliche Grundordnung bekämpft und abschaffen will zB AFD\n\n"+
                     "Das Grundgesetz ist so ausgerichtet, dass keine Diktatur auf legalem Weg eingerichtet werden kann, kein verbrechen gegen die Menschlichkeit soll vom Staat ausgehen\n"+
                     "Erinnerung, dass Frieden wichtig, deswegen bis heute immer erinnern."),
-            new Term("DDR & Wiedervereinigung","Deutschland wurde in 2 Staaten geteilt, weil sich die Allierten nicht einigen konnten.\n\nDie Westallierten wollten schnell politischen und witschaftlichen"+
+            new Term("DDR","Deutschland wurde in 2 Staaten geteilt, weil sich die Allierten nicht einigen konnten.\n\nDie Westallierten wollten schnell politischen und witschaftlichen"+
                     "Wiederaufbau, während die Sovietunion Reperationen für die erlittenen Kriegsschäden forderte\n\nDefinition Sozialismus: alle Menschen werden gleich behandelt. Sie haben gute Arbeitsbedingungen. "+
                     "Wirtschaft (Privateigentum an Produktionsmittel + Prozess) ist verstaatlicht \n\nAlle Bürger über 18 Jahren konnten zwar die Volkskammer (Parlament der DDR) wählen"+
                     ", allerdings war die Volkskammer schon von der (SED) vorbestimmt. Die Bürger konnten nur zustimmen oder ablehnen. Das Politbüro hatte in fast allen Angelegenheit das Sagen gehabt und bestimmte"+
