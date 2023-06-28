@@ -9,10 +9,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ab87b4-d96f-4f0f-913c-d4d0396b017d" name="Changes" comment="terms to WK">
+    <list default="true" id="43ab87b4-d96f-4f0f-913c-d4d0396b017d" name="Changes" comment="pics add">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/learnstuffapp/Terms.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/learnstuffapp/Terms.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties.txt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +20,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[51a596d1]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -77,22 +75,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/drawable&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/m.keck/AndroidStudioProjects/LearnStuffApp&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "last_directory_selection": "C:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/drawable",
+    "last_opened_file_path": "C:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/drawable",
+    "settings.editor.selected.configurable": "Errors"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Properties&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Properties"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Michael\AndroidStudioProjects\LearnStuffApp\app\src\main\res\drawable" />
@@ -397,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687641369970</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="pics add">
+      <created>1687890661972</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1687890661972</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -415,7 +420,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="checkboxes invisible if question answer option is empty" />
     <MESSAGE value="breaks because usage of null instead of empty string in Schoolstuff.java repaired" />
     <MESSAGE value="new main function &quot;Lexikon&quot;" />
     <MESSAGE value="chapters to new main function &quot;Lexikon&quot;, yet not all posted in, will ne slowly done trugh learning process for next exam till end of april, crashing when clicking on notice about chapters yet to post in in chapter spinner" />
@@ -440,6 +444,7 @@
     <MESSAGE value="terms GK &amp; gradlvers add" />
     <MESSAGE value="gradlevers" />
     <MESSAGE value="terms to WK" />
-    <option name="LAST_COMMIT_MESSAGE" value="terms to WK" />
+    <MESSAGE value="pics add" />
+    <option name="LAST_COMMIT_MESSAGE" value="pics add" />
   </component>
 </project>
