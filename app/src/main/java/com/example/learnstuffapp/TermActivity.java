@@ -155,6 +155,14 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.internet_netzwerk_aufbau);
             imgView.getLayoutParams().height=1300;
         }
+        if (term.equals("IPv4 Subnetting")) {
+            imgView.setImageResource(R.drawable.ipv4subnetting);
+            imgView.getLayoutParams().height=1000;
+        }
+        if (term.equals("Tilt, Swivel & Pivot")) {
+            imgView.setImageResource(R.drawable.tiltswivelpivot);
+            imgView.getLayoutParams().height=1000;
+        }
 
     }
 }

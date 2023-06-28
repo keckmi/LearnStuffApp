@@ -575,6 +575,7 @@ public class Terms {
             {//Selbstständig die Integration von Clients in ein Netzwerk planen und druchführen
                 new Term("IPv4 Config","IP-Adresse: 192.168.0.44\nSubnetzmaske: 255.255.255.0\nStandartgateway: 192.168.0.2\n"+
                             "DNS-Serveradresse: automatisch beziehen"),
+                new Term("IPv4 Subnetting",""),
                 new Term("IPCONFIG","Terminalbefehl\nalle Konfigrationen aller Netzwerke anzeigen"),
                 new Term("NSLOOKUP","ap adresse von domain bekommen & anderst herum\nLSLOOKUP für linux?"),
                 new Term("DHCP Protokoll", "Dynamic Host Config Protocoll\nVerteilt die Ip_Konfiguration an Rechner im Netz\nIP Adressen automatisch konfigurieren\n\n"+
@@ -941,6 +942,37 @@ public class Terms {
             "INSERT INTO Schueler (Nummer, Name, Vorname, Klasse)\n" + "VALUES (1, \"Maier\", \"Udo\", \"FIAN2\");"),
         new Term("UPDATE","SET Name = \"Keck\", Vorname=\"Michael\"\n" + "WHERE Nummer = 1"),
         new Term("DELETE","FROM Schueler\n" + "WHERE Nummer = 1"),
+        new Term("ArrayList","import java.util.ArrayList; \n\npublic class MyClass { \n\n  private ArrayList<Integer> nameArrayList = new ArrayList<>();"+
+            "\n\n  public void addInt(int int1) { \n    nameArrayList.add(int1); } \n\n  public void removeInt(int int1) {\n"+
+            "    nameArrayList.remove(int1); }\n}"+
+            "\n\n\nimport java.util.ArrayList; \nimport java.util.Collections; \n\npublic class Main { \n  public static void main(String args[]) {" +
+            "\n\n    ArrayList<Integer> zahlenArrayList = new ArrayList<>(); \n\n    Collections.addAll(zahlenArrayList, 1, 2, 3, 4);" +
+            "\n\n    for (int i= 0; i < zahlenArrayList.size(); i++) { \n      System.out.println(zahlenArrayList.get(i)); }\n  }\n}"),
+        new Term("Klassendiagramm","Zugriffsmodifizierer: \n# protected (abstrakte und basisklassen, auch basisklassen die erben)\n~ package private \n+ public \n- private"+
+            "\n\nVererbung: \nBeispiel: Ein Roman ist ein Buch. \nVon einem Viereck, in dem Roman steht geht ein Pfeil mit leerem Dreieck als Spitze aus und zeigt auf"+
+            " ein Viereck, in dem Buch steht. Neben dem Pfeil steht: extends."+
+            "\n\nAssoziation: \nBeispiel: Ein Kunde kann eine Anzahl von Videos ausleihen. \nVon einem Viereck, in dem Kunde steht geht eine Linie zu "+
+            "einem Viereck, in dem Videos steht. Neben dieser steht, wo sie aus dem ersten Viereck geht: 0..1 und: hat ausgeliehen und wo sie in das zweite "+
+            "Viereck geht: 0..* und: leiht aus."+
+            "\n\nKardinalitäten: \n1..1 oder 1 = genau einer \n0..* oder * = mehrere, viele (einschl 0) \n0..1 = keiner oder einer (optional) "+
+            "\n11 = genau 11 \n2..4 = 2,3, oder 4 (Bereichsangabe) \n2, 4 = 2 oder 4 (Aufzählung)" +
+            "\n\nAssoziationen Arten: \n\nAggregation: \nGanzes-Teil-Beziehung \nBeteiligte Objekte können unabhängig voneinander existieren"+
+            "Beispiel: Restaurant - Stuhl: Vierecke verbunden mit Linie. Wo diese auf das Viereck Restaurant trifft, befindet sich eine leere Raute."+
+            "Auf der Seite des Viereckes Stuhl steht neben der Linie: 0..* \n\n"+
+            "Bei der Aggregation werden Referenzen auf Objekte gespeichert"+
+            "\n\nKomposition: \nGanzes-Teil-Beziehung \nBeteiligte Objekte existieren nur gemeinsam"+
+            "Beispiel: Bestellung - Warenkorb: Vierecke verbunden mit Linie. Wo diese auf das Viereck Bestellung trifft, befindet sich eine gefüllte Raute. "+
+            "Auf der Seite des Viereckes Warenkorb steht neben der Linie: 1 \n\n"+
+            "Bei der Komposition werden die Objekte selbst erschaffen zB wird ein new Warenkorb in in Bestellung erschaffen."),
+        new Term("toString()","@Override\npublic String toString() {\n  String sterneInSternbild = \"\"; \n  for (Sterne s : sterne) { \n    sterneInSternbild += s + \" \"; }"+
+            "\n  return sterneInSternbild; \n}"),
+        new Term("Constructor","public NameClass (int attributBasisklasse1, String attributBasisKlasse2, double attributDieserKlasse) { \n  super(attributBasisklasse1,"+
+            " attributBasisklasse2); \n  this.attributDieserKlasse = atttributDieserKlasse; \n}"),
+        new Term("abstract","public abstract class Flaeche { \n  protected String farbe; \n\n  public Flaeche(String farbe) { \n"+
+            "    this.farbe = farbe; } \n\n  public abstract double berechneFlaech(); \n\n  public String getFarbe() { \n    return farbe; }\n\n\n"+
+            "public class Kreis extends Flaeche { \n  protected double radius; \n\n  public Kreis(String farbe, double radius) { \n    super(farbe); \n"+
+            "    this.radius = radius; } \n\n  @Override \n  public double berechneFlaeche() { \n    return 3.1415 * radius * radius } \n"+
+            "\n  public String getFarbe() { \n    return super.getFarbe(); }\n}")
     };
     private static Term[] termsLF9 = {
         new Term("Einflüsse auf Netzwerkbereitstellungen",
