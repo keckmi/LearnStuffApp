@@ -1050,6 +1050,61 @@ public class Terms {
                 "Redundantes Netzteil, VM Unterstützung"),
     };
     private static Term[] termsLF10 = {
+            new Term("Rechtsfähigkeit",
+                    "bedeutet Träger von Rechten & Pflichten zu sein \nzB Recht auf Urlaub -> Pflicht zu arbeiten \nBeginn: Geburt, Ende: Tod"),
+            new Term("Natürl, jurist Personen",
+                    "Natürliche Personen: alle lebenden Menschen, rechtsfähig (außer <18 -> gesetzlicher Vertreter)" +
+                    "\n\nJuristische Personen: rechtsfähig (können aber nur durch natürliche Personen handeln)"+
+                    " zB Herr M bestellt iPads im Namen der Paullinenpflege, bezahlt mit ihrem Geld"+
+                    "\ndes privaten Rechts -> Vereine, Firmen \nrechtsfähig wenn zB in öffentlichen Verzeichnis"+
+                    "\ndes öffentlichen Rechts -> Ämter, IHK, Polizei \nrechtrechtsfähig wenn Staat das genehmigt"),
+            new Term("Geschäftsfähigkeit",
+                    "geschäftsunfähig = 0-7 Jahre, geistig behindert = Rechtsgeschäfte nichtig\n"+
+                    "beschränkte geschäftsfähigkeit = 7 - 18 Jahre, = schwebend unwirksam, nur gültig bei zuständiger gesetzlicher Vertretung*\n"+
+                    "volle geschäftsfähigkeit 18+ Jahre = alle Rechtsgeschäfte sind voll gültig\n\n"+
+                    "*Ausnahmen: \nGeschäfte mit nur Vorteilen zB Geldgeschenk, \nGeschäfte die nur mit Taschengeld bezahlt werden können"+
+                    "\nRatenverträge <18 Jahre sind verboten \nGeschäfte die Arbeitsverhältnis betreffen wenn von Elter erlaubt"),
+            new Term("Rechtsgeschäfte",
+                    "-geschäftsfähige Personen + Willenserklärungen, rechtliche Folgen wenn sich nicht an Willenserklärung gehen wird\n\n"+
+                    "Willenserklärung \n1) ausdrückliche Erklärung = schriftlich, mündlich, telefon, handschlag \n"+
+                    "2) schlüssiges Handeln - Taxieinstieg, Waren auf Kassenband \n3) Schweigen im privaten Bereich = Ablehnung zB unbestelltes Buch\n\n"+
+                    "Besondere Formvorschriften: \nGrundsatz der Formfreiheit: \n"+
+                    "Rechtsgeschäfte können in beliebiger Form abgeschlossen werden, mündlich / schriftlich\n"+
+                    "Formzwang: \nschriftliche zB bei Berufsausbildungsvertrag, Ratenvertrag, Kündigung\n"+
+                    "öffentliche Beglaubigung zB bei Zeugnis, Geburtsurkunde (kopiert) (überprüfung ob Unterschrift auf Vertrag echt ist)\n"+
+                    "notarielle Beurkundung zB bei Ehevertrag, Grundstücksverkauf (Notar bestätigt Echtheit Unterschrift & Inhalt)\n\n"+
+                    "Einseitige Rechtsgeschäfte: Testament, Kündigung, Anfechtung\n"+"Zwei / Mehrseitige Rechtsgeschäfte: Verträge, Tausch, Schenkung, Verleih\n\n"+
+                    "Nichtige / anfechtbare Rechtsgeschäfte: \nPerson geschäftsunfähig, Person vorrübergehend gestört im Bewusststein,\n"+
+                    "Schwarzarbeit, schwebend unwirksam, Scherzgeschenk, Formzwang nicht eingehalten, illegal, Wucher, Drohung, Irrtum, Betrug"),
+            new Term("Kaufvertrag",
+                    "2 übereinstimmende Willenserklärungen WE (Inhalt gleich) \n\nVerpflichtungsgeschäft\nzB Verkäufer 1. WE Angebot, Käufer 2. WE Bestellung"+
+                    "\nzB Käufer 1.WE Bestellung, Verkäufer 2.WE Lieferung\n\n Erfüllungsgeschäft: \nPflichten Verkäufer: Annahme Kaufpreis, Ware bereitstellen (zum vereinbarten Zeitpunkt und vereinbarter Qualität)"+
+                    "Pflichten Käufen: Zahlung des Kaufpreises, Warenannahme \n\nInhalt: Art & Gut der Ware (Stück), Lieferzeit, Verpackung und Transportkosten, zB frei Haus, Käufer und Verkäufer,"+
+                    " Preisnachlass, SKonto*, Rabatt, Preis\n\n*Preisnachlass für Zahlung innerhalb einer bestimmten Zeit"),
+            new Term("Pflichtverletzung bei der Erfüllung von Kaufverträgen",
+                    "Mangelhafte Lieferung: \nSachmangel in Beschaffenheit, Menge, Art, Montage \nvorrangige Rechte: Nacherfüllung (Nachbesserung, Ersatz liefern)\n"+
+                    "nachrangige Rechte: Rücktritt, Minderung, Schadenersatz, Ersatz (wenn 2x erfolglose Nachbesserung oder Austauschware nicht geliefer, bzw. ebenfalls mangelhaft)\n\n"+
+                    "Bindung an das Angebot\n Verkäufer an Verkaufs- und Käufer an Kaufangebot gebunden außer Freizeichnungsklausel zB \"unverbindlich\", \"nur solange Vorrat reicht\"\n\n"+
+                    "Eigentum & Besitz \nEigentum = gehört mir, darf alles damit machen \nBesitz = gehört mir gerade, aufpassen, zurückgeben"+
+                    "\nEigentumsvorbehalt: Verkäufer bleibt Eigentümer bis Rate ganz beglichen \nman kann Eigentümer von Sache werden, die noch unter Eingentumsvorbehalt"+
+                    "stand wenn man sie gutgläubig (unwissend) vom Ratenzahler kaute\n\n"+
+                    "Mangelhafte Lieferung II \nAGB: Hier kann so manches über die Käuferrechte stehen \nRechte Verkäufer: Mängelrüge (Mahnung) nach Frist "+
+                    "nach 30 Tagen ist Käufer im Verzug. Zahlung nun einklagbar, Zahlung & Schadensersatz forderbar, Vertragsrücktritt möglich (nach Nachfrist), "+
+                    "+Schadensersatz. \nDavor muss Nachfrist in Mahnung gesendet werden. Die fällt weg, wenn Käufer Zahlung verweigert oder diese datiert wurde.\n\n"+
+                    "Vertragsstörungen: \nmangelhafte Lieferung: Ware defekt / falsche Ware \nLieferverzögerung: Ware zu spät / falsche Anzahl \ndurch Verkäufer: "+
+                    "Zahlungsverzug, Annahmeverzug"),
+            new Term("Zwangsvollstreckung","nach nicht Bezahlung nach gerichtlichem Mahnverfahren \nGerichtsvollzieher kommt zum Schuldner pfänden\n"+
+                    "klebt Pfandsiegel auf Möbel. Lebensnotwendige Dinge darf er nicht pfänden. Dann gibt es Versteigerung \n\nLohn auch pfändbar aber mit Grenzen\n"+
+                    "Arbeitsgeber rechnet Lebensunterhaltskosten aus, überflüssiges bekommt Gläubiger \n\nZPO - Zivilprozessordnung (was, wie viel darf man pfänden?)\n"+
+                    "pfändbar = Zuschläge Nacht-/Schichtarbeit, Freitags/Sonntagsarbeit, teilweise pfändbar = Gefahrenzulage, Beiträge für Altersvorsorge\n\n"),
+            new Term("Verjährung von Forderung", "30 J = Erbe, Gerichtsurteile\n10 J = Grundstückskauf\n5 J = Bauwerksmangel (zB Mauerrisse)\n"+
+                    "3 J = normale normale gesetzliche Verjährungsfrist (beginnt Jahresende zB 31.12.23)\n2 J = Gewährleistungsfrist mangelhafte Lieferung auch wenn Handy heil ankam, "+
+                    "aber nach 4 Wochen nicht mehr tut \n\nHemmung (Unterbrechung mind 3 Monate) durch gerichtliche Mahnung, Klagewind erhoben, höhere Gewalt\n\n"+
+                    "Nebeginn durch Zahlung durch Käufer (Teilzahlung), Mangelbeseitigung durch Käufer Vollstreckungsbescheid beantragt oder durchgeführt"),
+            new Term("Mangelhafte Lieferung III","Firma verkauft Neuware \n\ngesetzliche Gewährleistungsfrist 2 Jahre \nFirma muss Fehler & Schäden kostenlos "+
+                    "in Ordnung bringen \nnach 1 Jahr: Käufer muss jetzt Unschuld beweisen (zuvor Verkäufer) \n\nGarantie bedeutet Hersteller verspricht Fehler Verarbeitung / Material "+
+                    "seiner Waren kostenlos in Ordnung zu bringen. Achtung! ist freiwillig, Dauer ist verschieden. \n\nFirma verkauft gebrauchte Ware \ngesetzliche Gewährleistungspflicht 1 Jahr \nselbe wie oben \n\n"+
+                    "private Person verkauft gebrauchte Ware \nwenn Verkäufer Gewährleistung nicht ausdrücklich ausschließt: 1 Jahr \nwenn Verkäufer Gewährleistung ausdrücklich außschließt: 0"),
             new Term("Stiftung Warentest", "Unabhängige Testinstitution, \nseit 1964, \ngegründet von Bundesrepublik Deutschland, \n\n"+
                     "Finanzierung: 86% Verkauf Publikationen und Informationen, 14 % Bundesmittel, \n\n"+
                     "Produkteinkauf: anonym, Auswahl durch Marktanalytiker, \n\nPrüfung von: Produkten & Dienstleistungen, \n\n"+
@@ -1059,13 +1114,13 @@ public class Terms {
                     "falsche Angaben über Waren (Preis, Herkunft) machen, \nsittenwidrige Werbung (zB Belästigung auf Straße / Telefon) \n"+
                     "fremde Warenzeichen / Firmenzeichen benutzen, \nunbestellte Waren zuschicken, \nirreführende Angaben"),
             new Term("Haustürgeschäfte","Außerhalb von Geschäftsräumen geschlossenen Verträge \n\nWiderruf: \ninnerhalb von 14 Tagen (bei Erhalt deutlicher"+
-                    "Widerrufsbelehrung und deren gesonderten Unterschrift, \nsonst 1 Jahr und 14 Tage, \ngar nicht bei: Bagatellgeschäft (>40 Euro), notarieller Vertragsbeurkundung, "+
+                    "Widerrufsbelehrung und deren gesonderten Unterschrift, \nsonst 1 Jahr und 14 Tage, \ngar nicht bei: Bagatellgeschäft (<40 Euro), notarieller Vertragsbeurkundung, "+
                     "wenn Vertreter von Kunde selbst bestellt wurde \n\nWo? \nHaustür durch Klingeln, Fußgängerzone durch Ansprache"),
             new Term("Fernabsatzgeschäft","Vertrag zwischen Unternehmen und Verbraucher über Warenlieferungen oder Dienstleistungen unter ausschließlicher Verwendung "+
                     "von Fernkommunikationsmitteln \n(Vertragsverhandlungsabschluss per Internet, E-Mail, Brief, FAX, Katalog / Telefon) \n\n"+
                     "Widerrufsdauer: 14 Tage, oder 1 Monat (bei unerlaubten Werbeanrufen), oder 1 Jahr und 14 Tage (ohne Widerrufsmöglichkeitsbelehrung) "+
-                    "Warum Wiederrufsrecht: Weil Ware nicht persönlich betrachtet werden kann \nWann nicht: Speisen & Getränken zB Pizzaservice, entsiegelte Video Video Audio und Software Träger, "+
-                    "Hygieneartikel wie Kosmetik etc, Maßanfertigungen wie Maßanzüge etc, Lebensmittel \n\nkommt zustande durch Lieferung nach Bestellung, \nAngeboot im Internet ist keines, sondern Anpreisung"),
+                    "Warum Wiederrufsrecht: Weil Ware nicht persönlich betrachtet werden kann \nWann nicht: Speisen & Getränken zB Pizzaservice, entsiegelte Video Audio und Software Träger, "+
+                    "Hygieneartikel wie Kosmetik etc, Maßanfertigungen wie Maßanzüge etc, Lebensmittel \n\nkommt zustande durch Lieferung nach Bestellung, \nAngebot im Internet ist keines, sondern Anpreisung"),
             new Term("AGBs",
                     "Regeln und Pflichten von Käufer und Verkäufer. \n\nWie sie zu sein haben steht hier: Bürgerliches Gestzbuch (BGB). \n\nSie werden von Verkäufer selbst oder von einem Anwalt in seinem Auftrag geschrieben. \n\n"+
                     "Bsp: Verkäufer muss Käufer auf AGB hinweisen,\nAGB muss gut lesbar und verständlich sein, \nPreiserhöhung innerhalb von 4 Monaten verboten \nNachbesserungen müssen kostenlos sein, \n"+
@@ -1074,13 +1129,15 @@ public class Terms {
                     "zB Kaufvertrag - Wenn Käufer nicht zahlt oder Verkäufer Scheiße liefert \nzB private Haftungsversicherung - Lisa fällt vom Rad weil Steffen Sie übersieht \n"+
                     "2) Produkthaftung \nzB ein neuer TV explodiert nach 2h \n3)Unerlaubte Handlung \nist gegen das Gesetz. Wenn man eine andere Person mit Absicht schädigt: Eigentum, Gesundheit, Körper, Freiheit \n"+
                     "Kinder bis 7: nicht deliktfähig \n7-18: bedingt deliktfähig \nab 18: deliktfähig"),
-            new Term("Sparen - Ratenkauf","Sparen Vorteile: \nZinsen, \nBilliger: Keine Gebühren, keine Zinsen \nNachteile: \nWarten"+
-                    "Ratenkauf Vorteile: \nKeine Wartezeit \nNachteile: \nregelmäßige Ratenzahlung, \nTeuer: Zinsen, Gebühren,\n Wenn Sache vor Ende der Ratenzahlung kaputt geht, muss man weiter zahlen. \n"+
+            new Term("Sparen - Ratenkauf","Sparen \n\nVorteile: \nZinsen, \nBilliger: Keine Gebühren, keine Zinsen \n\nNachteile: \nWarten"+
+                    "\n\nRatenkauf \n\nVorteile: \nKeine Wartezeit \n\nNachteile: \nregelmäßige Ratenzahlung, \nTeuer: Zinsen, Gebühren,\n Wenn Sache vor Ende der Ratenzahlung kaputt geht, muss man weiter zahlen. \n"+
                     "Auch bei unvorhergesehenen Kosten."),
-            new Term("Ratenkauf","Muss man immer schriftlich machen. \n\nKann man 2 Wochen land wiederrufen \n(schreiben, dass man ihn doch nicht haben will:)" +
-                    "auf Postkarte, brief (spätestens am 14t Tag bei Post(Poststempel))) Beweis für rechtzeitiges Verschicken auch durch Einschreiben (Empfasngsbestätigung) möglich \n\n"+
+            new Term("Ratenkauf","Muss man immer schriftlich machen. \n\nKann man 2 Wochen land wiederrufen \n(schreiben, dass man ihn doch nicht haben will:) " +
+                    "auf Postkarte, brief (spätestens am 14t Tag bei Post(Poststempel))). Beweis für rechtzeitiges Verschicken auch durch Einschreiben (Empfasngsbestätigung) möglich \n\n"+
                     "Ratenkaufvertrag hat \n1. Barzahlungspreis \n2. Anzahl monatlicher Rate \n3. Wann und wie sind diese zu bezahlen \n4.Ratenpreis (Teilzahlungspreis): Diesen Preis muss man bei Ratenkauf insgesamt zahlen" +
-                    "\n5. effektiver Jahreszins: Mehrkosten Ratenkauf als Barzahlung (Sofortzahlung) in % \n6. Höhe monatlicher Raten"),
+                    "\n5. effektiver Jahreszins: Mehrkosten Ratenkauf als Barzahlung (Sofortzahlung) in % \n6. Höhe monatlicher Raten"+
+                    "\n\nBeispiel Rechnung: \nFlug \n1200 Barzahlungspreis \n12 monatliche Raten\n 0,5% monatlicher Zins \n 2% Bearbeitungsgebühr \n\nRatenpreis: \n+ (1200 * 0,05 * 12) \n1200 \n+ (1200 * 0,02) \n= 1296 \n\n"+
+                    "monatliche Rate: \n1296 / 12 \n= 108 \n\nPreis Differenz: \n1296 - 1200 \n= 96 \n\nEfffektiv(er) (Jahres) Zins: \n(100 : 1200) \n*96 \n= 8%"),
             new Term("Warenkennzeichnung","Lebensmittelkennzeichnungsverordnung \nInhaltsstoffe haben auf Verpackung zu stehen \n\nVerbraucherinformationsgesetz \n"+
                     "Wenn Firma Verbraucher getäuscht / verdorbene Lebensmittel verkauft, müssen Behörden informieren \nSelbstnacvhfrage bei Behörden möglich"+
                     " (zB Pestizidbelastung Gemüse / Allergika in Shampoo) \n\nEichgesetz \nAlte Waggen / Messbecher müssen regelmäßig geprüft werden, ob sie richtig wiegen oder ob das Maß noch stimmt (Eichung)"+
@@ -1089,7 +1146,7 @@ public class Terms {
                     "\n\nGütezeichen \ndürfen Hersteller nur nutzen wenn Waren einen vorgeschriebenen Qualitätsstandart haben zB reine Schurwolle, in Dutschland geprüfte Markenware, "+
                     "Bio nach EG-Öko Verordnung \n\nPrüfzeichen \nsollen festgelegten Sicherheitsstandart garantieren (=Waren mit diesem Zeichen sind geprüft und sicher)"+
                     "zB gprüfte Sicherheit GS, CE Europäisch Gemeinsch für Produkte in EU, Verband deutscher Elektriker \n\nUmweltzeichen \nfür Produkte die besonderst umweltfreundlich sind zB Blauer Engel"),
-            new Term("Verbaucherschutzgesetze","Wettbewerbsrechtliche Regelungen:\nGesetz gegen den unlauteren Wettbewerb\nKartellgesetz - Verbietet Kartelle + martkbeherschende"+
+            new Term("Verbaucherschutzgesetze","Wettbewerbsrechtliche Regelungen:\nGesetz gegen den unlauteren Wettbewerb\nKartellgesetz - Verbietet Kartelle + martkbeherschende "+
                     "Unternehmenszusammenschlüsse (zB mehrere Firmen sprechen Preise ab)\n->Verbraucher sollen bei Kaufentscheidung nciht wettbewerbswidrig beeinflusst werden\n\n"+
                     "Gesetze zum Schutz der Verbraucher:\nProdukthaftungsgesetz - Hersteller haften für Fehlerhafte Produkte\nBürgerliches Gesetzbuch - Es regelt: \nVerbraucherkredite"+
                     "(schützt vor Fallen bei Kreditverträgen)\nFernabsatzgeschäfte (schützt bei Bestellung im Versandhandel)\nHaustürgeschäfte(schützt bei Verträgen an der Haustür)\n"+
@@ -1109,17 +1166,17 @@ public class Terms {
                     "Vorteile:\njederzeit\nOnlinekonto günstiger\nBanken benötigen weniger Mitarbeiter\n\nNachteile:\nunsicher (phishing),\nkeine direkte / persönliche Beratung"),
             new Term("Phishing","(Password Fishing)\n\nFakemails mit Links zu Fakeseiten wie bspw Amazon, Ebay, mit dem Ziel, dass du dich dort \"einloggst\" um Anmeldedaten abnzugreifen"+
                     "\n\nErkennbar an:\n unpersönlicher Anrede (echter Name nicht bekannt)\nAndorderungen einzuloggen dringend (womöglich mit Drohung verbunden)\n"+
-                    "Direktlink zur Login Seite\nflasche Spreche\n\nVerhaltensregeln:\nMisstrauen bei Aufforderungen zum sofortigen Haneln\nNicht auf Links in verdächtigen Mails klicken\n"+
+                    "Direktlink zur Login Seite\nfalsche Sprache\n\nVerhaltensregeln:\nMisstrauen bei Aufforderungen zum sofortigen Handeln\nNicht auf Links in verdächtigen Mails klicken\n"+
                     "Auf Anbieterseite über Sicherheitsmerkmale informieren\nVerdächtige Mails an Anbieter weiterleiten"),
-            new Term("Kredite","Dispositionskredit:\nKonto überziehen\nschnnell Rechnung bezahlen\nKredithöhe mit Bank klären\nÜberziehungszinsen\n\nRatenkredit:"+
+            new Term("Kredite","Dispositionskredit:\nKonto überziehen\nschnnell Rechnung bezahlen\nKredithöhe mit Bank klären\nÜberziehungszinsen\n\nRatenkredit: "+
                     "bei höheren Beträgen\nKreditvertrag: Inhalt:\nKreditnehmer, -geber, Zinsen, Bearbeitungsgebühren, Laufzeit, Höhe der Raten\nSicherheiten zu geben:\n"+
-                    "Nachweis über regelmäßiges Einkommen, Hypothek, Bürgerschaft Lohnabtretung\nMonatliche Zahlung"),
+                    "Nachweis über regelmäßiges Einkommen, Hypothek, Bürgerschaft Lohnabtretung\nMonatliche Zahlung\n\n"),
             new Term("Sparen","Regeln (zuerst überlegen für beste Sparform):\nWie viel Geld habe ich?\nWie viel kann ich sparen?\nfür was möchte ich sparen?\n\n"+
                     "3 Entscheidungsmerkmale:\nErtrag: Wie viel Zinsen oder Gewinn gibt es?\nSicherheit: bekomme ich mein Geld wieder zurück?\nVerfügbarkeit: Wie lange muss ich anlgegen, wie schnell bekomm ichs zurück?"+
-                    "\n\nAb bestimmter Summe sollten Sparformen gemsicht werden\n\nSparmotive:\nZwecksparen, für bestimmte Sache, Wunsch\nVorsorgesparen, für bestimmte Zeit, zB Notzeit, Rente, Kinder\n"+
+                    "\n\nAb bestimmter Summe sollten Sparformen gemischt werden\n\nSparmotive:\nZwecksparen, für bestimmte Sache, Wunsch\nVorsorgesparen, für bestimmte Zeit, zB Notzeit, Rente, Kinder\n"+
                     "Vermögensbildung, für Eigentum, Reichtum (bringt Zinsen), zB Haus"),
             new Term("Kreditkarte","Kunde legt sie vor. Sie wird mit spezifischem Gerät gelesen & eine Rechnung wird gedruckt. Kunde unterschreibt Rechnung & bekommt Quittung. Damit kann er Zahlung kontrollieren"+
-                    "\n\nDer Händler bekommt Rechnungsbetrag von der Kreditgesellschaft nach einem vereinbartem Abrechnungszeitraum (zB monatlich).\n Er schickt der Kreditkartengesellschaft die Abrechnung über alle"+
+                    "\n\nDer Händler bekommt den Rechnungsbetrag von der Kreditgesellschaft nach einem vereinbartem Abrechnungszeitraum (zB monatlich). \nEr schickt der Kreditkartengesellschaft die Abrechnung über alle "+
                     "Rechnungen.\nDie Kreditkartengesellschaft hat eine Einzugsermächtigung. Sie lässt den Gesamtbetrag von dem Girokonto des Karteninhabers abbuchen"),
             new Term("Sparformen","\n" + "1) Erklärung\n" + "2) Verfügbarkeit des Geldes\n" + "3) Sicherheit\n" + "4) Ertrag (~Gewinn)"+
                     "\n\nSparbuch\n" + "1) Wenn ich Geld habe, dann bringe ich dieses Geld zur Bank und zahle es ein. Für das gesparte Geld bekomme ich Zinsen\n" +
