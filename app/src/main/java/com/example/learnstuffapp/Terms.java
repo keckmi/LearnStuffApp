@@ -1050,6 +1050,45 @@ public class Terms {
                 "Redundantes Netzteil, VM Unterstützung"),
     };
     private static Term[] termsLF10 = {
+            //Ordner 2
+            new Term("Sozialversicherungen",
+                    "Krankenversicherung \nseit1883 \nTräger: Krankenkasse \nBeiträge zahlt Arbeitgeber & Arbeitnehmer 50/50 \nBeitragshöhe: 14,6 % von Bruttolohn \n"+
+                    "\nUnfallversicherung \nseit1884 \nTräger: Berufsgenossenschaften \nBeiträge zahlt Arbeitgeber 100% \nBeitragshöhe hängt von Unfallrisiko ab\n\n"+
+                    "Rentenversicherung \nseit 1889 \nTräger: Deutsche Rentenversicherung \nBeiträge zahlt Arbeitgeber 100% \nBeitragshöhe 18,6 % vom Bruttolohn\n\n"+
+                    "Arbeitslosenversicherung \nseit 1927 \nTräger: Bundesagentur für Arbeit \nBeiträge zahlt Arbeit 100% \nBeitragshöhe 2,4 % von Bruttolohn\n\n"+
+                    "Pflegeversicherung \nseit 1995 \nTräger: Pflegekasse \n Beiträge zahlt Arbeit 100% \nBeitragshöhe 3,05 % (kinderlos, über 23: + 0,35 %)\n\n"+
+                    "Beitrag berechnen \nLohn * 0,5 (Arbeitgeber und Arbeitnehmer zahlen je die Hälfte) * 0,024 (Höhe Arbeitslosenversicheurng) = 28,80\n\n"+
+                    "Solidaritätsprinzip: Frau A & B zahlen ein, wenn eine krank wird, bekommt sie von den Beiträgen beider, so wie die andere auch, falls diese auch mal krank ist"),
+            new Term("Tarifvertrag",
+                    "Tarifverhandlungen durch \"Sozialpartner\" Arbeitgeberverband und Gewerkschaft führen zu \n\nLohntarifvertrag \nLohnhöhe \nLaufzeit: 1 Jahr \n\nManteltarifvertrag \nArbeitsbedingungen"+
+                    " wie Pausen, Mehrarbeit, Arbeitszeit, Laufzeit: 3 - 5 Jahre \n\nSo muss nicht jedes Jahr alles neu verhandelt werden \n\nTarifvertrag: einheitliche Arbeitsbedingungen für ganzen Wirtschaftszweig"+
+                    "\n\nTarifverhandlungen: \nTarifautonomie: Tarifpartner verhandeln selbst (Staat darf nicht einmischen) \nSchlichtung: Wenn Tarifverhandlung scheitert, +neutrale Person versucht Lösung zu finden \n"+
+                    "Urabstimmung: Wenn Schlichtung scheitert. Gewerkschaftsmitgleider stimmen über Streik ab (75% der Stimmen benötigt) \nStreikgeld: von Gewerkschaft (da kein Lohn während Streik) \n"+
+                    "Aussperrung: Firma wird geschlossen, da wegen Sreik unrentabel. Problem für Arbeiter außerhalb der Gewerkschaft. Diese bekommen jetzt weder Lohn noch Streikgeld\n"+
+                    "Neue Tarifverhandlungen: 2. Urabstimmung: Streik Ende? (mindestens 25% der Stimmen benötigt) \nNeuer Tarifvertrag \nallgemeinverbindlich für alle gültig!"+
+                    "\n  Jede Firma, jeder Chef, jeder Arbeiter muss ihn beachten. \nFriedenspflicht: Da neuer Tarifvertrag keinen Streik und keine Aussperrung mehr!"),
+            new Term("Interessenvertretung im Betrieb",
+                    "1) Schwerbehindertenvertretung \n2) Jugend & Auszubildendenvertretung \n3) Betriebsrat"+
+                    "\n\nwo? \nprivate Betriebe \n1) mit mindestens 5 Schwerbehinderten \n2) mit mindestens 5 Jugendlichen &/oder Auszubildenden \n3) mit mindestens 5 Arbeitnehmern"+
+                    "\n\nWahl für \n1) 4 Jahre von Schwerbehinderten (mindestens 60 GdB) \n2) 2 Jahre von < 18 jährigen & allen Azubis \n3) 4 Jahre von Arbeitnehmer > 18 jährig"+
+                    "\n\nWen wählen \n1) Arbeiter, mindestens 6 Monate im Betrieb, volljährig \n2) bis 25 jährige, bei Azubis alle \n3) Arbeiter >18 jährige und mindestens 6 Monate im Betrieb"+
+                    "\n\nMitgliederzahl \n1) 1 + 1 Stelllvertreter \n2) verschieden (maximal 25) \n3) abhängig von Betriebsgröße"+
+                    "\n\nAufgabe \n1) Betriebsratssitzungsteilnahme, hilft Schwerbehinderten bei Problemen im Betrieb, achtet auf Einhaltung von Gesetz und Vorschrift\n"+
+                    "2) Betriebsratssitzungsteilnahme, achtet auf Einhaltung von Gesetz und Vorschrift, Zusammenarbeit mit Betriebsrat, spricht nicht direkt mit Chef, sondern erst mit Betriebsrat"+
+                    "3) Verwaltung der Sozialeinrichtungen und Arbeitsschutz"),
+            new Term("Betriebsrat","Mitbestimmung im Betrieb \n\n   Personalsachen \n   Tarifverträge \n   Betriebsvereinbarungen \n   Betriebswirtschft"),
+            new Term("Betriebsversammlung","alle 3 Monate \n\nVorbereitung und Leitung: Betriebsrat \ndieser berichtet hier von Arbeit der letzten 3 Monate \nArbeiter kommen zusammen und stellen Fragen\n"+
+                    "Chefs sind dabei und können sich zu Wort melden"),
+            new Term("Besonderer Kündigungsschutz","Für Arbeiter in Betriebsrat und Schwerbehindertenvertretung"),
+            new Term("Arbeitszeugnis","einfaches Arbeitszeugnis: \nBeschäftigung Art & Dauer, erworbene Fähigkeiten & Kenntnisse"+
+                    "Qualifiziertes Zeugnis: \n(auf Verlangen) \nVerhalten + Leistung zusätzlich beurteilt \n\nJeder Arbeiter hat darrauf Anspruch \nmuss immer positiv formuliert sein "+
+                    "[siehe Bild]"),
+            new Term("Kündigung","fristlose Kündigung \nzB wegen Diebstahl, Körperliche Gewalt, Arbeitsvergewaltigung, zu häufiges Fehlen ohne Entschuldigung\n\n"+
+                    "fristgemäße Kündigung \n\nKündigungsschutz allgemein \nKündigung muss begründet und sozial gerechtigt sein (jüngere vor ältere, ledig vor Eltern, Neu vor lang in Betrieb)\n\n"+
+                    "besonderer Kündigungsschutz \nfür Betriebsräte, Jugend und Auszubildendenvetretung, Schwangere, Stillende, Schwerbehinderte mit mind 50 GdB\n\n"+
+                    "gesetzliche Kündigungsfrist \nProbezeit 2 Wochen: Kündigung kann jeden Tag ausgesprochen werden \nBeschäftigung < 2 Jahre: 3 Monate\n\n"+
+                    "nach selbst kündigen ohne Arbeit: Sperrzeit Arbeitslosengeld bis 12 Wochen"),
+            //Ordner 3
             new Term("Rechtsfähigkeit",
                     "bedeutet Träger von Rechten & Pflichten zu sein \nzB Recht auf Urlaub -> Pflicht zu arbeiten \nBeginn: Geburt, Ende: Tod"),
             new Term("Natürl, jurist Personen",
@@ -1105,6 +1144,7 @@ public class Terms {
                     "in Ordnung bringen \nnach 1 Jahr: Käufer muss jetzt Unschuld beweisen (zuvor Verkäufer) \n\nGarantie bedeutet Hersteller verspricht Fehler Verarbeitung / Material "+
                     "seiner Waren kostenlos in Ordnung zu bringen. Achtung! ist freiwillig, Dauer ist verschieden. \n\nFirma verkauft gebrauchte Ware \ngesetzliche Gewährleistungspflicht 1 Jahr \nselbe wie oben \n\n"+
                     "private Person verkauft gebrauchte Ware \nwenn Verkäufer Gewährleistung nicht ausdrücklich ausschließt: 1 Jahr \nwenn Verkäufer Gewährleistung ausdrücklich außschließt: 0"),
+            //Ordner 4
             new Term("Stiftung Warentest", "Unabhängige Testinstitution, \nseit 1964, \ngegründet von Bundesrepublik Deutschland, \n\n"+
                     "Finanzierung: 86% Verkauf Publikationen und Informationen, 14 % Bundesmittel, \n\n"+
                     "Produkteinkauf: anonym, Auswahl durch Marktanalytiker, \n\nPrüfung von: Produkten & Dienstleistungen, \n\n"+

@@ -163,6 +163,10 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.tiltswivelpivot);
             imgView.getLayoutParams().height=1000;
         }
+        if (term.equals("Arbeitszeugnis")) {
+            imgView.setImageResource(R.drawable.arbeitszeugnis);
+            imgView.getLayoutParams().height=500;
+        }
 
     }
 }
