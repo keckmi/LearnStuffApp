@@ -4,7 +4,7 @@
 6 Jun: gemeinschaftskunde added  
 5 Jun: Bug: Checkboxes invisible reset fail in quiz fixed, new terms'n'quiz to lf9 and wirtschaftskunde added  
 25 February: lexicon lf1 term content abscence fixed  
-23, 18 & 05 February: pics added 
+23, 18 & 05 February: pics added  
 25 January: chapters to new main function "Lexicon", yet not all posted in,  
 
 # LearnStuffApp
