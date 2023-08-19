@@ -1050,6 +1050,38 @@ public class Terms {
                 "Redundantes Netzteil, VM Unterstützung"),
     };
     private static Term[] termsLF10 = {
+            //Ordner 1
+            new Term("Berufe","Es gibt 324 Berufe, \ndie im Verzeichnis der anerkannten Berufe, \ndes Bundesinstitut für Berufsbildung BiB stehen \nund 54 Berufsfelder."),
+            new Term("BBiG","Berufsbildungsgesetz BBiG \n\nregelt Handwerksordnung HWO (Handwerksberufe) \nAusbildungsordnung für jeden Ausbildungsberufe "+
+                    "(Ort, Dauer, Name, Was wann lehren, Prüfung)"),
+            new Term("Duale Ausbildung","Betrieb \n(Wirtschaftsminister) \nFachpraxis Fp \nAbschluss: Kammerprüfung / Gehilfen: Gesellenbrief \n\n"+
+                    "Berufsschule \n(Wirtschaftsminister) \nFachtheorie + Fp (bisschen \nAllgemeinbildung + tp (technisches Praktikum)) \nSchulabschlussprüfung: Abschlusszeugnis Berufsschule"+
+                    "\n\nVorteile: \nAusbildung abwechslungsreicher \nGünstiger für Steuerzahler als ganzschulische \nfrüher Erfahrung in Arbeitswelt "+
+                    "\nauch Allgemeinbildung (Berufsschule) \ntheoretische Ausbildung kann nicht durch Betrieb unterbrochen werden \n\n"+
+                    "Nachteile: \nOrganisation manchmal schwierig, welche Ausbildungsinhalte wo vermitteln \nQualität je nach Betrieb anderst \n"+
+                    "Berufsschulen oft ohne moderne Maschinen \nzu wenige Ausbildungsplätze in Betrieben"),
+            new Term("Berufsausbildungsvertrag","Vertragspartner: Ausbilder + Auszubildender unterschreiben schicken zur Genehmigung an IHK Industriehandelskammer "+
+                    "und HWK Handwerkskammer. Diese machen Eintrag ins Verzeichnis der Berufsausbildungs VBAV. Grundlagen: Berufssbildungsgesetz BBiG, Handwerksordnung HWO, außerdem zB "+
+                    "Jugendarbeitsschutzgesetz \n\nInhalt: \nZiel der Ausbildung \nZeitliche Reihenfolge \ntägliche Arbeitszeit \nDauer (normalerweise 3 Jahre) \nDauer der Probezeit "+
+                    "\nAusbildungsmaßnahmen außerhalb der Firma \nHöhe Ausbildungsvergütung \nDauer Urlaub \nKündigungsvorraussetzungen \n"+
+                    "\nPflichten Auszubildender \nLernfplficht \nAusbildungsnachweis \nSorgfaltspflicht \nWettbewerbsverbot \nSchweigepflicht \nWeisungsgebundenheit "+
+                    "Teilnahmepflicht Berufsschule \nBenachrichtigungspflicht \n\nPflichten Ausbilder \nAusbildungspflicht \nBereitstellung von Arbeitsmitteln \nAusbildungsbezogene Tätigkeiten \n"+
+                    "Freistellungspflicht für Berufsschule \nFürsorgepflicht \nPflicht Zeugnisausstellung \nZahlungspflicht"),
+            new Term("Ende Berufsausbildung","In Probezeit \n1) Kündigung fristlos (ohne Grundangabe) \na) durch Azubi b) durch Ausbilder \n\n"+
+                    "Nach Probezeit \n1) Kündigung fristlos (wichtiger Grund) \na) durch Azubi zB Bedrohung Gewalt \nb) durch Ausbilder zB Diebstahl, Gewalt \n"+
+                    "2) Kündigung + Frist 4 Wochen \ndurch Azubi zB Berufswechsel \n\nGesellenprüfung, Abschlussprüfung"),
+            new Term ("Arbeitsschutz","Arbeitszeitgesetz, Bundesurlaubsgesetz, Mutterschutzgesetz, Schwerbehindertenschutz (Sozialgesetzbuch), Jugendabreitsschutzgesetz"),
+            new Term("Arbeitsstättenverordnung","Temperatur, Sauberkeit, Beleuchtung"),
+            new Term("Produktsicherheitsgesetz","Geräte und Maschinen, Notschalter, Sicherheitshinwweise, Fingerschutz, Sichtschutz, Schutzkappen"),
+            new Term("Unfallverhütungsvorschirften","Schutzbekleidung: Sicherheitsschuhe, Handschuhe, Schutzbrille, Mundschutz, Helm \n\n"+
+                    "Regeln in Wektstätten: Fluchtweg, Nicht Essen, Rauchen, an Sicherheitshinweise halten"),
+            new Term("überwachung","Unfallverhütungsvorschriften \ndurch Berufsgenossenschaften (Sicherheitsbeauftragter) ohne Anmeldung, sofort beseitigen, Geldstrafe \n\n"+
+                    "sozialen Arbeitsschutz \ndurch Gewerbeaufsichtsämter prüfen Anzeigen Geldstrafen \n\nTÜV (Technischer Überwachungsverein) \nüberprüft Maschinen im Betrieb \n\n"+
+                    "Betriebsärzte & Sicherheitsingenieure \n\nBetriebsrat"),
+            new Term("Arbeits - Ausbildungsvertrag","Arbeitsvertrag \nArbeitnehmer & geber \nNamen der Vertragspartner \nBeginn und Ende (bei Befristung) des Arbeitsverhältnisses \n"+
+                    "Beschreibung Arbeit \nArbeitszeit \nUrlaubstage \nGehalt \nKündigungsfristen \n\nAusbildungsvertrag \nAusbildender & Ausbilder \nNamen der Vertragspartner \n"+
+                    "Beginn & Ende \nAusbildungsinhalte \nAusbildungsmaßnahmen außerhalb von Firma \nUrlaubstage \nGehalt \nDauer Probezeit \nKündigungsfristen"),
+            new Term("",""),
             //Ordner 2
             new Term("Sozialversicherungen",
                     "Krankenversicherung \nseit1883 \nTräger: Krankenkasse \nBeiträge zahlt Arbeitgeber & Arbeitnehmer 50/50 \nBeitragshöhe: 14,6 % von Bruttolohn \n"+
