@@ -1267,6 +1267,57 @@ public class Terms {
                     "2) immer\n" + "3) je nach Fonds-Anteilen hoch / niedrig4\n" + "4) hoch / niedrig ja nach Fonds-Anteilen bzw. Aktienkurs & Sparförderung"),
     };
     private static Term[] termsLF11 = {
+            new Term("Monarchie - Republik","Monarchie \nAlleinherrschaft, Weitergabe meist in Familie \n\nRepublik \nPerson aus dem Volk regiert. Ursache unterschiedlich"),
+            new Term("Demokratie - Diktatur","Demokratie: \nHerrschaft von allen \nWahl durch Volk zwischen Parteien \nBefristete Regierungszeit \n"+
+                    "Gewaltenteilung: ausführende, Recht sprechende und Gesetz gebende. gegenseitige Kontrolle der Herrschenden \nGarantie von Menschen und Bürgerrechten "+
+                    "\nKontrolle durch Gerichte \nPresse und Meinungsfreiheit \n\nDiktatur \nvon einer Person / Gruppe \nWahl nur zum Schein \neine Partei \nMacht und Entscheidungshoheit "+
+                    "in einer Hand und wird nicht abgegeben \nUnterdrückung Presse und Meinungsfreiheit, Vorgabe \nKein/e ... Volkssouverränität, Pluralismus, Rechtstaat, "+
+                    "Gewaltenteilung, Mehrheitsmacht, Grundrechte / Menschenrechte"),
+            new Term ("Representative Demokratie","4-5 Jahre = eine Wahl der bis zur nächsten Wahl politische Entscheidungen treffenden Represanten \n\n"+
+                    "Verhältniswahlrecht: \nParteien in Parlament je nach Stimmanteil. \nDirektkandidaten direkt in Parlament (meisten Stimmen in einem Wahlkreis) \n\n"+
+                    "Herrschaftsformen: \n   parlamentarisch: \n      Parlament regiert mit (Gesetzvorlagen brauchen Zustimmung vom Parlament). Dadurch Regierungskontrolle \n"+
+                    "      Parlament wählt Regierung, kann sie wieder absetzen \n      Volk wählt Parteien, die meistgewählte bestimmt Mehrheit \n   präsidentiell: \n      "+
+                    "Präsident (regierungschef) hat Starke Stellung gegenüber Parlament \n      Volk wählt Präsident in direkter Wahl \n      Präsident kann viel entscheiden ohne Parlament zu fragen \n"+
+                    "      Volk wählt Parlament unabhängig von Präsidentenwahl \n       zB Frankreich, Amerika2"),
+            new Term("Demokratie Prinzipien","regeläßige, freie allgemeine, gleiche und geheime Wahlen \n\nEntscheidungen nach Mehrheitsprinzip (bei Anerkennung & Schutz der Minderheiten) "+
+                    "\n\nStaatsgewalt ist an Verfassung gebunden und gewährleistet, \n\nGewaltenteilung (verschiedene Abstufungen)"),
+            new Term("Bundesverfassungsgericht","Überwachung, Einhaltung Grundgesetz \nRichter gewählt von Tag / Rat 50/50% und von Präsident ernannt \n"+
+                    "oberstes Gericht in Deutschland \nVerfassungsklagen, Aufhebung von verfassungsfeindlichen Gesetzen"),
+            new Term("Bundesrat","Vertreter der Länder, kann Gesetze ablehnen, Wiederspruch einlegen \nMitwirkung Gesetzgebung (beraten, vorschlagen) \n"+
+                    "Alle Bundesgesetze müssen von Rat abgestimmt werden. Einige treten erst dann in Kraft)"),
+            new Term("Bundespräsident","Prässentation Bundesrepublik Deutschland \ndiplomatische Vertretung im Ausland (Verträge unterschreiben) \n"+
+                    "Vorschlag des Bundeskanzlers zur Wahl \nAuflösung Bundestag"),
+            new Term("Bundestag","vom Volk gewählt \nGesetzgebung (Beratung, vorschlagen, abstimmen) \nKontrolle Regierungssarbeit (Einsatz von Untersuchungsausschüssen) \n"+
+                    "Bundeshaushalt \nBundeswehreinsätze \nWahl Bundeskanzler/in"),
+            new Term("Bundesregierung","schlägt Gesetze vor, Kanzler, Minister (Fachberreiche), Umsetze Gesetze (in Ministerien), auf Vorschlag von Präsident vom Rat gewählt \n"+
+                    "Leitung des Staates durch dieses Organ \nBundeskanzler bestimmt Richtlinie der Politik , Minister halten sich dran"),
+            new Term("Grundgesetz","Schutz Menschenwürde \nBerufsfreiheit \nPersönliche Freiheit / Recht auf körperliche Unversehrtheit \nGleicheit vor Gesetz \n"+
+                    "Glauben und Gewissensfreiheit \nfreie Meinungsäußerung \nSchutz von Ehe und Familie \nstaatliche Schulaufsicht \nVersammlungs und Vereinigungsfrieheit \n"+
+                    "Brief und Postgeheimnis \nWohnungsverletzlichkeit \nFreizügigkeit \nRecht auf freie Wohnortwahl \nEigentumsgewährleistung \nStaatsangehörigkeit / Verbot von Ausbürgerung \n"+
+                    "Rechtliches Gehör vor Gerichten"),
+            new Term("Parteien - Verbände","Parteien: \nvertreten Interessen Ihrer Wähler \nmittl zwischen Bürger - Staat \nLösungsvorschläge zu Problemen "+
+                    "der Gegenwart & Zukunft \n->Handeln unmittelbar in allen politischen Bereichen \n\nVerbände: \nVertreten Interessen ihrer Mitglieder \nNehmen Einfluss auf Politik "+
+                    "\nHaben kein Mandat, nehmen nicht aktiv an Politik teil \n=>sie handeln mittelbar (nicht direkt, über dritte) in einem politischen Bereich"),
+            new Term("Lobbyismus","Lobbyisten sind Fachleute \nentlasten Staat \nThemenfeldaufbereitung \nMittler zwischen Staat und Gesellschaftsteil \n"+
+                    "Einflussnahme durch Beratung und direkten Kontakt zur Politik, Macht, Einfluss, Druck \n\n"+
+                    "PRO: \nLobbyisten sind Fachleute und bereiten ihren Standpunkte durch Argumente auf \nOrganisationen die sich für das Allgemeinwohl einsetzen, betrifft auch Lobbyismus \n"+
+                    "Gewerkschaften (zB Ver.di, IG Metall) vertreten die Berufsgruppen und setzen sich für höhere Löhne und Arbeitsbedingungen ein \n\n"+
+                    "CONTRA: \nInteressen einseitig und entsprechen nicht Meinung von allen \nLobbyismus bedeutet hohen Aufwand -> Größere und Reichere Firmen haben mehr Einfluss "+
+                    "weil sie mehr Kapital haben \nLobbyismus oft intransparent, Korruptionsgefahr (Bestechlichkeit) \nWechsel von Politik -> Lobbyverein -> Ausnutzung Positionen / Kontakte möglich"),
+            new Term("Vertikale Gewaltenteilung Förderalismus","Bundesebene: politische Entscheidungen für alle in BRD \nLandesebene: politische Entscheidungen für alle in Bundesland \n"+
+                    "Kommunale Ebene: politische Entscheidung der Städte und Gemeinden"),
+            new Term("Gewaltenteilung","Legislative: Bundestag, Bundesrat, Landtag, Kreistag, Gemeinderat \nExecutive: Bundespräsident, -kanzler, -regierung, Landesregierung, Landrat, Bürgermeister"+
+                    "\nJudikative: Bundesverfassungsgericht, Landesverfassungsgericht, Gerichte des Landes"),
+            new Term("Parteien","Aufgaben: politischer Einfluss in der Gesellschaft nehmen \ngreifen die Interessen der Bürger auf und bringen sie in die politischen Entscheidungen ein \nLösungsvorschläge"),
+            new Term("Direkte Demokratie","5. & 4. Jahrhundert vor Christus Athen frühe Form \n1919 Weimarer Republik Volksentscheid & begehren, Eingriff in Gesetzgebung \n\nBürgerbeteiligung: \nBürgerforum: "+
+                    "Bürger sind zu aktiven Diskussionen von politischen Institutionen, Partien und Verbänden geladen \nDemonstrationen \nVolksentscheid: Abstimmung über Gestzentwurf nur auf kommunaler und Landesebene"+
+                    "\nBürgerinitiativen \nWahlen \n\n"+
+                    "Kein Problemlöser für moderne Demokratien: \nhohe komplexität politischer Prozesse \nGroßteil der Bevölkerung nicht bereit und keine Zeit \n"+
+                    "politische Gestalten wäre schwerer, Zustände unregierbar \ndirekte Demokratie eignet sich vor allem zur Legitimierung von Ja/Nein Entscheidungen \n\n"+
+                    "Hat repräsentative Demokratie ausgedient? \nNein, bleibt weiterhin wichtig, um in vielen einzelnen Sachfragen täglich zu einer Entscheidung zu kommen, für möglichst leistungsfähige politische Gestaltung "+
+                    "sowie ausgewogenes Verhältnis zwischen Beteiligung und Gestaltung \nMuss jedoch transparenter und für jeden Interessierten nachvollziehbar gegen Politikverdrossenheit "+
+                    "und für politische Teilebene zB Petitionsrecht"),
+            //Ordner 4
             new Term("Kaiserreich","1848\n Revolutionsversuche, hinterlassen Spuren in der Gesellschaft\n\n"+
                     "1871\n Reichsgründung mit dem preußischen König als Kaiser\n\n"+
                     "1870 - 1871\n Deutsch-Französicher Krieg\n Wachsendes Nationalgefühl der deutschen Bevölkerung\n\n"+
