@@ -1267,6 +1267,24 @@ public class Terms {
                     "2) immer\n" + "3) je nach Fonds-Anteilen hoch / niedrig4\n" + "4) hoch / niedrig ja nach Fonds-Anteilen bzw. Aktienkurs & Sparförderung"),
     };
     private static Term[] termsLF11 = {
+            new Term("Generationenvertrag","Abkommen Jung <-> Alt \nKein echter Vertrag, sondern sprichwörtlich \n<bürger Beiträge -> gesetzliche Rentenversicherung \n"+
+                    "damit wird Rentte heutiger Rentner finanziert "),
+            new Term("Renteneintritt","67"),
+            new Term("Fluchtursachen","Push Faktoren \n(Bürger)Krieg \nNaturkatastrophen \nUnfreiheit \nStaatliche Verfolgung \nArmut \nDiskriminierung"),
+            new Term("Einwanderung", "Formen: \ngesteuert -> zB für Arbeiter (Fachkräfte) \nungesteuert -> EU-Bürger, Aufnahme von Flüchtenden aus menschlichen Gründen (legale Einwanderung)"+
+                    "\n\nProbleme: \nArbeitsknappheit, \nWahnungsknappheit, \nkurzfristige Überforderung durch Überraschungseffekt der Organisation, \nMöglicherweise Notwendigkeit der Ursachenforschung, Hilfe / Lösung"+
+                    "Veränderungen: \nArchitektur, Menschenfarben, Schrift / Sprache / Vielfalt \n\nPull Faktoren: \nKarriere, bessere Überlebensmöglichkeiten / Bedingungen, "+
+                    "medizinische & soziale Versorgung, besserer Verdienst, Beschäftigungsmöglichkeiten, Zukunftsperspektiven, Freiheit von sozialen Zwängen"),
+            new Term("Zuwanderungsgesetz","1.1.2005 \nhierin bekannte sich Deutschland Einwanderungsland zu sein"),
+            new Term("Migration","Mensch wechselt Wohnort in Staat oder von Staat zu Staat dauerhaft"),
+            new Term("Binnenwanderung","Mensch wechselt Wohnort innerhalb eines Staates \n\nUrsache: \nArbeit, Infrastruktur, Leerstand, Miete "+
+                    "\n\nVorteile: \nschrumpfende Region: \nmehr Raum (für Natur), Selbstständigkeit, günstiges Land (Wohnraum) \nwachsende Region: \nmehr Gesellschaft, "+
+                    "Selbstwertgefühl, Infrastruktur \n\nNachteile: \nschrumpfende Region: \nweniger Gesellschaft, lange Weile, Einsamkeit, fehlende Infrastruktur "+
+                    "\nwachsende Region: \nweniger Raum, teueres Land (Wohnraum), weniger Natur"),
+            new Term("2. Weltkrieg","1944/45 Flucht vor Roter Armee \n  45/46 Vertreibung aufgrund neuer Grenzziehung \n  49-61 bis 89/90 politische Unterdrückung und Verfolgung in DDR"+
+                    "  55-74 und seit 2004 Anwerbung von \"Gast\"Arbeitern \nab 1990 Konflikte in Herkunftsländern, Armut, Menschenrechtsverletzungen, Umweltprobleme \n"+
+                    "2005 frie Wahl von Wohnsitz & Arbeitsplatz für EU-Bürger"),
+            //Ordner 3
             new Term("Monarchie - Republik","Monarchie \nAlleinherrschaft, Weitergabe meist in Familie \n\nRepublik \nPerson aus dem Volk regiert. Ursache unterschiedlich"),
             new Term("Demokratie - Diktatur","Demokratie: \nHerrschaft von allen \nWahl durch Volk zwischen Parteien \nBefristete Regierungszeit \n"+
                     "Gewaltenteilung: ausführende, Recht sprechende und Gesetz gebende. gegenseitige Kontrolle der Herrschenden \nGarantie von Menschen und Bürgerrechten "+
