@@ -28,10 +28,10 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".QuizActivity"
             android:exported="false" />
         <activity
-            android:name=".MainMainActivity"
+            android:name=".LearnfieldSelectionActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
