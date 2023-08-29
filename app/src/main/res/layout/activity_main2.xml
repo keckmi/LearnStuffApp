@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorBackground"
     android:padding="20dp"
-    tools:context=".MainActivity2">
+    tools:context=".QuizActivity">
 
     <Button
         android:id="@+id/btnTitleLF"
