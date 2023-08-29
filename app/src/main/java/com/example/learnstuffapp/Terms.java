@@ -1267,6 +1267,28 @@ public class Terms {
                     "2) immer\n" + "3) je nach Fonds-Anteilen hoch / niedrig4\n" + "4) hoch / niedrig ja nach Fonds-Anteilen bzw. Aktienkurs & Sparförderung"),
     };
     private static Term[] termsLF11 = {
+            //Ordner 1
+            new Term("Aufgaben der Familie","Lebensgemeinschaft \nSchutz \nSicherheit \nGeborgenheit \nLiebe \nFreizeitgestaltung \nUnternehmungen \nKümmern \nSorgen"+
+                    "\n\nWirtschaftsgemeinschaft \nTaschengeld \nWohnung/Haus \nNahrung \nKleidung \nUrlaub \nSorge für Alte/Kranke"+
+                    "\n\nErziehungsinstanz \nKraft \nSprache \nAbschätzung (Werte) \nRechte & Pflichten \nmoralische Werte"),
+            new Term("Familienarten","Patchwork Familie \n Familie mit Kindern aus früher Ehe \nVor/Nachteile: \nmehr Artenreichtum / Verwandte \nBesuchszeiten zu beachten \nmögliche finanzielle Komplikationen"+
+                    "\n\nAlleinerziehend \nVor/Nachteile: \nkeine Diskussion mit anderem Erwachsenen \nweniger Zeit / möglicherweise weniger Geld"+
+                    "\nKinder werden früher erwachsen \nKinder müssen mehr mithelfen"+
+                    "\n\nRegenbogen Familie \nVor/Nachteile: \nInsgesamt mehr Verbindungs Variationen in der Gesellschaft \nToleranz gegenüber Homosexuellen \nGesellschaft verbietet weniger"+
+                    "\nmehr Adoptionen \nDiskriminierung"),
+            new Term("Nachteile Kinder","Zeit und Geld Kosten \nAdoption könnte bevorzugt werden (Moral) \nZeugungsunfähigkeit"),
+            new Term("Familien Politik","Ziele: \n\n1) finanzielle Stabilität von Familie \nKindergeld: bis 18 - 25 Jahre (solange in Ausbildung) 194 Euro / Monat"+
+                    " 2. Kind: 200, 4. Kind: 225 \nElterngeld: 12 Monate 65-67 % Einkommen max 1800 \n\n2) Vereinbarkeit Familie und Beruf "+
+                    "\nKindertagsbetreuung: Anspruch Betreuungsplatz \nwer sich Kindergrippe, garten ab 1 J nicht leisten kann, bekommt Geld vom Jugendamt "+
+                    "\n\n3) Wohlergehen & Förderung der Bildung von Kindern \nFörderung einkommensschwacher Familien \nArbeitslosengeld 2 + Kinderzuschlag (160 Euro je Kind) \n"+
+                    "Kinderwohngeld, Geld für Heizung \nBildungsgutscheine \nSchulausflüge \n10 Euro / Monat für Sportverein / Musikschule"+
+                    "\n\n1900 - 44 % leben in 5 Personen Haushalt, 7 % in 1 Person Haushalt \n 2007 - 41% leben in 1 Person Haushalt, 3 % in 3 Personen Haushalt"),
+            new Term("Ausbildung","Konflikte lösen durch... \nMitarbeiter, Vorgesetzte, Sozialdienst, Betriebsrat / Personalrat/abteilung, Gewerkschaften, Agentur für Arbeit"+
+                    "\n\nVerstöße gegen Pflichten des Azubi / Arbeitgebers \nAbmahnung, IHK, Kündigung, Arbeitsvertrag, Ausbildungsvertrag regeln"+
+                    "\n\nWarum bilden Betriebe aus \nLehren bildet, eigene Fachkräfte formen, kein einlernen nötig, mögliche Zuschüsse, Nachwuchs an Fachkräften"+
+                    "\n\nAbbruchgründe Ausbildung \nkörperliche / geistige Überforderung \nUnterforderung \nDifferenz zwischen Erwartung und Wirklichkeit \nLohn zu gering"+
+                    "\nzu viel/ hohe Arbeitszeit \nArbeitsweg zu lang \nMobbing \nschlechte Arbeitsbedingungen \nGesundheitsgefährdung \nLeistungsdruck  "),
+            //Ordner 2
             new Term("Generationenvertrag","Abkommen Jung <-> Alt \nKein echter Vertrag, sondern sprichwörtlich \n<bürger Beiträge -> gesetzliche Rentenversicherung \n"+
                     "damit wird Rentte heutiger Rentner finanziert "),
             new Term("Renteneintritt","67"),

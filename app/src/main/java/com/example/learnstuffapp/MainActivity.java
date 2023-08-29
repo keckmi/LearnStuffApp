@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "1");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "1");
                 startActivity(i);
             }
         });
@@ -59,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "2");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "2");
                 startActivity(i);
             }
         });
@@ -74,8 +74,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "3");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "3");
                 startActivity(i);
             }
         });
@@ -89,8 +89,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "4");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "4");
                 startActivity(i);
             }
         });
@@ -104,8 +104,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "5");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "5");
                 startActivity(i);
             }
         });
@@ -119,8 +119,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "6");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "6");
                 startActivity(i);
             }
         });
@@ -134,8 +134,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "7");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "7");
                 startActivity(i);
             }
         });
@@ -150,8 +150,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "8");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "8");
                 startActivity(i);
             }
         });
@@ -165,8 +165,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "9");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "9");
                 startActivity(i);
             }
         });
@@ -180,8 +180,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "10");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "10");
                 startActivity(i);
             }
         });
@@ -195,8 +195,8 @@ public class MainActivity extends AppCompatActivity {
                 if (intent.getStringExtra(WHERE).equals("AUFDECKEN")) {
                     i = new Intent(MainActivity.this, UncoverActivity.class);}
                 if (intent.getStringExtra(WHERE).equals("QUIZ")) {
-                    i = new Intent(MainActivity.this, MainActivity2.class);}
-                i.putExtra(MainActivity2.LERNFELD, "11");
+                    i = new Intent(MainActivity.this, QuizActivity.class);}
+                i.putExtra(QuizActivity.LERNFELD, "11");
                 startActivity(i);
             }
         });
@@ -204,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startQuiz() {
-        Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        Intent intent = new Intent(MainActivity.this, QuizActivity.class);
         startActivity(intent);
     }
 
