@@ -25,13 +25,13 @@
             android:name=".UncoverActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".LearnfieldSelectionActivity"
             android:exported="false" />
         <activity
             android:name=".QuizActivity"
             android:exported="false" />
         <activity
-            android:name=".LearnfieldSelectionActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
