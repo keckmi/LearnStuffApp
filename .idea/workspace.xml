@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ab87b4-d96f-4f0f-913c-d4d0396b017d" name="Changes" comment="class name changes">
+    <list default="true" id="43ab87b4-d96f-4f0f-913c-d4d0396b017d" name="Changes" comment="new learnfields">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,7 +20,7 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[/home/m.keck/.android/avd/Pixel_3a_API_33_x86_64.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -445,12 +445,12 @@
       <option name="project" value="LOCAL" />
       <updated>1693296815221</updated>
     </task>
-    <task id="LOCAL-00037" summary="class name changes">
-      <created>1693299217416</created>
+    <task id="LOCAL-00037" summary="new learnfields">
+      <created>1694711843981</created>
       <option name="number" value="00037" />
       <option name="presentableId" value="LOCAL-00037" />
       <option name="project" value="LOCAL" />
-      <updated>1693299217416</updated>
+      <updated>1694711843985</updated>
     </task>
     <option name="localTasksCounter" value="38" />
     <servers />
@@ -470,7 +470,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="nix eigentlich" />
     <MESSAGE value="new terms and questions in Learnfield2" />
     <MESSAGE value="chapters &amp; new terms in Learnfield3" />
     <MESSAGE value="23.4.2 +terms LF1&amp;8 +qests LF1, spinner crash fixed" />
@@ -495,6 +494,7 @@
     <MESSAGE value="gk terms add" />
     <MESSAGE value="gk terms add &amp; class name changes" />
     <MESSAGE value="class name changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="class name changes" />
+    <MESSAGE value="new learnfields" />
+    <option name="LAST_COMMIT_MESSAGE" value="new learnfields" />
   </component>
 </project>
