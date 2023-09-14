@@ -40,8 +40,11 @@ public class TermListActivity extends AppCompatActivity {
     private final Term[] termsLF7 = Terms.getTermsLF7();
     private final Term[] termsLF8 = Terms.getTermsLF8();
     private final Term[] termsLF9 = Terms.getTermsLF9();
-    private final Term[] termsLF10 = Terms.getTermsLF10();
+    private final Term[] termsLF10a = Terms.getTermsLF10a();
     private final Term[] termsLF11 = Terms.getTermsLF11();
+    private final Term[] termsLF12 = Terms.getTermsLF12();
+    private final Term[] termsLFWK = Terms.getTermsLFWK();
+    private final Term[] termsLFGK = Terms.getTermsLFGK();
 
     //VERÄNDERUNG
 
@@ -84,8 +87,11 @@ public class TermListActivity extends AppCompatActivity {
             case "7":
             case "8":
             case "9":
-            case "10":
+            case "10a":
             case "11":
+            case "12":
+            case "WK":
+            case "GK":
                 kapitelLF = kapitelLFYetUnpost; break;
         }
 
@@ -222,8 +228,11 @@ public class TermListActivity extends AppCompatActivity {
             case "7": terms = termsLF7; break;
             case "8": terms = termsLF8; break;
             case "9": terms = termsLF9; break;
-            case "10": terms = termsLF10; break;
+            case "10a": terms = termsLF10a; break;
             case "11": terms = termsLF11; break;
+            case "12": terms = termsLF12; break;
+            case "WK": terms = termsLFWK; break;
+            case "GK": terms = termsLFGK; break;
             default:
                 throw new IllegalStateException("Unexpected value: " + lernfeld);
         }
@@ -256,8 +265,11 @@ public class TermListActivity extends AppCompatActivity {
             case "7":
             case "8":
             case "9":
-            case "10":
+            case "10a":
             case "11":
+            case "12":
+            case "GK":
+            case "WK":
                 chapter = "Chapter yet unknown"; break;
             default:
                 throw new IllegalStateException("Unexpected value: " + lernfeld);

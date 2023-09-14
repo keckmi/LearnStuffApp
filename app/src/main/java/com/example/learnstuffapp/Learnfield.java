@@ -32,10 +32,18 @@ public class Learnfield {
             case "9":
                 learnfield = "LF 9: Netzwerkbereitstellung nach unterschiedlichen Unternehmensanforderungen unterscheiden";
                 break;
-            case "10":
-                learnfield = "Wirtschaftskunde";
+            case "10a":
+                learnfield = "Benutzerschnitstellen gestalten und entwickeln";
                 break;
             case "11":
+                learnfield = "Funktionalitäten in Anwendungen realisieren";
+                break;
+            case "12":
+                learnfield = "Kundenspezifische Anwendungsentwicklung durchführen";
+            case "WK":
+                learnfield = "Wirtschaftskunde";
+                break;
+            case "GK":
                 learnfield = "Gemeinschaftskunde";
                 break;
         }

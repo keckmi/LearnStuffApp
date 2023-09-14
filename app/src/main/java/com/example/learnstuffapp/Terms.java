@@ -1049,7 +1049,100 @@ public class Terms {
                 "Technische Anforderungen:\nBauform, Kapazität, RAID-Level, Filesystem, Netzwerkanbindung, Verschlüsselungsmodul, Schreib und Lesegeschwindigkeit,"+
                 "Redundantes Netzteil, VM Unterstützung"),
     };
-    private static Term[] termsLF10 = {
+    private static Term[] termsLF10a = {
+            //1.1
+            new Term("Anforderungen an eine Benutzerschnittstelle ermitteln",
+                    "Dem Kunden ist möglicherweise nicht klar, wie Anforderungen am besten zu formulieren sind\n" +
+                            "\n" +"Vollständigkeit der erarbeiteten Kundenbedürfnisse wichtig "),
+            new Term("Anforderungsspezifikation",
+                    "Analyse: Use Case Diagramme, Aktivitätsdiagramme, Lastenheft, Pflichtenheft, Product Backlog\n\n" +
+                            "Design: Klassendiagramme, Aktivitätsdiagramme, ER-Modell, Wireframe, Mockup\n\n" +
+                            "Implementierung: Java, Python, MySQL, MmongoDB, SQL\n\n" +
+                            "Testen: Unittest, Integrationstest, Review\n\n" +
+                            "Begrifferklärungen: \n" +
+                            "Product Backlog: grobe Arbeitsschritte, Scrum \n" +
+                            "Wireframe: Gedanken zur grafischen Oberfläche, Skizze in Schwarz/Weiß \n" +
+                            "Mock Up: fertige Oberfläche aber ohne Funktion\n\n" +
+                            "[Bild Seite 9]"),
+            new Term("Prozess der Anforderungsspezifikaion",
+                    "Ermitteln, Analysieren, Spezifizieren und Validieren (Überprüfen) aller Anforderungen an das zu entwickelnde System\n" +
+                            "Prozessschritte: Ist-Analyse, Anforderungen sammeln, Anforderungen definieren, Anforderungen überprüfen\n" +
+                            "[Bild Seite 10]\n\n"+
+                            "Ist-Analyse\n" +
+                            "Aufgabe des Prozesses: Art und Umfang aller anfallenden Aufgaben und deren Besonderheiten\n" +
+                            "Struktur des Prozesses: Die Organisation des Prozessablaufes\n" +
+                            "Kommunikation innerhalb des Prozesses: Ablauf und Vorrichtungen, welche zur Kommunikation genutzt werden\n" +
+                            "Prozessdaten: Art und Umfang der Dokumentation des Prozesses\n" +
+                            "Schwachstellen des Prozesses: bekannte Mängel, Behinderungen oder Redundanzen des Prozesses\n" +
+                            "\n" +
+                            "Anforderungen sammeln\n" +
+                            "Grundlage: Ist-Analyse. Weiter zu berücksichtigen: Anforderungen von Management oder zusätzlichen Nutzern.\n" +
+                            "Ziel: Vollständige Bedarfsübersicht.\n" +
+                            "Inhalt kann in folgende Kategorien unterteilt werden:\n" +
+                            "funktionale Anforderungen, technische Anforderungen, organisatorische Anforderungen, allgemeine Kriterien\n" +
+                            "\n" +
+                            "Anforderungen definieren\n" +
+                            "Konkrete Definierung und Ausformulierung der gesammelten Anforderungen.\n" +
+                            "folgende Überlegungen sind einzubeziehen:\n" +
+                            "Können die Anforderungen überhaupt erfüllt werden?\n" +
+                            "Welche technische Einschränkungen gibt es?\n" +
+                            "Welche Kosten fallen an und welche Ressourcen sind nötig?\n" +
+                            "Welche Risiken existieren?\n" +
+                            "Nun Zuordnung zu Softwarekriterien und einteilung in funktionale und nicht funktionale Anforderungen.\n" +
+                            "\n" +
+                            "Anforderungen überprüfen\n" +
+                            "Nicht alle Anforderungen können berücksichtigt werden, aus technsichen oder zeitlichen Gründen.\n" +
+                            "Manche sind für die Kernfunktion nicht notwendig. Prüfen ob Anforderungen im Anforderungskatalog bleiben und dort dann priorisiert werden.\n" +
+                            "Mögliche Priorisierungen: nicht erforderlich, nice-to-have, unbedingt erforderlich\n" +
+                            "\n" +
+                            "Anforderungskatalog fertigstellen und genehmigen\n" +
+                            "Bezeichnungen unterschiedlich: Lastenheft, Product Backlog. Inhalt feststehend oder wird in sich wiederholenden Durchläufen angepasst.\n" +
+                            "Alle Beteiligte geben ihre Zustimmung zu dem Katalog, bevor Projekt auf dessen Grundlage fortgesetzt wird.\n"),
+            new Term("Informationserfassung für die Anforderungsanalyse",
+                    "Interview \nVorteile: \npersönlicher Kontakt fördert Auskunftbereitschaft \ngestellte Fragen werden mit großer Wahrscheinlichkeit auch beantwortet \n" +
+                            "Unklarheiten können direkt geklärt werden\n" +
+                            "Nachteile: \nhoher zeitlicher Aufwand, \nsubjektive Prägung der Antworten, \nerschwerte Erfassung von Faktendaten\n\n" +
+                            "Fragebogen \nVorteile: \ngleichzeitige Informationsgewinnung innerhalb eines großen Personenkreises, \nweniger zeitaufwendig als ein Interview oder eine Beobachtung\n" +
+                            "keine zusätzliche Dokumentation der Antworten erforderlich, \nMöglichkeit der automatischen Auswertung der Antworten\n" +
+                            "Nachteile: \nhöherer Verarbeitungsaufwand als beim Interview, \nder Rücklauf der Fragebögen ist manchmal unzureichend, \nUnklarheiten lassen sich schwer klären\n\n" +
+                            "Beobachtung: \nvor Ort werden Prozesse begleitet und analysiert\n" +
+                            "Vorteile: \nProzesse sind objektiv zu beobachten, \nsehr effektive Erfassung möglich, \nbesonders für die Erfassung zeitlicher und quantitativer Informationen über den Prozess geeignet\n" +
+                            "Nachteile: \nzeitlicher Aufwand sehr hoch, \nes können teilweise nur kleine Ausschnitte eines Prozesses beobachtet werden,\n" +
+                            "Beobachtungen werden i.d.R. als unangenehm empfunden "),
+    };
+    private static Term[] termsLF11 = {
+            //Ordner 1
+            new Term("Berufe", "Es "),
+    };
+    private static Term[] termsLF12 = {
+            //Ordner 1
+            new Term("Kosten SW Dev und Reduzierungswege",
+                    "Gesamtkosten SW(Software) Projekt Zeitaufwand * Stundensatz\n" + "\n" +
+                    "Zeitschätzung: in 3 Gruppen nach Komplexität\n" + "\n" +
+                    "SW Komplexität: Einfach: \n~2 Monate, 500-700 Stunden, SW mit einfachen Funktionen und Design ohne Interkation\n" +
+                    "Mittelkomplex: \n~3,5 Monate, 700-1,200: SW mit komplexeren Funktionen und einer animierten Oberfläche, die in der agilen Umgebung entwickelt wird\n" +
+                    "Komplex: \n>4 Monate, >1200 Stunden: SW mit komplexer Architektur, hohen Sicherheitsnaorderungen, vielen Integrationen und/oder SW, beideren Entwicklung fortschrittliche Technologieen verwendet werden\n\n" +
+                    "Kostenschätzung: Anzahl der Stunden mit dem durchschnittlichen Stundensatz aller Projektbeiteiligten multiplizieren\n" + "\n" +
+                    "Kostenreduzierungswege: Outsourcing-Dienstleister\n" + "Andere (Gemein)Kosten die mit Inhouse-SW Dev (Software Development) verbunden sind:\n" +
+                    "Kosten für Personalgewinnung, -einstellung und -management, \nKosten für Nebenleistungen und Lohnsteuer,\n" +
+                    "Kosten für Arbeitsplätze, IT-Infrastruktur, Software und Hardware-Support und mehr, \nKosten für Schulungen\n" +"\n" +
+                    "bei Outsourcing zu beachten: durchschnittliche Stundensätze der SW Entwicklern variieren von Land zu Land\n" +
+                    "Deutschland: 100$, Vietnam: 20-40$, Belarus: 25-50$, Poland: $30-60\n" +
+                    "außerdem ist, trotz wesentlicher Kostensenkung, eine Verursachung versteckter Kosten möglich, die, falls nicht effizient organisiert und verwaltet, den Projektpreis in die Höhe treiben können.  \n" + "\n" +
+                    "Die Entwicklung einer SW verschlingt meist deutlich mehr Geld als geplant, oft weil Unternehmen Projektkostenkalkulationsmethoden fehlen.\n" + "\n" +
+                    "Früher wurden SW Projekte häufig geschätzt und ein üppiger Risikozuschlag hinzugerechnet. Entwickler blieben so inerhalb der vereinbarten Budgets. " +
+                    "Diese sind aber inzwischen knapper geworden."),
+            new Term("Gesamtkosten","Gesamtkosten = Zeitaufwand - Stundensatz\n" + "Personalkosten: \nLöhne, Gehälterr, Sozialleistungen, Arbeitsplatzkosten, Schulungen\n" +
+                    "Hardwarekosten: \nKosten für Computer, Datenbankserver, Vernetzung. anteilsmäßige Berücksichtigung weil die Hardware auch für andere Projekte genutzt werden kann.\n" +
+                    "Ausnahme: spezielle Hardware für genau dieses SW Projekt.\n" +
+                    "Softwarekosten: \nKosten für Software, welche für die Entwicklung benötigt wird (zB Lizenzkosten für Entwicklungsumgebungen). Sie verteilen sich, bis auf Aufnahmen, auf mehrere Projekte.\n" +
+                    "Energiekosten: \nnicht zu unterschätzen: Stromverbrauch der Hardware und KLimatisierung.\n" +
+                    "Fremdkoste: \nIn manchen Fällen kommen noch Kosten für das Outsourcing von Projektaufgaben, Beratungskosten usw. hinzu"),
+            new Term("Wirtschaftslichtkeit", "Wirtschaftslichtkeit zu Projektbeginn nicht mehr als eine Prognose, dann deutlicher zu zum Ende erfolgt eine genaue Analyse. Sie beinhaltet im einfachsten Fall eine angabe ob sie ein wirtschaftlicher Erfolg war,\n" +
+                    "also mit Gewinn oder zumindestens nicht mit Verlust abgeschlossen hat. Die Berechnung stellt die Differenz zwischen erwirtschafteten Erträgen, zB Verkaufspreis bei einem externen oder Kostenersparnis bei einem internen Projekt und den Projektkosten dar.\n" +
+                    "\n" + "Ergebnis = Ertrag - Kosten\n" + "\n" + "Beispiel: Die SW, erstellt in einem Projekt, bewirkt hausintern eine Kostenersparnis von 3000$. Hauptsächliche Kosten "),
+    };
+    private static Term[] termsLFWK = {
             //Ordner 1
             new Term("Berufe","Es gibt 324 Berufe, \ndie im Verzeichnis der anerkannten Berufe, \ndes Bundesinstitut für Berufsbildung BiB stehen \nund 54 Berufsfelder."),
             new Term("BBiG","Berufsbildungsgesetz BBiG \n\nregelt Handwerksordnung HWO (Handwerksberufe) \nAusbildungsordnung für jeden Ausbildungsberufe "+
@@ -1266,7 +1359,7 @@ public class Terms {
                     "\n\nInvestmentfonds \n" + "1) Ich zahle gemeinsam mit anderen in einen großen Topf. Die Investmentgesellschaft investiert mein Geld.\n" +
                     "2) immer\n" + "3) je nach Fonds-Anteilen hoch / niedrig4\n" + "4) hoch / niedrig ja nach Fonds-Anteilen bzw. Aktienkurs & Sparförderung"),
     };
-    private static Term[] termsLF11 = {
+    private static Term[] termsLFGK = {
             //Ordner 1
             new Term("Aufgaben der Familie","Lebensgemeinschaft \nSchutz \nSicherheit \nGeborgenheit \nLiebe \nFreizeitgestaltung \nUnternehmungen \nKümmern \nSorgen"+
                     "\n\nWirtschaftsgemeinschaft \nTaschengeld \nWohnung/Haus \nNahrung \nKleidung \nUrlaub \nSorge für Alte/Kranke"+
@@ -1495,9 +1588,12 @@ public class Terms {
     public static Term[] getTermsLF9() {
         return termsLF9;
     }
-    public static Term[] getTermsLF10() {
-        return termsLF10;
+    public static Term[] getTermsLF10a() {return termsLF10a; }
+    public static Term[] getTermsLF11() {return termsLF11; }
+    public static Term[] getTermsLF12() {return termsLF12; }
+    public static Term[] getTermsLFWK() {
+        return termsLFWK;
     }
-    public static Term[] getTermsLF11() { return termsLF11; }
+    public static Term[] getTermsLFGK() { return termsLFGK; }
 
 }

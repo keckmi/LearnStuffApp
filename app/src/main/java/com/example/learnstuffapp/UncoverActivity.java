@@ -26,7 +26,7 @@ public class UncoverActivity extends AppCompatActivity {
     private final Term[] termsLF7 = Terms.getTermsLF7();
     private final Term[] termsLF8 = Terms.getTermsLF8();
     private final Term[] termsLF9 = Terms.getTermsLF9();
-    private final Term[] termsLF10 = Terms.getTermsLF10();
+    private final Term[] termsLF10 = Terms.getTermsLF10a();
     private final Term[] termsLF11 = Terms.getTermsLF11();
     private TextView txtTerm;
     private Button btnAufdecken;

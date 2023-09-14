@@ -33,8 +33,11 @@ public class TermActivity extends AppCompatActivity {
     private final Term[] termsLF7 = Terms.getTermsLF7();
     private final Term[] termsLF8 = Terms.getTermsLF8();
     private final Term[] termsLF9 = Terms.getTermsLF9();
-    private final Term[] termsLF10 = Terms.getTermsLF10();
+    private final Term[] termsLF10a = Terms.getTermsLF10a();
     private final Term[] termsLF11 = Terms.getTermsLF11();
+    private final Term[] termsLF12 = Terms.getTermsLF12();
+    private final Term[] termsLFWK = Terms.getTermsLFWK();
+    private final Term[] termsLFGK = Terms.getTermsLFGK();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -73,10 +76,13 @@ public class TermActivity extends AppCompatActivity {
             case "5": terms = termsLF5; break;
             case "6": terms = termsLF6; break;
             case "7": terms = termsLF7; break;
-            case "8": terms = termsLF8;; break;
+            case "8": terms = termsLF8; break;
             case "9": terms = termsLF9; break;
-            case "10": terms = termsLF10; break;
+            case "10a": terms = termsLF10a; break;
             case "11": terms = termsLF11; break;
+            case "12": terms = termsLF12; break;
+            case "WK": terms = termsLFWK; break;
+            case "GK": terms = termsLFGK; break;
             default:
                 throw new IllegalStateException("Unexpected value: " + lernfeld);
         }
