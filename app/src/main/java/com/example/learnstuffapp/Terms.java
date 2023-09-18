@@ -1109,13 +1109,124 @@ public class Terms {
                             "Vorteile: \nProzesse sind objektiv zu beobachten, \nsehr effektive Erfassung möglich, \nbesonders für die Erfassung zeitlicher und quantitativer Informationen über den Prozess geeignet\n" +
                             "Nachteile: \nzeitlicher Aufwand sehr hoch, \nes können teilweise nur kleine Ausschnitte eines Prozesses beobachtet werden,\n" +
                             "Beobachtungen werden i.d.R. als unangenehm empfunden "),
+            //1.1.2 Arbeitsabläufe und Gesschäftsprozesse im Rahmen einer Ist-Analyse beschreiben
+            new Term("Arbeitsabläufe und Gesschäftsprozesse im Rahmen einer Ist-Analyse beschreiben",
+                    "Der Zweck von SW Dev ist ua die Automatisierung von Arbeitsabläufen / Geschäftsprozessen in Unternehmen.\n" +
+                            "Dazu müssen diese Vorraussetzungen erfüllen: Sie müssen klar beschreibbar sein und sich in gleicher Form wiederholen.\n" +
+                            "Laufen sie nur einmal oder selten ab, lohnt sich die Automatisierung nicht. Im normalen wirtschaftlichen Umfeld ist dann die Steuerung durch den Menschen günstiger.\n" +
+                            "Um festzustellen welche Prozesse mithilfe von SW Apps ganz oder teilautomatisiert werden können, müssen diese und ihre Schnitstellen im Rahmen von SW Projekten zunächst analysiert werden.\n" +
+                            "Daraus werden dann die Anforderungen an die zu entwickelnde Software abgeleitet. Dieses erfolgt im Rahmen einer Ist-Analyse: die einzelnen Prozessaspekte werden analysiert und erfasst."),
+            new Term("Grundlegende Begriffe",
+                            "Prozessanalyse: \nsystematische Untersuchung von Prozessen zur Schwachstellenerkennung und Verbesserungspotentialaufdeckung\n\n" +
+                            "Prozess: \nGesamtheit aller aufeinander einwirkenden Vorgänge innerhalb eines Systems\n\n" +
+                            "Geschäftsprozess: \nsich wiederholende Tätigkeitsabfolge, durch Input gestartet.\n" +
+                            "auch solche, die nicht zu einem wirtschaftlich verwertbaren Ergebnis führen (anders als im Buch steht)\n" +
+                            "zB Mitarbeitereinstellung und deren softwaretechnische Umsetzung, Urlaubsplanung, Abrechnung\n\n" +
+                            "Prozessschnittstelle: \nProzess tritt hier mit anderen Prozessen in Verbidnung\n" +
+                            "zB: Eingang von Informationen oder Materialien am Anfang oder im Verlaufe des Prozesses\n" +
+                            "Austausch von Informationen oder Materialien während des Prozesses\n" +
+                            "Ausgang des Prozessergebnisses in Form von Informationen oder Material am Ende des Prozesses\n\n" +
+                            "Informationsfluss (Datenfluss): \nWeg den mündliche, schriftlichee, visuelle oder auditive Daten nehmen von Quelle zu Empfängern. Nicht unbedingt die Leitung, sondern die Stationen."),
+            new Term("Prozessanalyse Schritte",
+                    "Prozess identifizieren: \nWelche Art von Prozess? zB technische, politische, soziologische, betriebswirtschaftliche, in weitere unterteilbar. [siehe Bild S.14]\n\n" +
+                            "Prozess aufnehmen und darstellen: \nProzesszerlegung in Teilschritte, grafische Darstellung, vorallem der Schnittstellen und des Informatinsflusses.\n" +
+                            "Darstellungsmöglichkeiten: Business Process Model (BPM), E3-Value-Model, ereignisgesteuerte Prozesskette (EPK), Wertschöpfungskette, UML-Aktivitätsdiagram, Programmablaufplan (PAP).\n" +
+                            "So werden die Prozesse für alle Projektbeteiligten nachvollziehbar. [siehe Bild S.15]\n\n" +
+                            "Prozess bewerten: \nSchwachstellen erkennen, Verbesserungspotential aufdecken, Bestimmung von automatisierbaren Teilen.\n" +
+                            "zB: Datenerfassung/verwaltung in Excel sowie Druck für Ordnerablage. Gefahr der Dateninkonsistenz durch diese redundante Verwaltung.\n" +
+                            "Aber durch das SW Projekt soll dieser Prozess optimiert und teilweise automatisiert werden, zB die Überprüfung der eingegebenen Daten.\n" +
+                            "Dieses und alle anderen Ergebnisse der Analyse des jewailigen Prozesses münden in der Formulierung der Anforderungen and as zukünftige SW Produkt.\n"),
+            //1.1.3 Anforderungskatalog erstellen
+            new Term("Anforderungskatalog erstellen",
+                    "Funktionale Anforderungen:\n\n" +
+                            "fachlich, bezogen auf den Arbeitsablauf oder Geschäftsprozess: \n" +
+                            "Eingabe und Löschfunktion für notwendige Daten des Prozesses, Anzeigen von Grafiken und Bildern mit Inhaltten des jeweiligen Prozesses\n\n" +
+                            "bezogen auf die Interaktion mit der Benutzerschnittstelle:\n" +
+                            "Bedienbarkeit zB mit Maus, Tastatur, Sprache, \\nScroll und Zoomfunktionen, Anpassbarkeit des Aussehens der Oberfläche\n\n" +
+                            "bezogen auf geplante Endgeräte und Softwareumgebungen:\n" +
+                            "Tablets, Smartphone, Desktopanwendung, stationäre Touch Panel für Automaten, \\nBetriebssysteme, Browser\n\n\n" +
+                            "Nicht funktionale Anforderungen \n\n" +
+                            "Qualitätsanforderung: \nBenutzbarkeit: Anforderungen an die Selbstbeschreibbarkeit und Erwartungskonformität\n\n" +
+                            "Zuverlässigkeit: \nAnforderungen an die Fehlertoleranz der Benutzerschnittstellen\n\n" +
+                            "Effizienz: \nAnforderungen an die Darstellung zB von 3D Animationen, Anforderungen an den Ressourcenverbrauch, zB bei speziellen Endgeräten\n\n" +
+                            "technische, organisatorische und norative Rahmenbedingungen: \nvorgegebene Betriebssysteme und Browser, " +
+                            "Rechtvergabe für bestimmte Funktionalitäten, Grad der Barrierefreiheit oder Mehrsprachigkeit\n\n" +
+                            "[Bild Seite 19]"),
+            //1.2 Ein Softwareprodukt designen
+            new Term("Softwareprodukt designen","S. 20"),
+            //1.2.1 Benutzerschnitstellen in den Kontext der Softwarearchitektur einordnen
+            new Term("Benutzerschnitstellen in den Kontext der Softwarearchitektur einordnen","Softwarearchitektur: \nstellt den Bauplan eines SW Systems dar. Beschreibung der einzelnen Komponenten und deren Verbindungen.\n\n"+
+                    "Wesentliche Merkmale einer guten Softwarearchitektur:\n" +"Modularität, Entkopplung, Abstraktion, Einfachheit, Vollständigkeit, Parallelität \n\n [Bild S.23] \n\n"+
+                    "Unterscheidung von Schnittstellen einer Software\n" + "Benutzerschnittstelle, Softwareschnittstelle, Hardwareschnittstelle, Hardwareschnittstelle, Datenschnittstelle"),
+            //1.2.2 Architekturmuster unterscheiden
+            new Term("Architekturmuster unterscheiden",
+                    "Grobentwurf: \nArchitekturmuster: \nMuster für Gestaltung von Softwaresystemen, \nEinfluss auf die Architektur der Subsysteme \nProgrammiersprachen unabhängig\n\n" +
+                            "Detailentwurf: \nEntwurfsmuster: \nMuster für die Entwicklung von Subsystemen und Komponenten, \nWeniger Enfluss auf das Gesamtsystem als die Architekturmuster, \nProgrammiersprachen unabhängig\n\n" +
+                            "Überlegungen für die direkte Umsetzung: \nImplementierungsmuster (Idiome): \nMuster für die Lösung von speziellen Problemen in den jewailigen Programmiersprachen, \nAbhängig von der Programmiersprache\n\n" +
+                            "Kategorien:\n\n" +
+                            "Mud-to-Structure: \nArchitekturmuster, die dabei helfen ein System aus zahlreichen Komponenten zu organisieren, zB Schichtenarchitektur, Blackboard\n\n" +
+                            "Verteilte Systeme: \nArchitekturmuster, gedacht für die Verwendung von Diensten und Ressourcen in Netzwerken zB Client-Server-Architektur, Peer-to-Peer\n\n" +
+                            "Interaktive Systeme: \nArchitekturmuster, spezialisiert auf die Interkation eines SW Systems mit Menschen zB Model View Controller (MVC), Model View Presenter (MVP)\n\n" +
+                            "Adaptive Systeme: \nArchitekturmuster, beschäftigt mit der Erweiterbarkeit und Anpassungsfähigkeit von SW Systemen zB Reflection, Dependency Injection"),
+            new Term("Drei-Schichten-Architektur",
+                    "Schichtenarichtektur Spezialform. SW wird in verschiedene Schichten(layer, tier) aufgeteilt.\n\n" +
+                            "Präsentationsschicht (Client Tier, Front End): \nDatenrepräsentation Benutzeringaben und Benutzerschnitstellen\n\n" +
+                            "Logikschicht (Aplication-Server Tier, Middle Tier, Enterprise Tier): \nDatenverarbeitung und Anwendungslogikvereinigung\n\n" +
+                            "Datenhaltungsschicht (Data-Server Tier, Back End): \nDaten speichern und laden und Datenbank.\n\n"+
+                            "[Bild S.25]\n\n"+
+                            "Vorteile: \nReduzierung von Abhängigkeiten zwischen den einzelnen Komponenten, Definierte Schnitstellen zwischen den Schichten, " +
+                            "Änderungen wirken sich nur selten auf andere Schichten aus, Austausch einer Schichte ist ohne Probleme möglich\n\n" +
+                            "Nachteile: \nReduzierung der Ausführungsgeschwindigkeit der Software durch die Weiterleitung und Transformation der Daten über verschiedene Schichten"),
+            new Term("Client-Server-Architektur",
+                            "Architekturmuster für verteilte Systeme. Subsysteme (Server) bieten Dienste an, die von Subsystemen (Clients) genutzt werden.\n\n" +
+                            "Vor und Nachteile der Drei-Schichten Architektur: \nbessere Skalierbarkeit durch Anwendungsverteilung auf verschiedene Systeme, \naber Anwendungsunterbrechungsmöglichkeit durch Webserverausfall. hardwareseitige maßnahmen notwendig"),
+            new Term("Model View Controller",
+                    "[Bild S.27] \nMuster für Benutzeroberflächen Problementwicklung. \nSW wird in drei unabhängige, in sich geschlossene Komponenten unterteilt: das Model, die View und den Controller. " +
+                            "Sie interagieren miteinander um die Gesamtfunktionalität der Software umzusetzen. \nIdee hinter MVC-Muster: klare Abgrenzung zwischen den Daten, deren Darstellung und den Interaktionen des Benutzers mit GUI.\n" +
+                            "Mittlerweile ist es eines der am weitesten verbreiteten Muster für die Präsenationsschicht der Drei-Schichten-Architektur von SW.\n\n" +
+                            "Vorteile: \nmehrere Ansichten (Views) des Models möglich, leichtes Hinzufügen von neuen Views, synchronisierte Views, unterstützt sehr gut die agile SW Dev\n" +
+                            "Nachteile: \nerhöht Komplexität der Anwendung"),
+            //1.3 Benutzerschnitstellen funktionsgerecht und ergonomisch konzipieren
+            //1.3.1 Benutzerschnitstellen unterscheiden und Zukunftstrends präsentieren
+            new Term("Arten von Benutzerschnitstellen",
+                    "CLI Command Line Interface (Befehlszeilenschnitstelle / Kommandozeile)\n\n" +
+                            "Text User Interface TUI (Zeichenorientierte Benutzerschnittstellen)\n\n" +
+                            "GUI Graphical User Inerface (Grafische Benutzeroberfläche)\n\n" +
+                            "NUI Natural User Interface (Natürliche Benutzerschnittstelle)\n\n" +
+                            "VUI Voice User Interfaces (Sprachbasierte Benutzerschnittstellen)\n\n" +
+                            "OUI Organic User Interface (Organische Benutzerschnittstelle)\n\n" +
+                            "BCI Brain Computer Interface (Gehirn-Computer-Schnittstelle)"),
+            new Term("ISO-Norm 9241-110",
+                    "Interaktionsprinzipien\n\n" +
+                            "Aufgabenangemessenheit: \nIdentifizierbarkeit der unterrstüützen Aufgaben, Aufwandsoptimierung bei der Aufgabenerledigung, Standartauswahlmöglichkeiten (Defaults)\n\n" +
+                            "Selbstbeschreibung: \nVorhandensein und Offensichtlichkeit von Informationen, Eindeutige Anzeige des Systemstatus\n\n" +
+                            "Steuerbarkeit: \nUnberechenbarkeit, Flexibilität, Induvidualiserbarkeit\n\n" +
+                            "Erwartungskonformität: \nSystemverhalten/-reaktionen wie erwartet, Konsistenz (intern und extern), Änderungen im Nutzungskontext werden erkannt\n\n" +
+                            "Robustheit gegen Benutzungsfehler: \nBenutzungsfehlervermeidung, Benutzungsfehlertoleranz, Fehlermanagement\n\n" +
+                            "Benutzerbindung: \nMotivation, Vertrauenswürdigkeit, Integration der Benutzer\n\n" +
+                            "Elernbarkeit: \nUnterstützung beim Entdecken von Bedienfunktionen, Unterstützung beim Erinnern und Wiedererkennen von Bedienfunktionen"),
+            new Term("User Experience UX Design",
+                    "Nutzererfahrungen / Wahrnehmungen und Reaktionen einer Person aus der tatsächlichen und erwarteten Benutzung eines Produkts / Systems / Dienstleistung \n\n" +
+                            "UX Design [Bild S.35]\n\n" +
+                            "Ziel: Kunde bleibt bei meinem Produkt\n\n" +
+                            "Bestandteile: \nVisuelles Design, Inforationsarchitektur, Interaktionsdesign, Usability (Gebrauchstauglichkeit), Zugänglichkeit\n\n" +
+                            "Grundprinzipien: \nVermeidung von Informationsflut, Konsistenz, Universelle Bedienbarkeit, Informative Rüückmeldungen, Abgeschlossene Dialoge, Einfache Fehlerbehebung, Widerrufbarkeit von Aktionen, Kontrollvermittlung"),
+            //1.3.3 Den Designprozess und Designwerkzeuge präsentieren
+            new Term("",
+                    "S.37ff\n" + "[Bild S.38]\n\n" +
+                            "Verstehen: \nVorstellungen und Eigenschaften der Zielgruppe herausfinden, \n\nForschen: \nSichtweise der Zielgruppen herausfinden, Datenanalyse, Konkurrenzbetrachtung,\n\n" +
+                            "Analysieren: \nLösungsideen und Prototypen aus Forschungsergebnissen skizzieren, Design: Umsetzung it einfachen anpassbaren Elementen, \n\n" +
+                            "Testen: \nFunktionstüchtigkeit und zielorientierte Nutzung mit \"echten\" Nutzern testen, \n\nEntwickeln: \nDesign an Ergebnisse und Erfahrungen anpassen\n\n" +
+                            "Entwürfe, die im Designprozess angefertigt werden:\n" +
+                            "Sketch->Wireeframe->Mockup->Prototype"),
     };
     private static Term[] termsLF11 = {
             //Ordner 1
-            new Term("Berufe", "Es "),
+            new Term("<...>", "<...> "),
     };
     private static Term[] termsLF12 = {
-            //Ordner 1
+            new Term("Projekt Beispiele",""),
+            new Term("Projekt Phasen",""),
             new Term("Kosten SW Dev und Reduzierungswege",
                     "Gesamtkosten SW(Software) Projekt Zeitaufwand * Stundensatz\n" + "\n" +
                     "Zeitschätzung: in 3 Gruppen nach Komplexität\n" + "\n" +
@@ -1140,7 +1251,28 @@ public class Terms {
                     "Fremdkoste: \nIn manchen Fällen kommen noch Kosten für das Outsourcing von Projektaufgaben, Beratungskosten usw. hinzu"),
             new Term("Wirtschaftslichtkeit", "Wirtschaftslichtkeit zu Projektbeginn nicht mehr als eine Prognose, dann deutlicher zu zum Ende erfolgt eine genaue Analyse. Sie beinhaltet im einfachsten Fall eine angabe ob sie ein wirtschaftlicher Erfolg war,\n" +
                     "also mit Gewinn oder zumindestens nicht mit Verlust abgeschlossen hat. Die Berechnung stellt die Differenz zwischen erwirtschafteten Erträgen, zB Verkaufspreis bei einem externen oder Kostenersparnis bei einem internen Projekt und den Projektkosten dar.\n" +
-                    "\n" + "Ergebnis = Ertrag - Kosten\n" + "\n" + "Beispiel: Die SW, erstellt in einem Projekt, bewirkt hausintern eine Kostenersparnis von 3000$. Hauptsächliche Kosten "),
+                    "\n" + "Ergebnis = Ertrag - Kosten\n" + "\n" + "Beispiel: Die SW, erstellt in einem Projekt, bewirkt hausintern eine Kostenersparnis von 3000$. Hauptsächliche Kosten: Personalkosten: 2300$ \n"+
+                    "Ergebnis: 3000$ - 2300$ = 700$\n" +
+                    "Also hat das Projekt positives Ergebnis von 700$. Damit wurde ein Gewinn gemacht und das Projekt war erfolgreich.\n" +
+                    "Mit diesem Ergebnis können jetzt weitere wirtschaftliche Brechnungen angestelllt werden.\n" +
+                    "Dazu werdenexemplarisch die statischen Berechnungsmethoden Rentabilitätsrechnung und Amortisationsrechnung näher betrachtet.\n" +
+                    "Siehe Rentabilität und Amortisationsdauer."),
+            new Term("Rentabilität",
+                    "Projektergebnis (Gewinn oder Verlust) wird in Bezug zu anderen Größen gestellt. In den meisten Fällen zu dem eingesetzten Kapital, welches notwendig war, um diesen Gewinn zu erzielen.\n" +
+                    "Rentabilität = ( Gewinn / Kapitaleinsatz ) * 100%\n" +
+                    "Beispiel: Ein SW Projekt erwirtschaftet durch den Verkaufserlös einen Gewinn von 20.000$ Das dafür eingetzte Kapital hatte einen Umfang von 100.000$.\n" +
+                    "Berechnung: (20.000$ / 100.000$) * 100% = 20%\n" +
+                    "Damit ergibt sich eine Projektrentabilität von 20%."),
+            new Term("Amortisationsdauer",
+                    "Zeitraum, in dem die Projektkosten durch regelmäßige zukünftige Gewinne wieder zurückgewonnen werden.\n" +
+                    "Beispiel: Kosten für SW Projekt: 50.000$. Sie wird inder Cloud angeboten und kann gemietet werden.\n" +
+                    "Die Einnahmen aus dem Cloud Geschäft betragen etwa 2000$ pro Monat.\n" +
+                    "Rechnung: (50.000$ / 2.000$ pro Monat) = 25 Monate\n" +
+                    "Damit dauert es 25 Monate oder etwas über zwei Jahre, ehe sich das Projekt amortisiert hat.\n"),
+            new Term("Studensatzkalkulation",
+                    "Anzahl Mitarbeiter: 8\n" + "Jahrekosten eines: 60.000\n" + "Gemeinkosten insgs: 230.000\n" + "Selbstkosten insgs: 8*60.000+230.000 = 710.000\n" +
+                    "verrechenbare Arbeitszeit/Jahr eines: 1512\n" + "aller: 8*1512=12096\n" + "Selbstkostenstundensatz: 710.000/12096 = 58,70$\n" +
+                    "Gewinnaufschlag: +15% = 8,80$\n" + "Netto-Stundensatz: 58,70$*1,15 = 67,50$ (115%)\n" + "Stundensatz inkl MwSt.: 100% + 19% = 80,33(119%)"),
     };
     private static Term[] termsLFWK = {
             //Ordner 1
