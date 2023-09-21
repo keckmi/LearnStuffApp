@@ -1212,13 +1212,44 @@ public class Terms {
                             "Bestandteile: \nVisuelles Design, Inforationsarchitektur, Interaktionsdesign, Usability (Gebrauchstauglichkeit), Zugänglichkeit\n\n" +
                             "Grundprinzipien: \nVermeidung von Informationsflut, Konsistenz, Universelle Bedienbarkeit, Informative Rüückmeldungen, Abgeschlossene Dialoge, Einfache Fehlerbehebung, Widerrufbarkeit von Aktionen, Kontrollvermittlung"),
             //1.3.3 Den Designprozess und Designwerkzeuge präsentieren
-            new Term("",
+            new Term("Den Designprozess und Designwerkzeuge präsentieren",
                     "S.37ff\n" + "[Bild S.38]\n\n" +
                             "Verstehen: \nVorstellungen und Eigenschaften der Zielgruppe herausfinden, \n\nForschen: \nSichtweise der Zielgruppen herausfinden, Datenanalyse, Konkurrenzbetrachtung,\n\n" +
                             "Analysieren: \nLösungsideen und Prototypen aus Forschungsergebnissen skizzieren, Design: Umsetzung it einfachen anpassbaren Elementen, \n\n" +
                             "Testen: \nFunktionstüchtigkeit und zielorientierte Nutzung mit \"echten\" Nutzern testen, \n\nEntwickeln: \nDesign an Ergebnisse und Erfahrungen anpassen\n\n" +
                             "Entwürfe, die im Designprozess angefertigt werden:\n" +
                             "Sketch->Wireeframe->Mockup->Prototype"),
+            //1.3.4 Grafische Benutzerelemente einer GUI unterscheiden und allgemeine Gestaltungskriterien präsentieren
+            new Term("Allgemeine Gestaltungsregeln UI Design GUI Oberflächen",
+                    "häufig wird die GUI-Element Gestaltung von dem Framework vorgegeben (Erwartungskonformität). Manchmal Abweichung für eigene SW Identität zB Computerspiele. \n" +
+                            "Aber auch bei Webseiten werden oft professionelle Designer engagiert, die u.a. den \"goldenen Schnitt\" und andere Proportionslehren anwenden.\n\n" +
+                            "Test - Maximal zwei bis drei verschiedene Schriftarten für Überschriften, Text und interaktive Elemente verwenden \n\n" +
+                            "Farben - Licht kommt von oben. Dieses entspricht der Erfahrungswelt des Menschen. Dementsprechend sind GUI ELemente oben hell und unten dunkler. Auch eventuelle Schatten sind so zu gestalten. DIe Anzahl der verwendeten Farben einzuschränken.\n\n" +
+                            "Texteingabe - Markierungen verwenden, um den Benutzer zur Eingabe der erforderlichen Daten zu führen. Benutzer können Daten in verschiedenen Formaten eingeben\n\n" +
+                            "Steuerelemente - Schaltflächen hervorheben, sodass Benutzer erkennen können, dass das Steuerlement anzuklicken ist. Gerade aktives Steuerelement von anderen Steuerelementen farblich oder formlich abheben. " +
+                            "Deaktivierte Steuerelemente durchsichtig gestalten, nicht grau. Nicht relevante Steuerelmente ausblenden oder zuklappen und erst bei Bedarf den Benutzer zur Verfügung stellen\n\n" +
+                            "Abstände - Eine gute Bedienoberfläche benötigt viel Raum, Oberfläche nicht mit GUI Elementen überladen\n\n" +
+                            "Icons - sollten einfach gehalten werden, in Form und Farbe, Icons sollten eine klare Bdeutung für den Benutzer haben, sollten alle den gleichen Stiel besitzen\n\n" +
+                            "Navigation - Durch die Anwendung sollte auch per Tastatur navigiert werden können. Die Anwendung sollte durch Shortcuts bedienbar sein. \n\n"+
+                            "Weitere Gestaltungsaspekte:\n"+
+                            "Emotionale Gestaltung - Bilder die Menschen mit einer passenden Emotion zeiten \nKlangliche Gestaltung zB Windows-Sound USB Sound Warngeräusch bei Backofentastenfeld-Bäcker \n" +
+                            "Soziale Gestaltung - zB ShareMöglichkeiten Kopierbarkeit \nCorporate Design (Corporate Identity) \nBarrierefreiheit \nMehrsprachigkeit \n\n"+
+                            "Bedienung von grafischen Oberflächen mit anderen Interkationsformen: \nTouchsteuerung, Gestensteuerung, Sprachsteuerung"),
+            //1.4 Benutzerschnitstellen in einer Programmiersprache implementieren
+            new Term("Bibliotheken und Frameworks auswählen",
+                    "Grundlegende Begriffe: \nBibliothek, Framework, Application Programming Interface (API)\n\n" +
+                            "Kriterien zur Auswahl eines GUI Frameworks\n" +
+                            "Abdeckung der Anforderungen, Popularität, Unterstützung und Dokumentation, Lizenz und Kosten, Entwurfsmuster, Installation, Elernbarkeit\n" +
+                            "S.51 Beispiele für GUIsrub\n" +
+                            "Beispiele für Web-Frameworks"),
+            //1.4.4 Webbasierte Benutzerschnitstellen realisieren
+            new Term("Webbasierte Benutzerschnitstellen realisieren",
+                    "Webseitenaufruf HTTP Protokoll\n" +
+                            "kennung des ports definiert welches Programm gestartet wird (zB Port 80 Anfrage an Webserver)\n" +
+                            "Commandos GET (Formulardaten werden nach ? an Webadresse angehängt und mit URL übertragen), POST, 3 wege handshake, verbindungsorientierung, feedback,\n" +
+                            "webserver kann sattische bereits gespeicherte html seite laden oder dynamisch durch bspw php skripte erstellen (zB eine amazonseite ja nach suchanfrage) \n" + "\n" +
+                            "HTML ist eine darstellungssprache / markup language, keine programmiersprache\n" + "\n" +
+                            "WYSIWYG - What you see is what you get"),
     };
     private static Term[] termsLF11 = {
             //Ordner 1
@@ -1227,6 +1258,42 @@ public class Terms {
     private static Term[] termsLF12 = {
             new Term("Projekt Beispiele",""),
             new Term("Projekt Phasen",""),
+            //4.1.2 Die Projektorganisation innerhalb von Unternehmen präsentieren
+            new Term("Auftraggeber","kann ein Führungskraft des Unternehmens sein (Geschäftsführer, Abteilungsleiter), ein Kunde oder der Eigentümer des Unternehmens.\n" +
+                    "Er initiiert den Projektauftrag, skizziert erste grobe Anforderungen, entscheidet über Abbruch oder Fortführung und bestimmt Lenkungsgruppenmitglieder und Projektleitung bei internen Projekten."),
+            new Term("Lenkungsausschuss","stellt das sogenannte Entscheidungsgremium dar, meistens aus Führungkräften des Unternehmens und eventuell aus Vertretern des Kunden zusammengesetzt. Mitglieder treffen sich idealerweise regelmäßig. " +
+                    "Er trifft in allen Phasen des Projektes Grundatzentscheidungen."),
+            new Term("Projektleitung","Projektplanung, -steuerung und Fortschrittüberwachung. Festlegung der  Regeln und der Rolllen und Teambildungsbestimmung, Projektdokumentationszuständigkeit, Informationspflichtig gegenüber Auftraggeber und Lenkungsausschuss. In größeren Projekten gibt es mehrere."),
+            new Term("Projektteam","Projektleitung + Projektteam. Mitarbeiter bearbeiten und Leitung / Moderation den Projektauftrag. Mitarbeiter sind in der Regel temporär dem Projekt zugeordnet. Bei Teilprojekten mehrere Projektteams möglich."),
+            new Term("Stakeholder ","Personen mit Interesse am Projekt oder die davon in irgendeiner Weise betroffen sind. zB Sponsoren, Betriebsratsmitglieder, Helpdeskmitarbeiter, Lieferanten oder Behörden."),
+            new Term("Reine Projektorganisation",
+                    "(aka autonome Projektorganisation) Mitarbeiter kommen aus unterschiedlichen Fachabbteilungen, werden für Projektdauer daraus gelöst. \n" +
+                            "Projektleitung übernimmt fachliche und disziplinarische Weisungsrecht. Diese Form erfordert große Ressourcen an Fachkräften.\n\n" +
+                            "[Bild]\n\n" +
+                            "Einsatzgebiete: Groß und Auslandsprojekte, zeitkritische Projekte\n\n" +
+                            "Vorteile: \nvolle Entscheidungs und Weisungsbefugnis der Projektleitung ermöglicht eine konzentrierte Realisierung der Projektziele,\n" +
+                            "umfangreiche Projekte können mit eigenen Ressourcen durchgeführt werden, \nAufgaben und Verantwortlichkeiten sind eindeutig verteilbar,\n" +
+                            "hohe Identifikation der Projektmitarbeiter mit dem Projekt direkte Kommunikation\n\n" +
+                            "Nachteile: hoher Aufwand für die Projektorganisation, \nProjekt bindet Ressourcen, \nwelche für den Projektzeitraum nicht zur Verfügung stehen, \nmögliche Probleme bei der Rückführung der Projektmitarbeiter in die vorherige Betriebsorganisation"),
+            new Term("Stabsprojektorganisation",
+                    "(aka Einflussorganisation)\n" +
+                            "Projektleitung ist direkt der Unternehmensleitung unterstellt und verfügt über keine fachliche und disziplinarische Weisungsbefugnis. \n" +
+                            "Sie koordiniert lediglich den Projektablauf (Stabsfunktion). \n" +
+                            "Mitarbeiter verbleiben in ihren Linienstrukturen und bearbeiten dort neben anderen Aufgaben auch die Projektaufgaben.\n\n" +
+                            "Vorteile: \nbestehende Betriebsorganisationsstruktur wird nicht verändert, wodurch die Projektorganisation schnell eingerichtet und aufgelöst werden kann,\n" +
+                            "sehr flexibel und das Fachwissen der einzelnen Abteilungen kann genutzt werden\n\n" +
+                            "Nachteile: \n und Koordination innerhalb des Projektes sehr aufwendig, \nnotwendige Maßnahmen teilweie schwierig durchzusetzen, da Projektleitung über keinerlei Weisungsberechtigung verfügt\n"),
+            new Term("Matrixprojektorganisation",
+                    "Mitglieder gehen normaler Tätigkeit nach und sind dabei für eine gewisse Zeit für das Projekt freigestellt. \n" +
+                            "Die Abteilungsleitung übt das disziplinarische Weisungsrecht und auch das fachliche für Linienaufgaben aus. \n" +
+                            "Die Projektleitung verfügt über das fachliche Weisungsrecht in Fragen des Projektes. \n" +
+                            "Wird in der Praxis sehr häufig angewendet. Sie stellt eine Mischform zwischen Stabs und reiner Projektorganisation dar.\n" +
+                            "[Bild]\n" +
+                            "Einsatzgebiete: mittlere und große Projekte\n\n" +
+                            "Vorteile: \nMitarbeiter verbleiben in ihren Abteilungen, sodass eventuelle Probleme bei Wiederingliederung am Ende des Projektes entfallen,\n" +
+                            "Mitarbeiter können vom Wissen und dem Austausch in ihren Fachabteilungen profitieren, Flexibler Zugriff auf Ressorucen\n\n" +
+                            "Nachteile: \nKonflikte zwischen Projekt und Abteilungsleiter, \nProbleme der Priorisierung zwischen Linien- und Projektarbeit\n"),
+            //
             new Term("Kosten SW Dev und Reduzierungswege",
                     "Gesamtkosten SW(Software) Projekt Zeitaufwand * Stundensatz\n" + "\n" +
                     "Zeitschätzung: in 3 Gruppen nach Komplexität\n" + "\n" +

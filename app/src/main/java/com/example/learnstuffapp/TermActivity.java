@@ -173,6 +173,50 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.arbeitszeugnis);
             imgView.getLayoutParams().height=500;
         }
+        if (term.equals("Anforderungsspezifikation")) {
+            imgView.setImageResource(R.drawable.anforderungsspezifikation);
+            imgView.getLayoutParams().height=500;
+        }
+        if (term.equals("Prozess der Anforderungsspezifikaion")) {
+            imgView.setImageResource(R.drawable.prozessanforderungsspezifikation);
+            imgView.getLayoutParams().height=500;
+        }
+        if (term.equals("Prozessanalyse Schritte")) {
+            imgView.setImageResource(R.drawable.prozessanalyse_schritte);
+            imgView.getLayoutParams().height=1000;
+        }
+        if (term.equals("Projekt Beispiele")) {
+            imgView.setImageResource(R.drawable.projekte_beispiele);
+            imgView.getLayoutParams().height=700;
+        }
+        if (term.equals("Projekt Phasen")) {
+            imgView.setImageResource(R.drawable.projekt_phasen);
+            imgView.getLayoutParams().height=700;
+        }
+        if (term.equals("Benutzerschnitstellen in den Kontext der Softwarearchitektur einordnen")) {
+            imgView.setImageResource(R.drawable.schnitstellen_software);
+            imgView.getLayoutParams().height=600;
+        }
+        if (term.equals("Drei-Schichten-Architektur")) {
+            imgView.setImageResource(R.drawable.drei_schichten_architektur);
+            imgView.getLayoutParams().height=700;
+        }
+        if (term.equals("Client-Server-Architektur")) {
+            imgView.setImageResource(R.drawable.client_server_architektur);
+            imgView.getLayoutParams().height=700;
+        }
+        if (term.equals("Model View Controller")) {
+            imgView.setImageResource(R.drawable.model_view_controller);
+            imgView.getLayoutParams().height=400;
+        }
+        if (term.equals("User Experience UX Design")) {
+            imgView.setImageResource(R.drawable.uxdesign);
+            imgView.getLayoutParams().height=400;
+        }
+        if (term.equals("Den Designprozess und Designwerkzeuge präsentieren")) {
+            imgView.setImageResource(R.drawable.designprozess);
+            imgView.getLayoutParams().height=1000;
+        }
 
     }
 }
