@@ -1,6 +1,7 @@
 ## News
 *more terms and questions are added from time to time*  
 
+14 Sep: learnfields 10a, 11 & 12 added  
 6 Jun: gemeinschaftskunde added  
 5 Jun: Bug: Checkboxes invisible reset fail in quiz fixed, new terms'n'quiz to lf9 and wirtschaftskunde added  
 25 February: lexicon lf1 term content abscence fixed  
