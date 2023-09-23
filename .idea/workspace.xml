@@ -9,9 +9,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43ab87b4-d96f-4f0f-913c-d4d0396b017d" name="Changes" comment="news to 10a'n'12">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="43ab87b4-d96f-4f0f-913c-d4d0396b017d" name="Changes" comment="pics to 12" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,27 +73,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/Michael/AndroidStudioProjects/learnstuffapp/app/src/main/res/drawable&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Michael/AndroidStudioProjects/learnstuffapp/app/src/main/res/drawable&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;Errors&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "cidr.known.project.marker": "true",
+    "com.google.services.firebase.aqiPopupShown": "true",
+    "last_directory_selection": "C:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/drawable",
+    "last_opened_file_path": "C:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/drawable",
+    "settings.editor.selected.configurable": "Errors"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Properties&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Properties"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Michael\AndroidStudioProjects\learnstuffapp\app\src\main\res\drawable" />
       <recent name="C:\Users\Michael\AndroidStudioProjects\LearnStuffApp\app\src\main\res\drawable" />
+      <recent name="C:\Users\Michael\AndroidStudioProjects\learnstuffapp\app\src\main\res\drawable" />
       <recent name="C:\Users\Michael\AndroidStudioProjects\LearnStuffApp\app\src\main\res\layout" />
       <recent name="$PROJECT_DIR$/app/src/main/res/layout" />
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable-v24" />
@@ -466,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1695320542241</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="pics to 12">
+      <created>1695455431506</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1695455431506</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -484,7 +489,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="chapters &amp; new terms in Learnfield3" />
     <MESSAGE value="23.4.2 +terms LF1&amp;8 +qests LF1, spinner crash fixed" />
     <MESSAGE value="pics to 3 terms" />
     <MESSAGE value="pics to 4 terms" />
@@ -509,6 +513,7 @@
     <MESSAGE value="class name changes" />
     <MESSAGE value="new learnfields" />
     <MESSAGE value="news to 10a'n'12" />
-    <option name="LAST_COMMIT_MESSAGE" value="news to 10a'n'12" />
+    <MESSAGE value="pics to 12" />
+    <option name="LAST_COMMIT_MESSAGE" value="pics to 12" />
   </component>
 </project>
