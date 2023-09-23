@@ -217,6 +217,18 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.designprozess);
             imgView.getLayoutParams().height=1000;
         }
+        if (term.equals("Reine Projektorganisation")) {
+            imgView.setImageResource(R.drawable.reine_projektorganisation);
+            imgView.getLayoutParams().height=500;
+        }
+        if (term.equals("Stabsprojektorganisation")) {
+            imgView.setImageResource(R.drawable.stabsprojektorganisation);
+            imgView.getLayoutParams().height=700;
+        }
+        if (term.equals("Matrixprojektorganisation")) {
+            imgView.setImageResource(R.drawable.matrixprojektorganisation);
+            imgView.getLayoutParams().height=500;
+        }
 
     }
 }
