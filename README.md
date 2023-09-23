@@ -73,7 +73,7 @@ new Term("Fachbegriffsbezeichnung", "Fachbegriffsbeschreibung")
 hinzufügbar, wobei zeilenumbrüche als \n und abschnitte als \n\n zu schreiben sind  
 
 **Quizfrage hinzufügen:**  
-Javadatei Schoolstuff öffnen,  
+Javadatei Questions öffnen,  
 zum entsprechenden Lernfeld scrollen  
 jedem Lernfeld entspricht ein  
 private static Question[] questionsLF = { .. }  
