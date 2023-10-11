@@ -229,6 +229,26 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.matrixprojektorganisation);
             imgView.getLayoutParams().height=500;
         }
+        if (term.equals("ereignisorientierte Prozesskette EPK")) {
+            imgView.setImageResource(R.drawable.ereignisgesteuerte_prozesskette);
+            imgView.getLayoutParams().height=700;
+        }
+        if (term.equals("Projektrisiken bewerten")) {
+            imgView.setImageResource(R.drawable.projektrisiken_bewerten);
+            imgView.getLayoutParams().height=500;
+        }
+        if (term.equals("Projektorganisationsformen")) {
+            imgView.setImageResource(R.drawable.projektorganisationsformen);
+            imgView.getLayoutParams().height=1500;
+        }
+        if (term.equals("EU Länder")) {
+            imgView.setImageResource(R.drawable.eulaeder);
+            imgView.getLayoutParams().height=800;
+        }
+        if (term.equals("Euro Länder")) {
+            imgView.setImageResource(R.drawable.eurolaender);
+            imgView.getLayoutParams().height=1000;
+        }
 
     }
 }

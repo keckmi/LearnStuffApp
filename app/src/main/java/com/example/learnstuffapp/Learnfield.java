@@ -40,6 +40,7 @@ public class Learnfield {
                 break;
             case "12":
                 learnfield = "Kundenspezifische Anwendungsentwicklung durchführen";
+                break;
             case "WK":
                 learnfield = "Wirtschaftskunde";
                 break;

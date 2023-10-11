@@ -1153,7 +1153,11 @@ public class Terms {
                             "Rechtvergabe für bestimmte Funktionalitäten, Grad der Barrierefreiheit oder Mehrsprachigkeit\n\n" +
                             "[Bild Seite 19]"),
             //1.2 Ein Softwareprodukt designen
-            new Term("Softwareprodukt designen","S. 20"),
+            new Term("Softwareprodukt designen",
+                    "Beim Designen (Entwerfen) einer SW werden Architektur, Komponenten, Schnitstellen, Datenstrukturen, Algorithmen u.a. geplant.\n"+
+                    "Es ist eine wichtige Phase da die gesamte Anwendung darauf aufbaut. \nBegonnen wird, nachdem Anforderungen feststehen. \n"+
+                    "Bei Vorgehensmodell Wasserfallmodell ist der Entwurf eine abgeschlossene Phase. Bei Scrum wird er wiederholt durchlaufen.\n"+
+                    "Dabei gibt es mehrere Entwurfsebenen die fließend ineinander übergehen, deren Ergebnisse während der Entwicklungszeit angepasst, verfeindert und optimiert werden."),
             //1.2.1 Benutzerschnitstellen in den Kontext der Softwarearchitektur einordnen
             new Term("Benutzerschnitstellen in den Kontext der Softwarearchitektur einordnen","Softwarearchitektur: \nstellt den Bauplan eines SW Systems dar. Beschreibung der einzelnen Komponenten und deren Verbindungen.\n\n"+
                     "Wesentliche Merkmale einer guten Softwarearchitektur:\n" +"Modularität, Entkopplung, Abstraktion, Einfachheit, Vollständigkeit, Parallelität \n\n [Bild S.23] \n\n"+
@@ -1200,7 +1204,7 @@ public class Terms {
                     "Interaktionsprinzipien\n\n" +
                             "Aufgabenangemessenheit: \nIdentifizierbarkeit der unterrstüützen Aufgaben, Aufwandsoptimierung bei der Aufgabenerledigung, Standartauswahlmöglichkeiten (Defaults)\n\n" +
                             "Selbstbeschreibung: \nVorhandensein und Offensichtlichkeit von Informationen, Eindeutige Anzeige des Systemstatus\n\n" +
-                            "Steuerbarkeit: \nUnberechenbarkeit, Flexibilität, Induvidualiserbarkeit\n\n" +
+                            "Steuerbarkeit: \nUnterbrechbarkeit, Flexibilität, Induvidualiserbarkeit\n\n" +
                             "Erwartungskonformität: \nSystemverhalten/-reaktionen wie erwartet, Konsistenz (intern und extern), Änderungen im Nutzungskontext werden erkannt\n\n" +
                             "Robustheit gegen Benutzungsfehler: \nBenutzungsfehlervermeidung, Benutzungsfehlertoleranz, Fehlermanagement\n\n" +
                             "Benutzerbindung: \nMotivation, Vertrauenswürdigkeit, Integration der Benutzer\n\n" +
@@ -1215,7 +1219,7 @@ public class Terms {
             new Term("Den Designprozess und Designwerkzeuge präsentieren",
                     "S.37ff\n" + "[Bild S.38]\n\n" +
                             "Verstehen: \nVorstellungen und Eigenschaften der Zielgruppe herausfinden, \n\nForschen: \nSichtweise der Zielgruppen herausfinden, Datenanalyse, Konkurrenzbetrachtung,\n\n" +
-                            "Analysieren: \nLösungsideen und Prototypen aus Forschungsergebnissen skizzieren, Design: Umsetzung it einfachen anpassbaren Elementen, \n\n" +
+                            "Analysieren: \nLösungsideen und Prototypen aus Forschungsergebnissen skizzieren, \n\nDesign: \nUmsetzung it einfachen anpassbaren Elementen, \n\n" +
                             "Testen: \nFunktionstüchtigkeit und zielorientierte Nutzung mit \"echten\" Nutzern testen, \n\nEntwickeln: \nDesign an Ergebnisse und Erfahrungen anpassen\n\n" +
                             "Entwürfe, die im Designprozess angefertigt werden:\n" +
                             "Sketch->Wireeframe->Mockup->Prototype"),
@@ -1223,7 +1227,7 @@ public class Terms {
             new Term("Allgemeine Gestaltungsregeln UI Design GUI Oberflächen",
                     "häufig wird die GUI-Element Gestaltung von dem Framework vorgegeben (Erwartungskonformität). Manchmal Abweichung für eigene SW Identität zB Computerspiele. \n" +
                             "Aber auch bei Webseiten werden oft professionelle Designer engagiert, die u.a. den \"goldenen Schnitt\" und andere Proportionslehren anwenden.\n\n" +
-                            "Test - Maximal zwei bis drei verschiedene Schriftarten für Überschriften, Text und interaktive Elemente verwenden \n\n" +
+                            "Text - Maximal zwei bis drei verschiedene Schriftarten für Überschriften, Text und interaktive Elemente verwenden \n\n" +
                             "Farben - Licht kommt von oben. Dieses entspricht der Erfahrungswelt des Menschen. Dementsprechend sind GUI ELemente oben hell und unten dunkler. Auch eventuelle Schatten sind so zu gestalten. DIe Anzahl der verwendeten Farben einzuschränken.\n\n" +
                             "Texteingabe - Markierungen verwenden, um den Benutzer zur Eingabe der erforderlichen Daten zu führen. Benutzer können Daten in verschiedenen Formaten eingeben\n\n" +
                             "Steuerelemente - Schaltflächen hervorheben, sodass Benutzer erkennen können, dass das Steuerlement anzuklicken ist. Gerade aktives Steuerelement von anderen Steuerelementen farblich oder formlich abheben. " +
@@ -1239,9 +1243,9 @@ public class Terms {
             new Term("Bibliotheken und Frameworks auswählen",
                     "Grundlegende Begriffe: \nBibliothek, Framework, Application Programming Interface (API)\n\n" +
                             "Kriterien zur Auswahl eines GUI Frameworks\n" +
-                            "Abdeckung der Anforderungen, Popularität, Unterstützung und Dokumentation, Lizenz und Kosten, Entwurfsmuster, Installation, Elernbarkeit\n" +
-                            "S.51 Beispiele für GUIsrub\n" +
-                            "Beispiele für Web-Frameworks"),
+                            "Abdeckung der Anforderungen, Popularität, Unterstützung und Dokumentation, Lizenz und Kosten, Entwurfsmuster, Installation, Elernbarkeit\n\n" +
+                            "Beispiele für GUI-Frameworks: \nPhython - Thinker, PyQt \nJava - Swing, JavaFX \nC# - .Net(Windows Forms), .Net(WPF) \nC++ - .Net(Windows Forms), Qt\n\n" +
+                            "Beispiele für Web-Frameworks: \nASP.NET (C#), \nExpress (JavaScript), \nDjango (Phyton), \n(Spring) Java, \nRuby on Rails (Ruby), \nLaravel (PHP), \nAngular (TypeScript)"),
             //1.4.4 Webbasierte Benutzerschnitstellen realisieren
             new Term("Webbasierte Benutzerschnitstellen realisieren",
                     "Webseitenaufruf HTTP Protokoll\n" +
@@ -1257,15 +1261,20 @@ public class Terms {
     };
     private static Term[] termsLF12 = {
             new Term("Projekt Beispiele",""),
-            new Term("Projekt Phasen",""),
+            new Term("Projekt Phasen",
+                    "Initialisierung: \nProjektziele skizzieren, Projektauftrag \n\n"+
+                    "Definition: \nKernteam bilden, Stakeholderanalyse, Ziele und Lieferobjekte, Phasen und Meilensteine\n\n"+
+                    "Planung: \nProjektstruktur, Arbeitspakete, Aufbauorganisation, Ablauf- und Terminplanung, Einsatzmittelplanung, Kostenplanung, Risikoanalyse\n\n"+
+                    "Steurung: \nKontrolle und Steuerung, Änderungsmanagement \n\nAbschluss: \nErfahrungssicherung"),
             //4.1.2 Die Projektorganisation innerhalb von Unternehmen präsentieren
             new Term("Auftraggeber","kann ein Führungskraft des Unternehmens sein (Geschäftsführer, Abteilungsleiter), ein Kunde oder der Eigentümer des Unternehmens.\n" +
                     "Er initiiert den Projektauftrag, skizziert erste grobe Anforderungen, entscheidet über Abbruch oder Fortführung und bestimmt Lenkungsgruppenmitglieder und Projektleitung bei internen Projekten."),
             new Term("Lenkungsausschuss","stellt das sogenannte Entscheidungsgremium dar, meistens aus Führungkräften des Unternehmens und eventuell aus Vertretern des Kunden zusammengesetzt. Mitglieder treffen sich idealerweise regelmäßig. " +
                     "Er trifft in allen Phasen des Projektes Grundatzentscheidungen."),
             new Term("Projektleitung","Projektplanung, -steuerung und Fortschrittüberwachung. Festlegung der  Regeln und der Rolllen und Teambildungsbestimmung, Projektdokumentationszuständigkeit, Informationspflichtig gegenüber Auftraggeber und Lenkungsausschuss. In größeren Projekten gibt es mehrere."),
-            new Term("Projektteam","Projektleitung + Projektteam. Mitarbeiter bearbeiten und Leitung / Moderation den Projektauftrag. Mitarbeiter sind in der Regel temporär dem Projekt zugeordnet. Bei Teilprojekten mehrere Projektteams möglich."),
+            new Term("Projektteam","Projektleitung + Projektteam. Mitarbeiter bearbeiten unter Leitung / Moderation den Projektauftrag. Mitarbeiter sind in der Regel temporär dem Projekt zugeordnet. Bei Teilprojekten mehrere Projektteams möglich."),
             new Term("Stakeholder ","Personen mit Interesse am Projekt oder die davon in irgendeiner Weise betroffen sind. zB Sponsoren, Betriebsratsmitglieder, Helpdeskmitarbeiter, Lieferanten oder Behörden."),
+            new Term("Projektorganisationsformen",""),
             new Term("Reine Projektorganisation",
                     "(aka autonome Projektorganisation) Mitarbeiter kommen aus unterschiedlichen Fachabbteilungen, werden für Projektdauer daraus gelöst. \n" +
                             "Projektleitung übernimmt fachliche und disziplinarische Weisungsrecht. Diese Form erfordert große Ressourcen an Fachkräften.\n\n" +
@@ -1293,7 +1302,9 @@ public class Terms {
                             "Vorteile: \nMitarbeiter verbleiben in ihren Abteilungen, sodass eventuelle Probleme bei Wiederingliederung am Ende des Projektes entfallen,\n" +
                             "Mitarbeiter können vom Wissen und dem Austausch in ihren Fachabteilungen profitieren, Flexibler Zugriff auf Ressorucen\n\n" +
                             "Nachteile: \nKonflikte zwischen Projekt und Abteilungsleiter, \nProbleme der Priorisierung zwischen Linien- und Projektarbeit\n"),
-            //
+            //4.2 Kundenprojekte im Rahmen von Projekten planen und bearbeiten
+            new Term("Qualitätsmerkmale von SW","Benutzbarkeit \nÜbertragbarkeit \nÄnderbarkeit \nEffizienz \nZuverlässigkeit \nFunktionalität"),
+            //4.2.2 Das Projekt planen und die Wirtschaftlichkeit beurteilen
             new Term("Kosten SW Dev und Reduzierungswege",
                     "Gesamtkosten SW(Software) Projekt Zeitaufwand * Stundensatz\n" + "\n" +
                     "Zeitschätzung: in 3 Gruppen nach Komplexität\n" + "\n" +
@@ -1340,6 +1351,17 @@ public class Terms {
                     "Anzahl Mitarbeiter: 8\n" + "Jahrekosten eines: 60.000\n" + "Gemeinkosten insgs: 230.000\n" + "Selbstkosten insgs: 8*60.000+230.000 = 710.000\n" +
                     "verrechenbare Arbeitszeit/Jahr eines: 1512\n" + "aller: 8*1512=12096\n" + "Selbstkostenstundensatz: 710.000/12096 = 58,70$\n" +
                     "Gewinnaufschlag: +15% = 8,80$\n" + "Netto-Stundensatz: 58,70$*1,15 = 67,50$ (115%)\n" + "Stundensatz inkl MwSt.: 100% + 19% = 80,33(119%)"),
+            new Term("Projektrisiken bewerten",
+                    "Arten von Risiken: \n\nPersonelle \nNicht genügend Mitarbeiter \nMitarbeiter werden krank \n\nZeitliche und finanzielle Risiken: \nkeine oder unrealistische Terminpläne und/oder Kostenplanung \n"+
+                    "auftreten von zeit oder kostenintensiven Aufgaben, die bei Projektplanung noch nicht bekannt waren \n\nTechnologische Risiken: \nTechnologie veraltet während Projektverlauf \n"+
+                    "Einsatz neuer Technologie, die noch nicht ausreichend bekannt ist \n\nOrganisatorische Risiken: \nEs wird das falsche Vorgehensmodell gewählt \nunzureichende Kommunikation im Projektteam \n\n"+
+                    "Bewertung von Risiken: \nSiehe Bild \nRisikokennziffer = Wahrscheinlichkeit * Schadenspotenzial \nkann bei bedarf farblich sein: \n1-8 - grün, 9-17 - gelb, 18-15 - rot"),
+            //wo im Buch?
+            new Term("ereignisorientierte Prozesskette EPK",
+                    "für geregelte Betriebliche Abläufe, Geschäftsprozesse \naus der Betriebswirtschaft \n"+
+                    "\nGrundelemente: \nEreignis: (rot) quadratisches Sechseck \nFunktion: (grün) abgerundetes Viereck \n"+
+                    "Verknüpfung: \nim Kreis: \nΛ - beide (und) \nV - beide oder eines (oder) \nxor - nur eines von beiden \n"+
+                    "Kontrollfluss: Pfeil"),
     };
     private static Term[] termsLFWK = {
             //Ordner 1
@@ -1353,19 +1375,19 @@ public class Terms {
                     "Nachteile: \nOrganisation manchmal schwierig, welche Ausbildungsinhalte wo vermitteln \nQualität je nach Betrieb anderst \n"+
                     "Berufsschulen oft ohne moderne Maschinen \nzu wenige Ausbildungsplätze in Betrieben"),
             new Term("Berufsausbildungsvertrag","Vertragspartner: Ausbilder + Auszubildender unterschreiben schicken zur Genehmigung an IHK Industriehandelskammer "+
-                    "und HWK Handwerkskammer. Diese machen Eintrag ins Verzeichnis der Berufsausbildungs VBAV. Grundlagen: Berufssbildungsgesetz BBiG, Handwerksordnung HWO, außerdem zB "+
+                    "und HWK Handwerkskammer. Diese machen Eintrag ins Verzeichnis der Berufsausbildungsverhältnisse VBAV. Grundlagen: Berufssbildungsgesetz BBiG, Handwerksordnung HWO, außerdem zB "+
                     "Jugendarbeitsschutzgesetz \n\nInhalt: \nZiel der Ausbildung \nZeitliche Reihenfolge \ntägliche Arbeitszeit \nDauer (normalerweise 3 Jahre) \nDauer der Probezeit "+
-                    "\nAusbildungsmaßnahmen außerhalb der Firma \nHöhe Ausbildungsvergütung \nDauer Urlaub \nKündigungsvorraussetzungen \n"+
-                    "\nPflichten Auszubildender \nLernfplficht \nAusbildungsnachweis \nSorgfaltspflicht \nWettbewerbsverbot \nSchweigepflicht \nWeisungsgebundenheit "+
-                    "Teilnahmepflicht Berufsschule \nBenachrichtigungspflicht \n\nPflichten Ausbilder \nAusbildungspflicht \nBereitstellung von Arbeitsmitteln \nAusbildungsbezogene Tätigkeiten \n"+
+                    "\nAusbildungsmaßnahmen außerhalb der Firma \nHöhe Ausbildungsvergütung \nDauer Urlaub \nKündigungsvoraussetzungen \n"+
+                    "\nPflichten Auszubildender: \nLernpflicht \nAusbildungsnachweis \nSorgfaltspflicht \nWettbewerbsverbot \nSchweigepflicht \nWeisungsgebundenheit \n"+
+                    "Teilnahmepflicht Berufsschule \nBenachrichtigungspflicht \n\nPflichten Ausbilder: \nAusbildungspflicht \nBereitstellung von Arbeitsmitteln \nAusbildungsbezogene Tätigkeiten \n"+
                     "Freistellungspflicht für Berufsschule \nFürsorgepflicht \nPflicht Zeugnisausstellung \nZahlungspflicht"),
             new Term("Ende Berufsausbildung","In Probezeit \n1) Kündigung fristlos (ohne Grundangabe) \na) durch Azubi b) durch Ausbilder \n\n"+
                     "Nach Probezeit \n1) Kündigung fristlos (wichtiger Grund) \na) durch Azubi zB Bedrohung Gewalt \nb) durch Ausbilder zB Diebstahl, Gewalt \n"+
                     "2) Kündigung + Frist 4 Wochen \ndurch Azubi zB Berufswechsel \n\nGesellenprüfung, Abschlussprüfung"),
             new Term ("Arbeitsschutz","Arbeitszeitgesetz, Bundesurlaubsgesetz, Mutterschutzgesetz, Schwerbehindertenschutz (Sozialgesetzbuch), Jugendabreitsschutzgesetz"),
             new Term("Arbeitsstättenverordnung","Temperatur, Sauberkeit, Beleuchtung"),
-            new Term("Produktsicherheitsgesetz","Geräte und Maschinen, Notschalter, Sicherheitshinwweise, Fingerschutz, Sichtschutz, Schutzkappen"),
-            new Term("Unfallverhütungsvorschirften","Schutzbekleidung: Sicherheitsschuhe, Handschuhe, Schutzbrille, Mundschutz, Helm \n\n"+
+            new Term("Produktsicherheitsgesetz","Geräte und Maschinen, Notschalter, Sicherheitshinweise, Fingerschutz, Sichtschutz, Schutzkappen"),
+            new Term("Unfallverhütungsvorschriften","Schutzbekleidung: Sicherheitsschuhe, Handschuhe, Schutzbrille, Mundschutz, Helm \n\n"+
                     "Regeln in Wektstätten: Fluchtweg, Nicht Essen, Rauchen, an Sicherheitshinweise halten"),
             new Term("überwachung","Unfallverhütungsvorschriften \ndurch Berufsgenossenschaften (Sicherheitsbeauftragter) ohne Anmeldung, sofort beseitigen, Geldstrafe \n\n"+
                     "sozialen Arbeitsschutz \ndurch Gewerbeaufsichtsämter prüfen Anzeigen Geldstrafen \n\nTÜV (Technischer Überwachungsverein) \nüberprüft Maschinen im Betrieb \n\n"+
@@ -1373,7 +1395,6 @@ public class Terms {
             new Term("Arbeits - Ausbildungsvertrag","Arbeitsvertrag \nArbeitnehmer & geber \nNamen der Vertragspartner \nBeginn und Ende (bei Befristung) des Arbeitsverhältnisses \n"+
                     "Beschreibung Arbeit \nArbeitszeit \nUrlaubstage \nGehalt \nKündigungsfristen \n\nAusbildungsvertrag \nAusbildender & Ausbilder \nNamen der Vertragspartner \n"+
                     "Beginn & Ende \nAusbildungsinhalte \nAusbildungsmaßnahmen außerhalb von Firma \nUrlaubstage \nGehalt \nDauer Probezeit \nKündigungsfristen"),
-            new Term("",""),
             //Ordner 2
             new Term("Sozialversicherungen",
                     "Krankenversicherung \nseit1883 \nTräger: Krankenkasse \nBeiträge zahlt Arbeitgeber & Arbeitnehmer 50/50 \nBeitragshöhe: 14,6 % von Bruttolohn \n"+
@@ -1387,7 +1408,7 @@ public class Terms {
                     "Tarifverhandlungen durch \"Sozialpartner\" Arbeitgeberverband und Gewerkschaft führen zu \n\nLohntarifvertrag \nLohnhöhe \nLaufzeit: 1 Jahr \n\nManteltarifvertrag \nArbeitsbedingungen"+
                     " wie Pausen, Mehrarbeit, Arbeitszeit, Laufzeit: 3 - 5 Jahre \n\nSo muss nicht jedes Jahr alles neu verhandelt werden \n\nTarifvertrag: einheitliche Arbeitsbedingungen für ganzen Wirtschaftszweig"+
                     "\n\nTarifverhandlungen: \nTarifautonomie: Tarifpartner verhandeln selbst (Staat darf nicht einmischen) \nSchlichtung: Wenn Tarifverhandlung scheitert, +neutrale Person versucht Lösung zu finden \n"+
-                    "Urabstimmung: Wenn Schlichtung scheitert. Gewerkschaftsmitgleider stimmen über Streik ab (75% der Stimmen benötigt) \nStreikgeld: von Gewerkschaft (da kein Lohn während Streik) \n"+
+                    "Urabstimmung: Wenn Schlichtung scheitert. Gewerkschaftsmitglieder stimmen über Streik ab (75% der Stimmen benötigt) \nStreikgeld: von Gewerkschaft (da kein Lohn während Streik) \n"+
                     "Aussperrung: Firma wird geschlossen, da wegen Sreik unrentabel. Problem für Arbeiter außerhalb der Gewerkschaft. Diese bekommen jetzt weder Lohn noch Streikgeld\n"+
                     "Neue Tarifverhandlungen: 2. Urabstimmung: Streik Ende? (mindestens 25% der Stimmen benötigt) \nNeuer Tarifvertrag \nallgemeinverbindlich für alle gültig!"+
                     "\n  Jede Firma, jeder Chef, jeder Arbeiter muss ihn beachten. \nFriedenspflicht: Da neuer Tarifvertrag keinen Streik und keine Aussperrung mehr!"),
@@ -1397,15 +1418,15 @@ public class Terms {
                     "\n\nWahl für \n1) 4 Jahre von Schwerbehinderten (mindestens 60 GdB) \n2) 2 Jahre von < 18 jährigen & allen Azubis \n3) 4 Jahre von Arbeitnehmer > 18 jährig"+
                     "\n\nWen wählen \n1) Arbeiter, mindestens 6 Monate im Betrieb, volljährig \n2) bis 25 jährige, bei Azubis alle \n3) Arbeiter >18 jährige und mindestens 6 Monate im Betrieb"+
                     "\n\nMitgliederzahl \n1) 1 + 1 Stelllvertreter \n2) verschieden (maximal 25) \n3) abhängig von Betriebsgröße"+
-                    "\n\nAufgabe \n1) Betriebsratssitzungsteilnahme, hilft Schwerbehinderten bei Problemen im Betrieb, achtet auf Einhaltung von Gesetz und Vorschrift\n"+
-                    "2) Betriebsratssitzungsteilnahme, achtet auf Einhaltung von Gesetz und Vorschrift, Zusammenarbeit mit Betriebsrat, spricht nicht direkt mit Chef, sondern erst mit Betriebsrat"+
+                    "\n\nAufgabe \n1) hilft Schwerbehinderten bei Problemen im Betrieb, Betriebsratssitzungsteilnahme, achtet auf Einhaltung von Gesetz und Vorschrift\n"+
+                    "2) Betriebsratssitzungsteilnahme, achtet auf Einhaltung von Gesetz und Vorschrift, Zusammenarbeit mit Betriebsrat, spricht nicht direkt mit Chef, sondern erst mit Betriebsrat\n"+
                     "3) Verwaltung der Sozialeinrichtungen und Arbeitsschutz"),
-            new Term("Betriebsrat","Mitbestimmung im Betrieb \n\n   Personalsachen \n   Tarifverträge \n   Betriebsvereinbarungen \n   Betriebswirtschft"),
+            new Term("Betriebsrat","Mitbestimmung im Betrieb \n\n   Personalsachen \n   Tarifverträge \n   Betriebsvereinbarungen \n   Betriebswirtschaft"),
             new Term("Betriebsversammlung","alle 3 Monate \n\nVorbereitung und Leitung: Betriebsrat \ndieser berichtet hier von Arbeit der letzten 3 Monate \nArbeiter kommen zusammen und stellen Fragen\n"+
                     "Chefs sind dabei und können sich zu Wort melden"),
             new Term("Besonderer Kündigungsschutz","Für Arbeiter in Betriebsrat und Schwerbehindertenvertretung"),
             new Term("Arbeitszeugnis","einfaches Arbeitszeugnis: \nBeschäftigung Art & Dauer, erworbene Fähigkeiten & Kenntnisse"+
-                    "Qualifiziertes Zeugnis: \n(auf Verlangen) \nVerhalten + Leistung zusätzlich beurteilt \n\nJeder Arbeiter hat darrauf Anspruch \nmuss immer positiv formuliert sein "+
+                    "\nQualifiziertes Zeugnis: \n(auf Verlangen) \nVerhalten + Leistung zusätzlich beurteilt \n\nJeder Arbeiter hat darrauf Anspruch \nmuss immer positiv formuliert sein "+
                     "[siehe Bild]"),
             new Term("Kündigung","fristlose Kündigung \nzB wegen Diebstahl, Körperliche Gewalt, Arbeitsvergewaltigung, zu häufiges Fehlen ohne Entschuldigung\n\n"+
                     "fristgemäße Kündigung \n\nKündigungsschutz allgemein \nKündigung muss begründet und sozial gerechtigt sein (jüngere vor ältere, ledig vor Eltern, Neu vor lang in Betrieb)\n\n"+
@@ -1557,6 +1578,89 @@ public class Terms {
                     "2) immer\n" + "3) niedrig\n" + "4) hoch / niedrig je nach Kurs und Sparförderung"+
                     "\n\nInvestmentfonds \n" + "1) Ich zahle gemeinsam mit anderen in einen großen Topf. Die Investmentgesellschaft investiert mein Geld.\n" +
                     "2) immer\n" + "3) je nach Fonds-Anteilen hoch / niedrig4\n" + "4) hoch / niedrig ja nach Fonds-Anteilen bzw. Aktienkurs & Sparförderung"),
+            //Ordner 5
+            new Term("Markt","Ein Markt ist ein Ort, an dem Anbieter (=Verkäufer) und Nachfrager (=Käufer) nach einem Gut zusammentreffen\n\n"+
+                    "Der Marktpreis \nAnbieter und Nachfrager haben auf einem Markt immer verschiedene Interessen. \nDer Anbieter will möglichst viele Güter zu einem möglichst hohen Preis.\n"+
+                    "Der Nachfrager will möglichst viele Güter zu einem möglichst niedrigen Preis. \nDer Marktpreis ist ein Kompromiss dazwischen.\n\n"+
+                    "Unser Wort \"Markt\" kommt vom althochdeutschen Wort \"Markat\". \"Markat\" kommt wiederrum aus dem Lateinischen. Dort heißt \"mercari\" -handeln und \"mercatus\" -Kauf, Handel. "+
+                    "Zu fast allen Zeiten hatten die Menschen Märkte \n\nAnbieter kommen mit der Absicht auf den Markt, um ihre Ware anzubieten. Käufer kommen mit der Absicht auf den Markt, Waren zu kaufen."+
+                    " Sie sind bereit, für die Waren eine bestimmte Summe, einen Preis zu bezahlen. Dies nennt man Nachfrage. Auf einem Markt treffen Angebot und Nachfrage zusammen. (zB Wochenmärkte, Supermärkte,"+
+                    " Gaststättten, Tankstellen, Handwerksbetriebe)"),
+            new Term("Marktarten","Einteilung nach Art der gehandelten Güter = \n\nArbeitsmarkt: \nHandel mit menschlicher Arbeitskraft \n\nImmobilienmarkt \nHandel mit Grundstücken und Gebäuden \n\nInvestitionsgütermarkt \n"+
+                    "Handel mit Gütern, die zur Herstellung von anderen Gütern verwendet werden zB Maschinen \n\nKonssumgütermarkt \nHandel mit Nahrungsmitteln, CDs, Fernsehgeräten \n\n"+
+                    "Geldmarkt \nHandel mit kurzfristigen Krediten durch Banken, Sparkassen, Privatpersonen \n\nKapitalmarkt \nHandel mit langfristigen Krediten durch Banken, Sparkassen, Privatpersonen \n\n"+
+                    "Devisenmarkt \nHandel mit ausländischen Währungen \n\n\nEinteilung nach räumlichen Kriterien = \n\nWeltmarkt \nDie deutsche Firme \"Meinhold & Co\" verkauft Schrauben nach Kanada \n\n"+
+                    "EU-Markt: \nDer spanische Landwirt José Miguelverkauft Tomaten an deutsche Supermärkte \n\nMarkt der Gemeinde: \nDer britische Bäcker David Smith backt die Brötchen für die Bäckerei Yorkshire \n\n"+
+                    "Markt der Bundesrepublik: \nDie schwäbische Firme \"Meisle\" produziert Infobroschüren für den deutschen Bundestag in Berlin \n\n\nMärkte sind auch in Funktionen einteilbar: \n"+
+                    "Beschaffungsmarkt - Absatzmarkt (Filiale) \n\nAußerdem kann man Märkte auch nach der Organisationsform einteilen: \norganisierte Märkte (Wochenmarkt, Messe, Börse) - nicht organisierte Märkte (zufälliges Treffen von Verkäufer und Käufer)"),
+            new Term("Marktformen","Polypol \nMarkt, auf dem viele Nachfrager auf viele Anbieter treffen. \nZustand: \"vollständige Konkurenz\". \nDer Markt bestimmt den Preis.\n \nKein Marktteilnehmer groß genug, um den Marktpreis zu beeinflussen. \n"+
+                    "Wenn ein Anbieter einen höheren Preis verlangt, welchseln sofort alle Nachfrager zur Konkurrenz über. Fordert er dagegen einen niederigeren Preis, dann könnte er die gesamte Nachfrage, die bei ihm entstehen würde, in keinem "+
+                    "Falle befriedigen. Hierzu wäre sein Marktanteil zu klein. \nPolypole findet man vorallem an den Wertpapierbörsen"+
+                    "\n\nOligopol \nZustand: \"Wenig Konkurrenz\". \nAngebotsoligopol: \nHier stehen sich wenige Anbieter und viele Nachfrager gegenüber. \nAnbieter können Preis zum Teil bestimmen. \nBsp: Automarkt, Zigarettenmarkt, Benzinmarkt. \nKommt in den Industriegesellschaften besonderst häufig vor. \n"+
+                    "Nachfrageoligopol: \nWenn vielen Anbietern nur wenige Nachfrager gegenübertreten. \nBsp: Viele Landwirte - wenige Molkereien. Bürger, die Polizisten werden wollen, können nur zwischen dem Bund und den Ländern wählen. \n"+
+                    "Oft herrscht eine starke gegenseitige Abhängigkeit unter Oligopolisten zB Benzinmarkt. Wenn ein Anbier den Preis verändert, reagieren die anderen. \nIm Extremfall kann ein sehr scharfer Wettbewerb entstehen, mit dem Ziel den Mitbewerber auszuschalten \n"+
+                    "oder die Marktführerschaft zu erreichen. \nAnderseits besteht allerdings auch die Gefahr, dass die Anbieter sich absprechen und den Wettbewerb ausschalten. Derartige Abmachungen sind alllerdings nach dem "+
+                    "Gesetz gegen Wettbewerbsbeschränkungen verboten."+
+                    "\n\nMonopol \nFür eine Waren gibt es nur einen Anbieter oder einen Nachfrager auf dem Markt (Angebots-, Nachfragemonopol). \nZustand: \"Keine Konkurrenz\". \nzB: Nachfragemonopolisten: Deutsche Bahn mit Lokomotiven-, Eisenbahnwagennachfrage (Vergangenheit), "+
+                    "Bundeswehr mit der Panzernachfrage. \nzB: Angebotsmonopolisten: \nAnbieter bestimmen den Preis\n Wasserwerke, deutsche Post AG im überregionalen Briefverkehr (bis 2007), private Unternehmer, die eine patentierte Erfindung vermarkten. \n"+
+                    "Angebotsmonopolisten fürchten keine Konkurenz und können die Preishöhe weitgehend selbst festlegen. Allerdings geht auch die bei höheren Preisen die Nachfrage zurück, Nachfrager könnten sich einschränken oder "+
+                    "auf Ersatzgüter umsteigen. Ein privater Monopolbetrieb wird ein Preis wählen, bei dem der Unterschied zwischen Einnahmen und Kosten am größten ist."),
+            new Term("Preisbildung Polypol","Der Preis wird bestimmt durch Angebot und Nachfrage. \n\nWenn die angebotene Ware größer ist als die Nachfrage, dann sinkt der Preis. \n"+
+                    "Wenn das Angbot kleiner ist ald die nachgefragte Menge, dann steigt der Preis. \n\nDa wo Angebot und Nachfrage gleich sind, ist der Gleichgewichtspreis \n\n"+
+                    "zB: Angebot an Erdbeeren sinkt im Winter aber die Nachfrage bleibt gleich, also steigt der Preis. \n\n"+
+                    "->Angebot steigt, Nachfrage sinkt-> \nzB Die Firmen produzieren und verkaufen viele Kühlschränke, irgendwann haben viele Menschen Kühlschränke, also kaufen nur noch wenige Menschen Kühlschränke. \n"+
+                    "->Preis sinkt-> \nzB Die Läden machen Sonderaktionen und verkaufen die Kühlschränke billiger \n->Angebot sinkt, Nachfrage steigt-> \nzB Viele Menschen, die vorher keinen Kühlschrank wollten, kaufen jetzt doch Kühlschränke. In den Läden stehen weniger Kühlschränke. \n"+
+                    "->Preis steigt-> \nzB Die Läden machen die wenigen Kühlschränke wieder teuer."),
+            new Term("Markt grafisch", "Die Situation auf einem Markt lässt sich grafisch darstellen. \n[Bild]"),
+            new Term("Marktpreisbildung grafisch", "Die Marktpreisbildung lässt sich grafisch darstellen \n[Bild]"),
+            new Term("Preisbildung Rechnen","[Bild]"),
+            new Term("Preisbildung Angebotsoligopol","Angebotsoligopole entstehen aufgrund der zunehmenden Unternehmenskonzentration immer häufiger. \n" +
+                    "Hier werden die Absatzmöglichkeiten nicht nur vom Verhalten der Nachfrager, sondern auch von den Aktionen und Reaktionen der anderen Oligopolisten bestimmt. \n" +
+                    "Bei der Preisbildung können die Anbieter folgende Strategien anwenden: \n\n"+
+                    "ruinöse Konkurenz: \nEin Anbieter versuch andere vom Markt zu drängen durch Preisunterbietung. \nMitanbieter ziehen mit, oft sogar bis unter die Selbstkosten. Nachfrager bekommen billige Preise. Gefahr von Monopolbildung durch "+
+                    "Ausscheiden von Anbietern, und wieder Preisanstieg. \nEin Computerhersteller beitet seine Geräte um 20% billiger an als sein Konkurenten. \n\nPreisabsprachen: \nNicht beliebig, da Verbraucher sich einschränken oder umsteigen können. "+
+                    "\nSind in der BRD nach dem Gesetz gegen Wettbewerbsbeschränkungen (Kartellgesetz) verboten. \nzB Drei große Mineralölfirmen vereinbaren, einheitliche Preise zu verlangen. \n\nPreisführung: \nDurch einen Betrieb, der ausreichend viel Marktanteil hat, "+
+                    "die anderen ruinieren zu können, falls diese ihn daran hindern. \nEin Tabakkonzern erhöht seine Zigarettenpreise, die anderen ziehen nach. \n\nQualität: \nVielfach verlagern die Konkurenten den Wettbewerb auf die Qualität, den Service, \n"+
+                    "die Werbung und die Aufmachung ihrer Erzeugnisse und vermeiden so eine gegenseitige Herausforderung durc die Preise. \nzB Ein Automobilhersteller erhöht die Garantiefrist seiner Fahrzeuge von 2 auf 3 Jahre."),
+            new Term("Optimale Marktbedingungen","Börse = einziger optimaler Markt \n\nOptimale (perfekte) Marktbedingungen für vollständige Konkurrenz (=Polypol):\nviele Anbieter und viele Nachfrager \n"+
+                    "alle Nachfrager haben guten Überblick über gesamten Markt \nNachfrager haben kein Vorlieben \nDie Ware ist gleichwertig"),
+            new Term("Unternehmenszusammenschluss / -arbeit","Gründe für die Unternehmenszusammenarbeit: \nman hat weniger Konkurenz ->mehr Marktmacht \nRisiko kann auf mehreren Schultern verteilt werden \n"+
+                    "Mengenrabatt durch den Einkauf von größeren Mengen \ngemeinsame Werbung erreicht mehr Kunden und die Unternehmen können gleichzeitig mehr Geld sparen \ngemeinsame Forschung, Know-How (Fachwissen), Interessen von Kunden "+
+                    "können besser berücksichtigt werden. \n\nNachteile: \nFirmen verschwinden \nes können marktbeherrschende Unternehmen entstehen, der Kunde hat weniger Auswahl, Gefahr der Monopolbildung \nAbsprachen können den Wettbewerb verhindern "+
+                    "\nEntscheidungen müssen mehr Abgesprochen werden \nDie Gewinne müssen aufgeteilt werden \nEs besteht Gefahr, dass Firmen nicht mehr innovativ sind "+
+                    "\n\n\nVerschiedene Arten von Zusammenarbeit: \n\nKartell: \nKunternehmen machen einen Vertrag. \ndarin steht, dass die Unternehmen in bestimmten Bereichen mit anderen Unternehmen zusammenarbeiten wollen." +
+                    "\nDie Unternehmen bleiben rechtlich völlig selbstständig. \n\nKonzern: \nZusammenschlüsse von Unternehmen. \nUnternehmen bleiben rechtlich selbstständig, haben aber wirtschaftlich gemeinsame Leitung. Es entstehen Mutter und Tochtergesellschaften bzw. Schwesterngesellschaften. \n"+
+                    "Konzerne mit vielen Tochtergesellschaften nennt man Multis (= multinationale Unternehmen). Sie haben große wirtschaftliche Macht. \n\nTrust: \nMehrere Unternehmen geben ihre Selbstständigkeit auf und verschmelzen zu einem Unternehmen. \n"+
+                    "Wenn Unternehmen verschmelzen, nennt man das auch Fusion. \nMan unterscheidet zwischen einer Neugründung und einer Aufnahme."),
+            new Term("verbotene Kartelle","Preiskartell \nDie Mitglieder treffen Preisabsprachen \n\nQuotenkartell \njedem Unternehmen wird eine bestimmte Produktionsmenge zugeteilt, um über die Angebotsmenge den Preis zu beinflussen "+
+                    "\n\nKalkulationskartell \ndie beteiligten Firmen vereinbaren den gleichen Aufbau ihrer Kalkulation, um zu gleichen Preisen zu gelangen \n\nGebietskartell \njedem Unternehmen wird ein bestimmtes Wirtschaftsgebiet "+
+                    "zugeteilt, um diesen Gebieten den Wettbewerb auszuschließen \n\nRabattkartell \nDie Mitglieder legen eine einheitliche Rabattgewährung fest \n\nKonditionenkartell \nEinheitliche Lieferungs-, Zahlungs-, und Geschäftbedingungen "+
+                    "wie Öffnungszeiten werden vereinbart. \n\n\nErlaubte Kartelle \n\nRationalisierungskartell \nzB Die Hersteller von Kaaffee-Filtern vereinbaren: In Zukunft werden wir alle umweltfreundliches Recycling-Papier verwenden \n\n"+
+                    "Normen & Typenkartell \nzB Die Hersteller von Satelitenantennen vereinbaren:: Wir werwenden ab jetzt einheitliche Anschlüsse für unsere Antennen"),
+            new Term("Kontrolle des Wettbewerbs","Gesetz gegen Wettbewerbsbeschränkungen (=Karrtellgesetz)\nKontrolle der Einhaltung: Bundeskartellamt (Bonn) \n\n"+
+                    "Bundeskartellamt Aufgaben: \n\nMissbrauchsaufsicht \nMarktbeherrschende Unternehmen werden kontrolliert. \nWenn Unternehmen ihre Stellung missbrauchen (zB zu hohe Preise, schlechte Geschäftsbedingungen, Dumpinglöhne), kann es Bußgelder verlangen."+
+                    "\n\nKartellaufsicht \nEs entscheidet ob Unternehmen Kartell gründen dürfen oder nicht. \nEs passt auf, dass keine verbotenen Kartelle entstehen. \n\n"+
+                    "Fusionsaufsicht \nWenn große Unternehmen eine Fusion planen, dann müssen sie das beim Bundeskartellamt anmelden. \nes kann die Fusion verbieten, falls ein marktbeherrschendes Unternehmen entsteht. "+
+                    "Der Bundesminister für Wirtschaft kann die Fusion aber tortzdem erlauben."),
+            new Term("Staatliche Eingriffe","Allgemeine Beeinflussung des Wettbewerbs = \n\nDer Staat beeinflusst den Wettbewerb in vielen Wirtschaftszweigen durch folgende Maßnahmen: \n\nEinfuhrzölle \nAusländische Unternehmen müssen Zoll bezahlen, wenn sie in Deutschland (und in der EU) Waren verkaufen wollen. \n"+
+                    "Ziel: Die deutschen/europäischen Unternehmen von der ausländischen Konkurrenz schützen \n\nSubventionen: Unternehmen in bestimmten Marktbereichen bekommen Geld vom Staat. Dadurch können diese Unternehmen gute Preise für die Verbraucher machen. "+
+                    "Ziel: Wettbewerbsfähigkeit der Unternehmen sichern. \n\nHöchst und Mindestpreis: \nDer Staat legt Höchstpreise fest, vor allem für lebensnotwendige Waren. \nMindestpreise gibt es zb Landwirtschaft der EU. "+
+                    "Die Bauern bekommen einen festgelegten Mindestpreis für ihre Waren. \n\nStaatliche Monopole: \nManche Unternehmen (zB Wasserwerke) sind im Besitz des Staates bzw. von Bundesländern, Landkreisen oder Gemeinden. \n"+
+                    "Ziel: alle Menschen sollen lebensnotwendige Güter kaufen und auch bekommen."+
+                    "\n\n\nBeeinflussung des EU-Agrarmarkts = \n\nNach dem 2.Weltkrieg in Europa: Zu wenig Lebensmittel, Hunger. \nDeßhalb machten die Staaten gemeinsame Agrarpolitik mit folgenden Zielen: \nVerbrauchern zu vernünftigen Preisen Lebensmittel verkaufen \n"+
+                    "Die Landwirtschaftliche Produktion sichern \nDen Landwirtschaften einen angemessenen Lohn geben \nAnbaubedingungen in EU und der Welt aber unterschiedlich. In manchen nicht-EU-Ländern können Bauern sehr billig "+
+                    "produzieren und verkaufen \nDie EU vereinbarte folgende Maßnahmen: \n\nAbnahmegarantie: \nalle lebensnotwendige Güter (Getreide, Milch, Fleisch) werden den Landwirten abgekauft. Die Bauern haben eine Garrantie, "+
+                    "dass ihre Produkte gekauft werden. \nProblem: Überproduktion \n\nFeste Preise: \nDie EU hat garantierte Richtpreise für die Agrarproduktion festgelegt. Diese Preise werden den Bauern von der EU bezahlt. \n"+
+                    "Problem: Die EU muss viel Geld bezahlen \n\nSchutz durch Einfuhrzölle \nsiehe oben \n\nFolgen: Produktabnahme zu festen Preisen -> Produktionsmengensteigerung -> EU muss viel Geld zahlen, lagern und Überschüsse vernichten \n\n"+
+                    "EU Agrarpolitik in der Zukunft: \nImmer noch wichtig: \nNahrungsmittelversorgung sichern \nLandwirtschaftliche Produktion sichern \nangemessener Lohn für Landwirte \nÄnderungen: \nEs gibt Quoten: "+
+                    "Wenn Landwirte mehr produzieren, dann bekommen sie weniger Unterstützung \nEs gibt Direktzahlung an Bauern \nWenn der Landwirt auf Umweltschutz / Tierschutz achtet, bekommt er mehr Unterstützung"),
+            new Term("Freie Marktwirtschaft - Zentralverwaltungswirtschaft","1) Freie Marktwirtschft \n2) Zentralverwaltungswirtschaft \n\nErfinder: \n1) Adam Smith \nKarl Marx \n\nRolle des Staates \n1)Staat greift nicht in die Wirtschaft ein, \n"+
+                    "außer bei Sicherheit, Recht & Bildung (Nachtwächterstaat) 2) Staat lenkt Wirtschaft, was produziert werden soll, Menge, Warenverteilung, Export, Import, Lohnhöhe \n\nPreisbestimmung: \n1) Der freie Markt (Agebot & Nachfrage) \n2) Der Staat \n\nWirtschaftsplanung: \n1) jede Firma eigener Wirtschaftsplan (dezentral) \n2) 2) Der Staat (zentral) "+
+                    "\n\nEigentum an Produktionsmittel, zB Maschinen: \n1) Firma \n2) Staat \n\nWichtigstes Ziel der Betriebe: \n1) Möglichst viel Gewinn \n2) den Plan umsetzen \n\nWahl von Beruf und Arbeitsplatz: \n1) freie Wahl "+
+                    "2) Staat bestimmt Beruf und Arbeitsplatz \n\nVorteile: \n1) Mehr Produktion, daher billiger zB Lebensmittel \n2) Keine Arbeitslosigkeit, Konjunkturschwankungn, Kauf ~= Verkauf \n\n"+
+                    "Nachteile: \n1) Löhne für einfachen Arbeiter sinken stetig, große Firmen kaufen kleine, Kinderarbeit \n2) Bei schlechtem Plan = zu wenig Rohstoffe & Waren, zu wenig Firmenmotivation, Unterproduktion"),
+
+
     };
     private static Term[] termsLFGK = {
             //Ordner 1
@@ -1758,6 +1862,32 @@ public class Terms {
             new Term("Rechtsdemokraten","zwischen konservativ und rechtspopulistisch\n\nAnsicht:\n Menschen sind verschieden,\n"+
                     "Aktzeptanz gesellschaftlicher Ungleicheiten, wenn sie aus fairem Wettbewerb entstehen,\n\nAufrechterhaltung traditioneller gesellschaftlicher Ordnung\n"+
                     "Ablehnung politisch geführter aktiver Gesellschaftsveränderung (zB Genderspreche)"),
+            new Term("EU Länder","seit 1958: \nBelgien, Deutschland, Frankreich, Italien, Luxemburg, Niederlande \n\nseit 1973 \nDänemark, Irland \n\nseit 1981: "+
+                    "\nGriechenland \n\nseit 1986: \nPortugal, Spanien \n\nseit 1995: \nFinnland, Österreich, Schweden \n\nseit 2004: \nEstland, Lettland, Litauen, Malta, Polen, Slowakei, Slowenien, "+
+                    "Tschechien, Ungarn, Zypern \n\nseit 2007: \nBulgarien, Rumänien, \n\nseit 2013: \nKroatien"),
+            new Term("Euro Länder","Euro Länder \n\nseit 1999: \nDeutschland, Fankreich, Finnland, Italien, Irland, Belgien, Luxemburg, Österreich, Niederlande, Portugal, Spanien"+
+                    "\n\nseit 2001: \nGriechenland, \n\nseit 2007: \nSlowenien \n\nseit 2008: \nZypern, Malta \n\nseit 2009: \nSlowakei \n\nseit 2011: \nEstland \n\nseit 2014: \nLettland, Litauen \n\nseit 2022: \nKroatien"),
+            new Term("EU Features","Euro \nFrüher: jedes EU Land hatte eigenes Geld \nHeute: 20 EU Länder haben das gleiche Geld: \"Euro\". \n\nkeine Grenz-Kontrolle \n"+
+                    "Früher: Reise-Pass, Perso zeigen, Stau an Grenzen \nHeute: keine Kontrollen, keine Staus mehr \n\nEU-Kranken-Versicherungs-Karte \nUnfall oder Krankheit in einem anderen EU-Land? "+
+                    "Krankenhaus oder Artzt hilft Ihnen, mit EU-Kranken-Versicherungskarte bezahlen \n\nsauberes Wasser \nAlle EU-Länder müssen sauberes Trink-Wasser, Meere, Seen, Flüsse haben. Das wird kontrolliert"+
+                    "\n\nE-Autos \nAbgase sind schlecht für die Luft. Menschen werden krank. EU-Plan für die Zukunft: E-Autos haben keine Abgase, sind gut für die Luft. Menschen bleiben gesund."+
+                    "\n\nUmweltfreundliche Haushaltsgeräte \nEU-weit gleiche Aufkleber auf Haushaltsgeräten: Grüne Farbe: gut für die Umwelt, wenig Stromverbrauch, Rote Farbe: schlecht für die Umwelt, "+
+                    "viel Stromverbrauch \n\nHandy-Gebühren \nDie Handy-Gebühren sind seit 2017 im EU-Ausland die selben wie im Inland. Die waren zuvor viel höher. \n\nVerbot Einweg-Plastik-Artikel \n"+
+                    "Weil viele Menschen oft Plastik in die Landschaft werfen, dürfen in der EU keine Einweg Plastik Artikel in den Geschäften verkauft werden. \n\nWohnen und Arrbeiten \n"+
+                    "Menschen in der EU dürfen selbst entscheiden, in welchem EU-Land sie wohnen, studieren oder arbeiten möchten. =\"Freizügigkeit\" \n\nFrieden \n"+
+                    "Früher: Viele Kriege in Europa \nHeute: seit 70 Jahren kein Krieg in Europa. EU Länder unterstützen sich gegenseitig und arbeiten zusammen \n\nEuropass \n"+
+                    "Bewerbungs-Mappe für das Bewerben auf Arbeitsplätze in allen EU-Ländern \n\nLebensmittel \nLebensmittel mit gleichem Zeichen für \"Bio\" oder \"Öko\", gleiche Bedeutung für saubere Lebensmittel"+
+                    "\n\nReiserechte \nin allen EU-Ländern Geldrückgabe bei Flug oder Bahn ausfall oder Verspätung \n\nGewährleistungsfrist bei Waren \nBei einem Kauf von EU-Waren im Internet in einem EU-Land "+
+                    "gibt es eine 14 Tage Warenumtauschmöglichkeit gegen neue Ware oder Geldrückgabe \n\nWarenumtausch im Internet \nKauf von Waren in einem EU-Land: Warengarantie: 2 Jahre, Reperatur oder Ersatz"),
+            new Term("EU 4 Freiheiten","Freier Personenverkehr \nAlle EU-Bürger können sich frei innerhalb der EU bewegen, sich niederlassen und eine Arbeit annehmen (bis zu 3 Monate) \n\n"+
+                    "Freier Warenverkehr \nKein Warengrenzkontrolle und keine Zölle. Das vereinfachte den Handel zwischen den Mitgliedstaaten und krubelte ihn an. \n\nFreier Dienstleistungsverkehr und Unternehmensgründungen "+
+                    "\nJede Privatperson kann zwischen eropäischen Handyanbietern, Stromversorgern oder Versicherungsgesellschaften wählen. Unternehmen dürfen sich auch in allen EU-Ländern niederlassen und Geschäfte betreiben \n\n"+
+                    "Freier Kapitalverkehr \nEU-Bürger haben freie Wahl in welchem Land und bei welchem Kreidtinstitut sie ihr Geld anlegen"),
+            new Term("EU Organe","Eropäischer Rat in Brüssel\nStaats und Regierungschefs der Mitgliedstaaten & Präsident der europäischen Kommission \nTreffen sich 2x jährlich, bestimmen Ziele und Richtung,"+
+                    " legen politische Richtung der EU und ihre wirtschaftlichen Ziele fest \n\nEuropäische Kommision in Brüssel\nEin Politiker je Land. Einer von ihnen wird Präsident, die anderen Kommissare \n"+
+                    "Aufgaben je nach Kommissar, zB Agrarkommisar. Sie schlagen neue Gesetze vor und kontrollieren die Gesetzeinhaltung der EU Länder. \n\nMinisterrat (Rat der EU) in Brüssel \n"+
+                    "Minister der Mitgliedsländer zB Umweltminister beim Umweltpolitiktreffen \nEntscheidungen über Gesetze & über Verteilung von Geld (Plan dazu) \n\nEuropäisches Parlament in Straßburg \n"+
+                    "Abgeordnete (gewählt von EU-Bürgern), oft in einer Partei \nEntscheidung über Gesetze, kontrolliert Geld - Ausgaben der Staaten, entscheidet welche Länder neu aufgenommen werden")
     };
 
     public static String[] getKapitelLFYetUnpost() {return kapitelLFYetUnpost;}
