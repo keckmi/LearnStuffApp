@@ -1,8 +1,16 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/layout/activity_list_view.xml" value="0.15677083333333333" />
+        <entry key="..\:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/layout/activity_main_main.xml" value="0.16259057971014493" />
+        <entry key="..\:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/layout/activity_term.xml" value="0.25" />
+        <entry key="..\:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/layout/activity_term_list.xml" value="0.2" />
+        <entry key="..\:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/layout/item_file.xml" value="0.1933876811594203" />
+        <entry key="..\:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/layout/list_item.xml" value="0.12545289855072464" />
+        <entry key="..\:/Users/Michael/AndroidStudioProjects/LearnStuffApp/app/src/main/res/layout/spinner_item.xml" value="0.11197916666666667" />
+        <entry key="..\:/Users/Michael/AppData/Local/Android/Sdk/platforms/android-33/data/res/layout/simple_spinner_dropdown_item.xml" value="0.1933876811594203" />
+        <entry key="..\:/Users/Michael/AppData/Local/Android/Sdk/platforms/android-33/data/res/layout/simple_spinner_item.xml" value="0.11197916666666667" />
         <entry key="app/src/main/res/layout/activity_list_view.xml" value="0.18802083333333333" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.265625" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.265625" />
@@ -11,6 +19,7 @@
         <entry key="app/src/main/res/layout/activity_term_list.xml" value="0.265625" />
         <entry key="app/src/main/res/layout/activity_term_list2.xml" value="0.265625" />
         <entry key="app/src/main/res/layout/activity_uncover.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/list_item.xml" value="0.2375" />
       </map>
     </option>
   </component>
@@ -18,7 +27,7 @@
   <component name="FrameworkDetectionExcludesConfiguration">
     <file type="web" url="file://$PROJECT_DIR$" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
