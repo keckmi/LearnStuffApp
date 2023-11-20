@@ -1254,6 +1254,79 @@ public class Terms {
                             "webserver kann sattische bereits gespeicherte html seite laden oder dynamisch durch bspw php skripte erstellen (zB eine amazonseite ja nach suchanfrage) \n" + "\n" +
                             "HTML ist eine darstellungssprache / markup language, keine programmiersprache\n" + "\n" +
                             "WYSIWYG - What you see is what you get"),
+            //1.5 Benutzerschnittstelle testen
+            new Term("Herausforderungen UI Testen ",
+                    "Herausforderungen beim Testen von Benutzerschnitstellen (UI) \n1. Sich ständig ändernde Benutzeroberfläche\n" + "2. Zunehmende Testkomplexität\n" + "3. Hoher und schwer zu kalkulierender Zeitaufwand\n" + "4. Umgang mit Mängeln und Fehlern"),
+            //1.5.1 Grafische Benutzerschnitstelle testen
+            new Term("GUI Darstellung testen",
+                    "Vollständigkeit aller unterstützender Hinweise für den Benutzer z.B. max. 50 Zeichen\n" +
+                    "größe, Position, Höhe und Breite, Ausrichtung der visuellen Elemente\n" +
+                    "Einhaltung von gesetzlichen Vorgaben, Normen und Regeln\n" +
+                    "Korrekte Farben und Hyperlinks\n" +
+                    "Schriftarten, Schriftgröße, Beschriftung\n" +
+                    "Korrektes Anzeigen von Fehlermeldungen, Warnungen und Informationen\n" +
+                    "Einheitlichkeit der Farben und des Designs\n" +
+                    "Auflösung Qualität und Aussagekraft der Bilder\n" +
+                    "Rechtschreibung\n" +
+                    "Positionierung der GUI Elemente bei unterschiedlichen Auflösungen\n" +
+                    "Umsetzung von Mehrsprachigkeit\n" +
+                    "Korrekter Inhalt von Texten\n" +
+                    "Erwartungskonforme und einheitliche Anordnung der GUI Elemente\n" +
+                    "Lesbarkeit und Gestaltung von Grafiken"),
+            new Term("GUI Funktionalität testen",
+                    "Sicherstellung, dass nur gültige Daten für bestimmte Datentypen wie Währung und Datumsangaben eingegeben werden können.\n" +
+                    "Bedienbarkeit per Maus, Tastatur oder Touch-Funktionalität\n" +
+                    "Korrektes Gruppenverhalten von Rediobuttons\n" +
+                    "Flüssiger und reibungsloser Ablauf von Animationen\n" +
+                    "Scrollfunktion\n" +
+                    "Sicherstellunng, dass alle erforderlichen Events bei GUI-Elementen ausgelöst werden, zB Click-Events\n" +
+                    "Skalierbarkeit von Grafiken\n" +
+                    "Zoomfunktion\n" +
+                    "Korrekte Navigation\n" +
+                    "Erwartungskonforme Funktionalität zB Hilfeunterstützunge beim Drücken der F1-Taste\n" +
+                    "Korrektes Auf und Einklappen von GUI Elementen\n" +
+                    "Korrektes Sperren und Entsperren bzw. Ein- und Ausblenden von GUI Elementen"),
+            new Term("Testverfahren GUI","Testverfhren zum Testen von grafischen Benutzeroberflächen\n" +
+                    "Manuelles Testen\n" + "Aufnahme und Wiedergabe Testen (Record-and-Replay-Testing)\n" + "Modellbasiertes Testen (Model-Based testing)"),
+            //1.5.3 Das Testen der User Experience beschreiben
+            new Term("UX Testen","User Experience Testen"+
+                    "Sind alle Angaben aktuell? \nIst das System nützlich und schafft einen Mehrwert für die Zielgruppe?\n" +
+                    "Werden die Grundsätze der Dialoggestelatung nach DIN EN ISO 9241-110 eingehalten?\n" +
+                    "Sind Inhalte, Farbe, Icons, Bilder ästhetisch ansprechend? \nIst das System leicht erlernbar?\n" +
+                    "Ist ein klarer Orientierungsrahmen innerhalb der Anwendung vorhanden? \nIst die Barrierefreiheit für Sehbehinderte gewährleistet?\n" +
+                    "Werden erwartungskonforme Begrifflichkeiten und Positionierungen verwendet? \nIst ein einheitliches Design umgesetzt?\n" +
+                    "Werden ausreichend Hilfen zur Verfügung gestellt? \nToleriert die Anwendung ausreichend Bedienungsfehler?\n" +
+                    "Ist die Anwendung effizient bedienbar zum Beispiel sollte wenig Navigation erforderlich sein, um das gewünschte Fenster oder die gewünschte Webseite zu erreichen.\n"),
+            new Term("UX-Testverfahren",
+                    "Kontextanalyse, Test mit Fokusgruppen, Online-Befragung, Expertenbasierte Überprüfung,\n" +"Labortest, Blickverlaufsmessung"),
+            new Term("UX Tests Vor- & Nachteile",
+                    "Vorteile: \n\n-effizientes Softwareprodukt, \n-Entwicklung eines Verständnisses für die Bedürfnisse der Benutzer,\n" +
+                    "welche in die weitere Entwicklung einfließen können, \n-hohe Benutzerakzeptanz der Software, \n" +
+                    "-Zeit- und Geldeinsparung, weil später aufwendiges Nacharbeiten vermieden wird\n\n" +
+                    "Nachteile: \n\n-hohe Testkosten, \n-ressourcen- und zeitintensiv,\n" +
+                    "-aufwendige Auswahl der Testpersonen \n-teilweise umfangreiche Vorbereitungen notwendig\n" +
+                    "-teilweise aufwendiges Auswerten der Ergebnisse erforderlich"),
+            //Benutzerschnitstellen dokumentieren
+            new Term("Benutzerhandbuch",
+                    "Inhalt: \n\nDeckblatt, Inhaltsverzeichnis, Einleitung, Kurzbeschreibung des Produkts (Überblick) (...), " +
+                    "Installationsanleitung (...), Bedienungsanleitung (...), Fehlerbehandlung (...), " +
+                    "Wartungs und Supportinformationen, Häufig gestellte Fragen FAQ, Begriffserläuterungen (Glossar)\n\n" +
+                    "Hersteller, Produktname, Kontaktdaten, mathematische Grundlagen, Lizenzen, Zubehör, technische Daten,\n" +
+                    "Grafiken und Screenshots, Normen, Feature, Haftungsausschuss, Copyright Erklärung\n\n" +
+                    "Kriterien für ein gutes Benutzerhandbuch\n" +
+                    "Verständlichkeit, Einfacheit, Konzentration auf das Problem, Fokus auf die visuelle Darstellung," +
+                    "Inhaltsverzeichnis mit klarer Struktur und logische Gliederung, Mehrsprachigkeit \n\n" +
+                    "Vor und Nachteile von Benutzerhandbüchern in Papierform\n\n" +
+                    "Vorteile: \nkann ohne elektronisches Gerät verwendet werden,\n" +
+                    "kann auf einen Blick geelesen werden, \ndie Erfahrung Papier in der Hand zu halten ist einzigartig,\n" +
+                    "diese Art der Leseerfharung ist für viele angenehmer als die digitale Leseerfahrung,\n" +
+                    "es kann immer und überall ohne weitere Voraussetzungen gelesen werden\n\n" +
+                    "Nachteile: \nKosten für Druck, Bindung und Verpackung,\n" +
+                    "begrenzter Platz und begrenzte Informationen, kann leicht verlegt werden,\n" +
+                    "nicht sofort aktualisierbar, keine Videos, \n" +
+                    "hoher Aufwand es für große Nutzergruppen zur Verfügung stellen"),
+            new Term("Onlinedokumentation","Vorteile von Onlinedokumentationen \n\n+" +
+                    "Hohe Aktualität, Hohe Multimedialität, Hohe Verfügbarkeit, Bessere Interaktivität, keine beschränkungen im Umfang")
     };
     private static Term[] termsLF11 = {
             //Ordner 1
@@ -1611,8 +1684,7 @@ public class Terms {
                     "->Angebot steigt, Nachfrage sinkt-> \nzB Die Firmen produzieren und verkaufen viele Kühlschränke, irgendwann haben viele Menschen Kühlschränke, also kaufen nur noch wenige Menschen Kühlschränke. \n"+
                     "->Preis sinkt-> \nzB Die Läden machen Sonderaktionen und verkaufen die Kühlschränke billiger \n->Angebot sinkt, Nachfrage steigt-> \nzB Viele Menschen, die vorher keinen Kühlschrank wollten, kaufen jetzt doch Kühlschränke. In den Läden stehen weniger Kühlschränke. \n"+
                     "->Preis steigt-> \nzB Die Läden machen die wenigen Kühlschränke wieder teuer."),
-            new Term("Markt grafisch", "Die Situation auf einem Markt lässt sich grafisch darstellen. \n[Bild]"),
-            new Term("Marktpreisbildung grafisch", "Die Marktpreisbildung lässt sich grafisch darstellen \n[Bild]"),
+            new Term("Marktpreis grafisch", "\n Marktpreis lässt sich grafisch darstellen \n[Bild]"),
             new Term("Preisbildung Rechnen","[Bild]"),
             new Term("Preisbildung Angebotsoligopol","Angebotsoligopole entstehen aufgrund der zunehmenden Unternehmenskonzentration immer häufiger. \n" +
                     "Hier werden die Absatzmöglichkeiten nicht nur vom Verhalten der Nachfrager, sondern auch von den Aktionen und Reaktionen der anderen Oligopolisten bestimmt. \n" +
@@ -1655,7 +1727,8 @@ public class Terms {
                     "EU Agrarpolitik in der Zukunft: \nImmer noch wichtig: \nNahrungsmittelversorgung sichern \nLandwirtschaftliche Produktion sichern \nangemessener Lohn für Landwirte \nÄnderungen: \nEs gibt Quoten: "+
                     "Wenn Landwirte mehr produzieren, dann bekommen sie weniger Unterstützung \nEs gibt Direktzahlung an Bauern \nWenn der Landwirt auf Umweltschutz / Tierschutz achtet, bekommt er mehr Unterstützung"),
             new Term("Freie Marktwirtschaft - Zentralverwaltungswirtschaft","1) Freie Marktwirtschft \n2) Zentralverwaltungswirtschaft \n\nErfinder: \n1) Adam Smith \nKarl Marx \n\nRolle des Staates \n1)Staat greift nicht in die Wirtschaft ein, \n"+
-                    "außer bei Sicherheit, Recht & Bildung (Nachtwächterstaat) 2) Staat lenkt Wirtschaft, was produziert werden soll, Menge, Warenverteilung, Export, Import, Lohnhöhe \n\nPreisbestimmung: \n1) Der freie Markt (Agebot & Nachfrage) \n2) Der Staat \n\nWirtschaftsplanung: \n1) jede Firma eigener Wirtschaftsplan (dezentral) \n2) 2) Der Staat (zentral) "+
+                    "außer bei Sicherheit, Recht & Bildung (Nachtwächterstaat) \n2) Staat lenkt Wirtschaft, was produziert werden soll, Menge, Warenverteilung, Export, Import, Lohnhöhe \n\nPreisbestimmung: \n1) Der freie Markt (Agebot & Nachfrage) \n2) Der Staat "+
+                    "\n\nWirtschaftsplanung: \n1) jede Firma eigener Wirtschaftsplan (dezentral) \n2) Der Staat (zentral) "+
                     "\n\nEigentum an Produktionsmittel, zB Maschinen: \n1) Firma \n2) Staat \n\nWichtigstes Ziel der Betriebe: \n1) Möglichst viel Gewinn \n2) den Plan umsetzen \n\nWahl von Beruf und Arbeitsplatz: \n1) freie Wahl "+
                     "2) Staat bestimmt Beruf und Arbeitsplatz \n\nVorteile: \n1) Mehr Produktion, daher billiger zB Lebensmittel \n2) Keine Arbeitslosigkeit, Konjunkturschwankungn, Kauf ~= Verkauf \n\n"+
                     "Nachteile: \n1) Löhne für einfachen Arbeiter sinken stetig, große Firmen kaufen kleine, Kinderarbeit \n2) Bei schlechtem Plan = zu wenig Rohstoffe & Waren, zu wenig Firmenmotivation, Unterproduktion"),

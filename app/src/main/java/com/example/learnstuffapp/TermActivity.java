@@ -249,6 +249,10 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.eurolaender);
             imgView.getLayoutParams().height=1000;
         }
+        if (term.equals("Marktpreis grafisch")) {
+            imgView.setImageResource(R.drawable.marktpreis);
+            imgView.getLayoutParams().height=1000;
+        }
 
     }
 }
