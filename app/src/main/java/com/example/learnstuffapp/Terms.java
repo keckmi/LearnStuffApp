@@ -340,7 +340,16 @@ public class Terms {
 
             },
             {// Angebotsvergleiche bei Beschaffungsmaßnahmen durchführen
-                new Term("Nutzwertanalyse",""),
+                new Term("Nutzwertanalyse",
+                        "Neben dem quantitativen Angebotsvergleich (Einstandspreis) sind qualitative Bewertungskriterien:\n" +
+                        "-Qualität und Funktionen des angebotenen Produkts\n" + "-Verbrauchskosten, Energiekosten, Folgekosten\n" + "-Liefermenge, Mindestabnahmemenge\n" +
+                        "-Besonderes Design und Aktualität des Produkts\n" + "-Schnelle und zuverlässige Lieferung\n" + "-Kompetenz des Lieferanten (Mitarbeiter)\n" + "-Verhalten des Lieferanten in besonderen Situationen (Notsituatuionen)\n" +
+                        "-Beteiligung des Lieferanten an Merketingmaßnahmen\n" + "-Gutes Image des Lieferanten\n" + "-Gutes Schulungs- und Fortbildungsprogramm\n" +
+                        "-Verkaufsförderungsmaßnahmen des Lieferanten\n" + "-Erreichbarkeit des Lieferanten\n" + "-Beachtung umweltgerechter Methoden und Verfahren\n" +
+                        "-EInfache Logistik\n" + "-Soziales Engagement in der Gemeinde oder Region\n" + "-Mitgliedschaft in gemeinsamen Kooperationen/Partnerschaften\n" +
+                        "-Persönliche Kenntnis der Lieferanten und Vertrauen\n" + "-Einfache Logik\n" + "-Soziales Engagement in der Gemeinde oder Region\n" +
+                        "-Mitgliedschaft in gemeinsamen Kooperationen/Partnerschaften\n" + "-Persönliche Kenntnis der Lieferanten und Vertrauen\n" +
+                        "-Besondere Konditionen: Ratenzahlen verlängerte Zahlungsfristen, Zuschüsse bei Aktionen und Investitionen, Bereitstellung von Mitarbeitern zur Aushilfe und Unterstützung\n"),
                 new Term("ABC-Analyse", "Produkteinteilung nach Nutzwert\nA = bestes\num zu wissen in welche mehr Zeit gesteckt werden sollte"),
                 new Term("XYZ-Analyse", "Berücksichtigt Kontext\nzB Badehosen werden besser im Sommer verkauft"),
                 new Term("Marktpreis","Preis kann auf Markt höher ausfallen als in Kalkulation\n"+
@@ -356,6 +365,19 @@ public class Terms {
                 new Term("Diff in % von 2 Preisen","(1 - (kleinerer Preis / größerer Preis)) * 100\n\n"+
                         "zB\nUli kaufte heute mittag eine Butterbrezel für 2 Euro. Gestern kaufte er eine für 1 Euro. Berechne die Preisdifferenz in %\n"+
                         "(1-(1/2))*100=50%"),
+                new Term("Verpflichtungs-/Erfüllungsgeschäft", "Siehe Wirtschaftskunde: Kaufvertrag"),
+                new Term("Wichtige Vertragsarten nach BGB",
+                        "Kaufvertrag, Verbrauchsgüterkauf, Fernabsatzvertrag, Dienstvertrag, Werkvertrag, sonstige Arten (je nach Vereinbarung im Vertrag), Nichtige Verträge (von vornherein ungültig), Anfechtbare Verträge"),
+                new Term("Annahmefristen eines Angebots","Allgemein: Solange Anbieter unter regelmäßigen Umständen mit Anworteingang rechnen kann\n" +
+                        "Unter Anwesenden bzw. fernmündlich - Sofort d.h. solange das Gespräch dauert\n" + "Bei Briefangebot ohne Fristsetzung: Ca. 5 - 7 Tage, 4 für Briefversand und einen für Bearbeitung\n" +
+                        "Bei E-Mail-/Fax-Angebot Ca. ein bis zwei Tage: für Bearbeitung und Antwortfax/-Mail\n" + "Bei Briefangebot mit Fristsetzung: Die Bestellung muss bis zur gesetzen Frist zugangen sein."),
+                new Term("AGB","Vorteile: \n" + "-einfache Vertragsgestaltung, Vertragsinhalte müssen nicht jedes mal neu ausgehandelt und aufgeführt werden (Kosten und Zeitersparnis)\n" +
+                        "-Vertragspartner erhält schnell Überblick über wichtige Vertragsbestandteile, die für die damit verbundenen Geschäfte von besonderer Bedeutung sind\n" +
+                        "-Potenzielle Kunden können sich vorab über die AGB informieren\n" + "-Verwender können Vetragsbestandteile einmalig auf Rechtsicherheit prüfen und dann vielfach verwenden\n" +
+                        "-Druch Vereinheitlichung der Vetragsbestandteile ist die Prüfung bei jeder Vetragsgestaltung entbehrlich oder vereinfacht\n\n" +
+                        "Nachteile\n" + "-Risiken werden auf den Vertragspartner verlagert, soweit gesetzlich möglich\n" +
+                        "-Verbraucher müssen als Vetragspartner in besonderer Weise auf AGB hingewiesen werden und in zumutbarer Weise vom Inhalt Kenntnis erlangen, was zusätzlichen Aufwand kostet\n" +
+                        "-Vetragspartner müssen i.d.R. AGB akzeptieren um zum Kaufabschluss zu kommen"),
             },
             {//Lieferung, Installation und Übergabe vornehmen
                 new Term("Rollout Produktauslieferung",
@@ -365,7 +387,21 @@ public class Terms {
                         "3.5 Unterstützung IT-Abteilung bei Geräteeinbindung in Unternehmensnetzwerk,\n 3.6 Nutzereinweisung 3.7 Altgerätedeinstallation\n" +
                         "4. Elektronische Dokumentation\n" +
                         "4.1 Übergrabeprotokolle,\n 4.2 Konfigurationsseiten,\n 4.3 Rolloutauswertung,\n 4.4 Übergabe aller Dokumente als elektronische Dokumentation\n" +
-                        "5. Entsorgung von Altgeräten und Verpackungen\n 5.1 Protokollierung ")
+                        "5. Entsorgung von Altgeräten und Verpackungen\n 5.1 Protokollierung "),
+                new Term("Kommissionierungslager","Hier werden Bestellungen zusammengestellt, kurz gelagert, wenn sie noch nicht ganz vollständig sind"),
+                new Term("Vorbereitung Produktabnahme","Kontrolle Lieferung, Zeit prüfen, Artmangel / Fehllieferung / Qualitätsmangel"),
+                new Term("Verantwortliche Stellen für Arbeitssicherheit","Bundesministerium für Arbeit und Soziales, Bundesanstalt für Arbeitsschutz und Arbeitsmedizin (BAuA), "+
+                        "Länderausschuss für Arbeitsschutz und Sicherheitstechnik (LASI), Ämter für Arbeitsschutz und Sicherheitstechnik (ehem. Gewerbeaufsichtsämter), Berufsgenossenschaften, "+
+                        "Unternehmen und Geschäftsleistungen sowie von ihnen beauftragte Personen"),
+                new Term("Wichtige Rechtsvorschriften zu Arbeitsschutz und Arbeitssicherheit","Anweisung, Aushangspflichtige Gesetze, Unfallverhütungsvorschriften (UVV), Arbeitsschutzgesetz (ArbSchG), Arbeitsstättenverordnung (ArbStättV), "+
+                        "Arbeitssicherheitsgesetz (AsiG), Produktsicherheitsgesetz (ProdSG), Telearbeitsgesetz"),
+                new Term("Arbeiten an elektrischen Anlagen","Abs 1 DGU Vorschrift 3 \"Elektrische Anlagen und Betriebsmitteln\"\n" +
+                        "Der Unternehmer hat dafür zu sorgen, dass elektrische Anlagen und Betriebsmittel nur von einer Elektrofachkraft oder unter Leitung und Aufsicht einer Elektrofachkraft den elektrotechnischen Regeln entsprechend errichtet,"+
+                        " geändert und instand gehalten werden\n" + "Fünf Sicherheitsregeln beim Umgang mit elektrischen Anlagen und Betriebsmitteln (VDE 0105, VBG 4)\n" + "1. Freischalten (Trennen der Anlage vom Strom)\n" +
+                        "2. Gegen Wiedereinschalten sichern (z.B. Entnahme der Sicherungen, Schild aufstellen)\n" + "3. Spannungsfreiheiten feststellen (mittels Spannungsprüfer)\n" + "4. Erden und Kurzschließen\n" +
+                        "5. Benachbarte, unter Spannung stehende Teile abdecken oder abschranken"),
+                new Term("Risikoanalyse","Darstellung zwischen Eintritttshäufigkeit und Auswirkungen / Schadenshöhe"),
+                new Term("Systemlieferung, -installation und -übergabe Prozess","Produktabnahme \nKunde prüft Produkt auf den ersten Blick und erklärt, dass Produkt seinen Anforderungen entspricht, bezahlt das Produkt und die Gewährleistungsfrist beginnt."),
             }
     };
 
@@ -1255,8 +1291,14 @@ public class Terms {
                             "HTML ist eine darstellungssprache / markup language, keine programmiersprache\n" + "\n" +
                             "WYSIWYG - What you see is what you get"),
             //1.5 Benutzerschnittstelle testen
+            new Term("Testverfahren","nach fertigstellung von software oder softwaremodul, \ndurchläuft software testverfahren und teststufen\n" +
+                    "Bsp: Funktionalität der Logik und Datenerhaltungsschicht einer Drei-Schichten-Architektur durch Unit-Test " +
+                    "mit Testdaten aus Grenzwertanalyse im Rahmen eines Blackbox-Tests oder einer Pfadüberdeckung im Rahmen eines Whitebox-Tests"),
             new Term("Herausforderungen UI Testen ",
-                    "Herausforderungen beim Testen von Benutzerschnitstellen (UI) \n1. Sich ständig ändernde Benutzeroberfläche\n" + "2. Zunehmende Testkomplexität\n" + "3. Hoher und schwer zu kalkulierender Zeitaufwand\n" + "4. Umgang mit Mängeln und Fehlern"),
+                    "Herausforderungen beim Testen von Benutzerschnitstellen (UI) \n1. Sich ständig ändernde Benutzeroberfläche \nApps werden aktualisiert\n" +
+                    "2. Zunehmende Testkomplexität \nmoderne apps haben sehr heterogene Funktionalitäten wie eingebettete Frames, komplexe Diagramme und Karten\n" +
+                    "3. Hoher und schwer zu kalkulierender Zeitaufwand \nwegen ständiger Änderung der Apps, schwer kalkulierbar\n" +
+                    "4. Umgang mit Mängeln und Fehlern \nnicht alle sind leicht zu beheben, manche können komplexe Änderung der Benutzerschnitstelle erforderlich machen"),
             //1.5.1 Grafische Benutzerschnitstelle testen
             new Term("GUI Darstellung testen",
                     "Vollständigkeit aller unterstützender Hinweise für den Benutzer z.B. max. 50 Zeichen\n" +
@@ -1286,10 +1328,13 @@ public class Terms {
                     "Erwartungskonforme Funktionalität zB Hilfeunterstützunge beim Drücken der F1-Taste\n" +
                     "Korrektes Auf und Einklappen von GUI Elementen\n" +
                     "Korrektes Sperren und Entsperren bzw. Ein- und Ausblenden von GUI Elementen"),
-            new Term("Testverfahren GUI","Testverfhren zum Testen von grafischen Benutzeroberflächen\n" +
-                    "Manuelles Testen\n" + "Aufnahme und Wiedergabe Testen (Record-and-Replay-Testing)\n" + "Modellbasiertes Testen (Model-Based testing)"),
+            new Term("Testverfahren GUI","Testverfhren zum Testen von grafischen Benutzeroberflächen\n\n" +
+                    "Manuelles Testen \nMensch testet funktionen und darstellung \nzeitaufwendig, niedrige testabdeckung, qualität abhängig von tester\n\n" +
+                    "Aufnahme und Wiedergabe Testen (Record-and-Replay-Testing) \nmit Automatisierungstools, zeichnet alle aktionen mit app auf, dann werden diese reproduziert und mit erwartung verglichen\n\n" +
+                    "Modellbasiertes Testen (Model-Based testing) \nauf Grundlage grafischer Modelle, die Systemverhalten beschreiben, ermöglicht tester hocheffiziente testfälle zu generieren, " +
+                    "da es tieferes verständnis vom system bietet, hohe Testabdeckung\n" + "Modelle: Ereignisbasiert, Zustandssbasiert, Domänen"),
             //1.5.3 Das Testen der User Experience beschreiben
-            new Term("UX Testen","User Experience Testen"+
+            new Term("UX Testen","User Experience Testen\n\n"+
                     "Sind alle Angaben aktuell? \nIst das System nützlich und schafft einen Mehrwert für die Zielgruppe?\n" +
                     "Werden die Grundsätze der Dialoggestelatung nach DIN EN ISO 9241-110 eingehalten?\n" +
                     "Sind Inhalte, Farbe, Icons, Bilder ästhetisch ansprechend? \nIst das System leicht erlernbar?\n" +
@@ -1298,7 +1343,10 @@ public class Terms {
                     "Werden ausreichend Hilfen zur Verfügung gestellt? \nToleriert die Anwendung ausreichend Bedienungsfehler?\n" +
                     "Ist die Anwendung effizient bedienbar zum Beispiel sollte wenig Navigation erforderlich sein, um das gewünschte Fenster oder die gewünschte Webseite zu erreichen.\n"),
             new Term("UX-Testverfahren",
-                    "Kontextanalyse, Test mit Fokusgruppen, Online-Befragung, Expertenbasierte Überprüfung,\n" +"Labortest, Blickverlaufsmessung"),
+                    "Kontextanalyse \nNutzer vor Ort, Arbeitsplatz weden befragt, beobachtet, beschrieben, \n\nTest mit Fokusgruppen, \nausgewähte homogene Zielgruppe wird befragt, auch nach verbesserungsvorschlägen\n\n"+
+                    "Online-Befragung \nnach Usability, vor allem beim Test von Webseiten, \n\nExpertenbasierte Überprüfung, \nUsability Überprüfung durch Experten nach Kriterien mit Auswertung\n\n" +
+                    "Labortest, \nauf Grundlage speziellen Szenarios, zielgruppenspezifische Testerauswahl, Experten beobachten Testpersonen bei Arbeit und Stellen Fragen\n\n"+
+                    "Blickverlaufsmessung, \nEye-Tracking, über Infrarottechnnik, im Labor"),
             new Term("UX Tests Vor- & Nachteile",
                     "Vorteile: \n\n-effizientes Softwareprodukt, \n-Entwicklung eines Verständnisses für die Bedürfnisse der Benutzer,\n" +
                     "welche in die weitere Entwicklung einfließen können, \n-hohe Benutzerakzeptanz der Software, \n" +
@@ -1321,10 +1369,8 @@ public class Terms {
                     "kann auf einen Blick geelesen werden, \ndie Erfahrung Papier in der Hand zu halten ist einzigartig,\n" +
                     "diese Art der Leseerfharung ist für viele angenehmer als die digitale Leseerfahrung,\n" +
                     "es kann immer und überall ohne weitere Voraussetzungen gelesen werden\n\n" +
-                    "Nachteile: \nKosten für Druck, Bindung und Verpackung,\n" +
-                    "begrenzter Platz und begrenzte Informationen, kann leicht verlegt werden,\n" +
-                    "nicht sofort aktualisierbar, keine Videos, \n" +
-                    "hoher Aufwand es für große Nutzergruppen zur Verfügung stellen"),
+                    "Nachteile: \nKosten für Druck, Bindung und Verpackung, \nbegrenzter Platz und begrenzte Informationen, \nkann leicht verlegt werden,\n" +
+                    "nicht sofort aktualisierbar, keine Videos, \nhoher Aufwand es für große Nutzergruppen zur Verfügung stellen"),
             new Term("Onlinedokumentation","Vorteile von Onlinedokumentationen \n\n+" +
                     "Hohe Aktualität, Hohe Multimedialität, Hohe Verfügbarkeit, Bessere Interaktivität, keine beschränkungen im Umfang")
     };
@@ -1435,6 +1481,14 @@ public class Terms {
                     "\nGrundelemente: \nEreignis: (rot) quadratisches Sechseck \nFunktion: (grün) abgerundetes Viereck \n"+
                     "Verknüpfung: \nim Kreis: \nΛ - beide (und) \nV - beide oder eines (oder) \nxor - nur eines von beiden \n"+
                     "Kontrollfluss: Pfeil"),
+            //4.2.1 Zielsetzung des Kundenauftrags erfassen
+            new Term("SW Qualitätsmerkmale ","Software Qualitätsmerkmale mit Kriteriengruppen \n\n"+
+                    "Funktionalität\n" + "Richtigkeit, Angemessenheit, Interoperabilität, Ordnungsmäßigkeit, Sicherheit, Konformität\n\n" +
+                    "Zuverlässigkeit\n" + "Reife, Fehlertoleranz, Wiederherstellbarkeit, Konformität\n\n" +
+                    "Effizienz\n" + "Zeitverhalten, Verbrauchsverhalten, Konformität\n\n" +
+                    "Benutzbarkeit \n" + "Verständlichkeit, Elernbarkeit, Bedienbarkeit, Attraktivität, Konformität\n\n" +
+                    "Änderbarkeit/Wartbarkeit\n" + "Analysierbarkeit, Modifizierbarkeit, Stabilität, Prüfbarkeit, Konformität\n\n" +
+                    "Übertragbarkeit\n" + "Anpassbarkeit, Installierbarkeit, Austauschbarkeit, Konformität"),
     };
     private static Term[] termsLFWK = {
             //Ordner 1
@@ -1732,7 +1786,48 @@ public class Terms {
                     "\n\nEigentum an Produktionsmittel, zB Maschinen: \n1) Firma \n2) Staat \n\nWichtigstes Ziel der Betriebe: \n1) Möglichst viel Gewinn \n2) den Plan umsetzen \n\nWahl von Beruf und Arbeitsplatz: \n1) freie Wahl "+
                     "2) Staat bestimmt Beruf und Arbeitsplatz \n\nVorteile: \n1) Mehr Produktion, daher billiger zB Lebensmittel \n2) Keine Arbeitslosigkeit, Konjunkturschwankungn, Kauf ~= Verkauf \n\n"+
                     "Nachteile: \n1) Löhne für einfachen Arbeiter sinken stetig, große Firmen kaufen kleine, Kinderarbeit \n2) Bei schlechtem Plan = zu wenig Rohstoffe & Waren, zu wenig Firmenmotivation, Unterproduktion"),
-
+            new Term("Soziale Marktwirtschaft",
+                    "Nach dem 2. WK entschieden die Sieger über die Wirtschaftsordnung. \nDie Westlichen sagten: \"Im Nationalsozialismus hatte Hitler und der Staat zu viel Macht. Daher wird die freie Marktwirtschaft eingeführt.\" \n"+
+                    "Die Östlichen sagten: \"Zwischen 1929-1933 hat die Weltwirtschaftskrise gezeigt, dass der Staat die Wirtschaft mehr lenken muss. Daher wird die Zentralverwaltungswirtschaft eingeführt. \n\n"+
+                    "Gründer: Ludwig Erhard: \"Wir brauchen eine neue Wirtschaftsordnung: Jeder Mensch soll frei sein und eigene Entscheidungen treffen können, aber der Staat soll die wirtschaftlich schwachen Menschen"+
+                    " unterstützen können. Wir brauchen eine soziale Marktwirtschaft\". \n\n Rolle des Staates: \nUnterstützung wirtschaftlich Schwacher \n\nWer/Was bestimmt den Preis?: \nAngebot & Nachfrage \n\n"+
+                    "Wirtschaftsplanung: \nGewerbefreiheit, jedes Unternehmen plant für sich selbst \n\nEigentum an Produktionsmitteln, zB Maschinen: \nDen Firmen \n\nWichtigstes Ziel der Betriebe: maximalen Gewinn erwirtschaften \n\n"+
+                    "Wahl von Beruf und Arbeitsplatz: \nFreie Berufswahl, Gewerbefreiheit \n\nVorteile: Mittelweg, sowohl unternehmerische Selbstbestimmung als auch Armenhilfe, Berufswahl, soziale Absicherung, Gewerbefreiheit \n\n"+
+                    "Nachteile: \nAbwanderung der Reichsten, Gefahr der Monopolstellung"),
+            new Term("Soziale Marktwirtschaft Merkmale",
+                    "Marktwirtschaft: \n\nGewerbefreiheit: \nFreie Berufswahl, Firmen entscheiden selbst, was sie produzieren \n\nVertragsfreiheit: \nJeder darf Verträge machen, jeder darf selbst entscheiden, mit wem er "+
+                    "einen Vertrag macht. \n\nFreie Preisbildung: \nAngebot & Nachfrage regeln den Preis, der Staat greift nicht ein. \n\nPrivateigentum: \nProduktionsmittel gehören Firme, nicht Staat, Bauern gehören Arbeitsgeräte \n\n"+
+                    "Sozial: \n\nSozialpolitik: \nSozialversicherungen (Renten, Kranken, Pflege, Unfall, Arbeitslosen), Arbeitsschutzbestimmmungen (Kündigungs-, Jugendarbeits-, Mutter-schutz) \n\n"+
+                    "Einkommens und Vermögendspolitik: \nSteuerprogression (wer mehr verdient, muss mehr Steuern zahlen), Spar und Bausparförderung \n\nWettbewerbspolitik: \nVerbot von Preisabsprachen, Schutz der Verbraucher durch "+
+                    "Produkthaftungsgesetz, Preisabgabegesetz, Mess & Eichgesetz \n\nStruktur und Konjunkturpolitik: \ngünstige Kredite für Firmengründung in wirtschaftlich schwachen Gebieten, Subventionen für Landwirtschaft, Bergbau, "+
+                    "Eisen & Stahlindustrie \n\nUmweltpolitik: \n Gesetze zum Umweltschutz (zB Recycling-Auflagen, Richtlinen für Mineralölverbrauch & Schadstoffausstoß), staatliche Förderer erneuerbarer Energien \n\n"+
+                    "Öffentliche Unternehmen: \nAlle Bürger sollen mit allen lebenswichtigen Gütern und Dienstleistungen versorgt werden zB Wasserkraftwerke, Schulen, Krankenhäuser und Nachverkehr"),
+            new Term("Verbraucherpreis-Index",
+                    "Warenkorb: Summe der Kosten aller Waren (Menge mal Preis) \nWird regelmäßig aktualisiert, je nach Häufigkeit im aktuellen Konsumverhalten \n\n"+
+                    "Wert des Warenkorbs: \nJahr 1: 80 \nJahr 2: 88 \n\nPreisindex: \nJahr 1: 100 \nJahr 2: (88/80)*100=110 \nJahr 3: (92,4/80)*100=115,5 \noder: (92,4/88)*110=115,5 \n\nPreissteigerung gegenüber Vorjahr "+
+                    "(Inflationsrate): \nJahr 2: +10% \nJahr 3: ((115,5-110)/110)*100=5,5%"+
+                    "\n\nGründe für Messung Preisindex: \nMit Warenkorb stellt man fest, um wie viel Euro und Protzent Preise gestiegen sind, wie viel Geld ein durchschnittlicher Mensch zum Leben braucht, wichtig für bspw. Verhandlungen "+
+                    "über Lohnerhöhungen \n\nNominale Lohnsteigerung: \nzB Ein Arbeiter bekommt 1,5% mehr Nettolohn \n\nReale Lohnsteigerung: \nzB Die Preise sind um 1,7% gestiegen. \nObwohl der Arbeiter 1,5% nominale Lohnsteigerung hat, \n"+
+                    "hat er eine reale (wirkliche) Lohnsteigerung von -0,2% \nreale Lohnsteigerung = nominale Lohnsteigerung - Preissteigerung"),
+            new Term("Kaufkraft", "Kaufkraft des Geldes = Wert des Geldes, wie viel kann ich von dem Geld kaufen? \nDie Kaufkraft ist abhängig von der Preisentwicklung.\n\n"+
+                    "zB Preis für eine Kugel Eis \nJahr 1 (Basisjahr): 1 Euro \nJahr 2: 1,50 Euro \nPreisniveau: +50% \nVerfügbarer Geldbetrag: 3 Euro \nKaufkraft Jahr 1: 100 \nKaufkraft Jahr 2: 66,7 ((100/150)*100)"+
+                    "\nZusammenhang: Wenn das Preisniveau um 50% steigt, sinkt die Kaufkraft um 33,3% \n\nVerringert sich Kaufkraft einer Währung: Inflation \nErhöht sich Kaufkraft einer Währung: Deflation"),
+            new Term("Inflation","Staat darf nicht mehr Geld drucken, als er Güter und Dienstleistungen hat, sonst sinkt die Kaufkraft und das Geld ist wertloser. \n\n"+
+                    "Ursachen: \n\nNachfrage-Inflation: \nHöhere Löhne / weniger Steuern / zu viel Geld gedruckt \nAber nicht mehr Güter auf dem Markt \n\n"+
+                    "Kosten: \nFirmen müssen mehr Lohn zahlen / Rohstoffpreise steigen \nalso erhöhen sie die Preise \n\nGeldmenge im Land steigt: \nwenn viele Güter ins Ausland verkauft werden, "+
+                    "sind weniger Güter im Land, aber es werden weniger produziert, daher teurer \n\nExport > Import \n\nFolgen/Auswirkungen: \nSchleichende Inflation: \nPreise steigen <5% / Jahr \nso langsam, dass man es fast nicht merkt \n"+
+                    "Geldkaufkraft sinkt langsam \nkein Problem für Wirtschaft / Menschen \n\nGaloppierende Inflation: \nPreise steigen > 10%, > 50% \nWirtschaft gehr kaputt & viele werden arm \n"+
+                    "Geld verliert ganz schnell seinen Wert. Die Kaufkraft sinkt sehr schnell \nGut bei Schulden / Krediten, aber nicht für Sparen \n"+
+                    "Leute kaufen sich Wertgegenstände, werden trotzdem ärmer, Kapitalflucht"),
+            new Term("Deflation",
+                    "Ursachen: \n\nSparen: \nFirmen / Leute wollen Geld nicht ausgeben, weniger Geld im Umlauf \n\nUnternehmen müssen Preise senken: \nWenn sie zu viel produziert haben / wenn der Markt gesättigt ist "+
+                    "(alle haben das Produkt schon) \n\nImport > Export \n\nFolgen / Auswirkungen: \n\nGut für Arbeiter mit festem Gehalt / Arbeitsstelle \nProdukte werden billiger \n"+
+                    "Arbeiter können mehr Güter von Geld kaufen \nUnternehmen müssen preise senken und amchen weniger Gewinn, müssen entlassen oder weniger Lohn bezahlen, "+
+                    "manchmal sogar Insolvenz anmelden, sehr viele verlieren Arbeitsplatz"),
+            new Term("Löhne","Lohnkosten EU \n2022: Arbeitskosten / Stunde: 30,5 Euro im Durschschnitt \nIn Luxemburg: 50,7 \nIn Bulgarien: nur 8,2 \nIn Deutschland "+
+                    "werden durchschnittlich 25% vom Lohn abgegeben \n\nLöhne aufgrund Lohnzusatzkosten hoch \n\nLohnzusatzkosten: \nbezahlter Urlaub \nWeihnachtsgeld \nUrlaubsgeld \nEntgeltfortzahlung bei Krankheit \nbezahlte Feiertage \nvermögendswirksame Leistung"+
+                    "\nArbeitgeberanteil Sozialversicherungsbeiträge \nbetriebliche Altersversorgung \nsonstige Personalzusatzkosten \n\nWettbewerbsfähigkeit kann so gefährdet werden, "+
+                    "aber durch Arbeitnehmerqualifikation und Produktqualität gehalten werden. \nLohnzusatzkostensenkung kann helfen um Unternehmen im Land zu halten."),
 
     };
     private static Term[] termsLFGK = {
@@ -1950,8 +2045,8 @@ public class Terms {
                     "Menschen in der EU dürfen selbst entscheiden, in welchem EU-Land sie wohnen, studieren oder arbeiten möchten. =\"Freizügigkeit\" \n\nFrieden \n"+
                     "Früher: Viele Kriege in Europa \nHeute: seit 70 Jahren kein Krieg in Europa. EU Länder unterstützen sich gegenseitig und arbeiten zusammen \n\nEuropass \n"+
                     "Bewerbungs-Mappe für das Bewerben auf Arbeitsplätze in allen EU-Ländern \n\nLebensmittel \nLebensmittel mit gleichem Zeichen für \"Bio\" oder \"Öko\", gleiche Bedeutung für saubere Lebensmittel"+
-                    "\n\nReiserechte \nin allen EU-Ländern Geldrückgabe bei Flug oder Bahn ausfall oder Verspätung \n\nGewährleistungsfrist bei Waren \nBei einem Kauf von EU-Waren im Internet in einem EU-Land "+
-                    "gibt es eine 14 Tage Warenumtauschmöglichkeit gegen neue Ware oder Geldrückgabe \n\nWarenumtausch im Internet \nKauf von Waren in einem EU-Land: Warengarantie: 2 Jahre, Reperatur oder Ersatz"),
+                    "\n\nReiserechte \nin allen EU-Ländern Geldrückgabe bei Flug oder Bahn ausfall oder Verspätung \n\nGewährleistungsfrist bei Waren \nKauf von Waren in einem EU-Land: Warengarantie: 2 Jahre, Reperatur oder Ersatz"+
+                    "\n\nWarenumtausch im Internet \n Bei einem Kauf von EU-Waren im Internet in einem EU-Land gibt es eine 14 Tage Warenumtauschmöglichkeit gegen neue Ware oder Geldrückgabe"),
             new Term("EU 4 Freiheiten","Freier Personenverkehr \nAlle EU-Bürger können sich frei innerhalb der EU bewegen, sich niederlassen und eine Arbeit annehmen (bis zu 3 Monate) \n\n"+
                     "Freier Warenverkehr \nKein Warengrenzkontrolle und keine Zölle. Das vereinfachte den Handel zwischen den Mitgliedstaaten und krubelte ihn an. \n\nFreier Dienstleistungsverkehr und Unternehmensgründungen "+
                     "\nJede Privatperson kann zwischen eropäischen Handyanbietern, Stromversorgern oder Versicherungsgesellschaften wählen. Unternehmen dürfen sich auch in allen EU-Ländern niederlassen und Geschäfte betreiben \n\n"+
@@ -1960,7 +2055,23 @@ public class Terms {
                     " legen politische Richtung der EU und ihre wirtschaftlichen Ziele fest \n\nEuropäische Kommision in Brüssel\nEin Politiker je Land. Einer von ihnen wird Präsident, die anderen Kommissare \n"+
                     "Aufgaben je nach Kommissar, zB Agrarkommisar. Sie schlagen neue Gesetze vor und kontrollieren die Gesetzeinhaltung der EU Länder. \n\nMinisterrat (Rat der EU) in Brüssel \n"+
                     "Minister der Mitgliedsländer zB Umweltminister beim Umweltpolitiktreffen \nEntscheidungen über Gesetze & über Verteilung von Geld (Plan dazu) \n\nEuropäisches Parlament in Straßburg \n"+
-                    "Abgeordnete (gewählt von EU-Bürgern), oft in einer Partei \nEntscheidung über Gesetze, kontrolliert Geld - Ausgaben der Staaten, entscheidet welche Länder neu aufgenommen werden")
+                    "Abgeordnete (gewählt von EU-Bürgern), oft in einer Partei \nEntscheidung über Gesetze, kontrolliert Geld - Ausgaben der Staaten, entscheidet welche Länder neu aufgenommen werden"),
+            new Term("Asyl Positionen","Zuwanderung nach Europa - der Streit um die Asylpolitik \n\n"+
+                    "Moria\n" + "Flüchtlingslager auf griechischer Insel Lesbos\n" + "wurde für 3000 gebaut, aber jahrelang lebten dort mehr 12000\n" +
+                    "2020 Zerstörung durch Brand\n" + "Dannach nahmen einige (auch Deutschland) welche auf\n\n" +
+                    "Rolle der EU\n" + "Keine Einigung über Flüchtlingsverteilung\n" + "Die betroffenen Länder wollten verpflichtenden Mechanismus zur Verteilung\n" +
+                    "Viele östlichen Länder lehnen sie weiterhin ab\n\n"+
+                    "Rechtliche Grundlage\n" + "Laut Dublin-Verfahren:\n" + "Asyssuchende müssen sich in dem Staat, in dem sie den EU-Raum erstmals betreten,\n" +
+                    "registrieren lassen und Asyl beantragen\n" + "Dann wird, nach rechtlicher Überprüfung, entschieden, wer tatsächlich Asyl und Schutz erhält.\n" +
+                    "Das Recht auf Asyl ist in Deutschland im Grundgesetz und in der EU in der Charta der Grundrechte verankert.\n" +
+                    "Asyl kann z.B. bekommen, wer aus politischen oder religiösen Gründen oder wegen seiner ethnischen Herkunft verfolgt wird.\n\n\n"+
+                    "Frontex - ProAsyl\n\n" +
+                    "Frontex: \nEuropäische Agentur für die Grenz & Küstenwache (seit 2015/16) davor Koordinierung der Grenze.\n" +
+                    "Meinung: Die EU stockt den EU-Grenz- und Küstenschutz bis 2027 auf 10 000 Einsatzkräfte auf. \n" +
+                    "\"Mit der heutigen Entscheidung machen wir Europa sicherer [...]\", sagte die EU-Abgeordnete Monika Hohlmeier (CSU) (zeit.de, 28.03.2019)\n\n" +
+                    "ProAsyl:  \nVerein der sich für den Schutz und die Rechte von asylsuchenden Menschen in Europa einsetzt. Sitz: Frankfurt am Main\n" +
+                    "Meinung: Die EU versucht, ihre Grenzen abzuriegeln. An einigen Grenzabschnitten haben die Staaten meterhohe Stacheldrahtzäune errichtet.\n" +
+                    "Die EU versucht, Flüchtlinge schon abzuwehren, bevor sie die Grenze der EU erreichen. (proasyl.de, 05.10.2020)"),
     };
 
     public static String[] getKapitelLFYetUnpost() {return kapitelLFYetUnpost;}
