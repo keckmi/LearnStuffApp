@@ -59,7 +59,7 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:layout_marginBottom="30dp"
-                android:text="Content" />
+                android:text="Content"/>
 
         </LinearLayout>
     </ScrollView>
