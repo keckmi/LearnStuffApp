@@ -124,7 +124,7 @@ public class TermActivity extends AppCompatActivity {
         }
         if (term.equals("Nutzwertanalyse")) {
             imgView.setImageResource(R.drawable.nutzwertanalyse);
-            imgView.getLayoutParams().height=1000;
+            imgView.getLayoutParams().height=400;
         }
         if (term.equals("Druckkostenvergleich")) {
             imgView.setImageResource(R.drawable.druckkostenvergleich2);
@@ -253,6 +253,22 @@ public class TermActivity extends AppCompatActivity {
         if (term.equals("Marktpreis grafisch")) {
             imgView.setImageResource(R.drawable.marktpreis);
             imgView.getLayoutParams().height=1000;
+        }
+        if (term.equals("Optimale Bestellmenge")) {
+            imgView.setImageResource(R.drawable.optimale_bestellmenge);
+            imgView.getLayoutParams().height=800;
+        }
+        if (term.equals("Bilanz")) {
+            imgView.setImageResource(R.drawable.bilanz);
+            imgView.getLayoutParams().height=600;
+        }
+        if (term.equals("Einfacher Buchungssatz")) {
+            imgView.setImageResource(R.drawable.einfacher_buchungssatz);
+            imgView.getLayoutParams().height=1500;
+        }
+        if (term.equals("Break Even Point")) {
+            imgView.setImageResource(R.drawable.breakevenpoint);
+            imgView.getLayoutParams().height=800;
         }
 
     }

@@ -337,7 +337,14 @@ public class Terms {
                             "Kosten:\n 160K + 20K + 16K + 5K = 201 000 Euro\n= 3,48\nAmortisationsdauer: 48 Monate / 3,48 = 13,8 Monate\n"),
                     new Term("ROI","Return of Investment\n\nROI=\nTotalerfolg / Investitionskosten\n\nROI=\nRückflüsse / Investitionskosten"),
                     new Term("Kommissionierung","Zusammenstellung von bestelltem Gut in Versandform"),
-
+                    new Term("Optimale Bestellmenge","Lagerbestand in Stück = \nBestellmenge / 2 \n\nJährliche Bestellkosten = \nKosten je Bestellung * Anzahl der Bestellungen pro Jahr\n\n"+
+                            "Jährliche Lagerkosten = \nLagerbestand in Stück * Einstandspreis * Lagerkostensatz \n\nGesamtkosten = \nJährliche Bestellkosten + Jährliche Lagerkosten\n\n"+
+                            "Von der Optimalen Bestellmenge kann abgewichen werden bei... \nunregelmäßigem Verbrauch zB bei Saisonartikeln \nbei fehlendem Lagerplatz \nbei fehlendem Kapital "+
+                            "zur Realisierung der optimalen Bestellmenge \ndrohendem Preisverfall / technischer Veralterung der Artikel \nbei drohendem Lieferengpass\n\n"+
+                            "Bestellpunktverfahren: \nBestellung erfolgt, wenn nur noch eine bestimmte Lagermange (Meldebestand) vorrätig ist, zB 100 Stück. Die Bestelltermine "+
+                            "sind meist unregelmäßig. \nProdukte werden bei unregelmäßigen Anlässen wie bei Preistief oder Nachfragehoch bestellt "+
+                            "\n\nBestellrythmusverfahren: \nBestellung erfolgt in regelmäßigen Intervallen zB alle 14 Tage \nProdukte werden regelmäßig bestellt um bspw Verfallszeiten "+
+                            "zu berücksichtigen oder weil die Nachfrage konstant ist."),
             },
             {// Angebotsvergleiche bei Beschaffungsmaßnahmen durchführen
                 new Term("Nutzwertanalyse",
@@ -367,11 +374,21 @@ public class Terms {
                         "(1-(1/2))*100=50%"),
                 new Term("Verpflichtungs-/Erfüllungsgeschäft", "Siehe Wirtschaftskunde: Kaufvertrag"),
                 new Term("Wichtige Vertragsarten nach BGB",
-                        "Kaufvertrag, Verbrauchsgüterkauf, Fernabsatzvertrag, Dienstvertrag, Werkvertrag, sonstige Arten (je nach Vereinbarung im Vertrag), Nichtige Verträge (von vornherein ungültig), Anfechtbare Verträge"),
+                       "Kaufvertrag: \nVerkauf von Sachen und Rechten gegen Entgeld\n\n" +
+                       "Verbrauchsgüterkauf: \nVerkauf von beweglichen Sachen gegen Entgeld von Unternehmen an Verbraucher (Beweislastumkehr in den ersten 6 Monden bei Mängeln)\n\n" +
+                       "Fernabsatzvertrag: \nVerträge über die Lieferung von Waren / Dienstleistungen unter außschließlicher Verwendung von Fernkommunikationsmitteln\n\n" +
+                       "Dienstvertrag: \nDas bloße Wirken, die Arbeitsleistung (das Bemühen) wird geschuldet, aber kein Erfolg. dabei: selbstständige, nicht selbstständige, abhängige, eigenbestimmte oder fremdbestimmte Dienstleistungen. zB Arbeitsvertrag.\n\n" +
+                       "Werkvertrag: \nHerstellung eines versprochenen Werkes (Herstellung oder Veränderung einer Sache bzw. durch Arbeit oder Dienstleistung herbeizuführender Erfolg) gegen Entgeld\n\n" +
+                       "sonstige Arten (je nach Vereinbarung im Vertrag): \nNach dem Ort: Platzkauf und Versendungskauf, \nNach Art / Güte: Kauf nach Probe, zur Probe, auf Probe, mit Umtauschrecht, Ramschkauf, Bestimmungskauf," +
+                       "\nnach Terminierung: Sofortkauf, Terminkauf, Fixkauf, Kauf auf Abruf, Teillieferungskauf, \nnach Zahlungsweise: Barkauf, mit Vorrauszahlung, Ziel-/Kreditkauf (Kauf auf Rechnung)\n\n" +
+                       "Nichtige Verträge (von vornherein ungültig): \nmit Geschäftsunfähigen, beschränkt Geschäftsunfähigen bei Zustimmungsverweigerung deren Vertreter, Scheingeschäfte, Scherzgeschäfte, illegale, "+
+                       "Wucher (Sittenverstoß), Formvorschriften Verstoß (Schriftform, notarielle Beurkundung, öffentl. Beglaubigung)\n\n" +
+                       "Anfechtbare Verträge: \nErklärungsirrtum, Übermittlungsirrtum, Eigenschaftsirrtum, Arglistige Täuschung, Widerrechtliche Drohung"),
                 new Term("Annahmefristen eines Angebots","Allgemein: Solange Anbieter unter regelmäßigen Umständen mit Anworteingang rechnen kann\n" +
                         "Unter Anwesenden bzw. fernmündlich - Sofort d.h. solange das Gespräch dauert\n" + "Bei Briefangebot ohne Fristsetzung: Ca. 5 - 7 Tage, 4 für Briefversand und einen für Bearbeitung\n" +
                         "Bei E-Mail-/Fax-Angebot Ca. ein bis zwei Tage: für Bearbeitung und Antwortfax/-Mail\n" + "Bei Briefangebot mit Fristsetzung: Die Bestellung muss bis zur gesetzen Frist zugangen sein."),
-                new Term("AGB","Vorteile: \n" + "-einfache Vertragsgestaltung, Vertragsinhalte müssen nicht jedes mal neu ausgehandelt und aufgeführt werden (Kosten und Zeitersparnis)\n" +
+                new Term("AGB", "Vorformulierte Vertragsbedingungen für eine vielzahl von Verträgen eines Unternehmens.\n\n"+
+                        "Vorteile: \n" + "-einfache Vertragsgestaltung, Vertragsinhalte müssen nicht jedes mal neu ausgehandelt und aufgeführt werden (Kosten und Zeitersparnis)\n" +
                         "-Vertragspartner erhält schnell Überblick über wichtige Vertragsbestandteile, die für die damit verbundenen Geschäfte von besonderer Bedeutung sind\n" +
                         "-Potenzielle Kunden können sich vorab über die AGB informieren\n" + "-Verwender können Vetragsbestandteile einmalig auf Rechtsicherheit prüfen und dann vielfach verwenden\n" +
                         "-Druch Vereinheitlichung der Vetragsbestandteile ist die Prüfung bei jeder Vetragsgestaltung entbehrlich oder vereinfacht\n\n" +
@@ -388,20 +405,35 @@ public class Terms {
                         "4. Elektronische Dokumentation\n" +
                         "4.1 Übergrabeprotokolle,\n 4.2 Konfigurationsseiten,\n 4.3 Rolloutauswertung,\n 4.4 Übergabe aller Dokumente als elektronische Dokumentation\n" +
                         "5. Entsorgung von Altgeräten und Verpackungen\n 5.1 Protokollierung "),
-                new Term("Kommissionierungslager","Hier werden Bestellungen zusammengestellt, kurz gelagert, wenn sie noch nicht ganz vollständig sind"),
-                new Term("Vorbereitung Produktabnahme","Kontrolle Lieferung, Zeit prüfen, Artmangel / Fehllieferung / Qualitätsmangel"),
+                 new Term("Vorbereitung Produktabnahme",
+                        "Kontrolle Lieferung / Vergleich mit Lieferpapieren, \nErfassung des Lagereingangs im Computersystem, \nZeit prüfen, "+
+                        "\nBei Mangel (zB Artmangel / Fehllieferung / Qualitätsmangel): Mängelanzeige erstellen im System oder auf Formular," +
+                        "\nBei keinem Mangel: ins Vorratslager bringen, ansonsten ins Zwischenlager.\n\n" +
+                        "Kommissionierungslager: \nHier werden Bestellungen zusammengestellt, kurz gelagert, wenn sie noch nicht ganz vollständig sind, mit Lieferpapieren bestückt\n\n" +
+                        "Warenannahme: \n1. Schritt: äußerliche Sichtkontrolle in Anwesenheit des Überbringers (Frachtführers)\n" +
+                        "2. Schritt: genauere Kontrolle später in Abwesenheit des Überbringers. Unverzügliche Überprüfung pflichtig, da spätere Mängelansprüche abgelehnt werden."),
                 new Term("Verantwortliche Stellen für Arbeitssicherheit","Bundesministerium für Arbeit und Soziales, Bundesanstalt für Arbeitsschutz und Arbeitsmedizin (BAuA), "+
                         "Länderausschuss für Arbeitsschutz und Sicherheitstechnik (LASI), Ämter für Arbeitsschutz und Sicherheitstechnik (ehem. Gewerbeaufsichtsämter), Berufsgenossenschaften, "+
                         "Unternehmen und Geschäftsleistungen sowie von ihnen beauftragte Personen"),
-                new Term("Wichtige Rechtsvorschriften zu Arbeitsschutz und Arbeitssicherheit","Anweisung, Aushangspflichtige Gesetze, Unfallverhütungsvorschriften (UVV), Arbeitsschutzgesetz (ArbSchG), Arbeitsstättenverordnung (ArbStättV), "+
-                        "Arbeitssicherheitsgesetz (AsiG), Produktsicherheitsgesetz (ProdSG), Telearbeitsgesetz"),
+                new Term("Wichtige Rechtsvorschriften zu Arbeitsschutz und Arbeitssicherheit",
+                        "Anweisung: \nMitarbeiter zu sicherheitsgerechtem Verhalten anweisen: bei Neuinstallation, mindestens einmal jährlich, bei einem Wechsel in einen anderen Tätigkeitsbereich\n\n" +
+                        "Aushangspflichtige Gesetze: \nArbeitgeber müssen für den Btrieb wichtige Arbeitsgesetze am Schwarzen Brett oder beim Personalbüro aushängen\n\n" +
+                        "Unfallverhütungsvorschriften (UVV): \nVerhütung von Arbeitsunfällen, Berufskrankheiten, Gesundheitsgefahren, erlassen von Berufsgenossenschaften\n\n" +
+                        "Arbeitsschutzgesetz (ArbSchG): \nGesetz zur Sicherheitsverbesserung und Gesundheitsschutz legt Handlungsrahmen mit Rechten und Pflichten. Details in Arbeitsstättenverordnung.\n\n" +
+                        "Arbeitsstättenverordnung (ArbStättV): \nGefährdungsbeurteilung, Anforderungen Vorschriften zum Arbeitsstätteneinrichtung und -betrieb \n\n" +
+                        "Arbeitssicherheitsgesetz (AsiG): \nBestellung von Betriebsärtzinnen je nach Unternehmensgröße und Arbeitsschutzausschuss bilden ab 20 Beschäftigten\n\n" +
+                        "Produktsicherheitsgesetz (ProdSG): \nAnforderungen, Sicherheitszeichen und -vorschriften für Geräte, Produkte und Anlagen zur Bereitstellung auf dem Markt\n\ns" +
+                        "Telearbeitsgesetz: \nArbeitsschutzverpflichtungen zB sichere Mittel, Verpflichtung zu Arbeitsschutzunterweisungen fpr Telearbeiter und im Homeoffice"),
                 new Term("Arbeiten an elektrischen Anlagen","Abs 1 DGU Vorschrift 3 \"Elektrische Anlagen und Betriebsmitteln\"\n" +
                         "Der Unternehmer hat dafür zu sorgen, dass elektrische Anlagen und Betriebsmittel nur von einer Elektrofachkraft oder unter Leitung und Aufsicht einer Elektrofachkraft den elektrotechnischen Regeln entsprechend errichtet,"+
                         " geändert und instand gehalten werden\n" + "Fünf Sicherheitsregeln beim Umgang mit elektrischen Anlagen und Betriebsmitteln (VDE 0105, VBG 4)\n" + "1. Freischalten (Trennen der Anlage vom Strom)\n" +
                         "2. Gegen Wiedereinschalten sichern (z.B. Entnahme der Sicherungen, Schild aufstellen)\n" + "3. Spannungsfreiheiten feststellen (mittels Spannungsprüfer)\n" + "4. Erden und Kurzschließen\n" +
                         "5. Benachbarte, unter Spannung stehende Teile abdecken oder abschranken"),
                 new Term("Risikoanalyse","Darstellung zwischen Eintritttshäufigkeit und Auswirkungen / Schadenshöhe"),
-                new Term("Systemlieferung, -installation und -übergabe Prozess","Produktabnahme \nKunde prüft Produkt auf den ersten Blick und erklärt, dass Produkt seinen Anforderungen entspricht, bezahlt das Produkt und die Gewährleistungsfrist beginnt."),
+                new Term("Systemlieferung, -installation und -übergabe Prozess",
+                        "-> Systeme zusammenstellen und liefern \n-> Hardware und Betriebssystem installieren, konfigurieren und anpassen\n" +
+                        "-> Anwendungsprogramme installieren und konfigurieren \n-> IT-Systeme übergeben \n-> Abnahme erklährung \n<- Kunde \n\n"+
+                        "Produktabnahme \n Kunde prüft Produkt auf den ersten Blick und erklärt, dass Produkt seinen Anforderungen entspricht, bezahlt das Produkt und die Gewährleistungsfrist beginnt."),
             }
     };
 
@@ -421,7 +453,18 @@ public class Terms {
             },
             {//Hauptbestandteile von Computernetzen unterscheiden
                     new Term("Provider","Internetvertragspartner\nzB Telecom, 1&1, Vodafone\nIPS = Internet Service Provider"),
-                    new Term("VPN", "Virtual Priate Network\n" + "Authenzität, Vertraulichkeit, Integrität\n" + "Tunnel = verschlüsselte Übertragungsstrecke\n" + "Ziel IP auch verschlüsselbar"),
+                    new Term("VPN", "Virtual Priate Network\n" + "\nEin privates Netzwerk wird über ein öffentliches Netzwerk (WAN eines Providers) betrieben, "+
+                            "indem der Datentransfer durch eine verschlüsselte Verbindung erfolgt. Mögliche Protokolle: L2TP, IPSec, SSTP \n\n"+
+                            "Anfrage wird an einen Server zwischengeleitet, der sie zum Ziel schickt, daher weis das Ziel nicht, woher sie ursprünglich kommt \n\n"+
+                            "Merkmale einer Sicheren Verbindung:\n" +
+                            "Authenzität: \nDer Kommunikationspartner ist der, der er vorgibt, zu sein \nIntegrität: \nDie Daten sind unverändert \nVertraulichkeit: \nDie Daten sind für Dritte nicht einsehbar\n\n" +
+                            "Tunnel = verschlüsselte Übertragungsstrecke \nEin komplettes Datenpaket oder ein Frame verschlüsselt und als Daten in ein anderes Datenpaket (oder ein Frame) eingepackt wird und so " +
+                            "sicher durch ein unsicheres Netz (zB Internet) transportiert wird. Im Zielnetz werden die Daten wieder ausgepackt und entschlüsselt\n"+
+                            "Die Verpackung (der Tunnel) ist die Adresse des Zwischenservers, die jene des letzendlichen Zieles verdeckt \n"+
+                            "Die Adresse des Zwischenservers und die des Absenders befinden sich bei HTTP Anfragen im Header. Dieser ist auch außen sichrbar.\n" + "Ziel IP auch verschlüsselbar"+
+                            "\n\nVPN Arten \nEnd-to-End VPN \nSito-to-Site VPN \nEnd-to-Site VPN\n\n"+
+                            "Die Außendienstmitarbeiter sollen sicheren Zugriff auf interne Server der Firma erhalten \nWelche Hard- & Software wird benötigt? \n"+
+                            "Eine VPN Client Software beim Außendienstmitarbeiter und im Firmennetz ein VPN Server."),
                     new Term("Peer to Peer <-> Client-Server Netzwerk", "Peer to Peer - PC-PC, jeder ist gleichberechtigt, Direktverbdinung, Physikalisch: LAN-Kabel, WLAN, Logisch: IP-tunnerling (VPN) (z.B: Musiktauschportal)\n\n" +
                             "Client-Server Netzwerk - Clients nutzen Dienste und Ressourcen (Speicher, Webserver,...), Server stellt Dienste zur Verfügung: file-, mail-, print-, Web-Server..."),
                     new Term("Switch", "aktive Netzwerkkomponente, braucht Strom, leitet Frame an richtige MAC \n\n"+
@@ -543,6 +586,8 @@ public class Terms {
                             "3 Netzwerk - Wegbestimmung im Netz, Routing, Datenflusskontrolle, Adressieren von Netzen und Rechnern\n" +
                             "2 Sicherung - logische Verbindung mit Datenpaketen, elementare Fehlererkennungsmechanismen, Addressieren von Netzwerk Interfaces\n" +
                             "1 Bit-Übertragung - Nachrichtentechnische Hilfsmittel für Übertragung von Bits"),
+                    new Term("HTTP", "Hypertext Transfer Protocol\n\n" +
+                            "Bei HTTP wird in Unterschied zu HTTPS alles im Klartext übertragen auch die Anmeldedaten"),
                     new Term("ARP", "Adress Resolution Protocol:\n liefert MAC (des Netzwerk-Interfaces) zu IP\n(OSI 2-3)\n\n"+
                             "ingesetzt um zu bekommen: MAC-Adresse von Zielrechner\n" +
                             "Interface-Adresse (IP) des Zielrechners muss beim Senden bekannt sein, in Adress-Feld des Ethernet-Frames einzusetzen\n" +
@@ -557,6 +602,12 @@ public class Terms {
                     new Term("DHCP", " Dynamic Host Config Protocoll (OSI 7)\nVerteilt die Ip_Konfiguration an Rechner im Netz\nIP Adressen automatisch konfigurieren"),
                     new Term("TCP", "Transmission Control Protocol\n Übertragungs Steuer Protocol:\n auf welche Weise Netzwerkkomponenten austauschen?\n OSI 4\n"),
                     new Term("RFC", "Request for Comments\n Festlegung Protokolle\n ietf.org/rfc/rfc793.txt\n hier: TCP"),
+                    new Term("TLS", "Transport Layer Security \n\n"+
+                            "Merkmale einer sicheren Verbindung: \nAuthenzität: \nDer Kommunikationspartner ist der, der er vorgibt, zu sein \nIntegrität: \nDie Daten sind unverändert \nVertraulichkeit: \nDie Daten sind für Dritte nicht einsehbar\n\n" +
+                            "Zertifikat Bestandteile: \nInhaber der Zertifikates \nAusstellende Certification Authority \nAblaufdatum \nPublic Key des Servers \n\n"+
+                            "TLS Verbindung mit Zertifikat: \nDer Server schickt beim Verbindungsaufbau sein Zertifikat an den Client, der die Gültigkeit prüft bei der ausstellenden "+
+                            "Certification Authority. Dann erstellt der Client einen symmetrischen Session Key, verschlüsselt ihn mit dem Public Key des Servers und schickt ihn zum Server. "+
+                             "Wenn die Verbindung steht, werden die Nutzdaten symmetrisch mit dem Session Key verschlüsselt übertragen."),
                     new Term("Header Protokollkopf",
                             "Header (Protokollkopf) - Daten senden in Netzwerk (zB Mail) Browseranfragen an Webserver\n" +
                             "Diese Nutzdaten werden an darunter Schicht übergeben, jede hängt ihren Header vor und gibt Datei weiter runter.\n" +
@@ -593,13 +644,20 @@ public class Terms {
                                     "Lease-Time: Config nur für Lease-Time gültig"),
                     new Term("Internet Netzwerk Aufbau", ""),
                     new Term("IPv6",
-                            "IPv4 und IPv6 können mithilfe geeigneter Mechanismen (z.B: Tunnelmechanismus) parallel betrieben werden" +
-                            "A:B:C:D:E:F:1:2 ist eine gültige IPv6 Adresse\nWindows 10 unterstützt IPv6\nFührende Nullen in einem Block von 4 Hexadezimal-Ziffern können weggelassen werden. Bsp: 002B -> 2B" +
-                            "Benachbarte Blöcke von Nullen können durch :: ersetzt werden\n:: kann nur an einer Stelle der IPv6 Adresse angewandt werden, wegen Eindeutigkeit" +
-                            "A0000:0000:0000:0000:0000:0000:0000:000B -> A000::B\nAF00:0000:0000:E255:0000:0001:332D:81FA -> AF00::E255:0:1:332D:81FA\nEin Hauptgrund für die Entwicklung von IPv6 ist die Erweiterung des Adressraums" +
-                            "IPv6 hat 2^128 Möglichkeiten zur Bildung von Adressen\nBei mehreren Blockfolgen aus Nullen wird längere ersetzt" +
-                            "Bei gleich langen Blockfolgen aus Nullen wird die erste ersetzt\nBEAF:0776:00A0:E222:D000:0012:0000:0000 -> BEAF:776:A0:E22:D000:12::" +
-                            "A21B:C756:0000:0000:1234:0000:0000:01AB -> A21B:C756:1234:0:0:1AB"),
+                            "Ein Hauptgrund für die Entwicklung von IPv6 ist die Erweiterung des Adressraums. IPv6 hat 2^128 Möglichkeiten zur Bildung von Adressen.\n"+
+                            "Eine Ipv6 Adresse besteht aus 128 Bit. \n\nGlobal Routing Präfix: \nErste Teil der Adresse (meist 48Bit) zeigt ob sie öffentlich oder privat ist \n\n"+
+                            "Subnetting ID: \nMittlere Teil der Adresse (meist 26 Bit) ist bei alles Geräten eines Netzwerkes gleich \n\n"+
+                            "Interface ID: \nLetzte Teil der Adresse (meist 64 Bit) variiert von Gerät zu Gerät.\n\n"+
+                            "IPv4 und IPv6 können mithilfe geeigneter Mechanismen (z.B: Tunneling oder DualStack) parallel betrieben werden" +
+                            "\n\nA:B:C:D:E:F:1:2 ist eine gültige IPv6 Adresse\n\nWindows 10 unterstützt IPv6\n\n"+
+                            "Beginnt eine Adresse mit fe80 ist sie link-lokal, also nicht öffentlich \nBeginnt sie jedoch mit 2001 ist sie öffentlich"+
+                            "\n\nVereinfachungsmöglichkeiten der Schreibweise: \n-Führende Nullen in einem Block von 4 Hexadezimal-Ziffern können weggelassen werden. \nBsp: 002B -> 2B" +
+                            "\n-Benachbarte Blöcke von Nullen können durch :: ersetzt werden\n-:: kann nur an einer Stelle der IPv6 Adresse angewandt werden, wegen Eindeutigkeit" +
+                            "\nA0000:0000:0000:0000:0000:0000:0000:000B -> A000::B\nAF00:0000:0000:E255:0000:0001:332D:81FA -> AF00::E255:0:1:332D:81FA " +
+                            "\nBei mehreren Blockfolgen aus Nullen wird längere ersetzt \nBei gleich langen Blockfolgen aus Nullen wird die erste ersetzt"+
+                            "\nBEAF:0776:00A0:E222:D000:0012:0000:0000 -> BEAF:776:A0:E22:D000:12:: \nA21B:C756:0000:0000:1234:0000:0000:01AB -> A21B:C756:1234:0:0:1AB\n\n"+
+                            "Möglichkeiten wie Interface ID in einem fe80 Adressbereich zustande kommt: \nEUI64, Aufspaltung der MAC-Adresse, Einfügen von FFFE, Bit 7 \"drehen\", "+
+                            "Privacy Extensions (zufällige Generation vom BS)"),
                     new Term("NAT", "Network Adress Translation (OSI 3)\n" +
                             "in Rechnernetzen der Sammelbegriff bei Änderungen von Adressen im IP-Header von IP-Paketen"+
                             "NAT ermöglicht ua. die gleichzeitige Verwendung einer öffentlichen Adresse (vrgl. private Ip-Adressen)"+
@@ -648,7 +706,9 @@ public class Terms {
                             "brute force und wörterbuchangriffe bekannt)\nNicht identifizierbaren (auf sich zurückführbaren) Netzwerknamen"+
                             "(Service Set Identifier SSID) oder diesen abschalten\nAutomatische Firmware aktualisierung einschalten\n"+
                             "WPS deaktivieren (Funktion die Verbindung ohne Passwort direkt per Knopfdruck eines Knopfes am AccessPoint und einer"+
-                            "Entsprechung im Handy ermöglicht)\nNetzwerkgeräte ausschalten, wenn sie nicht genutzt werden"),
+                            "Entsprechung im Handy ermöglicht)\nNetzwerkgeräte ausschalten, wenn sie nicht genutzt werden \n\n"+
+                            "Autonom: \nJeder AP ist für sich administriert. Alle Einstellungen incl. Authentifizierung müssen seperat erfolgen\n"+
+                            "Controller Gebunden: \nAlle APs werden zentral verwaltet. Die komplette Benutzerverwaltung und Sicherheitsadministration werden zentral angelegt"),
                     new Term("WLAN", "802.11xx - OSI 1 & 2\n" +
                             "Wireless AP übernimmt Routers Aufgabe, der Clients ind Netzwerk einbindet.\n" +
                             "Beacons (kleine Datenpakete) in Intervallen gesendet (übl: 10x je Sec), an allen Stationen in Empfangsbereich.\n" +
@@ -674,6 +734,21 @@ public class Terms {
                             "User-Authentifizierung:\nMitarbeiter mittels RADIUS-Server,\n Gäste Authentifizierung mittels CaptuiP.,\n Ticketsystem inclusive Erläuterung"),
             },
             {//Grundlage der Daten- und Netzwerksicherheit beschreiben"
+                new Term ("USV", "Unterbrechungsfreie Stromversorgung\n\n"+
+                        "Funktionen: \nFiltern von Störungen auf der Netzsdpannung wie Spannungspitzen, Überspannung, Unterspannung und Stabilisieren der Netzfrequenz\n" +
+                        "Überbrücken von kurzzeitigen Netzausfällen \ngeregelten Herunterfahren der Server be länger anhaltenden Stromausfällen"+
+                        "\n\nTypen:\n\n" +
+                        "VFI - Voltage and Frequency Independent from Mains Supply: \nandere Bezeichnung sind online, Double-Conversion, Dauerbetrieb oder Doppelwandler. spannungs und frequenzunabhängig.\n" +
+                        "Vorteile: \nKonstante Ausgangsspannung und -frequenz, keine Umschaltzeit, keine Versorgungslücken, Reine Sinuskurve, Lange Autonomiezeit, Optimaler Schutz vor Netzstörungen\n" +
+                        "Nachteile: \nKostenintensiv\n" + "Anwendungsbereiche: \nAutomatisierte Anlagen, Rechenzentren\n\n" +
+                        "VI - Voltage Independent from Mains Supply: \nandere Bezeichnungen sind netzinteraktiv (line-interaktiv), Single-Conversion, Delta-Conversion oder aktiver Mitlaufbetrieb. spannungsunabhängig.\n" +
+                        "Vorteile: \nHoher Wirkungsgrad, Gutes Preis-Leistungsverhältnis, Gute Filterleistung durch Kontrolleinheit, Niedrige Betriebskosten\n" +
+                        "Nachteile: \nUmschaltlücke von wenigen Milisekunden beim Umschalten auf Batteriebetrieb\n" +
+                        "Anwendungsbereiche: \nNetzwerke in Unternehmen, IT-Anwendungen\n\n" +
+                        "VFD - Voltage and Frequency Dependent from Mains Supply: \nandere Bezeichnungen sind offline, standby oder passiv. spannungs und frequenzabhängig.\n" +
+                        "Vorteile: \nHoher Wirkungsgrad, Lange Batterielebensdauer, Geringe Abmessungen, Einfacher Aufbau, Geringe Kosten\n" +
+                        "Nachteile: \nUmschaltlücke von wenigen Millisekunden (kann von Kondensatoren in guten PC-Netzteilen gehalten werden), Verbraucher wird durch ungefilterte Spannung versorgt, Nicht für empfindliche Verbraucher geeignet.\n" +
+                        "Anwendungsbereiche: \nBüros, Computer und PCs, Einzelne Workstations, Kleine Telekommunikationsanlagen\n"),
                 new Term("RAID","siehe Ordner 2")
             },
     };
@@ -699,9 +774,17 @@ public class Terms {
                     "B) Kunden haben Angst ihre Dateien diesem Anbieter nicht weiter anvertrauen zu können\n C) Firewall, Türschloss, VPN, Antivirus Software, Zugangsprotokoll, Daten verschlüsseln\n\n"+
                     "3) Verlust der Integrität (Korrektheit von Informationen)\nA) Softwarefehler, Speicherfehler, Datenerhebungsfehler, kriminelle Eingriffe, Fehler bei Synchronisierung redudant gspeicherter Daten\n"+
                     "B) Kunden arbeiten mit falschen Daten weiter und bekommen so Probleme\nC) Updates überprüfungen, ausgebildete Programmierer, Plausibilitätsprüfung, Prüfroutinen bei Erfassung"),
+            new Term("Firewall","Funktionen: \n\nPaketfilter: \nIP Adresse / Protokol Kontrolle, Port Überwachung \nFilterung mit Layer-3 Informationen (IP-Adressen), bestimmte Adressen können zugelassen oder gesperrt werden\n\n"+
+                    "Stateful Packet Inspection: \nIP Adresse / Protokol Kontrolle, Port Überwachung, Verbindungszuständigkeitsüberprüfung je nach offen oder zu vertrauenswürdig oder nicht, leistungsfähiger, ressourcenintensiver \n"+
+                    "Überprüfung, ob Pakete einer speziellen Sitzung gehören. Abfangen von dDoS-Attacken \n\nDeep Packet Inspection: Auf Anwendungsschicht wird geprüft, was in den Paketen ist \n"+
+                    "Prüfung der Pakete bis in die Anwendungsschicht hinauf. Datenbereiche prüfen. Somit können Pakete auf Viren, Spam und andere unerwünschte Inhalte untersucht werden"),
             new Term("Verschlüsselungen","asymetrische Verschlüsselung\npublic key, private key\n\nsymetrische Verschlüsselung\nzB AES, DES, Triple-DES\neinfacher, weniger rechenzeit\nwie bekomme ich key zum partner\n"+
                     "hybride Verschlüsselung\nKombination aus beiden\nzB https-Protokoll (=Kommunikation Server<->Browser)\nsymetrischer Schlüssel wird asymetrisch übertragen\n(kann nur mit private key geöffnet werden)\n\n"+
                     "Zertifikatstelle(https):\nAnfragen und Schlüssel zertifizeiren lassen\n\nRing of Trust:\nNetzwerk aus Leuten die key bestätigen"),
+            new Term("dDoS","Distributed Denial of Service"+ "\n\nBei einem dDoS Angriff werden Server überlastet indem mehr Zugriffe gleichzeitig darauf erfolgen, als verträglich " +
+                    "\n\nEin Dienst, wie z.B. Anfrage an einen Webserver, wird in so großer Häufigkeit beansprucht, dass andere Anfragen nicht ode rnur ungenügend "+
+                    "angenommen und bearbeitet werden können. \nDistributed bedeutet, dass diese Angriffe von einem Angreifer angeregt, jedoch von mehreren / vielen Clients ausgeführt werden. Bsp.: Mit einem manipulierten Ping "+
+                    "kann der Angreifer ein Broadcast- oder Multicast Paket mit der Quell-IP-Adresse des Webservers verschicken. Alle Adressaten antworten dann dem Webserver und belegen so dessen Ressourcen")
     };
     private static Term[] termsLF5 = {
             new Term("PrSp Ranglisten","RedMonk = Stackoverflow-Hashtags & GitHub-Projekte\n\nToibe-Index = Suchanfragen Google & Wiki & YouTube"+
@@ -1084,6 +1167,22 @@ public class Terms {
                 "sondern im (Mini-)Towergehäuse incl Webserver für Betrieb ServerApps & VMs (auf dem NAS)\n\n"+
                 "Technische Anforderungen:\nBauform, Kapazität, RAID-Level, Filesystem, Netzwerkanbindung, Verschlüsselungsmodul, Schreib und Lesegeschwindigkeit,"+
                 "Redundantes Netzteil, VM Unterstützung"),
+        new Term("Bilanz","Vermögen = \nAnlagevermögen + Umlaufvermögen \n\nKapital = Vermögen \n\nEigenkapital = \nKapital - Fremdkapital\n\n"+
+                "Anlagevermögen: \nGrundstücke, Fahrzeuge, Maschinen \n\nUmlaufvermögen: \nWaren, Vorräte, Forderungen aLuL, Wertpapiere, Kasse, Bank \n\n"+
+                "Fremdkapital / Schulden: \nHypotheken, Darlehen, Verbindlichkeiten aVLL"),
+        new Term("Einfacher Buchungssatz", "Einfache Buchungssätze sind solche, bei denen von einem Konto auf ein anderes gebucht wird. Dann gibt es noch den zusammengesetzten "+
+                "Buchungssatz, der mehr als zwei Konten betrifft. \n\n"+
+                "1. Welches Konto? Aus dem Text entnehmen \nUnbequeme Beispiele: \nich bezahle mittels eines Bankkredits = Konto: Verbindlichkeit ggü Kreditinstitut \n"+
+                "ich Bezahle eine Verbindlichkeit an Lieferung und Leistung (einer offenen Schuld / Rechnung) = Konto: Verbindlichkeit a. LuL \nich kaufe auf Ziel (gegen Rechnung) = Konto: Verbindlichkeit a. LuL\n"+
+                "ich bezahle eine Rechnung = Konto: Verbindlichkeit a. LuL \n\n"+
+                "2. Aktiv oder Passiv? Siehe Bilanz \nOb das Konto links auf der Aktiv Seite steht (zB Waren, Bank) \noder rechts auf der Passiv Seite (zB Schulden, Rechnungen, Verbindlichkeiten a. LuL) \n\n"+
+                "3. Zunahme oder Abnahme? denke \nZunahme: Wenn etwas mehr wird (zB die Waren beim Wareneinkauf, Die Verbindlichkeiten ggü einem Kreditinstitut beim Bezahlen mit einem Bankkredit) \n"+
+                "Abnahme: Wenn etwas weniger wird (zB die Bank (das Geld auf meinem Bankkonto) bei der Bazahlung per Banküberweisung, Die Verbindlichkeiten a. LuL zB bei der Bezahlung der Verbindlichkeiten a. LuL, )+" +
+                "oder aber auch bei der Bazahlung einer Rechnung \n\n"+
+                "4. Soll oder Haben? siehe Bild oben \nJe nach Aktiv oder Passiv und je nach Zunahme oder Abnahme \nzB Aktiv und Zunahme: Siehe Aktivkonto ob Zunahme unter Soll oder Haben steht. \n"+
+                "zB Passiv und Zunahme: Siehe Passivkonto ob Zunahme unter Soll oder Haben steht. \n\n"+
+                "Ergebnissatz: \nDie Antwort auf eine einfache Buchungssatz Aufgabe ist ein geschriebener Satz. \nDabei bucht Soll an Haben \nzB Waren an Bank 2000 EUR, \n"+
+                "Verb. a. LuL an Verb. ggü Kreditinstitut 10 000 EUR, \nWaren an Verb. a. LuL 5000 EUR, \nVerb. a. LuL an Bank 7000 EUR"),
     };
     private static Term[] termsLF10a = {
             //1.1
@@ -1489,6 +1588,10 @@ public class Terms {
                     "Benutzbarkeit \n" + "Verständlichkeit, Elernbarkeit, Bedienbarkeit, Attraktivität, Konformität\n\n" +
                     "Änderbarkeit/Wartbarkeit\n" + "Analysierbarkeit, Modifizierbarkeit, Stabilität, Prüfbarkeit, Konformität\n\n" +
                     "Übertragbarkeit\n" + "Anpassbarkeit, Installierbarkeit, Austauschbarkeit, Konformität"),
+            new Term("Break Even Point", "Umsatz = Stückzahl * Stückpreis\n\n"+ "Deckungsbeitrag = Umsatz - variable Kosten \n"+
+                    "Der Unterschied zwischen Erlösen (Umsatz) und variablen Kosten. Er steht zur Deckung der Fixkosten zur Verfügung. "+
+                    "Er kann auf die Gesamtmenge als auch auf ein Stück bezogen werden.\n\n"+
+                    "Break Even Point =\n Fixkosten / (Stückpreis - Variable Stückkosten) \nDer Punkt, ab dem Gewinn erwirtschaftet wird.")
     };
     private static Term[] termsLFWK = {
             //Ordner 1
