@@ -123,7 +123,7 @@ Auswahl Lernfelder 1 - 3 in Rubrik Aufdecken schmieren ab
 Ursache und Lösung bekannt, Umsetzung folgt irgendwann  
 
 Ich würde eine Datenbank anschließen, die über ein geeignetes Frontend füllbar ist.  
-Diese würde die Fachbegriffe und Quizfragen, die direkt im Code stehen, was ein Graus ist, ersetzen.  
+Diese würde die Fachbegriffe und Quizfragen, die direkt im Code stehen ersetzen.  
 
 Von Rol Kam kam die Idee für ein Karteikartenbox System, bei dem die Fachbegriffe,   
 die bereits oft genug richtig beantwortet werden konnten nicht mehr, oder selten vorkommen,  
