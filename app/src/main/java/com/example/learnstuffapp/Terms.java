@@ -554,23 +554,18 @@ public class Terms {
                     new Term("Erdschleifen",
                             "eine zur Schleife geschl Massenverbindung (bei Erdung), wenn Potentiale der Massen unterschiedlich kommt es zu Ausgleichsströmen (Störungen möglich)"),
                     new Term("Patchfeld", "passive Netzwerkkomponente, braucht kein Strom"),
-                    new Term("IEEE", "Institute of Electrical & Electronics Engineers"),
-                    new Term("IEE 802.11", "Grupppe von Standarts für n Funknetzwerk auf Basis von Ethernet WLAN auf Basis von 802.11"),
-                    new Term(" IEEE - 802.11n | 802.11ac | 802.11ad",
-                            "year:                    1999 | 2003       | 2006\n" +
-                                    "max Übertrgrate:   600 MBit/s | 1,3 GBit/s | 6,9 GBit/s\n" +
-                                    "max Reichweite:          100m | 50m        | 10m \n" +
-                                    "Freq.Band:          2,4+5 GHz | 5 GHz      | 60 GHz\n" +
-                                    "max Send/Empfansgber:     4x4 | 8x8        | 1x1\n" +
-                                    "Antennentec:             MIMI | HU-MIMO    | Beamforming\n" +
-                                    "max Kanalbreite        40 MHz | 160 MHz    | 2 GHz \n" +
-                                    "802.11ac Wave1=80MHz, Wave2=160Mhz"),
-                    new Term("MIMO", "3x3 MIMO 2600 MBit/s,\n 4x4 MIMO 3500 MBit/s,\n 8x8 MIMO 6900 MBit/s"),
-                    new Term("802.11ax", "NEU! jahr: 2019"),
-                    new Term("WiFi",
-                            "Wireless Fidelity (Treue, Genauigkeit) von WFA Alliance - Herstellerverband \n" +
+                    new Term("WiFi / IEE 802.11",
+                            "WiFi \nWireless Fidelity (Treue, Genauigkeit) von WFA Alliance - Herstellerverband \n" +
                             "prüfen WLAN Geräte freiwillig auf Konformität mit IEEE Standarts und Interoperabilität\n" +
-                            "WiFi4 (802.11n), WiFi5(802.11ac), WiFi6(802.11ax)"),
+                            "WiFi4 (802.11n), WiFi5(802.11ac), WiFi6(802.11ax)\n\n"+
+                            "IEEE \nInstitute of Electrical & Electronics Engineers\n\n"+
+                            "IEEE 802.11 \nGrupppe von Standarts für n Funknetzwerk auf Basis von Ethernet WLAN auf Basis von 802.11\n\n"+
+                            "IEEE 802.11n \n1999, 600 MBit/s, 100m, 2/4/5GHz, 4x4, MIMI, 40 MHz \n\n" +
+                            "IEEE 802.11ac \n2003, 1.3GBit/s, 50m, 5GHz, 8x8, HU-MIMO, 160MHz \nWave1=80Hz, Wave2=160MHz \n\n"+
+                            "IEEE 802.11ad \n2006, 6.9GBit/s, 10m, 60GHz, 1x1, Beamforming, 2GHz \n\n"+
+                            "Legende \nJahr, maxÜbertragungsrate, maxReichweite, Frequenzband, maxSend/Empfangseinheiten (4x4 =4Sende&4Emfpangseinheiten =4Antennen), \n"+
+                            "Antennentechnik, maxKanalbreite \n\n802.11ax \nNeu aus 2019 \n\n"+
+                            "MIMO \n3x3 MIMO 2600 MBit/s \n4x4 MIMO 3500 MBit/s \n8x8 MIMO 6900 MBit/s"),
                     new Term("Frequenzbereich",
                             "2,4 GHz ~(2,39-2,49), Reichweite: akteptabel(Haus), Kanalbreite: 20 & 40 MHz, sehr häufig genutzt (überfüllt)\n" +
                             "5 GHz, begrenzt (Wohnung/Stadt), 20, 40, 80, 160 MHz, (gering)\n" +
@@ -646,7 +641,7 @@ public class Terms {
                     new Term("IPv6",
                             "Ein Hauptgrund für die Entwicklung von IPv6 ist die Erweiterung des Adressraums. IPv6 hat 2^128 Möglichkeiten zur Bildung von Adressen.\n"+
                             "Eine Ipv6 Adresse besteht aus 128 Bit. \n\nGlobal Routing Präfix: \nErste Teil der Adresse (meist 48Bit) zeigt ob sie öffentlich oder privat ist \n\n"+
-                            "Subnetting ID: \nMittlere Teil der Adresse (meist 26 Bit) ist bei alles Geräten eines Netzwerkes gleich \n\n"+
+                            "Subnetting ID: \nMittlere Teil der Adresse (meist 16 Bit) ist bei alles Geräten eines Netzes / Subnetzes gleich \n\n"+
                             "Interface ID: \nLetzte Teil der Adresse (meist 64 Bit) variiert von Gerät zu Gerät.\n\n"+
                             "IPv4 und IPv6 können mithilfe geeigneter Mechanismen (z.B: Tunneling oder DualStack) parallel betrieben werden" +
                             "\n\nA:B:C:D:E:F:1:2 ist eine gültige IPv6 Adresse\n\nWindows 10 unterstützt IPv6\n\n"+
@@ -656,8 +651,8 @@ public class Terms {
                             "\nA0000:0000:0000:0000:0000:0000:0000:000B -> A000::B\nAF00:0000:0000:E255:0000:0001:332D:81FA -> AF00::E255:0:1:332D:81FA " +
                             "\nBei mehreren Blockfolgen aus Nullen wird längere ersetzt \nBei gleich langen Blockfolgen aus Nullen wird die erste ersetzt"+
                             "\nBEAF:0776:00A0:E222:D000:0012:0000:0000 -> BEAF:776:A0:E22:D000:12:: \nA21B:C756:0000:0000:1234:0000:0000:01AB -> A21B:C756:1234:0:0:1AB\n\n"+
-                            "Möglichkeiten wie Interface ID in einem fe80 Adressbereich zustande kommt: \nEUI64, Aufspaltung der MAC-Adresse, Einfügen von FFFE, Bit 7 \"drehen\", "+
-                            "Privacy Extensions (zufällige Generation vom BS)"),
+                            "Möglichkeiten wie Interface ID in einem fe80 Adressbereich zustande kommt: \nEUI64: Aufspaltung der MAC-Adresse, Einfügen von FFFE, Bit 7 \"drehen\" \n"+
+                            "Privacy Extensions: zufällige Generation vom BS"),
                     new Term("NAT", "Network Adress Translation (OSI 3)\n" +
                             "in Rechnernetzen der Sammelbegriff bei Änderungen von Adressen im IP-Header von IP-Paketen"+
                             "NAT ermöglicht ua. die gleichzeitige Verwendung einer öffentlichen Adresse (vrgl. private Ip-Adressen)"+
@@ -669,7 +664,21 @@ public class Terms {
             {//Selbstständig die Integration von Clients in ein Netzwerk planen und druchführen
                 new Term("IPv4 Config","IP-Adresse: 192.168.0.44\nSubnetzmaske: 255.255.255.0\nStandartgateway: 192.168.0.2\n"+
                             "DNS-Serveradresse: automatisch beziehen"),
-                new Term("IPv4 Subnetting",""),
+                new Term("IPv4 Subnetting",
+                        "Beim IPv4 Subnetting sieht man zunächst dannach wie viele Adresse ein Subnetz braucht (Zahl der geplanten Hosts)\n"+
+                        "Dann findet man heraus in welcher Potenz von 2 diese Zahl enthalten ist. \n"+
+                        "zB: Zahl der geplanten Hosts: 50: \n2^5 = 32. Das sind nicht genug Adressen. Doch 2^6 = 64. Das sind genug Adressen. \n\n"+
+                        "Da eine IPv4 Adresse 32 Bits hat, rechnet man nun 32-6 = 26. \nSo hat man die Subnetzmaske nach CIDR erhalten. Sie ist /26.\n\n"+
+                        "Die Netzwerkadresse ist die erste in dem Adressbereich, \nder in dem ersten Subnetz bei 0 beginnt und bei dem Ergebnis der Potenzrechnung minus 1 endet.\n"+
+                        "Weil das die Größe dieses Subnetzes ist und minus 1 weil 0 bereits eine Adresse ist. \nzB: Subnetzgröße 64, erste Adresse: 0, letzte Adresse: 63 \n\n"+
+                        "Die Broadcastadresse ist die letzte im Adressbereich. \n\nDie IP-Range beschreibt den ganzen Adressbereich des Subnetzes aber ohne die erste und die letzte Adresse.\n\n"+
+                        "Der Standart-Gateway, die IP-Adresse des Routers, über den das Subnetz mit anderen Netzen und oder dem Internet verbunden ist, ist entweder die erste oder die letzte "+
+                        "Adresse in der IP-Range \n\nBei der zweiten Zeile, dem zweiten Subnetz geht man eben so vor, nur dass man mit der Adresse anfängt, die auf die Boradcast des verherigen Subnetzes folgt.\n\n"+
+                        "Eine andere Schreibweise für die Subnetzmaske wäre die DDN (Dotted Decimal Notation) \nDiese lautet bei /26: 255.255.255.192 \n"+
+                        "Jede der dreistelligen dezimalen Zahlen entspricht einer achtstelligen binären. \nDa 32 - 26 = 6 ist, ist dies eine mit 6 freien Stellen, also: 1100 0000 \n" +
+                        "und das entspricht der Dezimalzahl 192 \nDas rechnet man so: für jede Stelle der Dezimalzahl von hinten nach vorne steht eine Potenz von 2. Die erste ist 2^0. "+
+                        "Man rechnet nur diejenigen zusammen, an deren Stelle eine 1 steht. Hier sind das die ersten beiden. Also 2^7 + 2^6 = 128 + 64 = 192\n\n"+
+                        "Üben auf: subnetipv4.com"),
                 new Term("IPCONFIG","Terminalbefehl\nalle Konfigrationen aller Netzwerke anzeigen"),
                 new Term("NSLOOKUP","ap adresse von domain bekommen & anderst herum\nLSLOOKUP für linux?"),
                 new Term("DHCP Protokoll", "Dynamic Host Config Protocoll\nVerteilt die Ip_Konfiguration an Rechner im Netz\nIP Adressen automatisch konfigurieren\n\n"+
@@ -735,8 +744,17 @@ public class Terms {
             },
             {//Grundlage der Daten- und Netzwerksicherheit beschreiben"
                 new Term ("USV", "Unterbrechungsfreie Stromversorgung\n\n"+
-                        "Funktionen: \nFiltern von Störungen auf der Netzsdpannung wie Spannungspitzen, Überspannung, Unterspannung und Stabilisieren der Netzfrequenz\n" +
-                        "Überbrücken von kurzzeitigen Netzausfällen \ngeregelten Herunterfahren der Server be länger anhaltenden Stromausfällen"+
+                        "Englisch: UPS Uninterruptible Power Supply\n\n"+
+                        "Aufbau: \nVFD: \nZwei Leitungen vom Netz (Steckdose): Eine direkt durch die USV zum Verbrauchter, die andere zu: \n" +
+                        "Gleichrichter: Generiert Gleichspannung aus Wechselspannung, die vom Netz (Steckdose) kommt.\nAkkumulator: Akku. Hier kommt dann die Gleichspannung rein \n"+
+                        "Wechselrichter: Generitert Wechselspannung aus der Gleichspannung, die aus den Akkus kommt, um den Verbraucher bei Netzstörung versorgen zu können.\n"+
+                        "VI : \nMit zusätzlichem AVR Spannungsregler auf der ersten Leitung \n"+
+                        "VFI: \nBetrieb läuft normal über die zweite Leitung, den Gleich- und dann über den Wechselrichter. Auch der Akku wird geladen und bei Netzstörung eingesetzt. \n"+
+                        "Die erste Leitung hat einen Bypass, der bei Störung auf der zweiten Leitung geschlossen wird. \n\n"+
+                        "Funktionen: \nFiltern von Störungen auf der Netzspannung wie Spannungspitzen, Überspannung, Unterspannung und Stabilisieren der Netzfrequenz\n" +
+                        "Überbrücken von kurzzeitigen Netzausfällen \ngeregelten Herunterfahren der Server be länger anhaltenden Stromausfällen\n"+
+                        "Schütz vor: Netzstörungen: Netzausfall, Spannungsschwankungen, Spannungsspitzen, Überspannung, Unterspannung, Frequenzabweichungen, Blitzeinwirkungen, Oberschwingungen\n\n"+
+                        "Verwendungen: \nComputeranlagen, Telekommunikationsanlagen. Alarmanlagen, Überwachungsanlagen, Notbeleuchtung, Notstromversorgung"+
                         "\n\nTypen:\n\n" +
                         "VFI - Voltage and Frequency Independent from Mains Supply: \nandere Bezeichnung sind online, Double-Conversion, Dauerbetrieb oder Doppelwandler. spannungs und frequenzunabhängig.\n" +
                         "Vorteile: \nKonstante Ausgangsspannung und -frequenz, keine Umschaltzeit, keine Versorgungslücken, Reine Sinuskurve, Lange Autonomiezeit, Optimaler Schutz vor Netzstörungen\n" +
@@ -776,7 +794,7 @@ public class Terms {
                     "B) Kunden arbeiten mit falschen Daten weiter und bekommen so Probleme\nC) Updates überprüfungen, ausgebildete Programmierer, Plausibilitätsprüfung, Prüfroutinen bei Erfassung"),
             new Term("Firewall","Funktionen: \n\nPaketfilter: \nIP Adresse / Protokol Kontrolle, Port Überwachung \nFilterung mit Layer-3 Informationen (IP-Adressen), bestimmte Adressen können zugelassen oder gesperrt werden\n\n"+
                     "Stateful Packet Inspection: \nIP Adresse / Protokol Kontrolle, Port Überwachung, Verbindungszuständigkeitsüberprüfung je nach offen oder zu vertrauenswürdig oder nicht, leistungsfähiger, ressourcenintensiver \n"+
-                    "Überprüfung, ob Pakete einer speziellen Sitzung gehören. Abfangen von dDoS-Attacken \n\nDeep Packet Inspection: Auf Anwendungsschicht wird geprüft, was in den Paketen ist \n"+
+                    "Überprüfung, ob Pakete einer speziellen Sitzung gehören. Abfangen von dDoS-Attacken. Merken von Paketen die gesendet und oder empfangen werden und Suche nach verdächtigen Mustern. \n\nDeep Packet Inspection: \nAuf Anwendungsschicht wird geprüft, was in den Paketen ist \n"+
                     "Prüfung der Pakete bis in die Anwendungsschicht hinauf. Datenbereiche prüfen. Somit können Pakete auf Viren, Spam und andere unerwünschte Inhalte untersucht werden"),
             new Term("Verschlüsselungen","asymetrische Verschlüsselung\npublic key, private key\n\nsymetrische Verschlüsselung\nzB AES, DES, Triple-DES\neinfacher, weniger rechenzeit\nwie bekomme ich key zum partner\n"+
                     "hybride Verschlüsselung\nKombination aus beiden\nzB https-Protokoll (=Kommunikation Server<->Browser)\nsymetrischer Schlüssel wird asymetrisch übertragen\n(kann nur mit private key geöffnet werden)\n\n"+
@@ -1692,8 +1710,8 @@ public class Terms {
                     "Schwarzarbeit, schwebend unwirksam, Scherzgeschenk, Formzwang nicht eingehalten, illegal, Wucher, Drohung, Irrtum, Betrug"),
             new Term("Kaufvertrag",
                     "2 übereinstimmende Willenserklärungen WE (Inhalt gleich) \n\nVerpflichtungsgeschäft\nzB Verkäufer 1. WE Angebot, Käufer 2. WE Bestellung"+
-                    "\nzB Käufer 1.WE Bestellung, Verkäufer 2.WE Lieferung\n\n Erfüllungsgeschäft: \nPflichten Verkäufer: Annahme Kaufpreis, Ware bereitstellen (zum vereinbarten Zeitpunkt und vereinbarter Qualität)"+
-                    "Pflichten Käufen: Zahlung des Kaufpreises, Warenannahme \n\nInhalt: Art & Gut der Ware (Stück), Lieferzeit, Verpackung und Transportkosten, zB frei Haus, Käufer und Verkäufer,"+
+                    "\nzB Käufer 1.WE Bestellung, Verkäufer 2.WE Lieferung\n\n Erfüllungsgeschäft: \nPflichten Verkäufer: Annahme Kaufpreis, Ware bereitstellen (zum vereinbarten Zeitpunkt und vereinbarter Qualität) \n"+
+                    "Pflichten Käufer: Zahlung des Kaufpreises, Warenannahme \n\nInhalt: Art & Gut der Ware (Stück), Lieferzeit, Verpackung und Transportkosten, zB frei Haus, Käufer und Verkäufer,"+
                     " Preisnachlass, SKonto*, Rabatt, Preis\n\n*Preisnachlass für Zahlung innerhalb einer bestimmten Zeit"),
             new Term("Pflichtverletzung bei der Erfüllung von Kaufverträgen",
                     "Mangelhafte Lieferung: \nSachmangel in Beschaffenheit, Menge, Art, Montage \nvorrangige Rechte: Nacherfüllung (Nachbesserung, Ersatz liefern)\n"+

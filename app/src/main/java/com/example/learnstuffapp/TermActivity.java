@@ -164,7 +164,7 @@ public class TermActivity extends AppCompatActivity {
         }
         if (term.equals("IPv4 Subnetting")) {
             imgView.setImageResource(R.drawable.ipv4subnetting);
-            imgView.getLayoutParams().height=1000;
+            imgView.getLayoutParams().height=1800;
         }
         if (term.equals("Tilt, Swivel & Pivot")) {
             imgView.setImageResource(R.drawable.tiltswivelpivot);
@@ -269,6 +269,10 @@ public class TermActivity extends AppCompatActivity {
         if (term.equals("Break Even Point")) {
             imgView.setImageResource(R.drawable.breakevenpoint);
             imgView.getLayoutParams().height=800;
+        }
+        if (term.equals("Risikoanalyse")) {
+            imgView.setImageResource(R.drawable.risikoanalyse);
+            imgView.getLayoutParams().height=4500;
         }
 
     }
