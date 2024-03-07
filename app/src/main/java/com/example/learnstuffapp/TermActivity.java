@@ -154,7 +154,7 @@ public class TermActivity extends AppCompatActivity {
             imgView.setImageResource(R.drawable.sortieralgorythmen);
             imgView.getLayoutParams().height=3000;
         }
-        if (term.equals("3-Stufige Verkabelungshierarchie")) {
+        if (term.equals("Strukturierte Verkabelung")) {
             imgView.setImageResource(R.drawable.drei_stufige_verkabelungshierarchie);
             imgView.getLayoutParams().height=600;
         }
@@ -273,6 +273,18 @@ public class TermActivity extends AppCompatActivity {
         if (term.equals("Risikoanalyse")) {
             imgView.setImageResource(R.drawable.risikoanalyse);
             imgView.getLayoutParams().height=4500;
+        }
+        if (term.equals("Konjunkturschwankungen")) {
+            imgView.setImageResource(R.drawable.konjunkturschwankungen);
+            imgView.getLayoutParams().height=1300;
+        }
+        if (term.equals("Kupferkabel Verdrill & Schirm")) {
+            imgView.setImageResource(R.drawable.kupferkabel_verdrill_schirm);
+            imgView.getLayoutParams().height=1000;
+        }
+        if (term.equals("Multi & Singlemode")) {
+            imgView.setImageResource(R.drawable.multi_singlemode);
+            imgView.getLayoutParams().height=1300;
         }
 
     }

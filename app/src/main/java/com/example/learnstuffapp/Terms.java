@@ -446,7 +446,14 @@ public class Terms {
                     new Term("Software im Netzwerk", "CRM, ERP, Datenbanken, Buchhaltung, Branchensoftware"),
                     new Term("Kabeltypen", "Lichtwellenleiter\nGlasfaßer, Licht, schneller, weiter\n <-> Patchkabel\nKupfer, Strom, einfacher, geringere Fehlerquote, günstiger"+
                             "niedrige Datenraten weil gedämpft, hohe Datenraten nur über kurze Distanz zB 100m\n"+
-                            "es konnten zwar früher auch über lange Distanz Daten geschickt werden aber nur sehr wenige, langsam"),
+                            "es konnten zwar früher auch über lange Distanz Daten geschickt werden aber nur sehr wenige, langsam\n\n"+
+                            "Kategorien, Bandbreite, Verkabelungsklasse (nach ISO/IEC), Ensatzgebiet \nCat.5, bis 100 MHz, Klasse D, für Datenraten bis 100 Mbit/s \n"+
+                            "Cat.5e, bis 100 MHz, Klasse D, für Datenraten bis 1Gbit/s \nCat.6, bis 250 MHz, Klasse E, für Datenraten bis 10 Gbit/s \n"+
+                            "Cat.6A, bis 500 MHz, Klasse EA, für Datenraten bis zu 10 Gbit/s \nCat.7, bis 600 MHz, Klasse F, für Multimedia Anwendungen \n"+
+                            "Cat.7A, bis 1000 MHz, Klasse FA, für Multimedia Anwendungen \nCat.8 bis 2000 MHz, Klasse G, 25 GBase-T und 40 GBase-T \n\n"+
+                            "Das Hertz Hz \nist die SI-Einheit der Frequenz. \nSie gibt die Anzahl sich wiederholender Vorgänge pro Sekunde in einem periodischen Signal an. \n"+
+                            "Sie wurde 1930 nach dem deutschen Physiker Heinrich Hertz benannt \n\n"+
+                            "Welches Kabel bei >10Gbit Übertragungsrate? Cat.7"),
                     new Term("LAN, MAN, WAN, GAN", "LAN Local Area Network,\nMAN Metropolitan,\nWAN Wide,\nGAN Global"),
                     new Term("End to Site <-> Site to Site", "End to Site: User -> Netzwerk z.B: Home Office\n" +
                             "Site to Site: Firmenstandort -> Firmenstandort\n" + "End to End: Rechner -> Rechner z.B: User installiert etwas auf PC in Firma"),
@@ -464,7 +471,11 @@ public class Terms {
                             "Die Adresse des Zwischenservers und die des Absenders befinden sich bei HTTP Anfragen im Header. Dieser ist auch außen sichrbar.\n" + "Ziel IP auch verschlüsselbar"+
                             "\n\nVPN Arten \nEnd-to-End VPN \nSito-to-Site VPN \nEnd-to-Site VPN\n\n"+
                             "Die Außendienstmitarbeiter sollen sicheren Zugriff auf interne Server der Firma erhalten \nWelche Hard- & Software wird benötigt? \n"+
-                            "Eine VPN Client Software beim Außendienstmitarbeiter und im Firmennetz ein VPN Server."),
+                            "Eine VPN Client Software beim Außendienstmitarbeiter und im Firmennetz ein VPN Server. \n\n"+
+                            "Für Wartungsarbeiten soll ein Fernzugriff auf das Netzwerk einer Schule eingerichtet werden. Nenne ein Verfahren. \n"+
+                            "VPN Host-to-Site: Wartungsmitarbeiter kontaktieren über VPN Client den VPN Gateway der Schule. Beide bauen nach erfolgreicher Authentifizierung einen Tunnel durch das unsichere Internet auf, "+
+                            "über den die Verbindungsdaten verschlüsselt übertragen werden. Der Client erhält dabei schulinterne IP, befindet sich virtuell im Schulnetz. Mögl zwei getrennte EIngänge für "+
+                            "Schulverwaltung und Schulnetz wegen Datenschutz nötig."),
                     new Term("Peer to Peer <-> Client-Server Netzwerk", "Peer to Peer - PC-PC, jeder ist gleichberechtigt, Direktverbdinung, Physikalisch: LAN-Kabel, WLAN, Logisch: IP-tunnerling (VPN) (z.B: Musiktauschportal)\n\n" +
                             "Client-Server Netzwerk - Clients nutzen Dienste und Ressourcen (Speicher, Webserver,...), Server stellt Dienste zur Verfügung: file-, mail-, print-, Web-Server..."),
                     new Term("Switch", "aktive Netzwerkkomponente, braucht Strom, leitet Frame an richtige MAC \n\n"+
@@ -502,19 +513,13 @@ public class Terms {
                             "Stern-Topologie\n" + "+verteilte Steuerung, große Netzausdehnung, -aufwendige Fehlersuche, bei Störungen Netzausfall, hoher Verkabelungsaufwand\n\n" +
                             "Ring-Topologie\n" + "+weniger Schnittstellen als Stern, -höhere Bandbreitenanforderungen als Stern\n\n" +
                             "Baum-Topologie\n" + "Ausfall Endgerät („Blatts“) harmlos, erweiterbar, auch auf große Entfernungen, -Ausfall VerteilerGerät (Strukturinnern) hat Folgeausfälle,"),
-                    new Term("3-Stufige Verkabelungshierarchie",
+                    new Term("Strukturierte Verkabelung", "3-Stufige Verkabelungshierarchie \n\n"+
                             "Geländeverkabelung (Primärverkabelung):\nSV Standortverteiler\n|x| Router\n---LWL(meist mehrere 100m, max 150m)---\n\n" +
                             "Gebäudeverkabelung (Sekundärverkabelung):\nGV Gebäudeverteiler\n|x| Router/Switch(wenn nicht so viele)\n---LWL,Patch(>100m, max 500m)---\n\n" +
                             "Etagenverkabelung (Tertiärverkabelung): Sterntopologie,\n EV Etagenverteiler\n|x|Switch\n---(LWL),Patch,Kupfer(<100m)---\n\n" +
-                            "TA Technischer Anschluss\n---Endgerät"),
-                    new Term("Strukturelle Verkabelung",
-                            "Campusverkabelung, Primärverkabelung, Lichtwellenleiter\nStockwertsverteilung, Sekundärverkabelung, Lichtwellenleiter, Kupferkabel" +
-                            "EV Etagenverteiler, Etagenverkabelung, Primärverkabelung, Lichtwellenleiter"),
-                    new Term("Strukturierte Verkabelung Anforderungen",
-                            "Kabellängen dürfen nicht überschritten werden, sollten möglichst kurz sein, bessere Übertragung\n" +
-                            "Patchfeld, Switch, Hubs & Router als Bindeglied"),
-                    new Term("Welches Kabel bei <100m?", "Kat 7 Patch\n(bei länger: Switch oder LWL)"),
-                    new Term("Welches Kabel bei >10Gbit Übertragungsrate?", "Cat 7"),
+                            "TA Technischer Anschluss\n---Endgerät \n\n"+
+                            "Anforderungen: \nKabellängen dürfen nicht überschritten werden, sollten möglichst kurz sein, bessere Übertragung \nPatchfeld, Switch, Hubs & Router als Bindeglied \n\n"+
+                            "Welches Kabel bei <100m? \nCat.7 Patch, bei länger: Switch oder LWL"),
                     new Term("LWL",
                             "Glasfaserkabel, Lichtwellenleiter\n(+) kein Stör durch Funk,\n kein Nebensprechen,\n keine Abhängigkeit von Frequenzen,\n hohe Datenrate,\n unterschiedliche Freq (Farb) gleiche Leitung\n\n"+
                             "Aufbau:\nKern, Mantel, Schutzbeschichtung\n" +
@@ -523,26 +528,35 @@ public class Terms {
                             "dadurch Totalreflexion (Strahlungsführung) an Schichtgrenze\n" +
                             "Wellenleiter die elektromagnetischen Strahl von ultraviolet bis infrarot Spektralbereich (350-2500nm)\n" +
                             "Schwingungsmodenarten abhängig von Geometrie & Beschaffenheit"),
-                    new Term("Netzwerkkabel",
-                            "8 Leitungen 4 Paare\n" +
-                            "jedes Paar kann geschirmt sein + zusätzliche Schirmung um alle Leitungen, um all das: Plastikhülle\n"),
-                    new Term("Verdrillen","der Adernpaare verhindert Aussenden magnetischer Störstrahlung\n"+
-                            "ebenso haben sich Störungen bei von außen eingestrahlten Störungen gegenseitig auf"),
-                    new Term("Schirm",
-                            "Schützt vor Störfrequenzen anderer Leitungen, Umhüllung Adernpaare, erhöht Verträglichkeit, Abhörsicherheit, verhindert Übersprechen"),
+                    new Term("Kupferkabel Verdrill & Schirm","Kupferdatenleitungen Kabel mit verdrillten Adernpaaren / Twisted Pair Kabel \n\n"+
+                            "Das Kabel hat 8 Leitungen von denen je zwei zu einem Paar verdrillt sind. \nJedes Paar kann geschirmt sein + zusätzliche Schirmung um alle Leitungen. \n"+
+                            "Um all das / ganz außen: Plastikhülle \n\n"+
+                            "Das Verdrillen der Adernpaare verhindert Aussenden magnetischer Störstrahlung \nebenso haben sich Störungen bei von außen eingestrahlten Störungen gegenseitig auf \n\n"+
+                            "Schirm \n\n"+
+                            "Umwickeln mit einer leitfähigen Folie oder Schirmgeflecht (Abschirmung) \nverhindert Aussenden von elektrischer Störstrahlung \nverhindert, dass sich die Leitung durch äußere "+
+                            "E-Felder stören lässtSchützt vor Störfrequenzen anderer Leitungen, \nUmhüllung Adernpaare, \nerhöht Verträglichkeit, \nAbhörsicherheit, \nverhindert Übersprechen \n\n"+
+                            "Leitungstypen (Kupfer) \nUnterscheidungen nach Aufbau des Kabelschirmes \n\nS/FTP \ngemeinsamer Geflechtschirm (S), einzelne Paare jeweils von einem Folienschirm umgeben (FTP) \n\n"+
+                            "F/UTP \ngemeinsamer Folienschirm (F), einzelne Paare ungeschirmt (UTP) \n\nSF/UTP \ngemeinsamer Schirm aus Geflecht und Folie (SF), einzelne Paare ungeschirmt (UTP) \n\n"+
+                            "U/UTP \nkein gemeinsamer Schirm (U), einzelne Paare ungeschirmt (UTP) \n\n"),
                     new Term("EMV",
                             "Elektro Magnetische Verträglichkeit: Realisierung bei Datenübertragung durch Schirmung durch Verdrillung,\n" +
                             "es entstehen entgegengesetzte Ausgleichsströme deren Magnetfelder sich aufheben\n"),
-                    new Term("Monomodefaser/Singlemodefaser",
-                            "OS μm Kern-> 9/125 <-Mantel\n_Π_eingangsimpuls BILD Ω ausgangsimpuls\n" +
-                            "Mode am Ausgang, der Durchschnitt in der Größenordnung  der Wellenlänge\n" +
-                            "theoretisch keine Begrenzung in der Frequenzen: Längen >100 km möglich"),
-                    new Term("Multimodefaser",
-                            "mit Stufenindexprofil OM 50/125\n_Π_eingangsimpuls BILD Ω ausgangsimpuls\n" +
-                            "unterschiedliche Wellenlängen für Licht von Signal, am Ende verbreiterung von Signal (vrgl Taschenlampenkreis)\n" +
-                            "-> Begrenzung Datenrate & Länge"),
-                    new Term("Kabel",
-                            "Singlemode-Fasern bieten die höchsten Übertragungsraten\n Aufgrund hoher Kosten für die Verlegung über lange Strecken werden meist sehr hochwertige Fasern vergraben" +
+                    new Term("Multi & Singlemode", "Lichtwellenleiter / Glasfaserkabel Typen \n\n"+
+                            "Multimodefaser mit Stufenindexprofil OM 50/125 \nOM = Optical Multimode \n50/125 = \nDer Faserkern ist ⌀ 50 μm (Mikrometer), \nDas Mantelglas ist ⌀ 125 μm \n" +
+                            "unterschiedliche Wellenlängen für Licht von Signal, am Ende Verbreiterung von Signal (vrgl Taschenlampenkreis) \n-> Begrenzung Datenrate & Länge\n"+
+                            "billig aber geringe Reichweite \nEinsatzgebiete: Unternehmen, Rechenzentren, LANs \n\n" +
+                            "Licht kann in verschiedenen Winkeln durch die Faser wandern, was Laufzeitprobleme verursacht und die Länge der Faserstrecke begrenzt. Dieser Grenzwert wird als "+
+                            "\"modale Bandbreite\" oder \"Bandbreiten Längenprodukt\" bezeichnet. \n" +
+                            "Multimode-Fasern Leistungsklassen: OM1 - OM5 \n\n" +
+                            "Monomodefaser/Singlemodefaser OS 9/125 \nOS = Optical Singlemode \n9/125 = \nDer Faserkern ist ⌀ 9 μm (Mikrometer), \nDas Mantelglas ist ⌀ 125 μm \n" +
+                            //"Mode am Ausgang, der Durchschnitt in der Größenordnung  der Wellenlänge \ntheoretisch keine Begrenzung in der Frequenzen: Längen >100 km möglich \n"+
+                            "große Reichweite aber teuer \nEinsatzgebiete: Weitverkehrsleitungen, Carrier-Netzwerke, MANs, PONs \n\n" +
+                            "Licht nimmt immer den \"geraden\" Weg im Faserkern. Laufzeitprobleme gibt es nicht. Nur die Dämpfung begrenzt die Länge der Faserstrecke. \n" +
+                            "Singlemode-Fasern Leistungsklassen: OS1 & OS2 \n\n"+
+                            "Legende: \nFasertyp, Kennzeichnungsfarbe, Kern/Faser ⌀, minimale modale Bandbreite B' bei 859 nm Wellenlänge, 1300 nm :\n\n"+
+                            "OM1, Organge, 50/125 oder 62,5/125, 200 MHz km, 500 MHz km \nOM2, Orange, 50/125, 500 MHz km, 500 MHz km, \nOM3, Aqua, 50/125, 1500 MHz km, 500 MHz km \n"+
+                            "OM4, Violett, 50/125, 3500 MHz km, 500 MHz km \nOM5, Lime, 50/125, 3500 MHz km, 500 MHz km, \nOS1 Gelb, 9/125 \nOS2, Gelb 9/125 \n\n"+
+                            "Singlemode-Fasern bieten die höchsten Übertragungsraten \nAufgrund hoher Kosten für die Verlegung über lange Strecken werden meist sehr hochwertige Fasern vergraben \n" +
                             "Kunststofffasern sind für kurze Strecken (z.B. im Pkw) gut geeignet"),
                     new Term("AWG", "American Wire Gaug,\n Codierung Drahtdurchmesser\n Amerikanisches Dichtmaß"),
                     new Term("Standartkabel", "1000 Base-SX, 10 GbaseT"),
@@ -572,17 +586,23 @@ public class Terms {
                             "60 GHz,gering (Raum), 2 GHz, (selten)"),
                     new Term("Bandbreite (freq:) Rechnen:", "1500MHz*km / 3 km = 750 MHz auf 3km"),
                     new Term("ISO", "International Organisation for Standartisation"),
-                    new Term("OSI", "Open Systems Interconnections"),
-                    new Term("OSI 7 Layer Modell",
-                            "7 Anwendung - Anwendung unterster Dienste, Netzwerkmanagement\n" +
-                            "6 Darstellung - Umsetzung Daten → Startformat, Interpreation dieser gemeinsamen Formate, Einheitliche Darstellung der Daten\n" +
-                            "5 Sitzung - Prozess zu Prozess Verbindung, Prozesssynchro, Sitzungsaufbau\n" +
-                            "4 Transport - logische Ende zu Ende Verbidnung in Abstraktion der Übertragungssysteme, Adressieren von Anwendungen\n" +
-                            "3 Netzwerk - Wegbestimmung im Netz, Routing, Datenflusskontrolle, Adressieren von Netzen und Rechnern\n" +
-                            "2 Sicherung - logische Verbindung mit Datenpaketen, elementare Fehlererkennungsmechanismen, Addressieren von Netzwerk Interfaces\n" +
-                            "1 Bit-Übertragung - Nachrichtentechnische Hilfsmittel für Übertragung von Bits"),
+                    new Term("OSI 7 Layer Modell", "OSI Open Systems Interconnections \n\n"+
+                            "7 Application Layer Anwendungsschicht \nAnwendung unterster Dienste, Netzwerkmanagement \nNetzwerkgeräte: Firewall, Server \nProtokolle: SIP, DHCP, FTP, HTTP, SMTP, DNS, SNMP \n\n" +
+                            "6 Presentation Layer Darstellungschicht \nUmsetzung Daten → Startformat, Interpreation dieser gemeinsamen Formate, Einheitliche Darstellung der Daten \nProtokolle: MIME, SSL \n\n" +
+                            "5 Session Layer Sitzungsschicht \nProzess zu Prozess Verbindung, Prozesssynchro, Sitzungsaufbau \n\n" +
+                            "4 Transport Layer Transportschicht \nlogische Ende zu Ende Verbidnung in Abstraktion der Übertragungssysteme, Adressieren von Anwendungen \nAdressen: Ports \nNetzwerkgeräte: Firewall \nProtokolle: TCP, UDP, SCTP \n\n" +
+                            "3 Network Layer Netzwerkschicht \nWegbestimmung im Netz, Routing, Datenflusskontrolle, Adressieren von Netzen und Rechnern \nAdressen: IP-Adressen \nNetzwerkgeräte: Router \nProtokolle: IPsec, IP, IGMP, ICMP \n\n" +
+                            "2 Data Link Layer Sicherungsschicht \nlogische Verbindung mit Datenpaketen, elementare Fehlererkennungsmechanismen, Addressieren von Netzwerk Interfaces \nAdressen: MAC-Adressen \nNetzwerkgeräte: Switch \nProtokolle: SLIP, PPP \n\n" +
+                            "1 Physical Layer Bit-Übertragungsschicht \nNachrichtentechnische Hilfsmittel für Übertragung von Bits \nNetzwerkgeräte: Ethernet \n\n"+
+                            "Wie man das nennt, das übertragen wird, auf Schicht 4: Segment, 3: Packet, 2: Frame \n\n"+
+                            "TCP/IP-Modell / DoD-Modell \n"+
+                            "4 Application Layer \n3 Transport Layer mit Ports zum adressieren von Anwendungen\n2 Internetwork Layer, Host to Host Layer mit IP-Adressen zum adressieren von Netzen und Rechnern"+
+                            "\n1 Network Access Layer mit MAC-Adressen zum adressieren von Netzwerk-Interfaces"),
                     new Term("HTTP", "Hypertext Transfer Protocol\n\n" +
-                            "Bei HTTP wird in Unterschied zu HTTPS alles im Klartext übertragen auch die Anmeldedaten"),
+                            "Bei HTTP wird in Unterschied zu HTTPS alles im Klartext übertragen auch die Anmeldedaten \n\n"+
+                            "Bei gesichertem Webzugriff über das https Protokoll zb bei einem Online Anmeldesystem eines Schul WLAN wird die asymetrische Verschlüsselung verwendet, zur  verschlüsselten Übertragung "+
+                            "eines gemeinsamen Sitzungsschlüssels. Die Aufgabe des Verschlüsselungsverfahren beim gesicherten Zugriff auf die Anmeldeseite ist die symetrische Verschlüsselung der Nutzdaten mithilfe des zuvor "+
+                            "übertragenen Sitzungsschlüssels"),
                     new Term("ARP", "Adress Resolution Protocol:\n liefert MAC (des Netzwerk-Interfaces) zu IP\n(OSI 2-3)\n\n"+
                             "ingesetzt um zu bekommen: MAC-Adresse von Zielrechner\n" +
                             "Interface-Adresse (IP) des Zielrechners muss beim Senden bekannt sein, in Adress-Feld des Ethernet-Frames einzusetzen\n" +
@@ -594,7 +614,12 @@ public class Terms {
                             "   192.168.83.254    ff-ff-ff-ff-ff-ff  statisch"),
                     new Term("DNS", "Domain Name Service:\n Übersetzung URL -> IP Adresse\n(OSI 7)\n\n"+
                             "Name Auflösung . domain Paulinenpflege.de\n" + "(DNS-Abfrage) =^ 139.119.81.86 öffentl IP-Adr"),
-                    new Term("DHCP", " Dynamic Host Config Protocoll (OSI 7)\nVerteilt die Ip_Konfiguration an Rechner im Netz\nIP Adressen automatisch konfigurieren"),
+                    new Term("DHCP", "Dynamic Host Config Protocoll \nArbeitet auf der Anwendungsschicht (OSI-Layer:7) \nVerteilt die Ip_Konfiguration an Rechner im Netz\nIP Adressen automatisch konfigurieren\n\n"+
+                            "Ablauf DHCP Protokoll: \n\n"+
+                            "DHCP DISCOVER: \nDer Client sendet eine Entdeckungsnachricht um nach DHCP Servern im Netz zu suchen \n\n"+
+                            "DHCP OFFER: \nEin DHCP Server im Netz, der die DISCOVER erhielt macht eine Offerte (Angebot) \n\n" +
+                            "DHCP REQUEST: \nDer Client hat sich für eine Offerte entschieden und sendet eine Rückfrage \n\n"+
+                            "DHCP Acknowledge \nDer DHCP Server, der die Rückfrage bekam, sendet eine Bestätigung"),
                     new Term("TCP", "Transmission Control Protocol\n Übertragungs Steuer Protocol:\n auf welche Weise Netzwerkkomponenten austauschen?\n OSI 4\n"),
                     new Term("RFC", "Request for Comments\n Festlegung Protokolle\n ietf.org/rfc/rfc793.txt\n hier: TCP"),
                     new Term("TLS", "Transport Layer Security \n\n"+
@@ -653,6 +678,10 @@ public class Terms {
                             "\nBEAF:0776:00A0:E222:D000:0012:0000:0000 -> BEAF:776:A0:E22:D000:12:: \nA21B:C756:0000:0000:1234:0000:0000:01AB -> A21B:C756:1234:0:0:1AB\n\n"+
                             "Möglichkeiten wie Interface ID in einem fe80 Adressbereich zustande kommt: \nEUI64: Aufspaltung der MAC-Adresse, Einfügen von FFFE, Bit 7 \"drehen\" \n"+
                             "Privacy Extensions: zufällige Generation vom BS"),
+                    new Term("IPv4 IPv6 Parallel","Technische Umsetzung des Wechsels von IPv4 auf IPv6 hapert, weil nicht alle Geräte schon bereit sind. Zum leichten Wchsel "+
+                            "und damit alte Geräte nicht weggeschmissen werden müssen, gibt es Übergangsverfahren (Transition Strategy). \n\nTunneling (zB Teredo, 6in4, 6to4, 6over4, DS Lite) \n"+
+                            "Parallelbetrieb (zB Dual-Stack) \nProtokollübersetzung (zB NAT64) \n\nWenn man als IPv4 User auf eine IPv6 Webseite will oder als Ipv6 User auf eine IPv4 Webseite "+
+                            "ist keine Verbindung möglich \nEine Verbindungsüberleitung von zB dem IPv4 only Router des Users über einen Dual Stack Router zu dem IPv6 only Router der Webseite"),
                     new Term("NAT", "Network Adress Translation (OSI 3)\n" +
                             "in Rechnernetzen der Sammelbegriff bei Änderungen von Adressen im IP-Header von IP-Paketen"+
                             "NAT ermöglicht ua. die gleichzeitige Verwendung einer öffentlichen Adresse (vrgl. private Ip-Adressen)"+
@@ -681,11 +710,6 @@ public class Terms {
                         "Üben auf: subnetipv4.com"),
                 new Term("IPCONFIG","Terminalbefehl\nalle Konfigrationen aller Netzwerke anzeigen"),
                 new Term("NSLOOKUP","ap adresse von domain bekommen & anderst herum\nLSLOOKUP für linux?"),
-                new Term("DHCP Protokoll", "Dynamic Host Config Protocoll\nVerteilt die Ip_Konfiguration an Rechner im Netz\nIP Adressen automatisch konfigurieren\n\n"+
-                            "DHCP-Discover - DHCP Gerät schickt DHCP Aufdeckungs-Nachricht\n" +
-                            "DHCP-Offer - DHCP Server antwortet mit Offerte\n" +
-                            "DHCP-Request - DHCP Gerät sendet Anfrage\n" +
-                            "DHCP-Ack - DHCP Server antwortet mit Bestätigung"),
                     new Term("Add-Hoc Netz",
                             "(Peer to Peer, PC zu PC), wenn der eine im Netz besseres Netz hat als du, verwendet dein Handy dem seine Verbindung. \n" +
                             "Sensoren aller Teilnehmer werden eins, verbinden sich, arbeiten zusammen."),
@@ -783,7 +807,19 @@ public class Terms {
                     "20 Recht auf Datenübertragbarkeit\n21 Widerspruchsrecht\n22 Automatisierte Entscheidungen im Einzellfall einschließlich Profiling\n23 Beschränkungen der Rechte verhältnismäßig in besonderen Fällen\n\n"+
                     "Prinzipien der Verarbeitung personenbezogener Daten gemäß Art. 5 Abs. 1 DSGVO (Verstoßbeispiele)\nRechtmäßigkeit, Verarbeitung nach Treu und Glauben,\n Transparenz (Identitätsdiebstahl)\nZweckbindung\n"+
                     "Datenminimierung (es wurde nicht ganz gekürzt)\nRichtigkeit (es wurde verfälscht)\nSpeicherbegrenzung (es wurde zu lange gespeichert)\nIntegrität, Vertraulichkeit (soziale Medien: eingeschränkte Daten werden weitergegeben oder intern weiter ausgewertet)"),
-            new Term("Urheberrecht","yet to be upgraded\nABB S.226f (In Ordner1) scan?"),
+            new Term("Urheberrecht","Urheber-, Marken- und Lizenzbestimmungen \n"+
+                    "Für den Schutz selbst erstellter Computerprogramme, Bilder und Darstellungen gilt: \nSie sind nur dann nach UrhG geschützt, wenn sie persönliche geistige Schöpfungen sind \n"+
+                    "Webcasts sind nach UrhG nicht geschützt \nSelbst erstellte Computerprogramme und Datenbanken mit geistiger Schöpfung sind nach UrhG geschützt \nWenn ein Bild selbst erstellt wurde "+
+                    "und keine anderen Rechte verletzt wurden, kann man es gegen Entgelt anderen anbieten \nMan darf ein Bild mit einem Prominenten im beruflichen Wirkungskreis veröffentlichen \n\n"+
+                    "Wer Urheber eines Bildes, einer Software oder einer Datenbank ist, für den gilt: \nAls Urheber darf man die Urheberbezeichnung bestimmen "+
+                    "\nDer Betrieb kann vertraglich verlangen, dass er die exklusiven Rechte an einer im dienstlichen Auftrag erstellten Software hat \n\n"+
+                    "Zur Prüfung der Verstöße gegen das UrhG gilt: \nEs ist auch mit Freiheitsstrafen, für Privatleute bis drei Jahre, gewerblich bis fünf Jahre, zu rechnen \n"+
+                    "Abmahnkosten sind gesetzlich nur gegenüber Privatleuten gedeckelt \nNeben Abmahn-, Gerichts- und Anwaltskosten ist mit Schadensersatz zu rechnen. \n"+
+                    "Unternehmen haften nicht für die Mitarbeiter, Mitarbeiter haften bei grober Fahrlässigkeit \nBei fremden Bildern muss genau geprüft werden, ob und wie die Quellenangabe zu erfolgen hat \n\n"+
+                    "Zur Prüfung von Vorfällen im Markenrecht gilt: \nDer Markeninhaber hat weitgehende Rechte, sodass geschäftliches und nicht geschäftsschädigendes Handeln besonders zu beachten ist. \n"+
+                    "Fremde Marken können im Geschäftsverkehr ine ngen Grenzen verwaendet werden, wenn es um die Bezeichnung der Waren und insbesondere eines passenden Zubehörs geht \n"+
+                    "Wenn fremde Marken für eigenes werbliches Handeln ohne Zustimmung des Rechteinhabers genutzt werden, kann es zu Markenrechtsverletzungen kommen \n\n"+
+                    "\nmehr hier: ABB S.226f (In Ordner1)"),
             new Term("Schutzziele","Beschreiben Sie in Kurzform Gefährdungen, die die Schutzziele \"Verfügbarkeit\", \"Vertraulichkeit\" und \"Integrität\" betreffen und geben Sie passende Auswirkungen und passende Maßnahmen an\n\n"+
                     "Schutzziele nach BSI und Art. 32 DSGVO\nA) Gefährdungen, die Schutzziele betreffen\nB) Auswirkungen bei Verlust von Schutzzielen\nC) Maßnahmen gegen Verlust der Schutzziele\n\n"+
                     "1) Verlust Verfügbarkeit von Informationen personenbezogener Daten und Zielobjekten\nA) Stromausfall, Passwort vergessen, Serverausfall, Kabel unterbrochen, Brand/Wasser, Datenträgerausfall, Cyberangriff\n"+
@@ -1912,14 +1948,14 @@ public class Terms {
                     "Die Östlichen sagten: \"Zwischen 1929-1933 hat die Weltwirtschaftskrise gezeigt, dass der Staat die Wirtschaft mehr lenken muss. Daher wird die Zentralverwaltungswirtschaft eingeführt. \n\n"+
                     "Gründer: Ludwig Erhard: \"Wir brauchen eine neue Wirtschaftsordnung: Jeder Mensch soll frei sein und eigene Entscheidungen treffen können, aber der Staat soll die wirtschaftlich schwachen Menschen"+
                     " unterstützen können. Wir brauchen eine soziale Marktwirtschaft\". \n\n Rolle des Staates: \nUnterstützung wirtschaftlich Schwacher \n\nWer/Was bestimmt den Preis?: \nAngebot & Nachfrage \n\n"+
-                    "Wirtschaftsplanung: \nGewerbefreiheit, jedes Unternehmen plant für sich selbst \n\nEigentum an Produktionsmitteln, zB Maschinen: \nDen Firmen \n\nWichtigstes Ziel der Betriebe: maximalen Gewinn erwirtschaften \n\n"+
+                    "Wirtschaftsplanung: \nGewerbefreiheit, jedes Unternehmen plant für sich selbst \n\nEigentum an Produktionsmitteln, zB Maschinen: \nDen Firmen \n\nWichtigstes Ziel der Betriebe: \nmaximalen Gewinn erwirtschaften \n\n"+
                     "Wahl von Beruf und Arbeitsplatz: \nFreie Berufswahl, Gewerbefreiheit \n\nVorteile: Mittelweg, sowohl unternehmerische Selbstbestimmung als auch Armenhilfe, Berufswahl, soziale Absicherung, Gewerbefreiheit \n\n"+
                     "Nachteile: \nAbwanderung der Reichsten, Gefahr der Monopolstellung"),
             new Term("Soziale Marktwirtschaft Merkmale",
                     "Marktwirtschaft: \n\nGewerbefreiheit: \nFreie Berufswahl, Firmen entscheiden selbst, was sie produzieren \n\nVertragsfreiheit: \nJeder darf Verträge machen, jeder darf selbst entscheiden, mit wem er "+
                     "einen Vertrag macht. \n\nFreie Preisbildung: \nAngebot & Nachfrage regeln den Preis, der Staat greift nicht ein. \n\nPrivateigentum: \nProduktionsmittel gehören Firme, nicht Staat, Bauern gehören Arbeitsgeräte \n\n"+
                     "Sozial: \n\nSozialpolitik: \nSozialversicherungen (Renten, Kranken, Pflege, Unfall, Arbeitslosen), Arbeitsschutzbestimmmungen (Kündigungs-, Jugendarbeits-, Mutter-schutz) \n\n"+
-                    "Einkommens und Vermögendspolitik: \nSteuerprogression (wer mehr verdient, muss mehr Steuern zahlen), Spar und Bausparförderung \n\nWettbewerbspolitik: \nVerbot von Preisabsprachen, Schutz der Verbraucher durch "+
+                    "Einkommens und Vermögenspolitik: \nSteuerprogression (wer mehr verdient, muss mehr Steuern zahlen), Spar und Bausparförderung \n\nWettbewerbspolitik: \nVerbot von Preisabsprachen, Schutz der Verbraucher durch "+
                     "Produkthaftungsgesetz, Preisabgabegesetz, Mess & Eichgesetz \n\nStruktur und Konjunkturpolitik: \ngünstige Kredite für Firmengründung in wirtschaftlich schwachen Gebieten, Subventionen für Landwirtschaft, Bergbau, "+
                     "Eisen & Stahlindustrie \n\nUmweltpolitik: \n Gesetze zum Umweltschutz (zB Recycling-Auflagen, Richtlinen für Mineralölverbrauch & Schadstoffausstoß), staatliche Förderer erneuerbarer Energien \n\n"+
                     "Öffentliche Unternehmen: \nAlle Bürger sollen mit allen lebenswichtigen Gütern und Dienstleistungen versorgt werden zB Wasserkraftwerke, Schulen, Krankenhäuser und Nachverkehr"),
@@ -1936,7 +1972,7 @@ public class Terms {
             new Term("Inflation","Staat darf nicht mehr Geld drucken, als er Güter und Dienstleistungen hat, sonst sinkt die Kaufkraft und das Geld ist wertloser. \n\n"+
                     "Ursachen: \n\nNachfrage-Inflation: \nHöhere Löhne / weniger Steuern / zu viel Geld gedruckt \nAber nicht mehr Güter auf dem Markt \n\n"+
                     "Kosten: \nFirmen müssen mehr Lohn zahlen / Rohstoffpreise steigen \nalso erhöhen sie die Preise \n\nGeldmenge im Land steigt: \nwenn viele Güter ins Ausland verkauft werden, "+
-                    "sind weniger Güter im Land, aber es werden weniger produziert, daher teurer \n\nExport > Import \n\nFolgen/Auswirkungen: \nSchleichende Inflation: \nPreise steigen <5% / Jahr \nso langsam, dass man es fast nicht merkt \n"+
+                    "sind weniger Güter im Land, aber es werden weniger produziert, daher teurer \n\nExport > Import \n\nFolgen/Auswirkungen: \n\nSchleichende Inflation: \nPreise steigen <5% / Jahr \nso langsam, dass man es fast nicht merkt \n"+
                     "Geldkaufkraft sinkt langsam \nkein Problem für Wirtschaft / Menschen \n\nGaloppierende Inflation: \nPreise steigen > 10%, > 50% \nWirtschaft gehr kaputt & viele werden arm \n"+
                     "Geld verliert ganz schnell seinen Wert. Die Kaufkraft sinkt sehr schnell \nGut bei Schulden / Krediten, aber nicht für Sparen \n"+
                     "Leute kaufen sich Wertgegenstände, werden trotzdem ärmer, Kapitalflucht"),
@@ -1949,6 +1985,135 @@ public class Terms {
                     "werden durchschnittlich 25% vom Lohn abgegeben \n\nLöhne aufgrund Lohnzusatzkosten hoch \n\nLohnzusatzkosten: \nbezahlter Urlaub \nWeihnachtsgeld \nUrlaubsgeld \nEntgeltfortzahlung bei Krankheit \nbezahlte Feiertage \nvermögendswirksame Leistung"+
                     "\nArbeitgeberanteil Sozialversicherungsbeiträge \nbetriebliche Altersversorgung \nsonstige Personalzusatzkosten \n\nWettbewerbsfähigkeit kann so gefährdet werden, "+
                     "aber durch Arbeitnehmerqualifikation und Produktqualität gehalten werden. \nLohnzusatzkostensenkung kann helfen um Unternehmen im Land zu halten."),
+            //Ordner 6
+            new Term("Gerechte Entlohnung","Arbeitsbewertung AB durch Analytische und Summarische AB, \nZiel: Leistungsgerechter Lohn durch Einteilung in Lohngruppen \n"+
+                    "+ Sozialen Aspekte \n\nSummarische Arbeitsbewertung: \nDie Arbeitsaufgabe wird als ganzes (=Summe) gesehen \n"+
+                    "Wichtig dabei: \nWelche Ausbildung, wie viel Berufserfahrung, welches Können, wie viel Verantwortung braucht man? \n\n"+
+                    "Analytische Arbeitsbewegung: \nDie Arbeitsaufgabe wird nach einzelnen Arbeitsanforderungen bewertet \nwichtig dabei: \n"+
+                    "Wie viel Können, Belastung, Verantwortung und welche Umwelteinflüsse?"),
+            new Term("Analytische AB","Bei der analytischen Arbeitsbewertung wird versucht die Arbeitsanforderungen zu beschreiben. Man untersucht dafür den Arbeitsplatz und bewertet die Anforderungen.\n\n" +
+                    "Der Ecklohn ist der Lohn eines 21 Jährigen \nIn Tarifverhandlungen wird normalerweise nur über die Höhe des Ecklohns verhandelt \n"+
+                    "Diese Lohngruppe wird gleich 100% gesetzt. \nDie anderen Lohngruppen werden durch Zuschläge oder Abzüge berechnet."),
+            new Term("Summarische AB","Hierbei werden die enzelnen Anforderungsarten einer Arbeit insgesamt als Ganzes (summarisch) bewertet.\n\n"+
+                    "Lohngruppe 1 - Einfache Arbeiten, die keine Arbeitskenntnisse und keine Ausbildung voraussetzen, sondern nur eine einmalige Anweisung. \n\n"+
+                    "Lohngruppe 8 - Besonders schwierige Arbeiten, die hervorragende Fachkenntnisse und Fähigkeiten und eine entsprechende Berufserfahrung voraussetzen"),
+            new Term("Soziale Aspekte","Benachteiligung Mancher bei bloser Leistungsbetrachtung, daher Berücksichtigung sozialer Aspekte. \n\n"+
+                    "Dauer der Betriebszugehörigkeit \nlangjährige Mitarbeiter haben Erfahrung und kennen sich im Betrieb aus. Treue Mitarbeiter sollen Belohnt werden \n\n"+
+                    "Alter \nAbsicherung durch die Firma. Es wird schwerer eine Arbeit zu finden. \n\nFamilienstand \nWer Familie hat, muss für weitere Personen sorgen. "+
+                    "Höhere Ausgaben für die Familie. \n\nDer Staat unterstützt besonderst die familiengerechte Entlohnung: \nFamilienstand bei Lohnsteuerklasse \n"+
+                    "Kindergeld \nWohngeld \nstaatliche gefördertes Vermögenswirksames Sparen \nArbeitnehmersparzulagen"),
+            new Term("Sozialprodukt","Zur Berechnung ob ein Staat wirtschaftlich stärker oder schwächer wurde als letztes Jahr\n\n"+
+                    "2 Möglichkeiten: \n\nBerechnung des Bruttoinlandprodukts BIP \nWert aller Dientleistungen und Sachgüter, die innerhalb eines Landes produziert werden \n\n"+
+                    "Berechnung des Bruttonationaleinkommens \nWert aller Dienstleistungen & Sachgütern, die von einem Land erwirtschaftet werden. \n\n"+
+                    "Unterscheidung gering. In letzter Zeit wird meistens BIP berechnet. \n\nNominales BIP \nzeigt nur, ob der Wert aller Dienstleistungen sinkt oder steigt, egal warum\n\n"+
+                    "Reales BIP \nwenn man die Inflationsrate (Preissteigerung) wegnimmt, bekommt man das wirkliche Wachstum \n\nKritik an Bruttoinlandsprodukt BIP: \n"+
+                    "Soziale Ehrenamtliche Arbeit und Hausarbeit fehlt. Arbeit, die repariert, zB nach Umweltkatastrophen wird auch gezählt, obwohl sie keine Wohlstandsmeerung schafft, "+
+                    "sondern wiederherstellt. Keine Aussage über Wohlstandsverteilung"),
+            new Term("Probleme Soz Marktw","Probleme der Sozialen Marktwirtschaft: \nFinanzierung sozialer Sicherungssysteme \nSubventionen \nÖffentliche Unternehmen -> Privatisierung \nKonjunkturschwankungen"),
+            new Term("Finanz soz Sichsys","Finanzierung sozialer Sicherungssysteme \nJe mehr Arbeitslose und Rentner, umso geringer Beitragseinnahmen \n"+
+                    "Arbeitslosenunterstützung und Renten Ausgaben steigen gleichzeitig \nDie Beiträge müssen erhöht und die Leistungen gekürzt werden, um dies zu bezahlen \n"+
+                    "dazu: Pflegeversicherungs und Krankenversicherungsausgaben steigen wegen Überalterung \nDie Folge: Wohlstand sinkt durch Beitragserhöhungen und Leistungskürzungen, "+
+                    "mehr private Vorsorge notwendig"),
+            new Term("Subventionen","Finanzielle gegenleistungslose Staatshilfe \nDamit Betriebe konkurenzfähig bleiben. Manche Betribe sind nur mit Hilfe von Zuschüssen überlebensfähig. \n\n"+
+                    "Die Staatsquote gibt an welchen Anteil die Staatsausgaben an der Wirtschaftsleistung (am BIP) haben. Eine hohe Staatsquote verfälscht das BIP. \n"+
+                    "Um sie zu senken will der Staat weniger subventionieren \n2020 lag sie bei 50,8% wegen Corona, Krankenversorgung, Kurzarbeitergeld, Unternehmensunterstützung \n"+
+                    "1990 - 1995: Anstieg wegen Kosten der Wiedervereinigung"),
+            new Term("Privatisierung","Privatisierung öffentlicher Unternehmen \nVerkauf von Unternehmen des Staates an private Leute \nStaat spart Steuergeld und bekommt "+
+                    "dazu den Verkaufspreis als Staatseinnahme. Die Preise beim Unternehmen fallen (zB Telekom) oder steigen. \n\n"+
+                    "Probleme öffentlicher Unternehmen \nUnrentabilität, Ihre Güter sind teurer, brauchen häufig "+
+                    "Zuschüsse \nliegt an der Monopolstellung (fehlender Wettbewerb). Sie reagieren gleichgültiger auf Neuerungen. \nSteuerzahlen tragen Verluste, daher vielfach überhöhter "+
+                    "Kapital und Personeneinsatz. \n-> Immer größere Zuschüsse benötigt \n\n"+
+                    "Telekom wurde ganz verkauft, Post und Bahn zum Teil. Lufthansa und Energieunternehmen in Planung \n"+
+                    "Zunehmend mehr Gemeinden lassen Müllabfuhr, Straßenreinigung und Abwasserbeseitigung von Privat machen"),
+            new Term("Konjunkturschwankungen","Konjunktur \nGrundmuster wirtschaftlicher Aktivität in der Volkswirtschaft von Auf und Ab, "+
+                    "über mehrere Jahre hinweg. Diese Welle heißt Konjunkturzyklus. \n\n"+
+                    "Staat will dass Konjunkturschwankungen gering sind, deshalb sind die Konjunkturpolitischen Maßnahmen antizyklisch. \n\n"+
+                    "Maßnahmen bei Tiefstand (Depression): \n\nMaßnahmen der Europäischen Zentralbank EZB / Geldpolitik: \n1. Senkung der Mindestreserve \n"+
+                    "Banken müssen weniger Geld bei der Bundesbank hinterlegen (zur Sicherheit, wenn sie pleite gehen) \nFolge: Die umlaufende Geldmenge steigt \n"+
+                    "2. Verkauf von Wertpapieren \nDie EZB kauft Staats-Aktien \nFolge: Die umlaufende Geldmenge wird größer \n3. Leitzinssenkung \n"+
+                    "Kredite von Banken kosten jetzt weniger Zinsen, man bekommt aber auch weniger Zinsen für gespartes Geld \nFolge: Privatleute sparen weniger, "+
+                    "nehmen mehr Kredite auf und haben mehr Geld zum Kaufen (=Nachfrage steigt) \n\nMaßnahmen vom Staat / Konjunkturpolitik: \n"+
+                    "1. Steuersenkung für Unternehmen \nFirmen müssen weniger Steuern zahlen \nFolge: Die Firmen investieren mehr (zB neue Machinen kaufen) "+
+                    "und schaffen neue Arbeitsplätze \n2. Erhöhung der Staatsaufträge \nFirmen bekommen mehr Staats-Aufträge \nFolge: Firmen machen mehr Gewinne und schaffen "+
+                    "neue Arbeitsplätze \n3. Subventionen für Unternehmen und private Haushalte \nFirmen und private Haushalte bekommen mehr Geld vom Staat \n"+
+                    "Folge: Firmen können mehr investieren und Privatleute können mehr kaufen \n4. Steuersenkungen für Verbraucher \nDie Nettolöhne steigen \n" +
+                    "Folge: Privatleute kaufen mehr \n\nMaßnahmen bei Hochkonjunktur (Boom): \n\nMaßnahmen der EZB / Geldpolitik: \n"+
+                    "1. Erhöhung der Mindestreserve \ndie Banken müssen mehr Geld bei der Bundesbank hinterlegen (zur Sicherheit, wenn sie pleite gehen) \n"+
+                    "Folge: Die umlaufende Geldmenge wird kleiner \n2. Kauf von Wertpapieren \nDie EZB verkaufen Staats-Aktien \nFolge: Die umlaufende Geldmenge wird kleiner \n"+
+                    "3. Die Leitzinserhöhung \nKredite von Banken kosten jetzt mehr Zinsen, man bekommt aber auch mehr Zinsen für gespartes Geld \nFolge: "+
+                    "Privatleute sparen mehr, nehmen weniger Kredite auf und ahben weniger Geld zum Kaufen (Nachfrage sinkt) \n\n"+
+                    "Maßnahmen vom Staat / Konjunkturpolitik: \n1. Steuererhöhungen für Unternehmen \nFirmen müssen mehr Steuern zahlen \nFolge: Die Firmen investieren weniger "+
+                    "zB neue Maschinen kaufen und schaffen keine neuen Arbeitsplätze \n2. Weniger Staatsaufträge \nFirmen bekommen weniger Staats-Aufträge \n"+
+                    "Folge: Firmen machen weniger Gewinne und schaffen keine neuen Arbeitsplätze \n3. Weniger Subventionen \nFirmen und private Haushalte bekommen weniger Geld vom Staat \n"+
+                    "Folge: Firmen investieren weniger und Privatleute können weniger kaufen \n4. Steuererhöhung \nDie Nettolöhne sinken \nFolge: Privatleute kaufen weniger"),
+            new Term("Wirtschaftspolitische Ziele","Stabilitätsgesetz \nErfordernisse des gesamtwirtschaftlichen Gleichgewichts beachten \n"+
+                    "Maßnahmen treffen, sodass gleichzeitig zu Preisstabilität, Beschäftigung, außenwirtschaftliches Gleichgewicht und Wirtschaftswachstum beigetragen wird, " +
+                    "im Rahmen der marktwirtschaftlichen Ordnung. \n\nDas magische Viereck \nPreisstabilität - Inflationsrate unter / am 2% \nVollbeschäftigung - Arbeitslosenquote kleiner als 3%"+
+                    "\nangemessenes Wirtschaftswachstum - um ca 3%\naußenwirtschaftliches Gleichgewicht - Import = Export \nIn der Wirtschaft ist es unmöglich alle 4 Ziele gleichzeitig zu erreichen. \n\n"+
+                    "Das magische Sechseck \nDas magische Viereck + \nNachhaltigkeit \nDie Wirtschaftsteilnehmer (AN & AG) sollen nachhaltig wirtschaften. Die Umwelt soll für die nachfolgenden Generationen "+
+                    "geschützt werden zB steuerliche Förderung von E-Autos \ngerechte Vermögensverteilung \nDie Einkommensverteilung erfolgt in D nach dem Leistungsprinzip. "+
+                    "Der Staat greift deshalb ein. Er handelt nach dem Bedarfsprinzip. Es findet ein spezieller Ausgleich statt zB Wohngeld, Kindergeld"),
+            new Term("Gründung Unternehmen","Hilfen \nIHK, HWK, Fachverbände, Institute der Wirtschaft, Bundesministerium für Wirtschaft, \nkostenpflichtig: "+
+                    "Steuerberater, Kreditinstitute, freie Unternehmensberater, Rechtsanwälte / Notar \n\nPersönliche Vorraussetzungen \nSelbstbewusstsein, Risikobereitschaft, "+
+                    "Fleiß, Fachkenntnisse, Kreativität, soziale Fähigkeiten, Ordnung \n\nBerufliche Vorraussetzungen \nAlle voll geschäftsfähigen Deutschen dürfen in D ein Gewerbe gründen \n"+
+                    "Normalerweise ist für ein Gewerbe im Einzelhandel keine Erlaubnis notwendig \nArzneimittelherstellung, Wohnungsuntervermietung und Taxi-Unternehmesgründung nur mit offizieller Erlaubnis \n"+
+                    " Anmeldung erlaubnispflichtiger Gewerbe bei der Kreisverwaltungsbehörde \nErlaubnisbeantragung vor Beginn der Tätigkeit \n"+
+                    "Behörde überprüft persönliche Zuverlässigkeit durch deine Beantragung eines Führungszeugnisses beim Einwohneramt / Gewerbeamt und dadurch dass du eine Auskunft für Behörden aus dem Gewerbezentralregister erstellen lässt \n"+
+                    "Handwerkliches Gewerbe gründbar durch Eintrag Handwerksrolle, durch Handwerksmeister / technische Hochschule / Fachschule \n\n"+
+                    "Möglichkeiten bei der Firmengründung \n\nVertriebsfranchising \nFranchise-Nehmer hat Geschäft mit dem Franchise-Namen und verkauft Waren des Franchise-Gebers \nBsp: McDonalds in Winnenden, McDonalds in New York \n"+
+                    "Subway in London, Subway in Stuttgart \n\nDienstleistungsfranchising \nFranchise-Nehmer bieten Dienstleistungen unter dem Namen des Franchise-Gebers an \n"+
+                    "Bsp: Montana-Hotel ind Kassel, Montana-Hotel in Bremen \nVolkshochschule Stuttgart, Volkshochschule Heidelberg \n\nProduktfranchising \nFranchise-Nehmer stellt Waren "+
+                    "in seinem eigenen Geschäft selber her und verkauft diese Waren unter dem Namen (Warenzeichen) des Franchise-Gebers \nBsp: Verkauf von Cartige World-Produkten (Verbrauchsmaterialien für Drucker) "+
+                    "in den USA, Verkauf von Catridge World-Produkten in Deutschland \n\nProduktfranchising (Herstellungsfr.) \nFranchise-Nehmer stellt Waren in seinem eigenen Geschäft selbst her und verkauft diese "+
+                    "Waren unter dem Namen (=Warenzeichen) des Franchise-Gebers \n\nRechtsform \nAuskunft über: \nWer bringt Kapital? Wer haftet für Schulden, in welchem Umfang? Wer leitet? Wer vertritt nach außen? "+
+                    "Wer bekommt den Gewinn? \nEinzelunternehmen <-> Gesellschaftsunternehmen (Personengesellschaft <-> Kapitalgesllschft) \n\n"+
+                    "Wahl des Standortes: \nKosten, Kundennähe, Behördliche Auflagen, Verkehrsanbindung, Arbeitskräfte, Konkurenz \n\n"),
+            new Term("Rechtsformen Unternehmen","Legende: \nName, Abkürzung, Haftung, Geschäftsführung, Gewinnverteilung \n\n"+
+                    "Einzelunternehmen: \nDurch den Einzelunternehmer, haftet allein und unbeschränkt auch mit Privatvermögen, Einzelunternehmer hat die Geschäftsführung, Einzelunternehmer bekommt Gewinn allein \n\n"+
+                    "Personengesellschaften: \n\nOffene Handelsgesellschaft: OHG, \nDurch mind 2 Personen, Jeder Gesellschafter haftet unbeschränkt auch mit Privatvermögen, Jeder Gesellschafter hat die eigene Geschäftsführung, Jeder bekommt 4% "+
+                    "auf die Kapitaleinlage, der Rest wird je nach Anteilen verteilt \n\nGesellschaft des bürgerlichen Rechts: GbR, \ndurch mindestens 2 natürliche oder juristische Personen mit gemeinsamem Ziel, "+
+                    "Jeder Gesellschafter haftet unbeschränkt auch mit Privat, Alle Gesellschafter oder Vetrag wird gemacht, Jeder bekommt gleichen Anteil \n\nKapitalgesellschaften: \n\n"+
+                    "Gesellschaft mit beschränkter Haftung: GmbH, \nDurch min 1 Person mit min 25000 Grundkapital, Jeder Gesellschafter haftet nur mit Stammeinlage, Der Geschäftsführer, Aufteilung je nach Stammeinlage \n\n"+
+                    "Aktiengesellschaft: AG, \nDurch min 1 Person mit min 50K Grundkapital, Jeder Aktionär haftet mit dem Wert seiner Aktien, Der Vorstand hat die Geschäftsführung, Die Dividende (Gewinn) wird nach Aktie verteilt \n\n"+
+                    "Unternehmensgesellschaft: UG, \nDurch min 1 Person mit min 1Euro Grundkapital, Jeder Gesellschafter haftet nur mit Stammeinlage, der Geschäftsführer, Aufteilung je nach Stammeinlage \n\n"+
+                    "Vorteile & Nachteile: \n\nEinzelu.: \n(+) man ist selbst der Chef, kann alles bestimmen, gute Kreditwürdigkeit, ganzer Gewinn, schnell gründbar, einfach auflösbar \n(-) Entscheidungen alle allein, Verantwortung voll, "+
+                    "Firma pleite - eigenes Geld weg \nOHG: \n(+) sehr gute Kreditwürdigkeit, \n(-) Firma pleite - eigene Gelder weg \n"+
+                    "GbR: \n(+) sehr gute Kreditwürdigkeit \n(-) Firma pleite - eigene Gelder weg \nGmbH: \n(+) Haftung nicht mit privat \n(-) schlechte Kreidtwürdigkeit, Stammkapital 25K, Körperschaftssteuer \n"+
+                    "AG: \n(+) zusätzliche Gewinne durch Aktien, schnell große Geldmenge beschaffbar durch Aktienverkauf \n(-) Stammkapital 50K, Körperschaftssteuer, Aktienwert kann sinken, viel Kontrolle macht schwerfällig \n"+
+                    "UG: \n(+) Gründung: 1Euro, Gesellschafter haften nicht Privat, Gründung schnell unkompliziert \n(-) schlechte Kreditwürdigkeit, Ansparpflicht (min 25% Überschüsse müssen in Stammeinlage bis 25K)"),
+            new Term("Marketing", "Marketing ist: wie kann ich möglichst viele Produkte verkaufen? \n\n"+
+                    "Marketing als Modell: \n\nMarktforschung: \nWie verhalten sich die Verbraucher? \nWie verhält sich die Konkurenz? \n\nZielformulierung: \nWas möchte die Firma in diesem Jahr erreichen? \n\n"+
+                    "Strategiefestlegung: \nWie erreicht die Firma die Ziele? \n\nMarketing-Mix: \nWelche Art von Werbung kann die Firma erreichen? \n\nMarketing-Controlling: \nÜberprüfung, ob die Ziele erreicht wurden \n\n\n"+
+                    "Marketing-Mix = Marketing Instrumente: \nzum erreichen von Ziel zB Verkaufszahl verdoppeln \n\nGute Produktpolitik und Sortimentpolitik: \nOrientierung an aktuellen Trends und Wünschen \nBei gutem Verkauf eines Produktes, werden Variationen produziert \n"+
+                    "Wenn sich eins schlecht verkauft, stoppt sie die Produktion \n\nGute Preisgestaltung: \nbesondere Kredite oder Rabatt oder verlängerte Garantie für bestimmte Kunden \ngute Lieferbedingungen für manche Lieferanten \n\n"+
+                    "Gute Kundenbetreuung: \nguter Kundendienst für telefonische oder persönliche Kundenberatung \nKundenberatung in Finanzierungsfragen (aktuelle Rabatte, geeignete Raten) \n\n"+
+                    "Gute Werbung: \nInvestitionen in Öffentlichkeitsarbeit um ein Produkt bekannt zu machen und in Absatzwerbung um möglichst vile von einem Produkt zu verkaufen \nKunden informieren über neue Waren, neu Kunden gewinnen und alte behalten \n\n"+
+                    "Ökomarketing: \nUmwelt-Gütesiegel bekommen (zB grüner Punkt, Bio) für Image-Besserung, neue Kunden und langfristige Wettbewerbsfähigkeit \n\n"+
+                    "Qualitätssicherung: \ndarauf achten keine mangelhafte Ware zu verkaufen \ngute Qualität spricht sich herum, also gutes Image und so Werbeeinsparungen möglich"),
+            new Term("Finanzierung Unternehmen","Kapitalbedarf: Geld für... \nGrundstück / Gebäude \nMaschinen \nMitarbeiteranstellung \nWerbung \n\n"+
+                    "Woher kann ich das Geld bekommen? \nEigenkapital: \neigenes Geld und Geld von Geschäftspartnern / Sponsoren \nFremdkapital: \nGeld, das ich ausleiehe und später zurückzahlen muss: Kredit / Darlehen von der Bank, \n"+
+                    "Investoren, \nFörderungsmittel (vom Staat), \nMikrokredite. \nJe mehr Eigenkapital, desto besser! (mindestens 20%, wenn ich eine Firma gründen will). Grund: nicht so viel Risiko und ich bekomme einfacher einen Kredit \n\n"+
+                    "Dispositionskredit \nmehr Gelf abheben als auf dem Konto ist \nKein neuer (Kredit)vertrag, als bei Kontoeröffnung \nZweck: Wenn man kurzfristig Geld braucht. \nKeine festgelegte Laufzeit. \nTilgung durch Einzahlung auf das Girokonto \n"+
+                    "Hohe Zinsen, abhängig vom Markt (=je nach Marktlage) \nkeine Gebühren \n\nRatenkredit / Darlehen \neinen Vertrag machen und Geld ausleihen \nneuer Vertrag in Schriftform \nZweck: Wenn man Güter anschaffen will \n"+
+                    "Festgelegte Laufzeit \nFestgelegte Raten, In der Regel immer gleiche Raten \nNiedrige Zinsen im Vertrag genau festgelegt \nIn der Regel 2% gebühren \n\n"+
+                    "Kredit Sicherung \nBei Ratenkredit / Darlehen ist Vertrag zu machen \nDie Bank will Sicherheit, dass ich das Geld zurück zahle \n1. Möglichkeit Bürgschaft \n"+
+                    "Eine dritte Person verpflichtet sich zu zahlen, wenn ich Schulden mache und das Geld nicht zurückzahlen kann \n2. Möglichkeit Verpfändung \nIch gebe dem Gläubiger zB der Bank "+
+                    "einen Gegenstand / eine Besitz-Urkunde. Der Gläubiger ist der Eigentümer bis ich das Geld zurück gezahlt habe \n3. Möglichkeit Sicherheitsübereignung \nzB Kredit für Auto. Der Gläubiger bekommt "+
+                    "Fahrzeugbrief, ist Eigentümer bis zur Rückzahlung \n4. Möglichkeit Hypothek / Grundschuld \nGläubiger bekommt Besitz-Urkunde für ein Gebäude. \n\n"+
+                    "Leasing \n\nLeasinggeber gibt Sache zum Gebrauch \nLeasingnehmer muss Leasingrate (~Miete) zahlen. \nAm Ende: Rückgabe der selben Sache oder Kauf \n"+
+                    "(+) Ich brauche keinen Kredit aufnehmen \n(+) Ich kann Sache haben auch wenn ich wenig Geld habe \n(+) Bei manchen Verträgen gibt es Betreuung und Beratung \n(+) Ich habe immer die neusten Sachen \n"+
+                    "(-) Ich bin während der Leasing-Zeit an den Hersteller gebungen \n(-) Es kann Streit geben, wie viel die Sache kosten darf, wenn ich die Sache später kaufen will \n"+
+                    "(-) Dauernde Belastung durch monatliche Raten \n(-) Die Leasing-Sachen gehören mir nicht"),
+            new Term("Betriebliche Kosten","Kosten im Betrieb \n\nFixe Kosten (fix = fest): \nMiete für Gebäude, Steuern, Sozialversicherungsbeiträge, "+
+                    "Kreditkosten, Energiekosten, Kosten für Arbeiter, Kosten für Sekretärin (= immer gleich) \n\nVariable Kosten (variable = verschieden): \nRohstoffkosten, Verpackungskosten, Material, Werkzeuge, Energiekosten \n\n"+
+                    "Einzelkosten (direkte Kosten): \nRohstoffkosten, Verpackungskosten, Material, Kosten für Arbeiter, Werkzeug \n\nGemeinkosten (indirekte Kosten): \nMiete für Gebäude, "+
+                    "Steuern, Sozialversicherungsbeiträge, Kreditkosten, Energiekosten, Kosten für die Sekretärin \n\nGesamtkosten = Fixe + Variable Kosten \noder: \n"+
+                    "Gesamtkosten = Einzelkosten + Gemeinkosten"),
+            new Term("Unternehmensziele","Ziele erwerbswirtschaftlicher Unternhemen (private): \nzB Bosch, Daimler AG \nhoher Gewinn und Gewinn steigern \nsichere Arbeit schaffen \n"+
+                    "moderne Maschinen kaufen \numweltfreundliche Waren verkaufen \n\nZiele öffentlicher Unternehmen (besitzt Staat, Land oder Gemeinde): \nzB Theater, Wasserwerk, Müllabfuhr \nBevölkerung "+
+                    "mit wichtigen Dienstleistungen und Gütern versorgen \nKostendeckung (= genügend verkaufen, damit die Firme nicht pleite geht) \n\n"+
+                    "Ziele genossenschaftlicher Unternhemen (Personenvereinigung (mehrere Personen schließen sich zusammen)): \nzB Volksbank \n"+
+                    "bessere Wettbewerbsfähigkeit (=wirtschaftliche Vorteile bekommen, konkurenzfähig sein)")
 
     };
     private static Term[] termsLFGK = {
@@ -1977,10 +2142,10 @@ public class Terms {
             new Term("Generationenvertrag","Abkommen Jung <-> Alt \nKein echter Vertrag, sondern sprichwörtlich \n<bürger Beiträge -> gesetzliche Rentenversicherung \n"+
                     "damit wird Rentte heutiger Rentner finanziert "),
             new Term("Renteneintritt","67"),
-            new Term("Fluchtursachen","Push Faktoren \n(Bürger)Krieg \nNaturkatastrophen \nUnfreiheit \nStaatliche Verfolgung \nArmut \nDiskriminierung"),
+            new Term("Fluchtursachen","Push Faktoren: \n(Bürger)Krieg \nNaturkatastrophen \nUnfreiheit \nStaatliche Verfolgung \nArmut \nDiskriminierung"),
             new Term("Einwanderung", "Formen: \ngesteuert -> zB für Arbeiter (Fachkräfte) \nungesteuert -> EU-Bürger, Aufnahme von Flüchtenden aus menschlichen Gründen (legale Einwanderung)"+
-                    "\n\nProbleme: \nArbeitsknappheit, \nWahnungsknappheit, \nkurzfristige Überforderung durch Überraschungseffekt der Organisation, \nMöglicherweise Notwendigkeit der Ursachenforschung, Hilfe / Lösung"+
-                    "Veränderungen: \nArchitektur, Menschenfarben, Schrift / Sprache / Vielfalt \n\nPull Faktoren: \nKarriere, bessere Überlebensmöglichkeiten / Bedingungen, "+
+                    "\n\nProbleme: \nArbeitsknappheit, \nWohnungsknappheit, \nkurzfristige Überforderung durch Überraschungseffekt der Organisation, \nMöglicherweise Notwendigkeit der Ursachenforschung, Hilfe / Lösung"+
+                    "\n\nVeränderungen: \nArchitektur, Menschenfarben, Schrift / Sprache / Vielfalt \n\nPull Faktoren: \nKarriere, bessere Überlebensmöglichkeiten / Bedingungen, "+
                     "medizinische & soziale Versorgung, besserer Verdienst, Beschäftigungsmöglichkeiten, Zukunftsperspektiven, Freiheit von sozialen Zwängen"),
             new Term("Zuwanderungsgesetz","1.1.2005 \nhierin bekannte sich Deutschland Einwanderungsland zu sein"),
             new Term("Migration","Mensch wechselt Wohnort in Staat oder von Staat zu Staat dauerhaft"),
@@ -2009,19 +2174,21 @@ public class Terms {
             new Term("Bundesverfassungsgericht","Überwachung, Einhaltung Grundgesetz \nRichter gewählt von Tag / Rat 50/50% und von Präsident ernannt \n"+
                     "oberstes Gericht in Deutschland \nVerfassungsklagen, Aufhebung von verfassungsfeindlichen Gesetzen"),
             new Term("Bundesrat","Vertreter der Länder, kann Gesetze ablehnen, Wiederspruch einlegen \nMitwirkung Gesetzgebung (beraten, vorschlagen) \n"+
-                    "Alle Bundesgesetze müssen von Rat abgestimmt werden. Einige treten erst dann in Kraft)"),
+                    "Alle Bundesgesetze müssen von Rat abgestimmt werden. Einige treten erst dann in Kraft."),
             new Term("Bundespräsident","Prässentation Bundesrepublik Deutschland \ndiplomatische Vertretung im Ausland (Verträge unterschreiben) \n"+
                     "Vorschlag des Bundeskanzlers zur Wahl \nAuflösung Bundestag"),
             new Term("Bundestag","vom Volk gewählt \nGesetzgebung (Beratung, vorschlagen, abstimmen) \nKontrolle Regierungssarbeit (Einsatz von Untersuchungsausschüssen) \n"+
                     "Bundeshaushalt \nBundeswehreinsätze \nWahl Bundeskanzler/in"),
-            new Term("Bundesregierung","schlägt Gesetze vor, Kanzler, Minister (Fachberreiche), Umsetze Gesetze (in Ministerien), auf Vorschlag von Präsident vom Rat gewählt \n"+
+            new Term("Bundesregierung","schlägt Gesetze vor, Kanzler, Minister (Fachberreiche), Umsetzung Gesetze (in Ministerien), \n"+
+                    "Kanzler auf Vorschlag des Bundespräsidenten vom Bundestag gewählt. kanzler/in wählt Minister/innen. Die werden vom Präsidenten ernannt.\n"+
                     "Leitung des Staates durch dieses Organ \nBundeskanzler bestimmt Richtlinie der Politik , Minister halten sich dran"),
             new Term("Grundgesetz","Schutz Menschenwürde \nBerufsfreiheit \nPersönliche Freiheit / Recht auf körperliche Unversehrtheit \nGleicheit vor Gesetz \n"+
                     "Glauben und Gewissensfreiheit \nfreie Meinungsäußerung \nSchutz von Ehe und Familie \nstaatliche Schulaufsicht \nVersammlungs und Vereinigungsfrieheit \n"+
-                    "Brief und Postgeheimnis \nWohnungsverletzlichkeit \nFreizügigkeit \nRecht auf freie Wohnortwahl \nEigentumsgewährleistung \nStaatsangehörigkeit / Verbot von Ausbürgerung \n"+
+                    "Brief und Postgeheimnis \nWohnungsunverletzlichkeit \nFreizügigkeit \nRecht auf freie Wohnortwahl \nEigentumsgewährleistung \nStaatsangehörigkeit / Verbot von Ausbürgerung \n"+
                     "Rechtliches Gehör vor Gerichten"),
             new Term("Parteien - Verbände","Parteien: \nvertreten Interessen Ihrer Wähler \nmittl zwischen Bürger - Staat \nLösungsvorschläge zu Problemen "+
-                    "der Gegenwart & Zukunft \n->Handeln unmittelbar in allen politischen Bereichen \n\nVerbände: \nVertreten Interessen ihrer Mitglieder \nNehmen Einfluss auf Politik "+
+                    "der Gegenwart & Zukunft \nnehmen politischen Einfluss in der Gesellschaft \ngreifen die Interessen der Bürger auf und bringen sie in die politischen Entscheidungen ein" +
+                    "\n->Handeln unmittelbar in allen politischen Bereichen \n\nVerbände: \nVertreten Interessen ihrer Mitglieder \nNehmen Einfluss auf Politik "+
                     "\nHaben kein Mandat, nehmen nicht aktiv an Politik teil \n=>sie handeln mittelbar (nicht direkt, über dritte) in einem politischen Bereich"),
             new Term("Lobbyismus","Lobbyisten sind Fachleute \nentlasten Staat \nThemenfeldaufbereitung \nMittler zwischen Staat und Gesellschaftsteil \n"+
                     "Einflussnahme durch Beratung und direkten Kontakt zur Politik, Macht, Einfluss, Druck \n\n"+
@@ -2029,11 +2196,10 @@ public class Terms {
                     "Gewerkschaften (zB Ver.di, IG Metall) vertreten die Berufsgruppen und setzen sich für höhere Löhne und Arbeitsbedingungen ein \n\n"+
                     "CONTRA: \nInteressen einseitig und entsprechen nicht Meinung von allen \nLobbyismus bedeutet hohen Aufwand -> Größere und Reichere Firmen haben mehr Einfluss "+
                     "weil sie mehr Kapital haben \nLobbyismus oft intransparent, Korruptionsgefahr (Bestechlichkeit) \nWechsel von Politik -> Lobbyverein -> Ausnutzung Positionen / Kontakte möglich"),
-            new Term("Vertikale Gewaltenteilung Förderalismus","Bundesebene: politische Entscheidungen für alle in BRD \nLandesebene: politische Entscheidungen für alle in Bundesland \n"+
-                    "Kommunale Ebene: politische Entscheidung der Städte und Gemeinden"),
-            new Term("Gewaltenteilung","Legislative: Bundestag, Bundesrat, Landtag, Kreistag, Gemeinderat \nExecutive: Bundespräsident, -kanzler, -regierung, Landesregierung, Landrat, Bürgermeister"+
-                    "\nJudikative: Bundesverfassungsgericht, Landesverfassungsgericht, Gerichte des Landes"),
-            new Term("Parteien","Aufgaben: politischer Einfluss in der Gesellschaft nehmen \ngreifen die Interessen der Bürger auf und bringen sie in die politischen Entscheidungen ein \nLösungsvorschläge"),
+            new Term("Förderalismus","Vertikale Gewaltenteilung \n\nBundesebene: \npolitische Entscheidungen für alle in BRD \n\n"+
+                    "Landesebene: \npolitische Entscheidungen für alle in Bundesland \n\nKommunale Ebene: \npolitische Entscheidung der Städte und Gemeinden"),
+            new Term("Gewaltenteilung","Legislative: \nBundestag, Bundesrat, Landtag, Kreistag, Gemeinderat "+
+                    "\n\nExecutive: \nBundespräsident, -kanzler, -regierung, Landesregierung, Landrat, Bürgermeister \n\nJudikative: \nBundesverfassungsgericht, Landesverfassungsgericht, Gerichte des Landes"),
             new Term("Direkte Demokratie","5. & 4. Jahrhundert vor Christus Athen frühe Form \n1919 Weimarer Republik Volksentscheid & begehren, Eingriff in Gesetzgebung \n\nBürgerbeteiligung: \nBürgerforum: "+
                     "Bürger sind zu aktiven Diskussionen von politischen Institutionen, Partien und Verbänden geladen \nDemonstrationen \nVolksentscheid: Abstimmung über Gestzentwurf nur auf kommunaler und Landesebene"+
                     "\nBürgerinitiativen \nWahlen \n\n"+
@@ -2193,6 +2359,60 @@ public class Terms {
                     "ProAsyl:  \nVerein der sich für den Schutz und die Rechte von asylsuchenden Menschen in Europa einsetzt. Sitz: Frankfurt am Main\n" +
                     "Meinung: Die EU versucht, ihre Grenzen abzuriegeln. An einigen Grenzabschnitten haben die Staaten meterhohe Stacheldrahtzäune errichtet.\n" +
                     "Die EU versucht, Flüchtlinge schon abzuwehren, bevor sie die Grenze der EU erreichen. (proasyl.de, 05.10.2020)"),
+            //Ordner 6
+            new Term("Ukraine Krieg","Die EU verurteilt den Russischen Angriffskrieg auf die Ukraine und liefert militärische Güter und finanzielle Mittel an die Ukraine. \n\n"+
+                    "Die EU hat \"massive und beispiellose\" Sanktionen gegen Russland verhängt \nIndividuelle (zB gegen Putin und Lawrow, Banken, Unternehmen, Wagner-Gruppe) "+
+                    "wie Vermögen Einfrieren, Einreiseverbot \nWirtschaftliche / Handel \nEinfuhr / Ausfuhrbeschränkungen abgesehen von Essen betrifft etw 50% Aus und 60% Einfuhren \n\n"+
+                    "hier noch Teil über Ukraine EU-Beitritts Status einfügen, frage nochmal nach"),
+            new Term("Kopenhager Kriterien","Welches Land darf in die EU? \n\nPolitisches Kriterium \nWahrung der Menschenrechte \nInstitutionelle Stabilität \nDamokratische und "+
+                    "rechtsstaatliche Grundordnung \nAchtung und Schutz von Minderheiten \n\nWirtschaftliches Kriterium \nDie Fähigkeit dem Wettbewerbsdruck innerhalb des EU-Binnenmarktes "+
+                    "standzuhalten \nFunktionsfähige und wettberwerbsfähige Marktwirtschaft \nOffenheit der Märkte gegenüber dem Ausland \n\nAcquis Kriterium \nDie Fähigkeit, sich aus einer EU-"+
+                    "Mitgliederschaft erwachsenen Verpflichtungen und Ziele zu eigen zu machen. Dies bedeutet praktisch die Übernahme des \"gemeinschaftlichen Besitzstandes\" (Acquis communautaire)"),
+            new Term("Globalisierung","Wie bin ich betroffen? \nWirtschaft: weltweite/r (arbeits-teilige) Produktion, Handel, Finanz-Krisen, Forschung \nUmwelt: Klima-Wandel, Krankheiten "+
+                    "(Ebola, Vogelgrippe usw.) \nKultur u. Soziales: weltweiter Tourismus, internationale Sport-Ereignisse, weltweite verbreitung von Musik/Filmen, weltweite Kommunikation, "+
+                    "Angleichung von Konsum-Gewohnheiten und Lebens-Stilen \nPolitik: Nichtregierungsorganisationen (Amnesty International, usw.), internationale Organistationen, (Militär)bündnisse (NATO, usw.), "+
+                    "Sanktionen (=Strafen), Kriege \n\n"+
+                    "Ursachen \nWunsch nach ausländischen Produkten zB Wunsch nach Bananen verbindet Handelswege nach Chile \nUnternehmen sparen Geld wenn sie im Ausland "+
+                    "ganz oder teilweise produzieren lassen \nUnternehmen schließen sich mit ausländischen Unternehmen zusammen \nUnternehmen wandern ganz aus \nSo werden Kunden "+
+                    "weltweit gewonnen \nTransport ist einfacher und billiger geworden (Flugzeuge, Frachtcontainer, Eisenbahn) \nMärkte werden immer freier zugänglich \ninternationale "+
+                    "Handelsbeziehung weiten sich aus \nWelthandel kann sich mehr und mehr entfalten \nEs ist schnell bekannt wo günstige Güter und Dienstleistungen zu kaufen sind und welche "+
+                    "Neuheiten es gibt \nGlobale Arbeitsprozesse können verteilt und koordiniert werden \nGeldstöme können auch frei von allen Beschränkungen dorthin fließen wo der größte Profit "+
+                    "zu erwaten ist \n\nAuswirkungen \nmenschen-unwürdige Arbeitsbedingungen zB an der Nähmaschine im Akkord (Bezahlung nach Stück) in Billig-Lohn Ländern (China, Hongkong, Taiwan, Bangladesch) \n"+
+                    "7 Tage in der Woche für sehr wenig Lohn ohne soziale Absicherung \nAuch in Industrieländern gibt es zunehmend prekäre Arbeits-Verhältnisse, Lohn aus einer Vollzeit-Beschäftigung reicht "+
+                    "nicht aus, um eine Familie zu ernähren \nKäufer von Billig-Kleidung belastet durch Chemikalien / Farbstoffe, Allergien, Organablagerungen, Krebs, Unfruchtbarkeit \n"+
+                    "Multinationale Unternehmen profitieren und nutzen Macht und nehmen Einfluss auf Arbeitsaltag ihrer Beschäftigten. Sie spielen die Arbeitenden in unterschiedlichen Regionen gegen "+
+                    "einander aus. \n\nWer gewinnt? Wer verliert? \n(multi-nationale) Unternehmen \n(+) preiswerte Produkte, geringe Lohnkosten, mehr Gewinn durch billige Produktion \n"+
+                    "Arbeitnehmer \n(+) mehr Arbeitsplätze \n(-) keine sozialen Versicherungen, geringer Stundenlohn, 7 Tage Woche, In den Industriestaaten nur noch qualifizierte Arbeit möglich \n"+
+                    "Konusmenten \n(+) Billige Produkte, Internationale Kultur \n(-) schlechte, teilweise giftige Produkte wegen mangelnder Kontrolle"),
+            new Term("Nachhaltigkeit","Ökologische Dimension \nfür kommende Generationen soll ein intakte Natur und Umwelt erhalten bleiben \nErhalt der Artenvielfalt \nKlimaschutz "+
+                    "\nPflege & Erhalt der Naturräume \nRessourcenschutz \n\nWirtschaftliche Dimension \nMenschen und Unternehmen soll so wirtschaften, dass eine dauerhafte Grundlage für Arbeit und Wohlstand"+
+                    " geschaffen wird \nArmutsbekämpfung \nstabile Arbeitsverhältnisse \nRessourcenschutz \nausgewogene Mitarbeiterstruktur, Ansiedlung neuer Unternehmen in strukturschwachen Regionen, geringe "+
+                    "soziale Ungleichheit \n\nSoziale Dimension \nEs soll auf Dauer eine zukünftsfähige, gerechte und lebenswerte Gesellschaft erreicht werden \nPersönliche Sicherheit "+
+                    "Politische Mitwirkung, Gleichbehandlung der Geschlechter \n\nWie kann ich Globalisierung gerechter und nachhaltiger gestalten? \n"+
+                    "Ich spende Kleider, die ich nicht mehr tragen möchte in die Altkleidersammlung weil ich so inärmeren Regionen dafür sorgen kann, dass die Menschen dort etwas zum Anziehen haben. \n"+
+                    "Ich boykottiere billige Kleidung von großen Ketten und Discountern weil es sich dann für die Ausbeuter Unternehmen nicht mehr lohnt auszubeuten \n"+
+                    "Ich übernehme eine Kinderpartnerschaft weil ich damit einem Kind in einem Entwicklungsland eine Perspektive auf Ausbildung und damit ein Chance auf ein gutes Leben ermögliche. \n"+
+                    "Ich verzichte auf Plastik(-beutel) beim Einkauf weil Plastik nicht verrottet und der Umwelt schadet  \nIch kaufe mir nicht alle 2 Jahre ein neues Smartphone weil ich so nicht den Abbau "+
+                    "von seltenen Rohstoffen fördere und die Umwelt schone \nDie lease ein Schwein weil ich so sicher sein kann, dass das Tier auf meinem Teller artgerecht gehalten und getötet wurde \n"+
+                    "Ich frage im Baumarkt nach der Herkunft der Steine weil ich so Druck auf den Händler ausüben kann, keine Kinderarbeit zu unterstützen und nachhaltig zu produzieren \n"+
+                    "Ich spende regelmäßig Geld an eine Hilfsorganisation weil ich dadurch langfristig angelegte Produkte fördere und so Lebensbedingungen in den unterstützten Regionen zu verbessern helfe.\n\n"+
+                    "Nachhaltigkeit kommt in den Entwicklungsländern nicht an \nAgenda 2030: UNO setzt sich für nachhaltige Entwicklung ein \nbildet noch nicht ab: "+
+                    "Wechsel-Wirkungen zwischen dem Tun und Lassen der Industrieländer und den Lebensbedingungen in den Entwicklungsländern, \"Spiellover\"-Effekte: selten in Statistik, nicht leicht nachweisbar. "+
+                    "zB Klimawandel: Industriestaaten verpulvern fossile Rohstoffe und heizen damit Erdatmosphäre auf. Folgen in Entwicklungsländern: Höhere Meeresspiegel in Küstenstädten, vermehrte Dürren, Überflutungen \n"+
+                    "Bertelsmann Stiftung und Forschernetzwerk SDSN machten Studie welche länder Artenvielfaltsverlust und Naturraubbau importieren: Platz 1: Luxemburg, dann: Singapur, Kuwait, Schweiz "+
+                    "und welche Länder Wasservorratsausbeutung importieren: Katar, Bahrain, Oman \nDas Konsumverhalten und die Geschäftspraktiken vieler reicher Länder können die nachhaltige Entwicklung in Entwicklungs und "+
+                    "Schwellenländern ernsthaft gefährden\", sagt der Ökonom Jeffrey Sachs, SDSN-Leiter. Gleichzeitig warnt Studie aber auch vor neuem Protektionismus, weil der auch eine nachhaltige Entwicklung bedroht. "+
+                    "Mitautor Kroll sagt, die Welt müsse enger zusammenwachsen aber die ungewollte Wechselwirkungen minimieren.\n"+
+                    "Deutschland steht in Ranking gut da bei Bildung und Infrastruktur aber nicht bei Einkommenslücke zwischen Männern und Frauen. \n"+
+                    "Je Einwohner in den Industrieländern werden 18Kg Elektroschrott jährlich hinterlassen. In Burundi, Kongo oder Malawi sind es nur 200g, allerdings wird dorthin aus reichen Ländern welcher exportiert, "+
+                    " um ihn von Kinderhänden nach Verwertbarem durchsuchen zu lassen."),
+            new Term("Schaubildanalyse","Informationen für den ersten Abschnitt: \nTitel, Thema, Quelle, Herausgeber, Jahr, \n"+
+                    "Maßeinheiten (Millionen, %, Gramm, Stunden, usw.), Art der Darstellung (Diagrammart, usw.) \n\nWesentliche Informationen: \n"+
+                    "Spitzenwerte, Auffälligkeiten, Durchschnittswerte, Tendenzen / Entwicklungen \n\nErkenntnis / wichtigste Aussagen: \n"+
+                    "Welche Informationen / Welches Wissen bekomme ich durch das Schaubild?"),
+            new Term("Umwelt Probleme","CO₂ Klimaerwärmung \nAnstieg von Meeresspiegel, Artensterben, Hungersnöte \n\nPlastik-Müll, Mikro-Plastik \n"+
+                    "Artensterben, Unabsehbare Folgen durch Mikro-Plastik, Krankheiten \n\nÖl-Pest \nArtensterben, Krankheit, Gifte für die Tiere \n\nLuftverschmutzung, "+
+                    "Feinstaub \nArtensterben, Atemwegserkrankungen, Krebs \n\nÜberdüngung, giftiges Grundwasser \nArtensterben, giftiges Grundwasser, Krankheiten, Krebs")
     };
 
     public static String[] getKapitelLFYetUnpost() {return kapitelLFYetUnpost;}
