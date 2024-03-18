@@ -18,7 +18,7 @@ Playlist: https://www.youtube.com/playlist?list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQ
 ## Installation
 
 APK File you can find in app > release  
-download it and open it on your android smartphone  
+download it and open it on your android
 
 ### Installation via Android Studio
 
