@@ -347,7 +347,7 @@ public class Terms {
                             "zu berücksichtigen oder weil die Nachfrage konstant ist."),
             },
             {// Angebotsvergleiche bei Beschaffungsmaßnahmen durchführen
-                new Term("Nutzwertanalyse",
+                new Term(" analyse",
                         "Neben dem quantitativen Angebotsvergleich (Einstandspreis) sind qualitative Bewertungskriterien:\n" +
                         "-Qualität und Funktionen des angebotenen Produkts\n" + "-Verbrauchskosten, Energiekosten, Folgekosten\n" + "-Liefermenge, Mindestabnahmemenge\n" +
                         "-Besonderes Design und Aktualität des Produkts\n" + "-Schnelle und zuverlässige Lieferung\n" + "-Kompetenz des Lieferanten (Mitarbeiter)\n" + "-Verhalten des Lieferanten in besonderen Situationen (Notsituatuionen)\n" +
@@ -531,10 +531,10 @@ public class Terms {
                     new Term("Kupferkabel Verdrill & Schirm","Kupferdatenleitungen Kabel mit verdrillten Adernpaaren / Twisted Pair Kabel \n\n"+
                             "Das Kabel hat 8 Leitungen von denen je zwei zu einem Paar verdrillt sind. \nJedes Paar kann geschirmt sein + zusätzliche Schirmung um alle Leitungen. \n"+
                             "Um all das / ganz außen: Plastikhülle \n\n"+
-                            "Das Verdrillen der Adernpaare verhindert Aussenden magnetischer Störstrahlung \nebenso haben sich Störungen bei von außen eingestrahlten Störungen gegenseitig auf \n\n"+
+                            "Das Verdrillen der Adernpaare verhindert Aussenden magnetischer Störstrahlung \nebenso heben sich Störungen bei von außen eingestrahlten Störungen gegenseitig auf \n\n"+
                             "Schirm \n\n"+
                             "Umwickeln mit einer leitfähigen Folie oder Schirmgeflecht (Abschirmung) \nverhindert Aussenden von elektrischer Störstrahlung \nverhindert, dass sich die Leitung durch äußere "+
-                            "E-Felder stören lässtSchützt vor Störfrequenzen anderer Leitungen, \nUmhüllung Adernpaare, \nerhöht Verträglichkeit, \nAbhörsicherheit, \nverhindert Übersprechen \n\n"+
+                            "E-Felder stören lässt \nSchützt vor Störfrequenzen anderer Leitungen, \nUmhüllung Adernpaare, \nerhöht Verträglichkeit, \nAbhörsicherheit, \nverhindert Übersprechen \n\n"+
                             "Leitungstypen (Kupfer) \nUnterscheidungen nach Aufbau des Kabelschirmes \n\nS/FTP \ngemeinsamer Geflechtschirm (S), einzelne Paare jeweils von einem Folienschirm umgeben (FTP) \n\n"+
                             "F/UTP \ngemeinsamer Folienschirm (F), einzelne Paare ungeschirmt (UTP) \n\nSF/UTP \ngemeinsamer Schirm aus Geflecht und Folie (SF), einzelne Paare ungeschirmt (UTP) \n\n"+
                             "U/UTP \nkein gemeinsamer Schirm (U), einzelne Paare ungeschirmt (UTP) \n\n"),
@@ -602,25 +602,35 @@ public class Terms {
                             "Bei HTTP wird in Unterschied zu HTTPS alles im Klartext übertragen auch die Anmeldedaten \n\n"+
                             "Bei gesichertem Webzugriff über das https Protokoll zb bei einem Online Anmeldesystem eines Schul WLAN wird die asymetrische Verschlüsselung verwendet, zur  verschlüsselten Übertragung "+
                             "eines gemeinsamen Sitzungsschlüssels. Die Aufgabe des Verschlüsselungsverfahren beim gesicherten Zugriff auf die Anmeldeseite ist die symetrische Verschlüsselung der Nutzdaten mithilfe des zuvor "+
-                            "übertragenen Sitzungsschlüssels"),
+                            "übertragenen Sitzungsschlüssels \n\nHTTPS verwendet bei der Verbindung die <b>hybride Verschlüsselung</b> \n"+
+                            "Der Client holt sich den öffentlichen Schlüssel des Servers aus dem erhaltenen Zertifikat des Servers, verschlüsselt damit einen symetrischen Session Key und schickt ihn an den Server. "+
+                            "Der Server entschlüsselt den Session Key mit seinem privaten Schlüssel. Beide tauschen Daten, mit dem symetrischen Session Key verschlüsselt, aus."),
                     new Term("ARP", "Adress Resolution Protocol:\n liefert MAC (des Netzwerk-Interfaces) zu IP\n(OSI 2-3)\n\n"+
-                            "ingesetzt um zu bekommen: MAC-Adresse von Zielrechner\n" +
+                            "eingesetzt um zu bekommen: MAC-Adresse von Zielrechner\n" +
                             "Interface-Adresse (IP) des Zielrechners muss beim Senden bekannt sein, in Adress-Feld des Ethernet-Frames einzusetzen\n" +
                             "ARP-Cache: hier speichert Rechner gelernte IP-Adressen Aufruf durch arp-a\n" +
                             "C:\\Users\\uri->arp -a\n" +
                             "Schnittstelle: 192.168.83.1 --- 0x3\n" +
                             "   Internetadresse   Physische Adresse  Typ\n" +
                             "   192.168.83.254    00-50-56-e7-48-5e  dynamisch\n" +
-                            "   192.168.83.254    ff-ff-ff-ff-ff-ff  statisch"),
+                            "   192.168.83.254    ff-ff-ff-ff-ff-ff  statisch \n\n"+
+                            "Der Rechner sendet ARP Request (Wer hat folgende IP? bitte sende MAC) als Broadcast an alle Host im Netz. Der angesprochene Host sendet ARP Reply + MAC. "+
+                            "Diese trägt der Absender dann in seinen ARP Cache ein."),
                     new Term("DNS", "Domain Name Service:\n Übersetzung URL -> IP Adresse\n(OSI 7)\n\n"+
-                            "Name Auflösung . domain Paulinenpflege.de\n" + "(DNS-Abfrage) =^ 139.119.81.86 öffentl IP-Adr"),
+                            "Name Auflösung . domain Paulinenpflege.de\n" + "(DNS-Abfrage) =^ 139.119.81.86 öffentl IP-Adr \n\n"+
+                            "DDNS (DynDNS) Dynamisches DNS \nMacht Webdienste, die auf Servern, mit sich ändernder IP Adresse, laufen, für die Öffentlichkeit erreichbar. \n"+
+                            "Dazu Domainname bei DDNS Anbieter registrieren. An diesen gehen dann die Anfragen nach der URL des Servers. Er hat eine Liste mit der aktuellen IP. "+
+                            "Wenn sich die IP ändert, sorgt eine Software auf dem Router dafür, dass die Liste aktualisiert wird"),
                     new Term("DHCP", "Dynamic Host Config Protocoll \nArbeitet auf der Anwendungsschicht (OSI-Layer:7) \nVerteilt die Ip_Konfiguration an Rechner im Netz\nIP Adressen automatisch konfigurieren\n\n"+
                             "Ablauf DHCP Protokoll: \n\n"+
                             "DHCP DISCOVER: \nDer Client sendet eine Entdeckungsnachricht um nach DHCP Servern im Netz zu suchen \n\n"+
                             "DHCP OFFER: \nEin DHCP Server im Netz, der die DISCOVER erhielt macht eine Offerte (Angebot) \n\n" +
                             "DHCP REQUEST: \nDer Client hat sich für eine Offerte entschieden und sendet eine Rückfrage \n\n"+
-                            "DHCP Acknowledge \nDer DHCP Server, der die Rückfrage bekam, sendet eine Bestätigung"),
-                    new Term("TCP", "Transmission Control Protocol\n Übertragungs Steuer Protocol:\n auf welche Weise Netzwerkkomponenten austauschen?\n OSI 4\n"),
+                            "DHCP Acknowledge \nDer DHCP Server, der die Rückfrage bekam, sendet eine Bestätigung\n\n"+
+                            "Verteilt Adressen von Switch an Geräte. Diese müssen dann im Adress Table der Switch auftauchen"),
+                    new Term("TCP", "Transmission Control Protocol\n Übertragungs Steuer Protocol:\n auf welche Weise Daten / Netzwerkkomponenten austauschen?\n OSI 4\n\n"+
+                            "TCP ist verbindungsorientiert. Dabei wird gewartet, ob der Host antwortet und weis damit ob das Paket ankam oder nicht. \n"+
+                            "UDP (User Datagram Protokol) hingegen ist nicht verbindungsorientiert / verbindungslos. Es sendet nur. Dafür ist es schneller als TCP"),
                     new Term("RFC", "Request for Comments\n Festlegung Protokolle\n ietf.org/rfc/rfc793.txt\n hier: TCP"),
                     new Term("TLS", "Transport Layer Security \n\n"+
                             "Merkmale einer sicheren Verbindung: \nAuthenzität: \nDer Kommunikationspartner ist der, der er vorgibt, zu sein \nIntegrität: \nDie Daten sind unverändert \nVertraulichkeit: \nDie Daten sind für Dritte nicht einsehbar\n\n" +
@@ -628,6 +638,7 @@ public class Terms {
                             "TLS Verbindung mit Zertifikat: \nDer Server schickt beim Verbindungsaufbau sein Zertifikat an den Client, der die Gültigkeit prüft bei der ausstellenden "+
                             "Certification Authority. Dann erstellt der Client einen symmetrischen Session Key, verschlüsselt ihn mit dem Public Key des Servers und schickt ihn zum Server. "+
                              "Wenn die Verbindung steht, werden die Nutzdaten symmetrisch mit dem Session Key verschlüsselt übertragen."),
+                    new Term("STP","Spanning Tree Protokol \n\nErlaubt Switches ein logisches Netzwerk auf Layer3 aufzubauen"),
                     new Term("Header Protokollkopf",
                             "Header (Protokollkopf) - Daten senden in Netzwerk (zB Mail) Browseranfragen an Webserver\n" +
                             "Diese Nutzdaten werden an darunter Schicht übergeben, jede hängt ihren Header vor und gibt Datei weiter runter.\n" +
@@ -725,7 +736,10 @@ public class Terms {
             {//Die Netzwerkfunktion der Clients prüfen und warten
                 new Term("PING","zB PING 192.178.01\noder: PING www.google.de\nsendet Pakete\num erreicbarkeit prüfen\nund dauer"),
                 new Term("DNS", "Domain Name Service:\n Übersetzung URL -> IP Adresse\n(OSI 7)\n\n"+
-                            "Name Auflösung . domain Paulinenpflege.de\n" + "(DNS-Abfrage) =^ 139.119.81.86 öffentl IP-Adr"),
+                            "Name Auflösung . domain Paulinenpflege.de\n" + "(DNS-Abfrage) =^ 139.119.81.86 öffentl IP-Adr\n\n" +
+                            "DDNS (DynDNS) Dynamisches DNS \nMacht Webdienste, die auf Servern, mit sich ändernder IP Adresse, laufen, für die Öffentlichkeit erreichbar. \n" +
+                            "Dazu Domainname bei DDNS Anbieter registrieren. An diesen gehen dann die Anfragen nach der URL des Servers. Er hat eine Liste mit der aktuellen IP. " +
+                            "Wenn sich die IP ändert, sorgt eine Software auf dem Router dafür, dass die Liste aktualisiert wird"),
             },
             {//Netzwerkkomponenten auswählen und konfigurieren
                     new Term("AP Accesspoint (Beacon)",
@@ -828,7 +842,8 @@ public class Terms {
                     "B) Kunden haben Angst ihre Dateien diesem Anbieter nicht weiter anvertrauen zu können\n C) Firewall, Türschloss, VPN, Antivirus Software, Zugangsprotokoll, Daten verschlüsseln\n\n"+
                     "3) Verlust der Integrität (Korrektheit von Informationen)\nA) Softwarefehler, Speicherfehler, Datenerhebungsfehler, kriminelle Eingriffe, Fehler bei Synchronisierung redudant gspeicherter Daten\n"+
                     "B) Kunden arbeiten mit falschen Daten weiter und bekommen so Probleme\nC) Updates überprüfungen, ausgebildete Programmierer, Plausibilitätsprüfung, Prüfroutinen bei Erfassung"),
-            new Term("Firewall","Funktionen: \n\nPaketfilter: \nIP Adresse / Protokol Kontrolle, Port Überwachung \nFilterung mit Layer-3 Informationen (IP-Adressen), bestimmte Adressen können zugelassen oder gesperrt werden\n\n"+
+            new Term("Firewall","Kann Netzwerkzugriff beschränken, nach Absender, Ziel und genutzten Diensten. Überwacht Datenverkehr und entscheidet anhand von Regeln ob bestimmte Pakete durchgelassen werden. \n\n"+
+                    "Funktionen: \n\nPaketfilter: \nIP Adresse / Protokol Kontrolle, Port Überwachung \nFilterung mit Layer-3 Informationen (IP-Adressen), bestimmte Adressen können zugelassen oder gesperrt werden\n\n"+
                     "Stateful Packet Inspection: \nIP Adresse / Protokol Kontrolle, Port Überwachung, Verbindungszuständigkeitsüberprüfung je nach offen oder zu vertrauenswürdig oder nicht, leistungsfähiger, ressourcenintensiver \n"+
                     "Überprüfung, ob Pakete einer speziellen Sitzung gehören. Abfangen von dDoS-Attacken. Merken von Paketen die gesendet und oder empfangen werden und Suche nach verdächtigen Mustern. \n\nDeep Packet Inspection: \nAuf Anwendungsschicht wird geprüft, was in den Paketen ist \n"+
                     "Prüfung der Pakete bis in die Anwendungsschicht hinauf. Datenbereiche prüfen. Somit können Pakete auf Viren, Spam und andere unerwünschte Inhalte untersucht werden"),
@@ -1645,7 +1660,8 @@ public class Terms {
             new Term("Break Even Point", "Umsatz = Stückzahl * Stückpreis\n\n"+ "Deckungsbeitrag = Umsatz - variable Kosten \n"+
                     "Der Unterschied zwischen Erlösen (Umsatz) und variablen Kosten. Er steht zur Deckung der Fixkosten zur Verfügung. "+
                     "Er kann auf die Gesamtmenge als auch auf ein Stück bezogen werden.\n\n"+
-                    "Break Even Point =\n Fixkosten / (Stückpreis - Variable Stückkosten) \nDer Punkt, ab dem Gewinn erwirtschaftet wird.")
+                    "Break Even Point =\n Fixkosten / (Stückpreis - Variable Stückkosten) \nDer Punkt, ab dem Gewinn erwirtschaftet wird."),
+            new Term("Betriebsabrechnungsbogen", "BAB")
     };
     private static Term[] termsLFWK = {
             //Ordner 1
@@ -2064,8 +2080,8 @@ public class Terms {
                     "Subway in London, Subway in Stuttgart \n\nDienstleistungsfranchising \nFranchise-Nehmer bieten Dienstleistungen unter dem Namen des Franchise-Gebers an \n"+
                     "Bsp: Montana-Hotel ind Kassel, Montana-Hotel in Bremen \nVolkshochschule Stuttgart, Volkshochschule Heidelberg \n\nProduktfranchising \nFranchise-Nehmer stellt Waren "+
                     "in seinem eigenen Geschäft selber her und verkauft diese Waren unter dem Namen (Warenzeichen) des Franchise-Gebers \nBsp: Verkauf von Cartige World-Produkten (Verbrauchsmaterialien für Drucker) "+
-                    "in den USA, Verkauf von Catridge World-Produkten in Deutschland \n\nProduktfranchising (Herstellungsfr.) \nFranchise-Nehmer stellt Waren in seinem eigenen Geschäft selbst her und verkauft diese "+
-                    "Waren unter dem Namen (=Warenzeichen) des Franchise-Gebers \n\nRechtsform \nAuskunft über: \nWer bringt Kapital? Wer haftet für Schulden, in welchem Umfang? Wer leitet? Wer vertritt nach außen? "+
+                    "in den USA, Verkauf von Catridge World-Produkten in Deutschland \n\n"+
+                    "Rechtsform \nAuskunft über: \nWer bringt Kapital? Wer haftet für Schulden, in welchem Umfang? Wer leitet? Wer vertritt nach außen? "+
                     "Wer bekommt den Gewinn? \nEinzelunternehmen <-> Gesellschaftsunternehmen (Personengesellschaft <-> Kapitalgesllschft) \n\n"+
                     "Wahl des Standortes: \nKosten, Kundennähe, Behördliche Auflagen, Verkehrsanbindung, Arbeitskräfte, Konkurenz \n\n"),
             new Term("Rechtsformen Unternehmen","Legende: \nName, Abkürzung, Haftung, Geschäftsführung, Gewinnverteilung \n\n"+
@@ -2386,10 +2402,10 @@ public class Terms {
                     "Konusmenten \n(+) Billige Produkte, Internationale Kultur \n(-) schlechte, teilweise giftige Produkte wegen mangelnder Kontrolle"),
             new Term("Nachhaltigkeit","Ökologische Dimension \nfür kommende Generationen soll ein intakte Natur und Umwelt erhalten bleiben \nErhalt der Artenvielfalt \nKlimaschutz "+
                     "\nPflege & Erhalt der Naturräume \nRessourcenschutz \n\nWirtschaftliche Dimension \nMenschen und Unternehmen soll so wirtschaften, dass eine dauerhafte Grundlage für Arbeit und Wohlstand"+
-                    " geschaffen wird \nArmutsbekämpfung \nstabile Arbeitsverhältnisse \nRessourcenschutz \nausgewogene Mitarbeiterstruktur, Ansiedlung neuer Unternehmen in strukturschwachen Regionen, geringe "+
-                    "soziale Ungleichheit \n\nSoziale Dimension \nEs soll auf Dauer eine zukünftsfähige, gerechte und lebenswerte Gesellschaft erreicht werden \nPersönliche Sicherheit "+
-                    "Politische Mitwirkung, Gleichbehandlung der Geschlechter \n\nWie kann ich Globalisierung gerechter und nachhaltiger gestalten? \n"+
-                    "Ich spende Kleider, die ich nicht mehr tragen möchte in die Altkleidersammlung weil ich so inärmeren Regionen dafür sorgen kann, dass die Menschen dort etwas zum Anziehen haben. \n"+
+                    " geschaffen wird \nArmutsbekämpfung \nstabile Arbeitsverhältnisse \nRessourcenschutz \nausgewogene Mitarbeiterstruktur, \nAnsiedlung neuer Unternehmen in strukturschwachen Regionen, \ngeringe "+
+                    "soziale Ungleichheit \n\nSoziale Dimension \nEs soll auf Dauer eine zukünftsfähige, gerechte und lebenswerte Gesellschaft erreicht werden \nPersönliche Sicherheit \n"+
+                    "Politische Mitwirkung, \nGleichbehandlung der Geschlechter \n\nWie kann ich Globalisierung gerechter und nachhaltiger gestalten? \n"+
+                    "Ich spende Kleider, die ich nicht mehr tragen möchte in die Altkleidersammlung weil ich so in ärmeren Regionen dafür sorgen kann, dass die Menschen dort etwas zum Anziehen haben. \n"+
                     "Ich boykottiere billige Kleidung von großen Ketten und Discountern weil es sich dann für die Ausbeuter Unternehmen nicht mehr lohnt auszubeuten \n"+
                     "Ich übernehme eine Kinderpartnerschaft weil ich damit einem Kind in einem Entwicklungsland eine Perspektive auf Ausbildung und damit ein Chance auf ein gutes Leben ermögliche. \n"+
                     "Ich verzichte auf Plastik(-beutel) beim Einkauf weil Plastik nicht verrottet und der Umwelt schadet  \nIch kaufe mir nicht alle 2 Jahre ein neues Smartphone weil ich so nicht den Abbau "+

@@ -7,7 +7,10 @@ import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.text.Html;
+import android.text.Spanned;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -56,11 +59,14 @@ public class TermActivity extends AppCompatActivity {
         String chapter = intent.getStringExtra(CHAPTER);
         String term = intent.getStringExtra(TERM);
         String content = content(intent, lernfeld, term);
-        System.out.println(content==null);
+        content = content.replace("\n", "<br>");
+        //System.out.println(content==null);
         titleLF.setText(Learnfield.getLearnfieldTitleByNumber(lernfeld));
         titleChapter.setText(chapter);
         txtTerm.setText(term);
-        txtContent.setText(content);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            txtContent.setText(Html.fromHtml(content, 5));
+        }
         setPicIfIs(term);
 
     }
@@ -285,6 +291,10 @@ public class TermActivity extends AppCompatActivity {
         if (term.equals("Multi & Singlemode")) {
             imgView.setImageResource(R.drawable.multi_singlemode);
             imgView.getLayoutParams().height=1300;
+        }
+        if (term.equals("Betriebsabrechnungsbogen")) {
+            imgView.setImageResource(R.drawable.betriebsabrechnungsbogen);
+            imgView.getLayoutParams().height=2200;
         }
 
     }
