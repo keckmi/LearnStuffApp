@@ -1,4 +1,6 @@
 ## News
+18 Mar 24: APK File you can find in app > realease  
+
 *more terms and questions are added from time to time*  
 
 14 Sep: learnfields 10a, 11 & 12 added  
@@ -14,6 +16,11 @@ Part 1: https://www.youtube.com/watch?v=PiCZQg4mhBQ&list=PLrnPJCHvNZuDCyg4Usq2gH
 Playlist: https://www.youtube.com/playlist?list=PLrnPJCHvNZuDCyg4Usq2gHMzz6_CiyQO7  
 
 ## Installation
+
+APK File you can find in app > release  
+download it and open it on your android smartphone  
+
+### Installation via Android Studio
 
 download von github  
 öffnen in android studio  
