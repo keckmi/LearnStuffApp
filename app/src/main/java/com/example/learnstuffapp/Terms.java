@@ -24,6 +24,8 @@ public class Terms {
             "▼ Einfache Anwendungen in Python implementieren", "▼ Auf Dateien in Anwendungen zugreifen",
             "▼ Die Verwaltung von Daten mithilfe von Datenbanken planen und umsetzen", "▼ Software testen und dokumentieren"};
 
+    private static String [] kapitelLFWK = {"▼ Berufsbildung und Arbeitswelt", "▼ Vertragsrecht", "▼ Verbraucherbewusstes Verhalten",
+            "▼ Umgang mit Geld", "▼ Soziale Marktwirtschaft", "▼ Unternehmensgründung"};
 
     private static Term[][] termsLF1 = {
               {//Die Eigene Rolle im Betrieb beschreiben
@@ -805,7 +807,18 @@ public class Terms {
                         "Vorteile: \nHoher Wirkungsgrad, Lange Batterielebensdauer, Geringe Abmessungen, Einfacher Aufbau, Geringe Kosten\n" +
                         "Nachteile: \nUmschaltlücke von wenigen Millisekunden (kann von Kondensatoren in guten PC-Netzteilen gehalten werden), Verbraucher wird durch ungefilterte Spannung versorgt, Nicht für empfindliche Verbraucher geeignet.\n" +
                         "Anwendungsbereiche: \nBüros, Computer und PCs, Einzelne Workstations, Kleine Telekommunikationsanlagen\n"),
-                new Term("RAID","siehe Ordner 2")
+                new Term("RAID",
+                        "RAID 0 \nmit Striping (Aufteilung) \naufeinanderfolgende Datensegmente werden auf unterschiedlichen Festplatten gespeichert.\n"+
+                        "Nützlich wenn die Geräte Anfrage nach Daten schneller ist, als eine Festplatte sie beantworten kann. \n\n"+
+                        "RAID 01 / RAID 0+1 \nmehrere Raid 0 \n\n"+
+                        "RAID 1 \nmit Redundanzen. doppelt gespeichert. mehrere Festplatten mit dem selben Inhalt \n\n"+
+                        "RAID 10 \nmehrere RAID 1 \n\n"+
+                        "RAID 5 \nMit <b>Parität</b>. Datensatz wird in zwei Teile geteilt, je auf eine Disk und daraus wird ein dritter Teil errechnet, der auf die dritte Disk geht. Bsp:\n"+
+                        "100 101 Disk1 \n010 110 Disk2 \n00 100 Disk3 Parität \nBei gerader Summe der Daten die bspw. auf den Disk 1 und 2 gegenüber liegen = 1 auf bspw. Disk3, sonst 0. \n"+
+                        "Die Paritäten der Datensätze sind bei RAID 5 nicht alle auf der selben Disk. Sie werden bei jedem Datensatz auf einer anderen Disk gespeichert als beim letzten. Dabei werden alle Disks durchgewechselt. \n"+
+                        "Beim Ausfall einer, egal welcher kann mit Hilfe der Verbleibenden der Inhalt wiedererechnet werden. \n\n"+
+                        "RAID 4 \nwie RAID 5 aber alle Paritäten sind auf der selben Disk. \n\n"+
+                        "Hot Spare \nextra Festplatte, angeschlossen, die bei Ausfall einer anderen beschrieben wird.")
             },
     };
     private static Term[] termsLF4 = {
@@ -907,6 +920,10 @@ public class Terms {
                     "Beispiele:\nEntitäten: Mitarbeiter-Schmid, 2, 5\nEntitätsmenge: {Mitarbeiter-Schmidth, Mitarbeiter-Müller}, {2, 5}\nEntity-Typ: Mitarbeiter, Integer\n\nRelationenschreibweise:\n"+
                     "Personen(PersNr, Name, ..., Geburtsort, Einstelldatum)\nVor der Klammer = Tabellenname\nIn der Klammer: alle Spalten\n\nGrafische Darstellung: Bild einfügen"),
             new Term("ERM Notations","von  diesem bild alle fälle ableitbar?"),
+            new Term("Assoziationen","durchgezogene Linie in UML, \"kennt\" Beziehung. \nLinie hat Pfeil an dem Ende an dem die Klasse ist, die von der anderen \"gekannt\" wird. "+
+                    "Und an beiden Enden wenn sie sich gegenseitig kennen. D.H. Objekte der anderen als Attribute haben. \n\nAggregation \ndurchgezogene Linie mit nicht ausgefüllter Raute, "+
+                    "\"hat\" / \"besitzt\" Beziehung. \nFestere Beziehung zB Rangordnung \n\nKomposition \ndurchgezogene Linie mit ausgefüllter Raute, \"Teil-Ganzes\" Beziehung \nExistenzabhängigkeit. "+
+                    "Können nur miteinander so funktionieren. Wird das Ganze gelöscht, so auch der Teil.")
 
     };
     private static Term[] termsLF6 = {
@@ -1160,7 +1177,20 @@ public class Terms {
             "    this.farbe = farbe; } \n\n  public abstract double berechneFlaech(); \n\n  public String getFarbe() { \n    return farbe; }\n\n\n"+
             "public class Kreis extends Flaeche { \n  protected double radius; \n\n  public Kreis(String farbe, double radius) { \n    super(farbe); \n"+
             "    this.radius = radius; } \n\n  @Override \n  public double berechneFlaeche() { \n    return 3.1415 * radius * radius } \n"+
-            "\n  public String getFarbe() { \n    return super.getFarbe(); }\n}")
+            "\n  public String getFarbe() { \n    return super.getFarbe(); }\n}"),
+        new Term("Normalisierung", "Relation, welche Normalform verletzt schrittweise in mehrere kleine Relationen überführen. \n\nSo werden sie übersichtlicher und möglichst einfach \n"+
+                "und sind gut pflegbar. \nAußerdem werden Redundanzen (mehrfache Speicherung der selben Information) vermieden \nund Anomalien (Probleme beim Daten Löschen, Ändern, Beifügen) behoben. \n\n"+
+                "1. Normalform: \nDie Werte der Attribute sind atomar. Keine Aufzählungen, keine Wiederholungsgruppen. 1 Wert in jeder Zeile. \nVorgehen: \nEntferne alle Mehrfacheinträge zB zwei Namen in Spalte Autor. "+
+                "Füge für jeden entfernten Wert eine neue Zeile oder Spalte hinzu. \n\n"+
+                "2. Normalform: \nSie ist in der 1.NF und jedes Nicht-Schlüsselfeld vom gesamten Primärschlüssel (der auch aus mehreren Feldern bestehen kann) funktional abhängig ist. \n"+
+                "Vorgehen: \nZerlege Relation in kleinere Relationen, so dass in jeder Relation alle Nicht-Schlüsselfelder nur noch vom Primärschlüssel abhängen. \nzB ist AbtNr von PK PersNr abhängig, "+
+                "da jede Person in nur einen Abteilung ist. ProjNr allerdings nicht, da eine Person in mehreren Projekten sein kann. So kommt ProjektNr in eine eigene Relation aber AbtNr nicht. \n\n"+
+                "Besteht ein Primärschlüssel aus mehreren Attributen ist zu prüfen, ob es Attribute gibt, die eigentlich nur von einem Teil des Primärschlüssels abhängen. "+
+                "Falls ja, so sind dieser Teil des Primärschlüssels und die zugehörigen Attribute in eine neue Relation zu bringen. \n\n"+
+                "3. Normalform: \nSie ist in der 2.NF und es gibt keine transitiven Abhängigkeiten \nVorgehen: \nTransitiven Abhängigkeiten durch Teilen der Relation in mehrere Relationen entfernen. "+
+                "In diesen alle Nicht-Schlüsselfelder direkt vom gesamten Schlüsselfeld abhängig sind. \nTransitive Abhängigkeiten sind Funktionale Abhängigkeiten über drei Felder. "+
+                "So ist AbtBez von AbtNr abhängig, die von PersNr abhängig ist. AbtBez ist zwar auch von PersNr abhängig, da jede Person in nur einer Abteilung ist mit nur einer Bezeichnung. Dies ist jedoch "+
+                "Dennoch eine transitive Abhängigkeit. Darum kommen AbtNr und AbtBez in eine eigene Relation. "),
     };
     private static Term[] termsLF9 = {
         new Term("Einflüsse auf Netzwerkbereitstellungen",
@@ -1663,474 +1693,485 @@ public class Terms {
                     "Break Even Point =\n Fixkosten / (Stückpreis - Variable Stückkosten) \nDer Punkt, ab dem Gewinn erwirtschaftet wird."),
             new Term("Betriebsabrechnungsbogen", "BAB")
     };
-    private static Term[] termsLFWK = {
+    private static Term[][] termsLFWK = {
             //Ordner 1
-            new Term("Berufe","Es gibt 324 Berufe, \ndie im Verzeichnis der anerkannten Berufe, \ndes Bundesinstitut für Berufsbildung BiB stehen \nund 54 Berufsfelder."),
-            new Term("BBiG","Berufsbildungsgesetz BBiG \n\nregelt Handwerksordnung HWO (Handwerksberufe) \nAusbildungsordnung für jeden Ausbildungsberufe "+
+            {//Berufsbildung und Arbeitswelt
+            new Term("Berufe", "Es gibt 324 Berufe, \ndie im Verzeichnis der anerkannten Berufe, \ndes Bundesinstitut für Berufsbildung BiB stehen \nund 54 Berufsfelder."),
+            new Term("BBiG", "Berufsbildungsgesetz BBiG \n\nregelt Handwerksordnung HWO (Handwerksberufe) \nAusbildungsordnung für jeden Ausbildungsberufe " +
                     "(Ort, Dauer, Name, Was wann lehren, Prüfung)"),
-            new Term("Duale Ausbildung","Betrieb \n(Wirtschaftsminister) \nFachpraxis Fp \nAbschluss: Kammerprüfung / Gehilfen: Gesellenbrief \n\n"+
-                    "Berufsschule \n(Wirtschaftsminister) \nFachtheorie + Fp (bisschen \nAllgemeinbildung + tp (technisches Praktikum)) \nSchulabschlussprüfung: Abschlusszeugnis Berufsschule"+
-                    "\n\nVorteile: \nAusbildung abwechslungsreicher \nGünstiger für Steuerzahler als ganzschulische \nfrüher Erfahrung in Arbeitswelt "+
-                    "\nauch Allgemeinbildung (Berufsschule) \ntheoretische Ausbildung kann nicht durch Betrieb unterbrochen werden \n\n"+
-                    "Nachteile: \nOrganisation manchmal schwierig, welche Ausbildungsinhalte wo vermitteln \nQualität je nach Betrieb anderst \n"+
+            new Term("Duale Ausbildung", "Betrieb \n(Wirtschaftsminister) \nFachpraxis Fp \nAbschluss: Kammerprüfung / Gehilfen: Gesellenbrief \n\n" +
+                    "Berufsschule \n(Wirtschaftsminister) \nFachtheorie + Fp (bisschen \nAllgemeinbildung + tp (technisches Praktikum)) \nSchulabschlussprüfung: Abschlusszeugnis Berufsschule" +
+                    "\n\nVorteile: \nAusbildung abwechslungsreicher \nGünstiger für Steuerzahler als ganzschulische \nfrüher Erfahrung in Arbeitswelt " +
+                    "\nauch Allgemeinbildung (Berufsschule) \ntheoretische Ausbildung kann nicht durch Betrieb unterbrochen werden \n\n" +
+                    "Nachteile: \nOrganisation manchmal schwierig, welche Ausbildungsinhalte wo vermitteln \nQualität je nach Betrieb anderst \n" +
                     "Berufsschulen oft ohne moderne Maschinen \nzu wenige Ausbildungsplätze in Betrieben"),
-            new Term("Berufsausbildungsvertrag","Vertragspartner: Ausbilder + Auszubildender unterschreiben schicken zur Genehmigung an IHK Industriehandelskammer "+
-                    "und HWK Handwerkskammer. Diese machen Eintrag ins Verzeichnis der Berufsausbildungsverhältnisse VBAV. Grundlagen: Berufssbildungsgesetz BBiG, Handwerksordnung HWO, außerdem zB "+
-                    "Jugendarbeitsschutzgesetz \n\nInhalt: \nZiel der Ausbildung \nZeitliche Reihenfolge \ntägliche Arbeitszeit \nDauer (normalerweise 3 Jahre) \nDauer der Probezeit "+
-                    "\nAusbildungsmaßnahmen außerhalb der Firma \nHöhe Ausbildungsvergütung \nDauer Urlaub \nKündigungsvoraussetzungen \n"+
-                    "\nPflichten Auszubildender: \nLernpflicht \nAusbildungsnachweis \nSorgfaltspflicht \nWettbewerbsverbot \nSchweigepflicht \nWeisungsgebundenheit \n"+
-                    "Teilnahmepflicht Berufsschule \nBenachrichtigungspflicht \n\nPflichten Ausbilder: \nAusbildungspflicht \nBereitstellung von Arbeitsmitteln \nAusbildungsbezogene Tätigkeiten \n"+
+            new Term("Berufsausbildungsvertrag", "Vertragspartner: Ausbilder + Auszubildender unterschreiben schicken zur Genehmigung an IHK Industriehandelskammer " +
+                    "und HWK Handwerkskammer. Diese machen Eintrag ins Verzeichnis der Berufsausbildungsverhältnisse VBAV. Grundlagen: Berufssbildungsgesetz BBiG, Handwerksordnung HWO, außerdem zB " +
+                    "Jugendarbeitsschutzgesetz \n\nInhalt: \nZiel der Ausbildung \nZeitliche Reihenfolge \ntägliche Arbeitszeit \nDauer (normalerweise 3 Jahre) \nDauer der Probezeit " +
+                    "\nAusbildungsmaßnahmen außerhalb der Firma \nHöhe Ausbildungsvergütung \nDauer Urlaub \nKündigungsvoraussetzungen \n" +
+                    "\nPflichten Auszubildender: \nLernpflicht \nAusbildungsnachweis \nSorgfaltspflicht \nWettbewerbsverbot \nSchweigepflicht \nWeisungsgebundenheit \n" +
+                    "Teilnahmepflicht Berufsschule \nBenachrichtigungspflicht \n\nPflichten Ausbilder: \nAusbildungspflicht \nBereitstellung von Arbeitsmitteln \nAusbildungsbezogene Tätigkeiten \n" +
                     "Freistellungspflicht für Berufsschule \nFürsorgepflicht \nPflicht Zeugnisausstellung \nZahlungspflicht"),
-            new Term("Ende Berufsausbildung","In Probezeit \n1) Kündigung fristlos (ohne Grundangabe) \na) durch Azubi b) durch Ausbilder \n\n"+
-                    "Nach Probezeit \n1) Kündigung fristlos (wichtiger Grund) \na) durch Azubi zB Bedrohung Gewalt \nb) durch Ausbilder zB Diebstahl, Gewalt \n"+
+            new Term("Ende Berufsausbildung", "In Probezeit \n1) Kündigung fristlos (ohne Grundangabe) \na) durch Azubi b) durch Ausbilder \n\n" +
+                    "Nach Probezeit \n1) Kündigung fristlos (wichtiger Grund) \na) durch Azubi zB Bedrohung Gewalt \nb) durch Ausbilder zB Diebstahl, Gewalt \n" +
                     "2) Kündigung + Frist 4 Wochen \ndurch Azubi zB Berufswechsel \n\nGesellenprüfung, Abschlussprüfung"),
-            new Term ("Arbeitsschutz","Arbeitszeitgesetz, Bundesurlaubsgesetz, Mutterschutzgesetz, Schwerbehindertenschutz (Sozialgesetzbuch), Jugendabreitsschutzgesetz"),
-            new Term("Arbeitsstättenverordnung","Temperatur, Sauberkeit, Beleuchtung"),
-            new Term("Produktsicherheitsgesetz","Geräte und Maschinen, Notschalter, Sicherheitshinweise, Fingerschutz, Sichtschutz, Schutzkappen"),
-            new Term("Unfallverhütungsvorschriften","Schutzbekleidung: Sicherheitsschuhe, Handschuhe, Schutzbrille, Mundschutz, Helm \n\n"+
+            new Term("Arbeitsschutz", "Arbeitszeitgesetz, Bundesurlaubsgesetz, Mutterschutzgesetz, Schwerbehindertenschutz (Sozialgesetzbuch), Jugendabreitsschutzgesetz"),
+            new Term("Arbeitsstättenverordnung", "Temperatur, Sauberkeit, Beleuchtung"),
+            new Term("Produktsicherheitsgesetz", "Geräte und Maschinen, Notschalter, Sicherheitshinweise, Fingerschutz, Sichtschutz, Schutzkappen"),
+            new Term("Unfallverhütungsvorschriften", "Schutzbekleidung: Sicherheitsschuhe, Handschuhe, Schutzbrille, Mundschutz, Helm \n\n" +
                     "Regeln in Wektstätten: Fluchtweg, Nicht Essen, Rauchen, an Sicherheitshinweise halten"),
-            new Term("überwachung","Unfallverhütungsvorschriften \ndurch Berufsgenossenschaften (Sicherheitsbeauftragter) ohne Anmeldung, sofort beseitigen, Geldstrafe \n\n"+
-                    "sozialen Arbeitsschutz \ndurch Gewerbeaufsichtsämter prüfen Anzeigen Geldstrafen \n\nTÜV (Technischer Überwachungsverein) \nüberprüft Maschinen im Betrieb \n\n"+
+            new Term("überwachung", "Unfallverhütungsvorschriften \ndurch Berufsgenossenschaften (Sicherheitsbeauftragter) ohne Anmeldung, sofort beseitigen, Geldstrafe \n\n" +
+                    "sozialen Arbeitsschutz \ndurch Gewerbeaufsichtsämter prüfen Anzeigen Geldstrafen \n\nTÜV (Technischer Überwachungsverein) \nüberprüft Maschinen im Betrieb \n\n" +
                     "Betriebsärzte & Sicherheitsingenieure \n\nBetriebsrat"),
-            new Term("Arbeits - Ausbildungsvertrag","Arbeitsvertrag \nArbeitnehmer & geber \nNamen der Vertragspartner \nBeginn und Ende (bei Befristung) des Arbeitsverhältnisses \n"+
-                    "Beschreibung Arbeit \nArbeitszeit \nUrlaubstage \nGehalt \nKündigungsfristen \n\nAusbildungsvertrag \nAusbildender & Ausbilder \nNamen der Vertragspartner \n"+
+            new Term("Arbeits - Ausbildungsvertrag", "Arbeitsvertrag \nArbeitnehmer & geber \nNamen der Vertragspartner \nBeginn und Ende (bei Befristung) des Arbeitsverhältnisses \n" +
+                    "Beschreibung Arbeit \nArbeitszeit \nUrlaubstage \nGehalt \nKündigungsfristen \n\nAusbildungsvertrag \nAusbildender & Ausbilder \nNamen der Vertragspartner \n" +
                     "Beginn & Ende \nAusbildungsinhalte \nAusbildungsmaßnahmen außerhalb von Firma \nUrlaubstage \nGehalt \nDauer Probezeit \nKündigungsfristen"),
             //Ordner 2
             new Term("Sozialversicherungen",
-                    "Krankenversicherung \nseit1883 \nTräger: Krankenkasse \nBeiträge zahlt Arbeitgeber & Arbeitnehmer 50/50 \nBeitragshöhe: 14,6 % von Bruttolohn \n"+
-                    "\nUnfallversicherung \nseit1884 \nTräger: Berufsgenossenschaften \nBeiträge zahlt Arbeitgeber 100% \nBeitragshöhe hängt von Unfallrisiko ab\n\n"+
-                    "Rentenversicherung \nseit 1889 \nTräger: Deutsche Rentenversicherung \nBeiträge zahlt Arbeitgeber 100% \nBeitragshöhe 18,6 % vom Bruttolohn\n\n"+
-                    "Arbeitslosenversicherung \nseit 1927 \nTräger: Bundesagentur für Arbeit \nBeiträge zahlt Arbeit 100% \nBeitragshöhe 2,4 % von Bruttolohn\n\n"+
-                    "Pflegeversicherung \nseit 1995 \nTräger: Pflegekasse \n Beiträge zahlt Arbeit 100% \nBeitragshöhe 3,05 % (kinderlos, über 23: + 0,35 %)\n\n"+
-                    "Beitrag berechnen \nLohn * 0,5 (Arbeitgeber und Arbeitnehmer zahlen je die Hälfte) * 0,024 (Höhe Arbeitslosenversicheurng) = 28,80\n\n"+
-                    "Solidaritätsprinzip: Frau A & B zahlen ein, wenn eine krank wird, bekommt sie von den Beiträgen beider, so wie die andere auch, falls diese auch mal krank ist"),
+                    "Krankenversicherung \nseit1883 \nTräger: Krankenkasse \nBeiträge zahlt Arbeitgeber & Arbeitnehmer 50/50 \nBeitragshöhe: 14,6 % von Bruttolohn \n" +
+                            "\nUnfallversicherung \nseit1884 \nTräger: Berufsgenossenschaften \nBeiträge zahlt Arbeitgeber 100% \nBeitragshöhe hängt von Unfallrisiko ab\n\n" +
+                            "Rentenversicherung \nseit 1889 \nTräger: Deutsche Rentenversicherung \nBeiträge zahlt Arbeitgeber 100% \nBeitragshöhe 18,6 % vom Bruttolohn\n\n" +
+                            "Arbeitslosenversicherung \nseit 1927 \nTräger: Bundesagentur für Arbeit \nBeiträge zahlt Arbeit 100% \nBeitragshöhe 2,4 % von Bruttolohn\n\n" +
+                            "Pflegeversicherung \nseit 1995 \nTräger: Pflegekasse \n Beiträge zahlt Arbeit 100% \nBeitragshöhe 3,05 % (kinderlos, über 23: + 0,35 %)\n\n" +
+                            "Beitrag berechnen \nLohn * 0,5 (Arbeitgeber und Arbeitnehmer zahlen je die Hälfte) * 0,024 (Höhe Arbeitslosenversicheurng) = 28,80\n\n" +
+                            "Solidaritätsprinzip: Frau A & B zahlen ein, wenn eine krank wird, bekommt sie von den Beiträgen beider, so wie die andere auch, falls diese auch mal krank ist"),
             new Term("Tarifvertrag",
-                    "Tarifverhandlungen durch \"Sozialpartner\" Arbeitgeberverband und Gewerkschaft führen zu \n\nLohntarifvertrag \nLohnhöhe \nLaufzeit: 1 Jahr \n\nManteltarifvertrag \nArbeitsbedingungen"+
-                    " wie Pausen, Mehrarbeit, Arbeitszeit, Laufzeit: 3 - 5 Jahre \n\nSo muss nicht jedes Jahr alles neu verhandelt werden \n\nTarifvertrag: einheitliche Arbeitsbedingungen für ganzen Wirtschaftszweig"+
-                    "\n\nTarifverhandlungen: \nTarifautonomie: Tarifpartner verhandeln selbst (Staat darf nicht einmischen) \nSchlichtung: Wenn Tarifverhandlung scheitert, +neutrale Person versucht Lösung zu finden \n"+
-                    "Urabstimmung: Wenn Schlichtung scheitert. Gewerkschaftsmitglieder stimmen über Streik ab (75% der Stimmen benötigt) \nStreikgeld: von Gewerkschaft (da kein Lohn während Streik) \n"+
-                    "Aussperrung: Firma wird geschlossen, da wegen Sreik unrentabel. Problem für Arbeiter außerhalb der Gewerkschaft. Diese bekommen jetzt weder Lohn noch Streikgeld\n"+
-                    "Neue Tarifverhandlungen: 2. Urabstimmung: Streik Ende? (mindestens 25% der Stimmen benötigt) \nNeuer Tarifvertrag \nallgemeinverbindlich für alle gültig!"+
-                    "\n  Jede Firma, jeder Chef, jeder Arbeiter muss ihn beachten. \nFriedenspflicht: Da neuer Tarifvertrag keinen Streik und keine Aussperrung mehr!"),
+                    "Tarifverhandlungen durch \"Sozialpartner\" Arbeitgeberverband und Gewerkschaft führen zu \n\nLohntarifvertrag \nLohnhöhe \nLaufzeit: 1 Jahr \n\nManteltarifvertrag \nArbeitsbedingungen" +
+                            " wie Pausen, Mehrarbeit, Arbeitszeit, Laufzeit: 3 - 5 Jahre \n\nSo muss nicht jedes Jahr alles neu verhandelt werden \n\nTarifvertrag: einheitliche Arbeitsbedingungen für ganzen Wirtschaftszweig" +
+                            "\n\nTarifverhandlungen: \nTarifautonomie: Tarifpartner verhandeln selbst (Staat darf nicht einmischen) \nSchlichtung: Wenn Tarifverhandlung scheitert, +neutrale Person versucht Lösung zu finden \n" +
+                            "Urabstimmung: Wenn Schlichtung scheitert. Gewerkschaftsmitglieder stimmen über Streik ab (75% der Stimmen benötigt) \nStreikgeld: von Gewerkschaft (da kein Lohn während Streik) \n" +
+                            "Aussperrung: Firma wird geschlossen, da wegen Sreik unrentabel. Problem für Arbeiter außerhalb der Gewerkschaft. Diese bekommen jetzt weder Lohn noch Streikgeld\n" +
+                            "Neue Tarifverhandlungen: 2. Urabstimmung: Streik Ende? (mindestens 25% der Stimmen benötigt) \nNeuer Tarifvertrag \nallgemeinverbindlich für alle gültig!" +
+                            "\n  Jede Firma, jeder Chef, jeder Arbeiter muss ihn beachten. \nFriedenspflicht: Da neuer Tarifvertrag keinen Streik und keine Aussperrung mehr!"),
             new Term("Interessenvertretung im Betrieb",
-                    "1) Schwerbehindertenvertretung \n2) Jugend & Auszubildendenvertretung \n3) Betriebsrat"+
-                    "\n\nwo? \nprivate Betriebe \n1) mit mindestens 5 Schwerbehinderten \n2) mit mindestens 5 Jugendlichen &/oder Auszubildenden \n3) mit mindestens 5 Arbeitnehmern"+
-                    "\n\nWahl für \n1) 4 Jahre von Schwerbehinderten (mindestens 60 GdB) \n2) 2 Jahre von < 18 jährigen & allen Azubis \n3) 4 Jahre von Arbeitnehmer > 18 jährig"+
-                    "\n\nWen wählen \n1) Arbeiter, mindestens 6 Monate im Betrieb, volljährig \n2) bis 25 jährige, bei Azubis alle \n3) Arbeiter >18 jährige und mindestens 6 Monate im Betrieb"+
-                    "\n\nMitgliederzahl \n1) 1 + 1 Stelllvertreter \n2) verschieden (maximal 25) \n3) abhängig von Betriebsgröße"+
-                    "\n\nAufgabe \n1) hilft Schwerbehinderten bei Problemen im Betrieb, Betriebsratssitzungsteilnahme, achtet auf Einhaltung von Gesetz und Vorschrift\n"+
-                    "2) Betriebsratssitzungsteilnahme, achtet auf Einhaltung von Gesetz und Vorschrift, Zusammenarbeit mit Betriebsrat, spricht nicht direkt mit Chef, sondern erst mit Betriebsrat\n"+
-                    "3) Verwaltung der Sozialeinrichtungen und Arbeitsschutz"),
-            new Term("Betriebsrat","Mitbestimmung im Betrieb \n\n   Personalsachen \n   Tarifverträge \n   Betriebsvereinbarungen \n   Betriebswirtschaft"),
-            new Term("Betriebsversammlung","alle 3 Monate \n\nVorbereitung und Leitung: Betriebsrat \ndieser berichtet hier von Arbeit der letzten 3 Monate \nArbeiter kommen zusammen und stellen Fragen\n"+
+                    "1) Schwerbehindertenvertretung \n2) Jugend & Auszubildendenvertretung \n3) Betriebsrat" +
+                            "\n\nwo? \nprivate Betriebe \n1) mit mindestens 5 Schwerbehinderten \n2) mit mindestens 5 Jugendlichen &/oder Auszubildenden \n3) mit mindestens 5 Arbeitnehmern" +
+                            "\n\nWahl für \n1) 4 Jahre von Schwerbehinderten (mindestens 60 GdB) \n2) 2 Jahre von < 18 jährigen & allen Azubis \n3) 4 Jahre von Arbeitnehmer > 18 jährig" +
+                            "\n\nWen wählen \n1) Arbeiter, mindestens 6 Monate im Betrieb, volljährig \n2) bis 25 jährige, bei Azubis alle \n3) Arbeiter >18 jährige und mindestens 6 Monate im Betrieb" +
+                            "\n\nMitgliederzahl \n1) 1 + 1 Stelllvertreter \n2) verschieden (maximal 25) \n3) abhängig von Betriebsgröße" +
+                            "\n\nAufgabe \n1) hilft Schwerbehinderten bei Problemen im Betrieb, Betriebsratssitzungsteilnahme, achtet auf Einhaltung von Gesetz und Vorschrift\n" +
+                            "2) Betriebsratssitzungsteilnahme, achtet auf Einhaltung von Gesetz und Vorschrift, Zusammenarbeit mit Betriebsrat, spricht nicht direkt mit Chef, sondern erst mit Betriebsrat\n" +
+                            "3) Verwaltung der Sozialeinrichtungen und Arbeitsschutz"),
+            new Term("Betriebsrat", "Mitbestimmung im Betrieb \n\n   Personalsachen \n   Tarifverträge \n   Betriebsvereinbarungen \n   Betriebswirtschaft"),
+            new Term("Betriebsversammlung", "alle 3 Monate \n\nVorbereitung und Leitung: Betriebsrat \ndieser berichtet hier von Arbeit der letzten 3 Monate \nArbeiter kommen zusammen und stellen Fragen\n" +
                     "Chefs sind dabei und können sich zu Wort melden"),
-            new Term("Besonderer Kündigungsschutz","Für Arbeiter in Betriebsrat und Schwerbehindertenvertretung"),
-            new Term("Arbeitszeugnis","einfaches Arbeitszeugnis: \nBeschäftigung Art & Dauer, erworbene Fähigkeiten & Kenntnisse"+
-                    "\nQualifiziertes Zeugnis: \n(auf Verlangen) \nVerhalten + Leistung zusätzlich beurteilt \n\nJeder Arbeiter hat darrauf Anspruch \nmuss immer positiv formuliert sein "+
+            new Term("Besonderer Kündigungsschutz", "Für Arbeiter in Betriebsrat und Schwerbehindertenvertretung"),
+            new Term("Arbeitszeugnis", "einfaches Arbeitszeugnis: \nBeschäftigung Art & Dauer, erworbene Fähigkeiten & Kenntnisse" +
+                    "\nQualifiziertes Zeugnis: \n(auf Verlangen) \nVerhalten + Leistung zusätzlich beurteilt \n\nJeder Arbeiter hat darrauf Anspruch \nmuss immer positiv formuliert sein " +
                     "[siehe Bild]"),
-            new Term("Kündigung","fristlose Kündigung \nzB wegen Diebstahl, Körperliche Gewalt, Arbeitsvergewaltigung, zu häufiges Fehlen ohne Entschuldigung\n\n"+
-                    "fristgemäße Kündigung \n\nKündigungsschutz allgemein \nKündigung muss begründet und sozial gerechtigt sein (jüngere vor ältere, ledig vor Eltern, Neu vor lang in Betrieb)\n\n"+
-                    "besonderer Kündigungsschutz \nfür Betriebsräte, Jugend und Auszubildendenvetretung, Schwangere, Stillende, Schwerbehinderte mit mind 50 GdB\n\n"+
-                    "gesetzliche Kündigungsfrist \nProbezeit 2 Wochen: Kündigung kann jeden Tag ausgesprochen werden \nBeschäftigung < 2 Jahre: 3 Monate\n\n"+
+            new Term("Kündigung", "fristlose Kündigung \nzB wegen Diebstahl, Körperliche Gewalt, Arbeitsvergewaltigung, zu häufiges Fehlen ohne Entschuldigung\n\n" +
+                    "fristgemäße Kündigung \n\nKündigungsschutz allgemein \nKündigung muss begründet und sozial gerechtigt sein (jüngere vor ältere, ledig vor Eltern, Neu vor lang in Betrieb)\n\n" +
+                    "besonderer Kündigungsschutz \nfür Betriebsräte, Jugend und Auszubildendenvetretung, Schwangere, Stillende, Schwerbehinderte mit mind 50 GdB\n\n" +
+                    "gesetzliche Kündigungsfrist \nProbezeit 2 Wochen: Kündigung kann jeden Tag ausgesprochen werden \nBeschäftigung < 2 Jahre: 3 Monate\n\n" +
                     "nach selbst kündigen ohne Arbeit: Sperrzeit Arbeitslosengeld bis 12 Wochen"),
+            },
             //Ordner 3
+            {//Vertragsrecht
             new Term("Rechtsfähigkeit",
                     "bedeutet Träger von Rechten & Pflichten zu sein \nzB Recht auf Urlaub -> Pflicht zu arbeiten \nBeginn: Geburt, Ende: Tod"),
             new Term("Natürl, jurist Personen",
                     "Natürliche Personen: alle lebenden Menschen, rechtsfähig (außer <18 -> gesetzlicher Vertreter)" +
-                    "\n\nJuristische Personen: rechtsfähig (können aber nur durch natürliche Personen handeln)"+
-                    " zB Herr M bestellt iPads im Namen der Paullinenpflege, bezahlt mit ihrem Geld"+
-                    "\ndes privaten Rechts -> Vereine, Firmen \nrechtsfähig wenn zB in öffentlichen Verzeichnis"+
-                    "\ndes öffentlichen Rechts -> Ämter, IHK, Polizei \nrechtrechtsfähig wenn Staat das genehmigt"),
+                            "\n\nJuristische Personen: rechtsfähig (können aber nur durch natürliche Personen handeln)" +
+                            " zB Herr M bestellt iPads im Namen der Paullinenpflege, bezahlt mit ihrem Geld" +
+                            "\ndes privaten Rechts -> Vereine, Firmen \nrechtsfähig wenn zB in öffentlichen Verzeichnis" +
+                            "\ndes öffentlichen Rechts -> Ämter, IHK, Polizei \nrechtrechtsfähig wenn Staat das genehmigt"),
             new Term("Geschäftsfähigkeit",
-                    "geschäftsunfähig = 0-7 Jahre, geistig behindert = Rechtsgeschäfte nichtig\n"+
-                    "beschränkte geschäftsfähigkeit = 7 - 18 Jahre, = schwebend unwirksam, nur gültig bei zuständiger gesetzlicher Vertretung*\n"+
-                    "volle geschäftsfähigkeit 18+ Jahre = alle Rechtsgeschäfte sind voll gültig\n\n"+
-                    "*Ausnahmen: \nGeschäfte mit nur Vorteilen zB Geldgeschenk, \nGeschäfte die nur mit Taschengeld bezahlt werden können"+
-                    "\nRatenverträge <18 Jahre sind verboten \nGeschäfte die Arbeitsverhältnis betreffen wenn von Elter erlaubt"),
+                    "geschäftsunfähig = 0-7 Jahre, geistig behindert = Rechtsgeschäfte nichtig\n" +
+                            "beschränkte geschäftsfähigkeit = 7 - 18 Jahre, = schwebend unwirksam, nur gültig bei zuständiger gesetzlicher Vertretung*\n" +
+                            "volle geschäftsfähigkeit 18+ Jahre = alle Rechtsgeschäfte sind voll gültig\n\n" +
+                            "*Ausnahmen: \nGeschäfte mit nur Vorteilen zB Geldgeschenk, \nGeschäfte die nur mit Taschengeld bezahlt werden können" +
+                            "\nRatenverträge <18 Jahre sind verboten \nGeschäfte die Arbeitsverhältnis betreffen wenn von Elter erlaubt"),
             new Term("Rechtsgeschäfte",
-                    "-geschäftsfähige Personen + Willenserklärungen, rechtliche Folgen wenn sich nicht an Willenserklärung gehen wird\n\n"+
-                    "Willenserklärung \n1) ausdrückliche Erklärung = schriftlich, mündlich, telefon, handschlag \n"+
-                    "2) schlüssiges Handeln - Taxieinstieg, Waren auf Kassenband \n3) Schweigen im privaten Bereich = Ablehnung zB unbestelltes Buch\n\n"+
-                    "Besondere Formvorschriften: \nGrundsatz der Formfreiheit: \n"+
-                    "Rechtsgeschäfte können in beliebiger Form abgeschlossen werden, mündlich / schriftlich\n"+
-                    "Formzwang: \nschriftliche zB bei Berufsausbildungsvertrag, Ratenvertrag, Kündigung\n"+
-                    "öffentliche Beglaubigung zB bei Zeugnis, Geburtsurkunde (kopiert) (überprüfung ob Unterschrift auf Vertrag echt ist)\n"+
-                    "notarielle Beurkundung zB bei Ehevertrag, Grundstücksverkauf (Notar bestätigt Echtheit Unterschrift & Inhalt)\n\n"+
-                    "Einseitige Rechtsgeschäfte: Testament, Kündigung, Anfechtung\n"+"Zwei / Mehrseitige Rechtsgeschäfte: Verträge, Tausch, Schenkung, Verleih\n\n"+
-                    "Nichtige / anfechtbare Rechtsgeschäfte: \nPerson geschäftsunfähig, Person vorrübergehend gestört im Bewusststein,\n"+
-                    "Schwarzarbeit, schwebend unwirksam, Scherzgeschenk, Formzwang nicht eingehalten, illegal, Wucher, Drohung, Irrtum, Betrug"),
+                    "-geschäftsfähige Personen + Willenserklärungen, rechtliche Folgen wenn sich nicht an Willenserklärung gehen wird\n\n" +
+                            "Willenserklärung \n1) ausdrückliche Erklärung = schriftlich, mündlich, telefon, handschlag \n" +
+                            "2) schlüssiges Handeln - Taxieinstieg, Waren auf Kassenband \n3) Schweigen im privaten Bereich = Ablehnung zB unbestelltes Buch\n\n" +
+                            "Besondere Formvorschriften: \nGrundsatz der Formfreiheit: \n" +
+                            "Rechtsgeschäfte können in beliebiger Form abgeschlossen werden, mündlich / schriftlich\n" +
+                            "Formzwang: \nschriftliche zB bei Berufsausbildungsvertrag, Ratenvertrag, Kündigung\n" +
+                            "öffentliche Beglaubigung zB bei Zeugnis, Geburtsurkunde (kopiert) (überprüfung ob Unterschrift auf Vertrag echt ist)\n" +
+                            "notarielle Beurkundung zB bei Ehevertrag, Grundstücksverkauf (Notar bestätigt Echtheit Unterschrift & Inhalt)\n\n" +
+                            "Einseitige Rechtsgeschäfte: Testament, Kündigung, Anfechtung\n" + "Zwei / Mehrseitige Rechtsgeschäfte: Verträge, Tausch, Schenkung, Verleih\n\n" +
+                            "Nichtige / anfechtbare Rechtsgeschäfte: \nPerson geschäftsunfähig, Person vorrübergehend gestört im Bewusststein,\n" +
+                            "Schwarzarbeit, schwebend unwirksam, Scherzgeschenk, Formzwang nicht eingehalten, illegal, Wucher, Drohung, Irrtum, Betrug"),
             new Term("Kaufvertrag",
-                    "2 übereinstimmende Willenserklärungen WE (Inhalt gleich) \n\nVerpflichtungsgeschäft\nzB Verkäufer 1. WE Angebot, Käufer 2. WE Bestellung"+
-                    "\nzB Käufer 1.WE Bestellung, Verkäufer 2.WE Lieferung\n\n Erfüllungsgeschäft: \nPflichten Verkäufer: Annahme Kaufpreis, Ware bereitstellen (zum vereinbarten Zeitpunkt und vereinbarter Qualität) \n"+
-                    "Pflichten Käufer: Zahlung des Kaufpreises, Warenannahme \n\nInhalt: Art & Gut der Ware (Stück), Lieferzeit, Verpackung und Transportkosten, zB frei Haus, Käufer und Verkäufer,"+
-                    " Preisnachlass, SKonto*, Rabatt, Preis\n\n*Preisnachlass für Zahlung innerhalb einer bestimmten Zeit"),
+                    "2 übereinstimmende Willenserklärungen WE (Inhalt gleich) \n\nVerpflichtungsgeschäft\nzB Verkäufer 1. WE Angebot, Käufer 2. WE Bestellung" +
+                            "\nzB Käufer 1.WE Bestellung, Verkäufer 2.WE Lieferung\n\n Erfüllungsgeschäft: \nPflichten Verkäufer: Annahme Kaufpreis, Ware bereitstellen (zum vereinbarten Zeitpunkt und vereinbarter Qualität) \n" +
+                            "Pflichten Käufer: Zahlung des Kaufpreises, Warenannahme \n\nInhalt: Art & Gut der Ware (Stück), Lieferzeit, Verpackung und Transportkosten, zB frei Haus, Käufer und Verkäufer," +
+                            " Preisnachlass, SKonto*, Rabatt, Preis\n\n*Preisnachlass für Zahlung innerhalb einer bestimmten Zeit"),
             new Term("Pflichtverletzung bei der Erfüllung von Kaufverträgen",
-                    "Mangelhafte Lieferung: \nSachmangel in Beschaffenheit, Menge, Art, Montage \nvorrangige Rechte: Nacherfüllung (Nachbesserung, Ersatz liefern)\n"+
-                    "nachrangige Rechte: Rücktritt, Minderung, Schadenersatz, Ersatz (wenn 2x erfolglose Nachbesserung oder Austauschware nicht geliefer, bzw. ebenfalls mangelhaft)\n\n"+
-                    "Bindung an das Angebot\n Verkäufer an Verkaufs- und Käufer an Kaufangebot gebunden außer Freizeichnungsklausel zB \"unverbindlich\", \"nur solange Vorrat reicht\"\n\n"+
-                    "Eigentum & Besitz \nEigentum = gehört mir, darf alles damit machen \nBesitz = gehört mir gerade, aufpassen, zurückgeben"+
-                    "\nEigentumsvorbehalt: Verkäufer bleibt Eigentümer bis Rate ganz beglichen \nman kann Eigentümer von Sache werden, die noch unter Eingentumsvorbehalt"+
-                    "stand wenn man sie gutgläubig (unwissend) vom Ratenzahler kaute\n\n"+
-                    "Mangelhafte Lieferung II \nAGB: Hier kann so manches über die Käuferrechte stehen \nRechte Verkäufer: Mängelrüge (Mahnung) nach Frist "+
-                    "nach 30 Tagen ist Käufer im Verzug. Zahlung nun einklagbar, Zahlung & Schadensersatz forderbar, Vertragsrücktritt möglich (nach Nachfrist), "+
-                    "+Schadensersatz. \nDavor muss Nachfrist in Mahnung gesendet werden. Die fällt weg, wenn Käufer Zahlung verweigert oder diese datiert wurde.\n\n"+
-                    "Vertragsstörungen: \nmangelhafte Lieferung: Ware defekt / falsche Ware \nLieferverzögerung: Ware zu spät / falsche Anzahl \ndurch Verkäufer: "+
-                    "Zahlungsverzug, Annahmeverzug"),
-            new Term("Zwangsvollstreckung","nach nicht Bezahlung nach gerichtlichem Mahnverfahren \nGerichtsvollzieher kommt zum Schuldner pfänden\n"+
-                    "klebt Pfandsiegel auf Möbel. Lebensnotwendige Dinge darf er nicht pfänden. Dann gibt es Versteigerung \n\nLohn auch pfändbar aber mit Grenzen\n"+
-                    "Arbeitsgeber rechnet Lebensunterhaltskosten aus, überflüssiges bekommt Gläubiger \n\nZPO - Zivilprozessordnung (was, wie viel darf man pfänden?)\n"+
+                    "Mangelhafte Lieferung: \nSachmangel in Beschaffenheit, Menge, Art, Montage \nvorrangige Rechte: Nacherfüllung (Nachbesserung, Ersatz liefern)\n" +
+                            "nachrangige Rechte: Rücktritt, Minderung, Schadenersatz, Ersatz (wenn 2x erfolglose Nachbesserung oder Austauschware nicht geliefer, bzw. ebenfalls mangelhaft)\n\n" +
+                            "Bindung an das Angebot\n Verkäufer an Verkaufs- und Käufer an Kaufangebot gebunden außer Freizeichnungsklausel zB \"unverbindlich\", \"nur solange Vorrat reicht\"\n\n" +
+                            "Eigentum & Besitz \nEigentum = gehört mir, darf alles damit machen \nBesitz = gehört mir gerade, aufpassen, zurückgeben" +
+                            "\nEigentumsvorbehalt: Verkäufer bleibt Eigentümer bis Rate ganz beglichen \nman kann Eigentümer von Sache werden, die noch unter Eingentumsvorbehalt" +
+                            "stand wenn man sie gutgläubig (unwissend) vom Ratenzahler kaute\n\n" +
+                            "Mangelhafte Lieferung II \nAGB: Hier kann so manches über die Käuferrechte stehen \nRechte Verkäufer: Mängelrüge (Mahnung) nach Frist " +
+                            "nach 30 Tagen ist Käufer im Verzug. Zahlung nun einklagbar, Zahlung & Schadensersatz forderbar, Vertragsrücktritt möglich (nach Nachfrist), " +
+                            "+Schadensersatz. \nDavor muss Nachfrist in Mahnung gesendet werden. Die fällt weg, wenn Käufer Zahlung verweigert oder diese datiert wurde.\n\n" +
+                            "Vertragsstörungen: \nmangelhafte Lieferung: Ware defekt / falsche Ware \nLieferverzögerung: Ware zu spät / falsche Anzahl \ndurch Verkäufer: " +
+                            "Zahlungsverzug, Annahmeverzug"),
+            new Term("Zwangsvollstreckung", "nach nicht Bezahlung nach gerichtlichem Mahnverfahren \nGerichtsvollzieher kommt zum Schuldner pfänden\n" +
+                    "klebt Pfandsiegel auf Möbel. Lebensnotwendige Dinge darf er nicht pfänden. Dann gibt es Versteigerung \n\nLohn auch pfändbar aber mit Grenzen\n" +
+                    "Arbeitsgeber rechnet Lebensunterhaltskosten aus, überflüssiges bekommt Gläubiger \n\nZPO - Zivilprozessordnung (was, wie viel darf man pfänden?)\n" +
                     "pfändbar = Zuschläge Nacht-/Schichtarbeit, Freitags/Sonntagsarbeit, teilweise pfändbar = Gefahrenzulage, Beiträge für Altersvorsorge\n\n"),
-            new Term("Verjährung von Forderung", "30 J = Erbe, Gerichtsurteile\n10 J = Grundstückskauf\n5 J = Bauwerksmangel (zB Mauerrisse)\n"+
-                    "3 J = normale normale gesetzliche Verjährungsfrist (beginnt Jahresende zB 31.12.23)\n2 J = Gewährleistungsfrist mangelhafte Lieferung auch wenn Handy heil ankam, "+
-                    "aber nach 4 Wochen nicht mehr tut \n\nHemmung (Unterbrechung mind 3 Monate) durch gerichtliche Mahnung, Klagewind erhoben, höhere Gewalt\n\n"+
+            new Term("Verjährung von Forderung", "30 J = Erbe, Gerichtsurteile\n10 J = Grundstückskauf\n5 J = Bauwerksmangel (zB Mauerrisse)\n" +
+                    "3 J = normale normale gesetzliche Verjährungsfrist (beginnt Jahresende zB 31.12.23)\n2 J = Gewährleistungsfrist mangelhafte Lieferung auch wenn Handy heil ankam, " +
+                    "aber nach 4 Wochen nicht mehr tut \n\nHemmung (Unterbrechung mind 3 Monate) durch gerichtliche Mahnung, Klagewind erhoben, höhere Gewalt\n\n" +
                     "Nebeginn durch Zahlung durch Käufer (Teilzahlung), Mangelbeseitigung durch Käufer Vollstreckungsbescheid beantragt oder durchgeführt"),
-            new Term("Mangelhafte Lieferung III","Firma verkauft Neuware \n\ngesetzliche Gewährleistungsfrist 2 Jahre \nFirma muss Fehler & Schäden kostenlos "+
-                    "in Ordnung bringen \nnach 1 Jahr: Käufer muss jetzt Unschuld beweisen (zuvor Verkäufer) \n\nGarantie bedeutet Hersteller verspricht Fehler Verarbeitung / Material "+
-                    "seiner Waren kostenlos in Ordnung zu bringen. Achtung! ist freiwillig, Dauer ist verschieden. \n\nFirma verkauft gebrauchte Ware \ngesetzliche Gewährleistungspflicht 1 Jahr \nselbe wie oben \n\n"+
+            new Term("Mangelhafte Lieferung III", "Firma verkauft Neuware \n\ngesetzliche Gewährleistungsfrist 2 Jahre \nFirma muss Fehler & Schäden kostenlos " +
+                    "in Ordnung bringen \nnach 1 Jahr: Käufer muss jetzt Unschuld beweisen (zuvor Verkäufer) \n\nGarantie bedeutet Hersteller verspricht Fehler Verarbeitung / Material " +
+                    "seiner Waren kostenlos in Ordnung zu bringen. Achtung! ist freiwillig, Dauer ist verschieden. \n\nFirma verkauft gebrauchte Ware \ngesetzliche Gewährleistungspflicht 1 Jahr \nselbe wie oben \n\n" +
                     "private Person verkauft gebrauchte Ware \nwenn Verkäufer Gewährleistung nicht ausdrücklich ausschließt: 1 Jahr \nwenn Verkäufer Gewährleistung ausdrücklich außschließt: 0"),
+            },
             //Ordner 4
-            new Term("Stiftung Warentest", "Unabhängige Testinstitution, \nseit 1964, \ngegründet von Bundesrepublik Deutschland, \n\n"+
-                    "Finanzierung: 86% Verkauf Publikationen und Informationen, 14 % Bundesmittel, \n\n"+
-                    "Produkteinkauf: anonym, Auswahl durch Marktanalytiker, \n\nPrüfung von: Produkten & Dienstleistungen, \n\n"+
+            {//Verbraucherbewusstes Verhalten
+            new Term("Stiftung Warentest", "Unabhängige Testinstitution, \nseit 1964, \ngegründet von Bundesrepublik Deutschland, \n\n" +
+                    "Finanzierung: 86% Verkauf Publikationen und Informationen, 14 % Bundesmittel, \n\n" +
+                    "Produkteinkauf: anonym, Auswahl durch Marktanalytiker, \n\nPrüfung von: Produkten & Dienstleistungen, \n\n" +
                     "Testort: in Laboren zusammenarbeitenden Testinstitutionen weltweit"),
-            new Term("Verbraucherberatungsstellen","Auffgaben: \nBeratung (zB Recht, Geräte) \nInfobereitstellung (zb über Energieverbrauch, Preisvergleich)"),
-            new Term("Gesetz gegen unlauteren Wettbewerb","verbietet: \nKonkurenz bedrohen / schlecht machen \nLockvogelangebote / Versprechen nicht einhalten \n"+
-                    "falsche Angaben über Waren (Preis, Herkunft) machen, \nsittenwidrige Werbung (zB Belästigung auf Straße / Telefon) \n"+
+            new Term("Verbraucherberatungsstellen", "Auffgaben: \nBeratung (zB Recht, Geräte) \nInfobereitstellung (zb über Energieverbrauch, Preisvergleich)"),
+            new Term("Gesetz gegen unlauteren Wettbewerb", "verbietet: \nKonkurenz bedrohen / schlecht machen \nLockvogelangebote / Versprechen nicht einhalten \n" +
+                    "falsche Angaben über Waren (Preis, Herkunft) machen, \nsittenwidrige Werbung (zB Belästigung auf Straße / Telefon) \n" +
                     "fremde Warenzeichen / Firmenzeichen benutzen, \nunbestellte Waren zuschicken, \nirreführende Angaben"),
-            new Term("Haustürgeschäfte","Außerhalb von Geschäftsräumen geschlossenen Verträge \n\nWiderruf: \ninnerhalb von 14 Tagen (bei Erhalt deutlicher"+
-                    "Widerrufsbelehrung und deren gesonderten Unterschrift, \nsonst 1 Jahr und 14 Tage, \ngar nicht bei: Bagatellgeschäft (<40 Euro), notarieller Vertragsbeurkundung, "+
+            new Term("Haustürgeschäfte", "Außerhalb von Geschäftsräumen geschlossenen Verträge \n\nWiderruf: \ninnerhalb von 14 Tagen (bei Erhalt deutlicher" +
+                    "Widerrufsbelehrung und deren gesonderten Unterschrift, \nsonst 1 Jahr und 14 Tage, \ngar nicht bei: Bagatellgeschäft (<40 Euro), notarieller Vertragsbeurkundung, " +
                     "wenn Vertreter von Kunde selbst bestellt wurde \n\nWo? \nHaustür durch Klingeln, Fußgängerzone durch Ansprache"),
-            new Term("Fernabsatzgeschäft","Vertrag zwischen Unternehmen und Verbraucher über Warenlieferungen oder Dienstleistungen unter ausschließlicher Verwendung "+
-                    "von Fernkommunikationsmitteln \n(Vertragsverhandlungsabschluss per Internet, E-Mail, Brief, FAX, Katalog / Telefon) \n\n"+
-                    "Widerrufsdauer: 14 Tage, oder 1 Monat (bei unerlaubten Werbeanrufen), oder 1 Jahr und 14 Tage (ohne Widerrufsmöglichkeitsbelehrung) "+
-                    "Warum Wiederrufsrecht: Weil Ware nicht persönlich betrachtet werden kann \nWann nicht: Speisen & Getränken zB Pizzaservice, entsiegelte Video Audio und Software Träger, "+
+            new Term("Fernabsatzgeschäft", "Vertrag zwischen Unternehmen und Verbraucher über Warenlieferungen oder Dienstleistungen unter ausschließlicher Verwendung " +
+                    "von Fernkommunikationsmitteln \n(Vertragsverhandlungsabschluss per Internet, E-Mail, Brief, FAX, Katalog / Telefon) \n\n" +
+                    "Widerrufsdauer: 14 Tage, oder 1 Monat (bei unerlaubten Werbeanrufen), oder 1 Jahr und 14 Tage (ohne Widerrufsmöglichkeitsbelehrung) " +
+                    "Warum Wiederrufsrecht: Weil Ware nicht persönlich betrachtet werden kann \nWann nicht: Speisen & Getränken zB Pizzaservice, entsiegelte Video Audio und Software Träger, " +
                     "Hygieneartikel wie Kosmetik etc, Maßanfertigungen wie Maßanzüge etc, Lebensmittel \n\nkommt zustande durch Lieferung nach Bestellung, \nAngebot im Internet ist keines, sondern Anpreisung"),
             new Term("AGBs",
-                    "Regeln und Pflichten von Käufer und Verkäufer. \n\nWie sie zu sein haben steht hier: Bürgerliches Gestzbuch (BGB). \n\nSie werden von Verkäufer selbst oder von einem Anwalt in seinem Auftrag geschrieben. \n\n"+
-                    "Bsp: Verkäufer muss Käufer auf AGB hinweisen,\nAGB muss gut lesbar und verständlich sein, \nPreiserhöhung innerhalb von 4 Monaten verboten \nNachbesserungen müssen kostenlos sein, \n"+
-                    "überraschende Klauseln (=Abmachungen) sind verboten, \ndie gesetzliche Fristen dürfen nicht verkürzt werden (zB 2 Jahre Gewährleistung ist Pflicht)"),
-            new Term("Haftung","Verpflichtung einer Person den Schaden zu ersetzen, den sie durch eigenes Verschulden verursacht hat. \n\nHaftungsgründe: \n1) Haftung aus Verträgen \n"+
-                    "zB Kaufvertrag - Wenn Käufer nicht zahlt oder Verkäufer Scheiße liefert \nzB private Haftungsversicherung - Lisa fällt vom Rad weil Steffen Sie übersieht \n"+
-                    "2) Produkthaftung \nzB ein neuer TV explodiert nach 2h \n3)Unerlaubte Handlung \nist gegen das Gesetz. Wenn man eine andere Person mit Absicht schädigt: Eigentum, Gesundheit, Körper, Freiheit \n"+
+                    "Regeln und Pflichten von Käufer und Verkäufer. \n\nWie sie zu sein haben steht hier: Bürgerliches Gestzbuch (BGB). \n\nSie werden von Verkäufer selbst oder von einem Anwalt in seinem Auftrag geschrieben. \n\n" +
+                            "Bsp: Verkäufer muss Käufer auf AGB hinweisen,\nAGB muss gut lesbar und verständlich sein, \nPreiserhöhung innerhalb von 4 Monaten verboten \nNachbesserungen müssen kostenlos sein, \n" +
+                            "überraschende Klauseln (=Abmachungen) sind verboten, \ndie gesetzliche Fristen dürfen nicht verkürzt werden (zB 2 Jahre Gewährleistung ist Pflicht)"),
+            new Term("Haftung", "Verpflichtung einer Person den Schaden zu ersetzen, den sie durch eigenes Verschulden verursacht hat. \n\nHaftungsgründe: \n1) Haftung aus Verträgen \n" +
+                    "zB Kaufvertrag - Wenn Käufer nicht zahlt oder Verkäufer Scheiße liefert \nzB private Haftungsversicherung - Lisa fällt vom Rad weil Steffen Sie übersieht \n" +
+                    "2) Produkthaftung \nzB ein neuer TV explodiert nach 2h \n3)Unerlaubte Handlung \nist gegen das Gesetz. Wenn man eine andere Person mit Absicht schädigt: Eigentum, Gesundheit, Körper, Freiheit \n" +
                     "Kinder bis 7: nicht deliktfähig \n7-18: bedingt deliktfähig \nab 18: deliktfähig"),
-            new Term("Sparen - Ratenkauf","Sparen \n\nVorteile: \nZinsen, \nBilliger: Keine Gebühren, keine Zinsen \n\nNachteile: \nWarten"+
-                    "\n\nRatenkauf \n\nVorteile: \nKeine Wartezeit \n\nNachteile: \nregelmäßige Ratenzahlung, \nTeuer: Zinsen, Gebühren,\n Wenn Sache vor Ende der Ratenzahlung kaputt geht, muss man weiter zahlen. \n"+
+            },
+            {//Umgang mit Geld
+            new Term("Sparen - Ratenkauf", "Sparen \n\nVorteile: \nZinsen, \nBilliger: Keine Gebühren, keine Zinsen \n\nNachteile: \nWarten" +
+                    "\n\nRatenkauf \n\nVorteile: \nKeine Wartezeit \n\nNachteile: \nregelmäßige Ratenzahlung, \nTeuer: Zinsen, Gebühren,\n Wenn Sache vor Ende der Ratenzahlung kaputt geht, muss man weiter zahlen. \n" +
                     "Auch bei unvorhergesehenen Kosten."),
-            new Term("Ratenkauf","Muss man immer schriftlich machen. \n\nKann man 2 Wochen land wiederrufen \n(schreiben, dass man ihn doch nicht haben will:) " +
-                    "auf Postkarte, brief (spätestens am 14t Tag bei Post(Poststempel))). Beweis für rechtzeitiges Verschicken auch durch Einschreiben (Empfasngsbestätigung) möglich \n\n"+
+            new Term("Ratenkauf", "Muss man immer schriftlich machen. \n\nKann man 2 Wochen land wiederrufen \n(schreiben, dass man ihn doch nicht haben will:) " +
+                    "auf Postkarte, brief (spätestens am 14t Tag bei Post(Poststempel))). Beweis für rechtzeitiges Verschicken auch durch Einschreiben (Empfasngsbestätigung) möglich \n\n" +
                     "Ratenkaufvertrag hat \n1. Barzahlungspreis \n2. Anzahl monatlicher Rate \n3. Wann und wie sind diese zu bezahlen \n4.Ratenpreis (Teilzahlungspreis): Diesen Preis muss man bei Ratenkauf insgesamt zahlen" +
-                    "\n5. effektiver Jahreszins: Mehrkosten Ratenkauf als Barzahlung (Sofortzahlung) in % \n6. Höhe monatlicher Raten"+
-                    "\n\nBeispiel Rechnung: \nFlug \n1200 Barzahlungspreis \n12 monatliche Raten\n 0,5% monatlicher Zins \n 2% Bearbeitungsgebühr \n\nRatenpreis: \n+ (1200 * 0,05 * 12) \n1200 \n+ (1200 * 0,02) \n= 1296 \n\n"+
+                    "\n5. effektiver Jahreszins: Mehrkosten Ratenkauf als Barzahlung (Sofortzahlung) in % \n6. Höhe monatlicher Raten" +
+                    "\n\nBeispiel Rechnung: \nFlug \n1200 Barzahlungspreis \n12 monatliche Raten\n 0,5% monatlicher Zins \n 2% Bearbeitungsgebühr \n\nRatenpreis: \n+ (1200 * 0,05 * 12) \n1200 \n+ (1200 * 0,02) \n= 1296 \n\n" +
                     "monatliche Rate: \n1296 / 12 \n= 108 \n\nPreis Differenz: \n1296 - 1200 \n= 96 \n\nEfffektiv(er) (Jahres) Zins: \n(100 : 1200) \n*96 \n= 8%"),
-            new Term("Warenkennzeichnung","Lebensmittelkennzeichnungsverordnung \nInhaltsstoffe haben auf Verpackung zu stehen \n\nVerbraucherinformationsgesetz \n"+
-                    "Wenn Firma Verbraucher getäuscht / verdorbene Lebensmittel verkauft, müssen Behörden informieren \nSelbstnacvhfrage bei Behörden möglich"+
-                    " (zB Pestizidbelastung Gemüse / Allergika in Shampoo) \n\nEichgesetz \nAlte Waggen / Messbecher müssen regelmäßig geprüft werden, ob sie richtig wiegen oder ob das Maß noch stimmt (Eichung)"+
-                    " \n\nTextilkennzeichnungsgesetz \nAus was ist der Stoff? (bei Textilien) zB 80% Baumolle, 20% Polyamid \n\nEU-Güteklasse \nViele landwirtschaftliche Produkte in Eu sind eingeteilt"+
-                    "nach größe, Gewicht und Qualität in Güte / Handelsklassen. \n\nPreisangabeverordnung \nPreis hat auf Waren angegeben zu sein (Preisschild). Gilt für alle Waren im Geschäft und in den Schaufenstern"+
-                    "\n\nGütezeichen \ndürfen Hersteller nur nutzen wenn Waren einen vorgeschriebenen Qualitätsstandart haben zB reine Schurwolle, in Dutschland geprüfte Markenware, "+
-                    "Bio nach EG-Öko Verordnung \n\nPrüfzeichen \nsollen festgelegten Sicherheitsstandart garantieren (=Waren mit diesem Zeichen sind geprüft und sicher)"+
+            new Term("Warenkennzeichnung", "Lebensmittelkennzeichnungsverordnung \nInhaltsstoffe haben auf Verpackung zu stehen \n\nVerbraucherinformationsgesetz \n" +
+                    "Wenn Firma Verbraucher getäuscht / verdorbene Lebensmittel verkauft, müssen Behörden informieren \nSelbstnacvhfrage bei Behörden möglich" +
+                    " (zB Pestizidbelastung Gemüse / Allergika in Shampoo) \n\nEichgesetz \nAlte Waggen / Messbecher müssen regelmäßig geprüft werden, ob sie richtig wiegen oder ob das Maß noch stimmt (Eichung)" +
+                    " \n\nTextilkennzeichnungsgesetz \nAus was ist der Stoff? (bei Textilien) zB 80% Baumolle, 20% Polyamid \n\nEU-Güteklasse \nViele landwirtschaftliche Produkte in Eu sind eingeteilt" +
+                    "nach größe, Gewicht und Qualität in Güte / Handelsklassen. \n\nPreisangabeverordnung \nPreis hat auf Waren angegeben zu sein (Preisschild). Gilt für alle Waren im Geschäft und in den Schaufenstern" +
+                    "\n\nGütezeichen \ndürfen Hersteller nur nutzen wenn Waren einen vorgeschriebenen Qualitätsstandart haben zB reine Schurwolle, in Dutschland geprüfte Markenware, " +
+                    "Bio nach EG-Öko Verordnung \n\nPrüfzeichen \nsollen festgelegten Sicherheitsstandart garantieren (=Waren mit diesem Zeichen sind geprüft und sicher)" +
                     "zB gprüfte Sicherheit GS, CE Europäisch Gemeinsch für Produkte in EU, Verband deutscher Elektriker \n\nUmweltzeichen \nfür Produkte die besonderst umweltfreundlich sind zB Blauer Engel"),
-            new Term("Verbaucherschutzgesetze","Wettbewerbsrechtliche Regelungen:\nGesetz gegen den unlauteren Wettbewerb\nKartellgesetz - Verbietet Kartelle + martkbeherschende "+
-                    "Unternehmenszusammenschlüsse (zB mehrere Firmen sprechen Preise ab)\n->Verbraucher sollen bei Kaufentscheidung nciht wettbewerbswidrig beeinflusst werden\n\n"+
-                    "Gesetze zum Schutz der Verbraucher:\nProdukthaftungsgesetz - Hersteller haften für Fehlerhafte Produkte\nBürgerliches Gesetzbuch - Es regelt: \nVerbraucherkredite"+
-                    "(schützt vor Fallen bei Kreditverträgen)\nFernabsatzgeschäfte (schützt bei Bestellung im Versandhandel)\nHaustürgeschäfte(schützt bei Verträgen an der Haustür)\n"+
+            new Term("Verbaucherschutzgesetze", "Wettbewerbsrechtliche Regelungen:\nGesetz gegen den unlauteren Wettbewerb\nKartellgesetz - Verbietet Kartelle + martkbeherschende " +
+                    "Unternehmenszusammenschlüsse (zB mehrere Firmen sprechen Preise ab)\n->Verbraucher sollen bei Kaufentscheidung nciht wettbewerbswidrig beeinflusst werden\n\n" +
+                    "Gesetze zum Schutz der Verbraucher:\nProdukthaftungsgesetz - Hersteller haften für Fehlerhafte Produkte\nBürgerliches Gesetzbuch - Es regelt: \nVerbraucherkredite" +
+                    "(schützt vor Fallen bei Kreditverträgen)\nFernabsatzgeschäfte (schützt bei Bestellung im Versandhandel)\nHaustürgeschäfte(schützt bei Verträgen an der Haustür)\n" +
                     "Allgemeine Geschäftsbedingungen (schützt vor Kleingedrucktem)"),
-            new Term("Zahlungsarten","Barzahlung \nHalbbare Zahlung - Einer benutzt Konto zB Nachname, Scheck \nBargeldlose Zahlung - Beide nutzen Konto zB Überweisung \n"),
+            new Term("Zahlungsarten", "Barzahlung \nHalbbare Zahlung - Einer benutzt Konto zB Nachname, Scheck \nBargeldlose Zahlung - Beide nutzen Konto zB Überweisung \n"),
             new Term("Girokonto",
-                    "Vorraussetzungen:\n 18 und voll geschäftsfähig,\n sonst (für jugendl):\n beide Eltern unterschreiben,\n darf nicht überzogen werden,\n EC-Karte nur wenn Eltern zustimmen\n\n"+
-                    "Unterscheidungsmerkmale:\n hohe/niedrige Guthabenzinsen,\nhohe/niedrige Überziehungszinsen\nhohe/niedrige Kontoführungsgebühren/Kosten für Service (Gebühren für Kontoauszüge, Daueraufträge, Homebanking, ...\n\n)"+
-                    "IBAN - International Bank Account Number\nBIC - Bank Identifier Code\nBuchungsdatum - wann kam das Geld auf das Konto? / wann wurde es abgebucht?\n"+
-                    "Buchungstext - Grund / Erklärung für Überweisung\nSoll - Schuldbetrag (=Minus Betrag)\nHaben - Das Guthaben (=Plus Betrag)\nAlter Saldo - Geldbetrag, der beim letzten"+
-                    "Kontoauszug auf Konto war\nNeuer Saldo - Geldbetrag der jetzt auf Konto ist\nKontoführungsgebühren - für Verwaltung & Buchungsbearbeitung"),
-            new Term("Dauerauftrag","Überweisungsart 1\n\nAbsender gibt Bank Auftrag aztomatisch jede Woche/Monat immer selben Geldbetrag zu senden an selben Empfänger zur selben Zeit bis auf Wiederruf\n\n"+
+                    "Vorraussetzungen:\n 18 und voll geschäftsfähig,\n sonst (für jugendl):\n beide Eltern unterschreiben,\n darf nicht überzogen werden,\n EC-Karte nur wenn Eltern zustimmen\n\n" +
+                            "Unterscheidungsmerkmale:\n hohe/niedrige Guthabenzinsen,\nhohe/niedrige Überziehungszinsen\nhohe/niedrige Kontoführungsgebühren/Kosten für Service (Gebühren für Kontoauszüge, Daueraufträge, Homebanking, ...\n\n)" +
+                            "IBAN - International Bank Account Number\nBIC - Bank Identifier Code\nBuchungsdatum - wann kam das Geld auf das Konto? / wann wurde es abgebucht?\n" +
+                            "Buchungstext - Grund / Erklärung für Überweisung\nSoll - Schuldbetrag (=Minus Betrag)\nHaben - Das Guthaben (=Plus Betrag)\nAlter Saldo - Geldbetrag, der beim letzten" +
+                            "Kontoauszug auf Konto war\nNeuer Saldo - Geldbetrag der jetzt auf Konto ist\nKontoführungsgebühren - für Verwaltung & Buchungsbearbeitung"),
+            new Term("Dauerauftrag", "Überweisungsart 1\n\nAbsender gibt Bank Auftrag aztomatisch jede Woche/Monat immer selben Geldbetrag zu senden an selben Empfänger zur selben Zeit bis auf Wiederruf\n\n" +
                     "zB Miete, Zeitungsbbonnement, Vereinsbetrag"),
-            new Term("Lastschriftverfahren","Überweisungsart 2\n\nAbsender erlaubt Zahlungsempfänger schriftlich von seinem Konto abzubuchen, einmalig oder öfters, selbe oder"+
+            new Term("Lastschriftverfahren", "Überweisungsart 2\n\nAbsender erlaubt Zahlungsempfänger schriftlich von seinem Konto abzubuchen, einmalig oder öfters, selbe oder" +
                     "unterschiedliche Summen, zu Selben oder unterschiedlichen Zeiten\n\nzB Heizungsrechnung, Stromrechnung, Telefonrechnung"),
-            new Term("Onlinebanking","mit Computer & Internetzugang, enstprechende Software von Bank\nPIN, TAN\n50% der Erwachsenen haben Onlinekonto, aber 50% aller sind misstrauisch, haben Zweifel an der Sicherheit\n\n"+
+            new Term("Onlinebanking", "mit Computer & Internetzugang, enstprechende Software von Bank\nPIN, TAN\n50% der Erwachsenen haben Onlinekonto, aber 50% aller sind misstrauisch, haben Zweifel an der Sicherheit\n\n" +
                     "Vorteile:\njederzeit\nOnlinekonto günstiger\nBanken benötigen weniger Mitarbeiter\n\nNachteile:\nunsicher (phishing),\nkeine direkte / persönliche Beratung"),
-            new Term("Phishing","(Password Fishing)\n\nFakemails mit Links zu Fakeseiten wie bspw Amazon, Ebay, mit dem Ziel, dass du dich dort \"einloggst\" um Anmeldedaten abnzugreifen"+
-                    "\n\nErkennbar an:\n unpersönlicher Anrede (echter Name nicht bekannt)\nAndorderungen einzuloggen dringend (womöglich mit Drohung verbunden)\n"+
-                    "Direktlink zur Login Seite\nfalsche Sprache\n\nVerhaltensregeln:\nMisstrauen bei Aufforderungen zum sofortigen Handeln\nNicht auf Links in verdächtigen Mails klicken\n"+
+            new Term("Phishing", "(Password Fishing)\n\nFakemails mit Links zu Fakeseiten wie bspw Amazon, Ebay, mit dem Ziel, dass du dich dort \"einloggst\" um Anmeldedaten abnzugreifen" +
+                    "\n\nErkennbar an:\n unpersönlicher Anrede (echter Name nicht bekannt)\nAndorderungen einzuloggen dringend (womöglich mit Drohung verbunden)\n" +
+                    "Direktlink zur Login Seite\nfalsche Sprache\n\nVerhaltensregeln:\nMisstrauen bei Aufforderungen zum sofortigen Handeln\nNicht auf Links in verdächtigen Mails klicken\n" +
                     "Auf Anbieterseite über Sicherheitsmerkmale informieren\nVerdächtige Mails an Anbieter weiterleiten"),
-            new Term("Kredite","Dispositionskredit:\nKonto überziehen\nschnnell Rechnung bezahlen\nKredithöhe mit Bank klären\nÜberziehungszinsen\n\nRatenkredit: "+
-                    "bei höheren Beträgen\nKreditvertrag: Inhalt:\nKreditnehmer, -geber, Zinsen, Bearbeitungsgebühren, Laufzeit, Höhe der Raten\nSicherheiten zu geben:\n"+
+            new Term("Kredite", "Dispositionskredit:\nKonto überziehen\nschnnell Rechnung bezahlen\nKredithöhe mit Bank klären\nÜberziehungszinsen\n\nRatenkredit: " +
+                    "bei höheren Beträgen\nKreditvertrag: Inhalt:\nKreditnehmer, -geber, Zinsen, Bearbeitungsgebühren, Laufzeit, Höhe der Raten\nSicherheiten zu geben:\n" +
                     "Nachweis über regelmäßiges Einkommen, Hypothek, Bürgerschaft Lohnabtretung\nMonatliche Zahlung\n\n"),
-            new Term("Sparen","Regeln (zuerst überlegen für beste Sparform):\nWie viel Geld habe ich?\nWie viel kann ich sparen?\nfür was möchte ich sparen?\n\n"+
-                    "3 Entscheidungsmerkmale:\nErtrag: Wie viel Zinsen oder Gewinn gibt es?\nSicherheit: bekomme ich mein Geld wieder zurück?\nVerfügbarkeit: Wie lange muss ich anlgegen, wie schnell bekomm ichs zurück?"+
-                    "\n\nAb bestimmter Summe sollten Sparformen gemischt werden\n\nSparmotive:\nZwecksparen, für bestimmte Sache, Wunsch\nVorsorgesparen, für bestimmte Zeit, zB Notzeit, Rente, Kinder\n"+
+            new Term("Sparen", "Regeln (zuerst überlegen für beste Sparform):\nWie viel Geld habe ich?\nWie viel kann ich sparen?\nfür was möchte ich sparen?\n\n" +
+                    "3 Entscheidungsmerkmale:\nErtrag: Wie viel Zinsen oder Gewinn gibt es?\nSicherheit: bekomme ich mein Geld wieder zurück?\nVerfügbarkeit: Wie lange muss ich anlgegen, wie schnell bekomm ichs zurück?" +
+                    "\n\nAb bestimmter Summe sollten Sparformen gemischt werden\n\nSparmotive:\nZwecksparen, für bestimmte Sache, Wunsch\nVorsorgesparen, für bestimmte Zeit, zB Notzeit, Rente, Kinder\n" +
                     "Vermögensbildung, für Eigentum, Reichtum (bringt Zinsen), zB Haus"),
-            new Term("Kreditkarte","Kunde legt sie vor. Sie wird mit spezifischem Gerät gelesen & eine Rechnung wird gedruckt. Kunde unterschreibt Rechnung & bekommt Quittung. Damit kann er Zahlung kontrollieren"+
-                    "\n\nDer Händler bekommt den Rechnungsbetrag von der Kreditgesellschaft nach einem vereinbartem Abrechnungszeitraum (zB monatlich). \nEr schickt der Kreditkartengesellschaft die Abrechnung über alle "+
+            new Term("Kreditkarte", "Kunde legt sie vor. Sie wird mit spezifischem Gerät gelesen & eine Rechnung wird gedruckt. Kunde unterschreibt Rechnung & bekommt Quittung. Damit kann er Zahlung kontrollieren" +
+                    "\n\nDer Händler bekommt den Rechnungsbetrag von der Kreditgesellschaft nach einem vereinbartem Abrechnungszeitraum (zB monatlich). \nEr schickt der Kreditkartengesellschaft die Abrechnung über alle " +
                     "Rechnungen.\nDie Kreditkartengesellschaft hat eine Einzugsermächtigung. Sie lässt den Gesamtbetrag von dem Girokonto des Karteninhabers abbuchen"),
-            new Term("Sparformen","\n" + "1) Erklärung\n" + "2) Verfügbarkeit des Geldes\n" + "3) Sicherheit\n" + "4) Ertrag (~Gewinn)"+
+            new Term("Sparformen", "\n" + "1) Erklärung\n" + "2) Verfügbarkeit des Geldes\n" + "3) Sicherheit\n" + "4) Ertrag (~Gewinn)" +
                     "\n\nSparbuch\n" + "1) Wenn ich Geld habe, dann bringe ich dieses Geld zur Bank und zahle es ein. Für das gesparte Geld bekomme ich Zinsen\n" +
-                    "2) Kleine Bträge: immer, Mehr als 1500/2000 Euro: 3 Monate (Kündigungsfrist), \n" + "3) Hoch\n" + "4) niedrig bis 1%"+
+                    "2) Kleine Bträge: immer, Mehr als 1500/2000 Euro: 3 Monate (Kündigungsfrist), \n" + "3) Hoch\n" + "4) niedrig bis 1%" +
                     "\n\nSparbrief\n" + "1) Ich kaufe ihn bei einer Bank und zahle es ein. Für das gesparte Geld bekomme ich Zinsen.\n" +
-                    "2) 4 - 8 Jahre fest angelegt (=ich bekomme mein Geld erst wieder nach 4 - 8 Jahren)\n" + "3) Hoch\n" + "4) etwas höher als beim Sparbuch"+
+                    "2) 4 - 8 Jahre fest angelegt (=ich bekomme mein Geld erst wieder nach 4 - 8 Jahren)\n" + "3) Hoch\n" + "4) etwas höher als beim Sparbuch" +
                     "\n\nVersicherungssparen\n" + "1) Ich bezahle regelmäßig Geld. Wenn ich alt bin, bekomme ich dieses Geld + Zinsen ausbezhalt. Wenn ich vorher sterbe dann bekommt die Familie das gesamte Geld schon vorher\n" +
-                    "2) feste Laufzeit (Ich bekomme mein Geld zB nach 30 jahren wieder)\n" + "3) Hoch\n" + "4) hoch / niederig je nach Vertrag & Sparförderung"+
+                    "2) feste Laufzeit (Ich bekomme mein Geld zB nach 30 jahren wieder)\n" + "3) Hoch\n" + "4) hoch / niederig je nach Vertrag & Sparförderung" +
                     "\n\nBausparen \n" + "1) Ich bezahle regelmäßig Geld. Nach einer bestimmten Zeit kann ein Darlehen (=einen Kredit) mit niedrigen Zinsen bekommen.\n" +
-                    "2) abhängig von Mindestsparsumme und Mindestsparzeit\n" + "3) Hoch\n" + "4) hoch / niedrig je nach Vertrag und Sparförderung"+
+                    "2) abhängig von Mindestsparsumme und Mindestsparzeit\n" + "3) Hoch\n" + "4) hoch / niedrig je nach Vertrag und Sparförderung" +
                     "\n\nWertpapiere\n" + "\n" + "Festverzinsliche Wertpapiere\n" + "1) Ich kaufe zB einen pfandbrief und bekomme am Ende der Laufzeit das Gled + Zinsen. Ich kann den Pfandbrief weiterverkaufen.\n" +
-                    "2) immer\n" + "3) Hoch\n" + "4) hoch (ich bekomme feste Zinsen & Sparförderung)"+
+                    "2) immer\n" + "3) Hoch\n" + "4) hoch (ich bekomme feste Zinsen & Sparförderung)" +
                     "\n\nAktien\n" + "1) Ich kaufe eine Urkunde und werde Teil einer Firma. Ich bekomme Dividenden oder kann die Aktie gewinnbringend verkaufen.\n" +
-                    "2) immer\n" + "3) niedrig\n" + "4) hoch / niedrig je nach Kurs und Sparförderung"+
+                    "2) immer\n" + "3) niedrig\n" + "4) hoch / niedrig je nach Kurs und Sparförderung" +
                     "\n\nInvestmentfonds \n" + "1) Ich zahle gemeinsam mit anderen in einen großen Topf. Die Investmentgesellschaft investiert mein Geld.\n" +
                     "2) immer\n" + "3) je nach Fonds-Anteilen hoch / niedrig4\n" + "4) hoch / niedrig ja nach Fonds-Anteilen bzw. Aktienkurs & Sparförderung"),
+            },
             //Ordner 5
-            new Term("Markt","Ein Markt ist ein Ort, an dem Anbieter (=Verkäufer) und Nachfrager (=Käufer) nach einem Gut zusammentreffen\n\n"+
-                    "Der Marktpreis \nAnbieter und Nachfrager haben auf einem Markt immer verschiedene Interessen. \nDer Anbieter will möglichst viele Güter zu einem möglichst hohen Preis.\n"+
-                    "Der Nachfrager will möglichst viele Güter zu einem möglichst niedrigen Preis. \nDer Marktpreis ist ein Kompromiss dazwischen.\n\n"+
-                    "Unser Wort \"Markt\" kommt vom althochdeutschen Wort \"Markat\". \"Markat\" kommt wiederrum aus dem Lateinischen. Dort heißt \"mercari\" -handeln und \"mercatus\" -Kauf, Handel. "+
-                    "Zu fast allen Zeiten hatten die Menschen Märkte \n\nAnbieter kommen mit der Absicht auf den Markt, um ihre Ware anzubieten. Käufer kommen mit der Absicht auf den Markt, Waren zu kaufen."+
-                    " Sie sind bereit, für die Waren eine bestimmte Summe, einen Preis zu bezahlen. Dies nennt man Nachfrage. Auf einem Markt treffen Angebot und Nachfrage zusammen. (zB Wochenmärkte, Supermärkte,"+
+            {//Sozial Marktwirtschaft
+            new Term("Markt", "Ein Markt ist ein Ort, an dem Anbieter (=Verkäufer) und Nachfrager (=Käufer) nach einem Gut zusammentreffen\n\n" +
+                    "Der Marktpreis \nAnbieter und Nachfrager haben auf einem Markt immer verschiedene Interessen. \nDer Anbieter will möglichst viele Güter zu einem möglichst hohen Preis.\n" +
+                    "Der Nachfrager will möglichst viele Güter zu einem möglichst niedrigen Preis. \nDer Marktpreis ist ein Kompromiss dazwischen.\n\n" +
+                    "Unser Wort \"Markt\" kommt vom althochdeutschen Wort \"Markat\". \"Markat\" kommt wiederrum aus dem Lateinischen. Dort heißt \"mercari\" -handeln und \"mercatus\" -Kauf, Handel. " +
+                    "Zu fast allen Zeiten hatten die Menschen Märkte \n\nAnbieter kommen mit der Absicht auf den Markt, um ihre Ware anzubieten. Käufer kommen mit der Absicht auf den Markt, Waren zu kaufen." +
+                    " Sie sind bereit, für die Waren eine bestimmte Summe, einen Preis zu bezahlen. Dies nennt man Nachfrage. Auf einem Markt treffen Angebot und Nachfrage zusammen. (zB Wochenmärkte, Supermärkte," +
                     " Gaststättten, Tankstellen, Handwerksbetriebe)"),
-            new Term("Marktarten","Einteilung nach Art der gehandelten Güter = \n\nArbeitsmarkt: \nHandel mit menschlicher Arbeitskraft \n\nImmobilienmarkt \nHandel mit Grundstücken und Gebäuden \n\nInvestitionsgütermarkt \n"+
-                    "Handel mit Gütern, die zur Herstellung von anderen Gütern verwendet werden zB Maschinen \n\nKonssumgütermarkt \nHandel mit Nahrungsmitteln, CDs, Fernsehgeräten \n\n"+
-                    "Geldmarkt \nHandel mit kurzfristigen Krediten durch Banken, Sparkassen, Privatpersonen \n\nKapitalmarkt \nHandel mit langfristigen Krediten durch Banken, Sparkassen, Privatpersonen \n\n"+
-                    "Devisenmarkt \nHandel mit ausländischen Währungen \n\n\nEinteilung nach räumlichen Kriterien = \n\nWeltmarkt \nDie deutsche Firme \"Meinhold & Co\" verkauft Schrauben nach Kanada \n\n"+
-                    "EU-Markt: \nDer spanische Landwirt José Miguelverkauft Tomaten an deutsche Supermärkte \n\nMarkt der Gemeinde: \nDer britische Bäcker David Smith backt die Brötchen für die Bäckerei Yorkshire \n\n"+
-                    "Markt der Bundesrepublik: \nDie schwäbische Firme \"Meisle\" produziert Infobroschüren für den deutschen Bundestag in Berlin \n\n\nMärkte sind auch in Funktionen einteilbar: \n"+
+            new Term("Marktarten", "Einteilung nach Art der gehandelten Güter = \n\nArbeitsmarkt: \nHandel mit menschlicher Arbeitskraft \n\nImmobilienmarkt \nHandel mit Grundstücken und Gebäuden \n\nInvestitionsgütermarkt \n" +
+                    "Handel mit Gütern, die zur Herstellung von anderen Gütern verwendet werden zB Maschinen \n\nKonssumgütermarkt \nHandel mit Nahrungsmitteln, CDs, Fernsehgeräten \n\n" +
+                    "Geldmarkt \nHandel mit kurzfristigen Krediten durch Banken, Sparkassen, Privatpersonen \n\nKapitalmarkt \nHandel mit langfristigen Krediten durch Banken, Sparkassen, Privatpersonen \n\n" +
+                    "Devisenmarkt \nHandel mit ausländischen Währungen \n\n\nEinteilung nach räumlichen Kriterien = \n\nWeltmarkt \nDie deutsche Firme \"Meinhold & Co\" verkauft Schrauben nach Kanada \n\n" +
+                    "EU-Markt: \nDer spanische Landwirt José Miguelverkauft Tomaten an deutsche Supermärkte \n\nMarkt der Gemeinde: \nDer britische Bäcker David Smith backt die Brötchen für die Bäckerei Yorkshire \n\n" +
+                    "Markt der Bundesrepublik: \nDie schwäbische Firme \"Meisle\" produziert Infobroschüren für den deutschen Bundestag in Berlin \n\n\nMärkte sind auch in Funktionen einteilbar: \n" +
                     "Beschaffungsmarkt - Absatzmarkt (Filiale) \n\nAußerdem kann man Märkte auch nach der Organisationsform einteilen: \norganisierte Märkte (Wochenmarkt, Messe, Börse) - nicht organisierte Märkte (zufälliges Treffen von Verkäufer und Käufer)"),
-            new Term("Marktformen","Polypol \nMarkt, auf dem viele Nachfrager auf viele Anbieter treffen. \nZustand: \"vollständige Konkurenz\". \nDer Markt bestimmt den Preis.\n \nKein Marktteilnehmer groß genug, um den Marktpreis zu beeinflussen. \n"+
-                    "Wenn ein Anbieter einen höheren Preis verlangt, welchseln sofort alle Nachfrager zur Konkurrenz über. Fordert er dagegen einen niederigeren Preis, dann könnte er die gesamte Nachfrage, die bei ihm entstehen würde, in keinem "+
-                    "Falle befriedigen. Hierzu wäre sein Marktanteil zu klein. \nPolypole findet man vorallem an den Wertpapierbörsen"+
-                    "\n\nOligopol \nZustand: \"Wenig Konkurrenz\". \nAngebotsoligopol: \nHier stehen sich wenige Anbieter und viele Nachfrager gegenüber. \nAnbieter können Preis zum Teil bestimmen. \nBsp: Automarkt, Zigarettenmarkt, Benzinmarkt. \nKommt in den Industriegesellschaften besonderst häufig vor. \n"+
-                    "Nachfrageoligopol: \nWenn vielen Anbietern nur wenige Nachfrager gegenübertreten. \nBsp: Viele Landwirte - wenige Molkereien. Bürger, die Polizisten werden wollen, können nur zwischen dem Bund und den Ländern wählen. \n"+
-                    "Oft herrscht eine starke gegenseitige Abhängigkeit unter Oligopolisten zB Benzinmarkt. Wenn ein Anbier den Preis verändert, reagieren die anderen. \nIm Extremfall kann ein sehr scharfer Wettbewerb entstehen, mit dem Ziel den Mitbewerber auszuschalten \n"+
-                    "oder die Marktführerschaft zu erreichen. \nAnderseits besteht allerdings auch die Gefahr, dass die Anbieter sich absprechen und den Wettbewerb ausschalten. Derartige Abmachungen sind alllerdings nach dem "+
-                    "Gesetz gegen Wettbewerbsbeschränkungen verboten."+
-                    "\n\nMonopol \nFür eine Waren gibt es nur einen Anbieter oder einen Nachfrager auf dem Markt (Angebots-, Nachfragemonopol). \nZustand: \"Keine Konkurrenz\". \nzB: Nachfragemonopolisten: Deutsche Bahn mit Lokomotiven-, Eisenbahnwagennachfrage (Vergangenheit), "+
-                    "Bundeswehr mit der Panzernachfrage. \nzB: Angebotsmonopolisten: \nAnbieter bestimmen den Preis\n Wasserwerke, deutsche Post AG im überregionalen Briefverkehr (bis 2007), private Unternehmer, die eine patentierte Erfindung vermarkten. \n"+
-                    "Angebotsmonopolisten fürchten keine Konkurenz und können die Preishöhe weitgehend selbst festlegen. Allerdings geht auch die bei höheren Preisen die Nachfrage zurück, Nachfrager könnten sich einschränken oder "+
+            new Term("Marktformen", "Polypol \nMarkt, auf dem viele Nachfrager auf viele Anbieter treffen. \nZustand: \"vollständige Konkurenz\". \nDer Markt bestimmt den Preis.\n \nKein Marktteilnehmer groß genug, um den Marktpreis zu beeinflussen. \n" +
+                    "Wenn ein Anbieter einen höheren Preis verlangt, welchseln sofort alle Nachfrager zur Konkurrenz über. Fordert er dagegen einen niederigeren Preis, dann könnte er die gesamte Nachfrage, die bei ihm entstehen würde, in keinem " +
+                    "Falle befriedigen. Hierzu wäre sein Marktanteil zu klein. \nPolypole findet man vorallem an den Wertpapierbörsen" +
+                    "\n\nOligopol \nZustand: \"Wenig Konkurrenz\". \nAngebotsoligopol: \nHier stehen sich wenige Anbieter und viele Nachfrager gegenüber. \nAnbieter können Preis zum Teil bestimmen. \nBsp: Automarkt, Zigarettenmarkt, Benzinmarkt. \nKommt in den Industriegesellschaften besonderst häufig vor. \n" +
+                    "Nachfrageoligopol: \nWenn vielen Anbietern nur wenige Nachfrager gegenübertreten. \nBsp: Viele Landwirte - wenige Molkereien. Bürger, die Polizisten werden wollen, können nur zwischen dem Bund und den Ländern wählen. \n" +
+                    "Oft herrscht eine starke gegenseitige Abhängigkeit unter Oligopolisten zB Benzinmarkt. Wenn ein Anbier den Preis verändert, reagieren die anderen. \nIm Extremfall kann ein sehr scharfer Wettbewerb entstehen, mit dem Ziel den Mitbewerber auszuschalten \n" +
+                    "oder die Marktführerschaft zu erreichen. \nAnderseits besteht allerdings auch die Gefahr, dass die Anbieter sich absprechen und den Wettbewerb ausschalten. Derartige Abmachungen sind alllerdings nach dem " +
+                    "Gesetz gegen Wettbewerbsbeschränkungen verboten." +
+                    "\n\nMonopol \nFür eine Waren gibt es nur einen Anbieter oder einen Nachfrager auf dem Markt (Angebots-, Nachfragemonopol). \nZustand: \"Keine Konkurrenz\". \nzB: Nachfragemonopolisten: Deutsche Bahn mit Lokomotiven-, Eisenbahnwagennachfrage (Vergangenheit), " +
+                    "Bundeswehr mit der Panzernachfrage. \nzB: Angebotsmonopolisten: \nAnbieter bestimmen den Preis\n Wasserwerke, deutsche Post AG im überregionalen Briefverkehr (bis 2007), private Unternehmer, die eine patentierte Erfindung vermarkten. \n" +
+                    "Angebotsmonopolisten fürchten keine Konkurenz und können die Preishöhe weitgehend selbst festlegen. Allerdings geht auch die bei höheren Preisen die Nachfrage zurück, Nachfrager könnten sich einschränken oder " +
                     "auf Ersatzgüter umsteigen. Ein privater Monopolbetrieb wird ein Preis wählen, bei dem der Unterschied zwischen Einnahmen und Kosten am größten ist."),
-            new Term("Preisbildung Polypol","Der Preis wird bestimmt durch Angebot und Nachfrage. \n\nWenn die angebotene Ware größer ist als die Nachfrage, dann sinkt der Preis. \n"+
-                    "Wenn das Angbot kleiner ist ald die nachgefragte Menge, dann steigt der Preis. \n\nDa wo Angebot und Nachfrage gleich sind, ist der Gleichgewichtspreis \n\n"+
-                    "zB: Angebot an Erdbeeren sinkt im Winter aber die Nachfrage bleibt gleich, also steigt der Preis. \n\n"+
-                    "->Angebot steigt, Nachfrage sinkt-> \nzB Die Firmen produzieren und verkaufen viele Kühlschränke, irgendwann haben viele Menschen Kühlschränke, also kaufen nur noch wenige Menschen Kühlschränke. \n"+
-                    "->Preis sinkt-> \nzB Die Läden machen Sonderaktionen und verkaufen die Kühlschränke billiger \n->Angebot sinkt, Nachfrage steigt-> \nzB Viele Menschen, die vorher keinen Kühlschrank wollten, kaufen jetzt doch Kühlschränke. In den Läden stehen weniger Kühlschränke. \n"+
+            new Term("Preisbildung Polypol", "Der Preis wird bestimmt durch Angebot und Nachfrage. \n\nWenn die angebotene Ware größer ist als die Nachfrage, dann sinkt der Preis. \n" +
+                    "Wenn das Angbot kleiner ist ald die nachgefragte Menge, dann steigt der Preis. \n\nDa wo Angebot und Nachfrage gleich sind, ist der Gleichgewichtspreis \n\n" +
+                    "zB: Angebot an Erdbeeren sinkt im Winter aber die Nachfrage bleibt gleich, also steigt der Preis. \n\n" +
+                    "->Angebot steigt, Nachfrage sinkt-> \nzB Die Firmen produzieren und verkaufen viele Kühlschränke, irgendwann haben viele Menschen Kühlschränke, also kaufen nur noch wenige Menschen Kühlschränke. \n" +
+                    "->Preis sinkt-> \nzB Die Läden machen Sonderaktionen und verkaufen die Kühlschränke billiger \n->Angebot sinkt, Nachfrage steigt-> \nzB Viele Menschen, die vorher keinen Kühlschrank wollten, kaufen jetzt doch Kühlschränke. In den Läden stehen weniger Kühlschränke. \n" +
                     "->Preis steigt-> \nzB Die Läden machen die wenigen Kühlschränke wieder teuer."),
             new Term("Marktpreis grafisch", "\n Marktpreis lässt sich grafisch darstellen \n[Bild]"),
-            new Term("Preisbildung Rechnen","[Bild]"),
-            new Term("Preisbildung Angebotsoligopol","Angebotsoligopole entstehen aufgrund der zunehmenden Unternehmenskonzentration immer häufiger. \n" +
+            new Term("Preisbildung Rechnen", "[Bild]"),
+            new Term("Preisbildung Angebotsoligopol", "Angebotsoligopole entstehen aufgrund der zunehmenden Unternehmenskonzentration immer häufiger. \n" +
                     "Hier werden die Absatzmöglichkeiten nicht nur vom Verhalten der Nachfrager, sondern auch von den Aktionen und Reaktionen der anderen Oligopolisten bestimmt. \n" +
-                    "Bei der Preisbildung können die Anbieter folgende Strategien anwenden: \n\n"+
-                    "ruinöse Konkurenz: \nEin Anbieter versuch andere vom Markt zu drängen durch Preisunterbietung. \nMitanbieter ziehen mit, oft sogar bis unter die Selbstkosten. Nachfrager bekommen billige Preise. Gefahr von Monopolbildung durch "+
-                    "Ausscheiden von Anbietern, und wieder Preisanstieg. \nEin Computerhersteller beitet seine Geräte um 20% billiger an als sein Konkurenten. \n\nPreisabsprachen: \nNicht beliebig, da Verbraucher sich einschränken oder umsteigen können. "+
-                    "\nSind in der BRD nach dem Gesetz gegen Wettbewerbsbeschränkungen (Kartellgesetz) verboten. \nzB Drei große Mineralölfirmen vereinbaren, einheitliche Preise zu verlangen. \n\nPreisführung: \nDurch einen Betrieb, der ausreichend viel Marktanteil hat, "+
-                    "die anderen ruinieren zu können, falls diese ihn daran hindern. \nEin Tabakkonzern erhöht seine Zigarettenpreise, die anderen ziehen nach. \n\nQualität: \nVielfach verlagern die Konkurenten den Wettbewerb auf die Qualität, den Service, \n"+
+                    "Bei der Preisbildung können die Anbieter folgende Strategien anwenden: \n\n" +
+                    "ruinöse Konkurenz: \nEin Anbieter versuch andere vom Markt zu drängen durch Preisunterbietung. \nMitanbieter ziehen mit, oft sogar bis unter die Selbstkosten. Nachfrager bekommen billige Preise. Gefahr von Monopolbildung durch " +
+                    "Ausscheiden von Anbietern, und wieder Preisanstieg. \nEin Computerhersteller beitet seine Geräte um 20% billiger an als sein Konkurenten. \n\nPreisabsprachen: \nNicht beliebig, da Verbraucher sich einschränken oder umsteigen können. " +
+                    "\nSind in der BRD nach dem Gesetz gegen Wettbewerbsbeschränkungen (Kartellgesetz) verboten. \nzB Drei große Mineralölfirmen vereinbaren, einheitliche Preise zu verlangen. \n\nPreisführung: \nDurch einen Betrieb, der ausreichend viel Marktanteil hat, " +
+                    "die anderen ruinieren zu können, falls diese ihn daran hindern. \nEin Tabakkonzern erhöht seine Zigarettenpreise, die anderen ziehen nach. \n\nQualität: \nVielfach verlagern die Konkurenten den Wettbewerb auf die Qualität, den Service, \n" +
                     "die Werbung und die Aufmachung ihrer Erzeugnisse und vermeiden so eine gegenseitige Herausforderung durc die Preise. \nzB Ein Automobilhersteller erhöht die Garantiefrist seiner Fahrzeuge von 2 auf 3 Jahre."),
-            new Term("Optimale Marktbedingungen","Börse = einziger optimaler Markt \n\nOptimale (perfekte) Marktbedingungen für vollständige Konkurrenz (=Polypol):\nviele Anbieter und viele Nachfrager \n"+
+            new Term("Optimale Marktbedingungen", "Börse = einziger optimaler Markt \n\nOptimale (perfekte) Marktbedingungen für vollständige Konkurrenz (=Polypol):\nviele Anbieter und viele Nachfrager \n" +
                     "alle Nachfrager haben guten Überblick über gesamten Markt \nNachfrager haben kein Vorlieben \nDie Ware ist gleichwertig"),
-            new Term("Unternehmenszusammenschluss / -arbeit","Gründe für die Unternehmenszusammenarbeit: \nman hat weniger Konkurenz ->mehr Marktmacht \nRisiko kann auf mehreren Schultern verteilt werden \n"+
-                    "Mengenrabatt durch den Einkauf von größeren Mengen \ngemeinsame Werbung erreicht mehr Kunden und die Unternehmen können gleichzeitig mehr Geld sparen \ngemeinsame Forschung, Know-How (Fachwissen), Interessen von Kunden "+
-                    "können besser berücksichtigt werden. \n\nNachteile: \nFirmen verschwinden \nes können marktbeherrschende Unternehmen entstehen, der Kunde hat weniger Auswahl, Gefahr der Monopolbildung \nAbsprachen können den Wettbewerb verhindern "+
-                    "\nEntscheidungen müssen mehr Abgesprochen werden \nDie Gewinne müssen aufgeteilt werden \nEs besteht Gefahr, dass Firmen nicht mehr innovativ sind "+
+            new Term("Unternehmenszusammenschluss / -arbeit", "Gründe für die Unternehmenszusammenarbeit: \nman hat weniger Konkurenz ->mehr Marktmacht \nRisiko kann auf mehreren Schultern verteilt werden \n" +
+                    "Mengenrabatt durch den Einkauf von größeren Mengen \ngemeinsame Werbung erreicht mehr Kunden und die Unternehmen können gleichzeitig mehr Geld sparen \ngemeinsame Forschung, Know-How (Fachwissen), Interessen von Kunden " +
+                    "können besser berücksichtigt werden. \n\nNachteile: \nFirmen verschwinden \nes können marktbeherrschende Unternehmen entstehen, der Kunde hat weniger Auswahl, Gefahr der Monopolbildung \nAbsprachen können den Wettbewerb verhindern " +
+                    "\nEntscheidungen müssen mehr Abgesprochen werden \nDie Gewinne müssen aufgeteilt werden \nEs besteht Gefahr, dass Firmen nicht mehr innovativ sind " +
                     "\n\n\nVerschiedene Arten von Zusammenarbeit: \n\nKartell: \nKunternehmen machen einen Vertrag. \ndarin steht, dass die Unternehmen in bestimmten Bereichen mit anderen Unternehmen zusammenarbeiten wollen." +
-                    "\nDie Unternehmen bleiben rechtlich völlig selbstständig. \n\nKonzern: \nZusammenschlüsse von Unternehmen. \nUnternehmen bleiben rechtlich selbstständig, haben aber wirtschaftlich gemeinsame Leitung. Es entstehen Mutter und Tochtergesellschaften bzw. Schwesterngesellschaften. \n"+
-                    "Konzerne mit vielen Tochtergesellschaften nennt man Multis (= multinationale Unternehmen). Sie haben große wirtschaftliche Macht. \n\nTrust: \nMehrere Unternehmen geben ihre Selbstständigkeit auf und verschmelzen zu einem Unternehmen. \n"+
+                    "\nDie Unternehmen bleiben rechtlich völlig selbstständig. \n\nKonzern: \nZusammenschlüsse von Unternehmen. \nUnternehmen bleiben rechtlich selbstständig, haben aber wirtschaftlich gemeinsame Leitung. Es entstehen Mutter und Tochtergesellschaften bzw. Schwesterngesellschaften. \n" +
+                    "Konzerne mit vielen Tochtergesellschaften nennt man Multis (= multinationale Unternehmen). Sie haben große wirtschaftliche Macht. \n\nTrust: \nMehrere Unternehmen geben ihre Selbstständigkeit auf und verschmelzen zu einem Unternehmen. \n" +
                     "Wenn Unternehmen verschmelzen, nennt man das auch Fusion. \nMan unterscheidet zwischen einer Neugründung und einer Aufnahme."),
-            new Term("verbotene Kartelle","Preiskartell \nDie Mitglieder treffen Preisabsprachen \n\nQuotenkartell \njedem Unternehmen wird eine bestimmte Produktionsmenge zugeteilt, um über die Angebotsmenge den Preis zu beinflussen "+
-                    "\n\nKalkulationskartell \ndie beteiligten Firmen vereinbaren den gleichen Aufbau ihrer Kalkulation, um zu gleichen Preisen zu gelangen \n\nGebietskartell \njedem Unternehmen wird ein bestimmtes Wirtschaftsgebiet "+
-                    "zugeteilt, um diesen Gebieten den Wettbewerb auszuschließen \n\nRabattkartell \nDie Mitglieder legen eine einheitliche Rabattgewährung fest \n\nKonditionenkartell \nEinheitliche Lieferungs-, Zahlungs-, und Geschäftbedingungen "+
-                    "wie Öffnungszeiten werden vereinbart. \n\n\nErlaubte Kartelle \n\nRationalisierungskartell \nzB Die Hersteller von Kaaffee-Filtern vereinbaren: In Zukunft werden wir alle umweltfreundliches Recycling-Papier verwenden \n\n"+
+            new Term("verbotene Kartelle", "Preiskartell \nDie Mitglieder treffen Preisabsprachen \n\nQuotenkartell \njedem Unternehmen wird eine bestimmte Produktionsmenge zugeteilt, um über die Angebotsmenge den Preis zu beinflussen " +
+                    "\n\nKalkulationskartell \ndie beteiligten Firmen vereinbaren den gleichen Aufbau ihrer Kalkulation, um zu gleichen Preisen zu gelangen \n\nGebietskartell \njedem Unternehmen wird ein bestimmtes Wirtschaftsgebiet " +
+                    "zugeteilt, um diesen Gebieten den Wettbewerb auszuschließen \n\nRabattkartell \nDie Mitglieder legen eine einheitliche Rabattgewährung fest \n\nKonditionenkartell \nEinheitliche Lieferungs-, Zahlungs-, und Geschäftbedingungen " +
+                    "wie Öffnungszeiten werden vereinbart. \n\n\nErlaubte Kartelle \n\nRationalisierungskartell \nzB Die Hersteller von Kaaffee-Filtern vereinbaren: In Zukunft werden wir alle umweltfreundliches Recycling-Papier verwenden \n\n" +
                     "Normen & Typenkartell \nzB Die Hersteller von Satelitenantennen vereinbaren:: Wir werwenden ab jetzt einheitliche Anschlüsse für unsere Antennen"),
-            new Term("Kontrolle des Wettbewerbs","Gesetz gegen Wettbewerbsbeschränkungen (=Karrtellgesetz)\nKontrolle der Einhaltung: Bundeskartellamt (Bonn) \n\n"+
-                    "Bundeskartellamt Aufgaben: \n\nMissbrauchsaufsicht \nMarktbeherrschende Unternehmen werden kontrolliert. \nWenn Unternehmen ihre Stellung missbrauchen (zB zu hohe Preise, schlechte Geschäftsbedingungen, Dumpinglöhne), kann es Bußgelder verlangen."+
-                    "\n\nKartellaufsicht \nEs entscheidet ob Unternehmen Kartell gründen dürfen oder nicht. \nEs passt auf, dass keine verbotenen Kartelle entstehen. \n\n"+
-                    "Fusionsaufsicht \nWenn große Unternehmen eine Fusion planen, dann müssen sie das beim Bundeskartellamt anmelden. \nes kann die Fusion verbieten, falls ein marktbeherrschendes Unternehmen entsteht. "+
+            new Term("Kontrolle des Wettbewerbs", "Gesetz gegen Wettbewerbsbeschränkungen (=Karrtellgesetz)\nKontrolle der Einhaltung: Bundeskartellamt (Bonn) \n\n" +
+                    "Bundeskartellamt Aufgaben: \n\nMissbrauchsaufsicht \nMarktbeherrschende Unternehmen werden kontrolliert. \nWenn Unternehmen ihre Stellung missbrauchen (zB zu hohe Preise, schlechte Geschäftsbedingungen, Dumpinglöhne), kann es Bußgelder verlangen." +
+                    "\n\nKartellaufsicht \nEs entscheidet ob Unternehmen Kartell gründen dürfen oder nicht. \nEs passt auf, dass keine verbotenen Kartelle entstehen. \n\n" +
+                    "Fusionsaufsicht \nWenn große Unternehmen eine Fusion planen, dann müssen sie das beim Bundeskartellamt anmelden. \nes kann die Fusion verbieten, falls ein marktbeherrschendes Unternehmen entsteht. " +
                     "Der Bundesminister für Wirtschaft kann die Fusion aber tortzdem erlauben."),
-            new Term("Staatliche Eingriffe","Allgemeine Beeinflussung des Wettbewerbs = \n\nDer Staat beeinflusst den Wettbewerb in vielen Wirtschaftszweigen durch folgende Maßnahmen: \n\nEinfuhrzölle \nAusländische Unternehmen müssen Zoll bezahlen, wenn sie in Deutschland (und in der EU) Waren verkaufen wollen. \n"+
-                    "Ziel: Die deutschen/europäischen Unternehmen von der ausländischen Konkurrenz schützen \n\nSubventionen: Unternehmen in bestimmten Marktbereichen bekommen Geld vom Staat. Dadurch können diese Unternehmen gute Preise für die Verbraucher machen. "+
-                    "Ziel: Wettbewerbsfähigkeit der Unternehmen sichern. \n\nHöchst und Mindestpreis: \nDer Staat legt Höchstpreise fest, vor allem für lebensnotwendige Waren. \nMindestpreise gibt es zb Landwirtschaft der EU. "+
-                    "Die Bauern bekommen einen festgelegten Mindestpreis für ihre Waren. \n\nStaatliche Monopole: \nManche Unternehmen (zB Wasserwerke) sind im Besitz des Staates bzw. von Bundesländern, Landkreisen oder Gemeinden. \n"+
-                    "Ziel: alle Menschen sollen lebensnotwendige Güter kaufen und auch bekommen."+
-                    "\n\n\nBeeinflussung des EU-Agrarmarkts = \n\nNach dem 2.Weltkrieg in Europa: Zu wenig Lebensmittel, Hunger. \nDeßhalb machten die Staaten gemeinsame Agrarpolitik mit folgenden Zielen: \nVerbrauchern zu vernünftigen Preisen Lebensmittel verkaufen \n"+
-                    "Die Landwirtschaftliche Produktion sichern \nDen Landwirtschaften einen angemessenen Lohn geben \nAnbaubedingungen in EU und der Welt aber unterschiedlich. In manchen nicht-EU-Ländern können Bauern sehr billig "+
-                    "produzieren und verkaufen \nDie EU vereinbarte folgende Maßnahmen: \n\nAbnahmegarantie: \nalle lebensnotwendige Güter (Getreide, Milch, Fleisch) werden den Landwirten abgekauft. Die Bauern haben eine Garrantie, "+
-                    "dass ihre Produkte gekauft werden. \nProblem: Überproduktion \n\nFeste Preise: \nDie EU hat garantierte Richtpreise für die Agrarproduktion festgelegt. Diese Preise werden den Bauern von der EU bezahlt. \n"+
-                    "Problem: Die EU muss viel Geld bezahlen \n\nSchutz durch Einfuhrzölle \nsiehe oben \n\nFolgen: Produktabnahme zu festen Preisen -> Produktionsmengensteigerung -> EU muss viel Geld zahlen, lagern und Überschüsse vernichten \n\n"+
-                    "EU Agrarpolitik in der Zukunft: \nImmer noch wichtig: \nNahrungsmittelversorgung sichern \nLandwirtschaftliche Produktion sichern \nangemessener Lohn für Landwirte \nÄnderungen: \nEs gibt Quoten: "+
+            new Term("Staatliche Eingriffe", "Allgemeine Beeinflussung des Wettbewerbs = \n\nDer Staat beeinflusst den Wettbewerb in vielen Wirtschaftszweigen durch folgende Maßnahmen: \n\nEinfuhrzölle \nAusländische Unternehmen müssen Zoll bezahlen, wenn sie in Deutschland (und in der EU) Waren verkaufen wollen. \n" +
+                    "Ziel: Die deutschen/europäischen Unternehmen von der ausländischen Konkurrenz schützen \n\nSubventionen: Unternehmen in bestimmten Marktbereichen bekommen Geld vom Staat. Dadurch können diese Unternehmen gute Preise für die Verbraucher machen. " +
+                    "Ziel: Wettbewerbsfähigkeit der Unternehmen sichern. \n\nHöchst und Mindestpreis: \nDer Staat legt Höchstpreise fest, vor allem für lebensnotwendige Waren. \nMindestpreise gibt es zb Landwirtschaft der EU. " +
+                    "Die Bauern bekommen einen festgelegten Mindestpreis für ihre Waren. \n\nStaatliche Monopole: \nManche Unternehmen (zB Wasserwerke) sind im Besitz des Staates bzw. von Bundesländern, Landkreisen oder Gemeinden. \n" +
+                    "Ziel: alle Menschen sollen lebensnotwendige Güter kaufen und auch bekommen." +
+                    "\n\n\nBeeinflussung des EU-Agrarmarkts = \n\nNach dem 2.Weltkrieg in Europa: Zu wenig Lebensmittel, Hunger. \nDeßhalb machten die Staaten gemeinsame Agrarpolitik mit folgenden Zielen: \nVerbrauchern zu vernünftigen Preisen Lebensmittel verkaufen \n" +
+                    "Die Landwirtschaftliche Produktion sichern \nDen Landwirtschaften einen angemessenen Lohn geben \nAnbaubedingungen in EU und der Welt aber unterschiedlich. In manchen nicht-EU-Ländern können Bauern sehr billig " +
+                    "produzieren und verkaufen \nDie EU vereinbarte folgende Maßnahmen: \n\nAbnahmegarantie: \nalle lebensnotwendige Güter (Getreide, Milch, Fleisch) werden den Landwirten abgekauft. Die Bauern haben eine Garrantie, " +
+                    "dass ihre Produkte gekauft werden. \nProblem: Überproduktion \n\nFeste Preise: \nDie EU hat garantierte Richtpreise für die Agrarproduktion festgelegt. Diese Preise werden den Bauern von der EU bezahlt. \n" +
+                    "Problem: Die EU muss viel Geld bezahlen \n\nSchutz durch Einfuhrzölle \nsiehe oben \n\nFolgen: Produktabnahme zu festen Preisen -> Produktionsmengensteigerung -> EU muss viel Geld zahlen, lagern und Überschüsse vernichten \n\n" +
+                    "EU Agrarpolitik in der Zukunft: \nImmer noch wichtig: \nNahrungsmittelversorgung sichern \nLandwirtschaftliche Produktion sichern \nangemessener Lohn für Landwirte \nÄnderungen: \nEs gibt Quoten: " +
                     "Wenn Landwirte mehr produzieren, dann bekommen sie weniger Unterstützung \nEs gibt Direktzahlung an Bauern \nWenn der Landwirt auf Umweltschutz / Tierschutz achtet, bekommt er mehr Unterstützung"),
-            new Term("Freie Marktwirtschaft - Zentralverwaltungswirtschaft","1) Freie Marktwirtschft \n2) Zentralverwaltungswirtschaft \n\nErfinder: \n1) Adam Smith \nKarl Marx \n\nRolle des Staates \n1)Staat greift nicht in die Wirtschaft ein, \n"+
-                    "außer bei Sicherheit, Recht & Bildung (Nachtwächterstaat) \n2) Staat lenkt Wirtschaft, was produziert werden soll, Menge, Warenverteilung, Export, Import, Lohnhöhe \n\nPreisbestimmung: \n1) Der freie Markt (Agebot & Nachfrage) \n2) Der Staat "+
-                    "\n\nWirtschaftsplanung: \n1) jede Firma eigener Wirtschaftsplan (dezentral) \n2) Der Staat (zentral) "+
-                    "\n\nEigentum an Produktionsmittel, zB Maschinen: \n1) Firma \n2) Staat \n\nWichtigstes Ziel der Betriebe: \n1) Möglichst viel Gewinn \n2) den Plan umsetzen \n\nWahl von Beruf und Arbeitsplatz: \n1) freie Wahl "+
-                    "2) Staat bestimmt Beruf und Arbeitsplatz \n\nVorteile: \n1) Mehr Produktion, daher billiger zB Lebensmittel \n2) Keine Arbeitslosigkeit, Konjunkturschwankungn, Kauf ~= Verkauf \n\n"+
+            new Term("Freie Marktwirtschaft - Zentralverwaltungswirtschaft", "1) Freie Marktwirtschft \n2) Zentralverwaltungswirtschaft \n\nErfinder: \n1) Adam Smith \nKarl Marx \n\nRolle des Staates \n1)Staat greift nicht in die Wirtschaft ein, \n" +
+                    "außer bei Sicherheit, Recht & Bildung (Nachtwächterstaat) \n2) Staat lenkt Wirtschaft, was produziert werden soll, Menge, Warenverteilung, Export, Import, Lohnhöhe \n\nPreisbestimmung: \n1) Der freie Markt (Agebot & Nachfrage) \n2) Der Staat " +
+                    "\n\nWirtschaftsplanung: \n1) jede Firma eigener Wirtschaftsplan (dezentral) \n2) Der Staat (zentral) " +
+                    "\n\nEigentum an Produktionsmittel, zB Maschinen: \n1) Firma \n2) Staat \n\nWichtigstes Ziel der Betriebe: \n1) Möglichst viel Gewinn \n2) den Plan umsetzen \n\nWahl von Beruf und Arbeitsplatz: \n1) freie Wahl " +
+                    "2) Staat bestimmt Beruf und Arbeitsplatz \n\nVorteile: \n1) Mehr Produktion, daher billiger zB Lebensmittel \n2) Keine Arbeitslosigkeit, Konjunkturschwankungn, Kauf ~= Verkauf \n\n" +
                     "Nachteile: \n1) Löhne für einfachen Arbeiter sinken stetig, große Firmen kaufen kleine, Kinderarbeit \n2) Bei schlechtem Plan = zu wenig Rohstoffe & Waren, zu wenig Firmenmotivation, Unterproduktion"),
             new Term("Soziale Marktwirtschaft",
-                    "Nach dem 2. WK entschieden die Sieger über die Wirtschaftsordnung. \nDie Westlichen sagten: \"Im Nationalsozialismus hatte Hitler und der Staat zu viel Macht. Daher wird die freie Marktwirtschaft eingeführt.\" \n"+
-                    "Die Östlichen sagten: \"Zwischen 1929-1933 hat die Weltwirtschaftskrise gezeigt, dass der Staat die Wirtschaft mehr lenken muss. Daher wird die Zentralverwaltungswirtschaft eingeführt. \n\n"+
-                    "Gründer: Ludwig Erhard: \"Wir brauchen eine neue Wirtschaftsordnung: Jeder Mensch soll frei sein und eigene Entscheidungen treffen können, aber der Staat soll die wirtschaftlich schwachen Menschen"+
-                    " unterstützen können. Wir brauchen eine soziale Marktwirtschaft\". \n\n Rolle des Staates: \nUnterstützung wirtschaftlich Schwacher \n\nWer/Was bestimmt den Preis?: \nAngebot & Nachfrage \n\n"+
-                    "Wirtschaftsplanung: \nGewerbefreiheit, jedes Unternehmen plant für sich selbst \n\nEigentum an Produktionsmitteln, zB Maschinen: \nDen Firmen \n\nWichtigstes Ziel der Betriebe: \nmaximalen Gewinn erwirtschaften \n\n"+
-                    "Wahl von Beruf und Arbeitsplatz: \nFreie Berufswahl, Gewerbefreiheit \n\nVorteile: Mittelweg, sowohl unternehmerische Selbstbestimmung als auch Armenhilfe, Berufswahl, soziale Absicherung, Gewerbefreiheit \n\n"+
-                    "Nachteile: \nAbwanderung der Reichsten, Gefahr der Monopolstellung"),
+                    "Nach dem 2. WK entschieden die Sieger über die Wirtschaftsordnung. \nDie Westlichen sagten: \"Im Nationalsozialismus hatte Hitler und der Staat zu viel Macht. Daher wird die freie Marktwirtschaft eingeführt.\" \n" +
+                            "Die Östlichen sagten: \"Zwischen 1929-1933 hat die Weltwirtschaftskrise gezeigt, dass der Staat die Wirtschaft mehr lenken muss. Daher wird die Zentralverwaltungswirtschaft eingeführt. \n\n" +
+                            "Gründer: Ludwig Erhard: \"Wir brauchen eine neue Wirtschaftsordnung: Jeder Mensch soll frei sein und eigene Entscheidungen treffen können, aber der Staat soll die wirtschaftlich schwachen Menschen" +
+                            " unterstützen können. Wir brauchen eine soziale Marktwirtschaft\". \n\n Rolle des Staates: \nUnterstützung wirtschaftlich Schwacher \n\nWer/Was bestimmt den Preis?: \nAngebot & Nachfrage \n\n" +
+                            "Wirtschaftsplanung: \nGewerbefreiheit, jedes Unternehmen plant für sich selbst \n\nEigentum an Produktionsmitteln, zB Maschinen: \nDen Firmen \n\nWichtigstes Ziel der Betriebe: \nmaximalen Gewinn erwirtschaften \n\n" +
+                            "Wahl von Beruf und Arbeitsplatz: \nFreie Berufswahl, Gewerbefreiheit \n\nVorteile: Mittelweg, sowohl unternehmerische Selbstbestimmung als auch Armenhilfe, Berufswahl, soziale Absicherung, Gewerbefreiheit \n\n" +
+                            "Nachteile: \nAbwanderung der Reichsten, Gefahr der Monopolstellung"),
             new Term("Soziale Marktwirtschaft Merkmale",
-                    "Marktwirtschaft: \n\nGewerbefreiheit: \nFreie Berufswahl, Firmen entscheiden selbst, was sie produzieren \n\nVertragsfreiheit: \nJeder darf Verträge machen, jeder darf selbst entscheiden, mit wem er "+
-                    "einen Vertrag macht. \n\nFreie Preisbildung: \nAngebot & Nachfrage regeln den Preis, der Staat greift nicht ein. \n\nPrivateigentum: \nProduktionsmittel gehören Firme, nicht Staat, Bauern gehören Arbeitsgeräte \n\n"+
-                    "Sozial: \n\nSozialpolitik: \nSozialversicherungen (Renten, Kranken, Pflege, Unfall, Arbeitslosen), Arbeitsschutzbestimmmungen (Kündigungs-, Jugendarbeits-, Mutter-schutz) \n\n"+
-                    "Einkommens und Vermögenspolitik: \nSteuerprogression (wer mehr verdient, muss mehr Steuern zahlen), Spar und Bausparförderung \n\nWettbewerbspolitik: \nVerbot von Preisabsprachen, Schutz der Verbraucher durch "+
-                    "Produkthaftungsgesetz, Preisabgabegesetz, Mess & Eichgesetz \n\nStruktur und Konjunkturpolitik: \ngünstige Kredite für Firmengründung in wirtschaftlich schwachen Gebieten, Subventionen für Landwirtschaft, Bergbau, "+
-                    "Eisen & Stahlindustrie \n\nUmweltpolitik: \n Gesetze zum Umweltschutz (zB Recycling-Auflagen, Richtlinen für Mineralölverbrauch & Schadstoffausstoß), staatliche Förderer erneuerbarer Energien \n\n"+
-                    "Öffentliche Unternehmen: \nAlle Bürger sollen mit allen lebenswichtigen Gütern und Dienstleistungen versorgt werden zB Wasserkraftwerke, Schulen, Krankenhäuser und Nachverkehr"),
+                    "Marktwirtschaft: \n\nGewerbefreiheit: \nFreie Berufswahl, Firmen entscheiden selbst, was sie produzieren \n\nVertragsfreiheit: \nJeder darf Verträge machen, jeder darf selbst entscheiden, mit wem er " +
+                            "einen Vertrag macht. \n\nFreie Preisbildung: \nAngebot & Nachfrage regeln den Preis, der Staat greift nicht ein. \n\nPrivateigentum: \nProduktionsmittel gehören Firme, nicht Staat, Bauern gehören Arbeitsgeräte \n\n" +
+                            "Sozial: \n\nSozialpolitik: \nSozialversicherungen (Renten, Kranken, Pflege, Unfall, Arbeitslosen), Arbeitsschutzbestimmmungen (Kündigungs-, Jugendarbeits-, Mutter-schutz) \n\n" +
+                            "Einkommens und Vermögenspolitik: \nSteuerprogression (wer mehr verdient, muss mehr Steuern zahlen), Spar und Bausparförderung \n\nWettbewerbspolitik: \nVerbot von Preisabsprachen, Schutz der Verbraucher durch " +
+                            "Produkthaftungsgesetz, Preisabgabegesetz, Mess & Eichgesetz \n\nStruktur und Konjunkturpolitik: \ngünstige Kredite für Firmengründung in wirtschaftlich schwachen Gebieten, Subventionen für Landwirtschaft, Bergbau, " +
+                            "Eisen & Stahlindustrie \n\nUmweltpolitik: \n Gesetze zum Umweltschutz (zB Recycling-Auflagen, Richtlinen für Mineralölverbrauch & Schadstoffausstoß), staatliche Förderer erneuerbarer Energien \n\n" +
+                            "Öffentliche Unternehmen: \nAlle Bürger sollen mit allen lebenswichtigen Gütern und Dienstleistungen versorgt werden zB Wasserkraftwerke, Schulen, Krankenhäuser und Nachverkehr"),
             new Term("Verbraucherpreis-Index",
-                    "Warenkorb: Summe der Kosten aller Waren (Menge mal Preis) \nWird regelmäßig aktualisiert, je nach Häufigkeit im aktuellen Konsumverhalten \n\n"+
-                    "Wert des Warenkorbs: \nJahr 1: 80 \nJahr 2: 88 \n\nPreisindex: \nJahr 1: 100 \nJahr 2: (88/80)*100=110 \nJahr 3: (92,4/80)*100=115,5 \noder: (92,4/88)*110=115,5 \n\nPreissteigerung gegenüber Vorjahr "+
-                    "(Inflationsrate): \nJahr 2: +10% \nJahr 3: ((115,5-110)/110)*100=5,5%"+
-                    "\n\nGründe für Messung Preisindex: \nMit Warenkorb stellt man fest, um wie viel Euro und Protzent Preise gestiegen sind, wie viel Geld ein durchschnittlicher Mensch zum Leben braucht, wichtig für bspw. Verhandlungen "+
-                    "über Lohnerhöhungen \n\nNominale Lohnsteigerung: \nzB Ein Arbeiter bekommt 1,5% mehr Nettolohn \n\nReale Lohnsteigerung: \nzB Die Preise sind um 1,7% gestiegen. \nObwohl der Arbeiter 1,5% nominale Lohnsteigerung hat, \n"+
-                    "hat er eine reale (wirkliche) Lohnsteigerung von -0,2% \nreale Lohnsteigerung = nominale Lohnsteigerung - Preissteigerung"),
-            new Term("Kaufkraft", "Kaufkraft des Geldes = Wert des Geldes, wie viel kann ich von dem Geld kaufen? \nDie Kaufkraft ist abhängig von der Preisentwicklung.\n\n"+
-                    "zB Preis für eine Kugel Eis \nJahr 1 (Basisjahr): 1 Euro \nJahr 2: 1,50 Euro \nPreisniveau: +50% \nVerfügbarer Geldbetrag: 3 Euro \nKaufkraft Jahr 1: 100 \nKaufkraft Jahr 2: 66,7 ((100/150)*100)"+
+                    "Warenkorb: Summe der Kosten aller Waren (Menge mal Preis) \nWird regelmäßig aktualisiert, je nach Häufigkeit im aktuellen Konsumverhalten \n\n" +
+                            "Wert des Warenkorbs: \nJahr 1: 80 \nJahr 2: 88 \n\nPreisindex: \nJahr 1: 100 \nJahr 2: (88/80)*100=110 \nJahr 3: (92,4/80)*100=115,5 \noder: (92,4/88)*110=115,5 \n\nPreissteigerung gegenüber Vorjahr " +
+                            "(Inflationsrate): \nJahr 2: +10% \nJahr 3: ((115,5-110)/110)*100=5,5%" +
+                            "\n\nGründe für Messung Preisindex: \nMit Warenkorb stellt man fest, um wie viel Euro und Protzent Preise gestiegen sind, wie viel Geld ein durchschnittlicher Mensch zum Leben braucht, wichtig für bspw. Verhandlungen " +
+                            "über Lohnerhöhungen \n\nNominale Lohnsteigerung: \nzB Ein Arbeiter bekommt 1,5% mehr Nettolohn \n\nReale Lohnsteigerung: \nzB Die Preise sind um 1,7% gestiegen. \nObwohl der Arbeiter 1,5% nominale Lohnsteigerung hat, \n" +
+                            "hat er eine reale (wirkliche) Lohnsteigerung von -0,2% \nreale Lohnsteigerung = nominale Lohnsteigerung - Preissteigerung"),
+            new Term("Kaufkraft", "Kaufkraft des Geldes = Wert des Geldes, wie viel kann ich von dem Geld kaufen? \nDie Kaufkraft ist abhängig von der Preisentwicklung.\n\n" +
+                    "zB Preis für eine Kugel Eis \nJahr 1 (Basisjahr): 1 Euro \nJahr 2: 1,50 Euro \nPreisniveau: +50% \nVerfügbarer Geldbetrag: 3 Euro \nKaufkraft Jahr 1: 100 \nKaufkraft Jahr 2: 66,7 ((100/150)*100)" +
                     "\nZusammenhang: Wenn das Preisniveau um 50% steigt, sinkt die Kaufkraft um 33,3% \n\nVerringert sich Kaufkraft einer Währung: Inflation \nErhöht sich Kaufkraft einer Währung: Deflation"),
-            new Term("Inflation","Staat darf nicht mehr Geld drucken, als er Güter und Dienstleistungen hat, sonst sinkt die Kaufkraft und das Geld ist wertloser. \n\n"+
-                    "Ursachen: \n\nNachfrage-Inflation: \nHöhere Löhne / weniger Steuern / zu viel Geld gedruckt \nAber nicht mehr Güter auf dem Markt \n\n"+
-                    "Kosten: \nFirmen müssen mehr Lohn zahlen / Rohstoffpreise steigen \nalso erhöhen sie die Preise \n\nGeldmenge im Land steigt: \nwenn viele Güter ins Ausland verkauft werden, "+
-                    "sind weniger Güter im Land, aber es werden weniger produziert, daher teurer \n\nExport > Import \n\nFolgen/Auswirkungen: \n\nSchleichende Inflation: \nPreise steigen <5% / Jahr \nso langsam, dass man es fast nicht merkt \n"+
-                    "Geldkaufkraft sinkt langsam \nkein Problem für Wirtschaft / Menschen \n\nGaloppierende Inflation: \nPreise steigen > 10%, > 50% \nWirtschaft gehr kaputt & viele werden arm \n"+
-                    "Geld verliert ganz schnell seinen Wert. Die Kaufkraft sinkt sehr schnell \nGut bei Schulden / Krediten, aber nicht für Sparen \n"+
+            new Term("Inflation", "Staat darf nicht mehr Geld drucken, als er Güter und Dienstleistungen hat, sonst sinkt die Kaufkraft und das Geld ist wertloser. \n\n" +
+                    "Ursachen: \n\nNachfrage-Inflation: \nHöhere Löhne / weniger Steuern / zu viel Geld gedruckt \nAber nicht mehr Güter auf dem Markt \n\n" +
+                    "Kosten: \nFirmen müssen mehr Lohn zahlen / Rohstoffpreise steigen \nalso erhöhen sie die Preise \n\nGeldmenge im Land steigt: \nwenn viele Güter ins Ausland verkauft werden, " +
+                    "sind weniger Güter im Land, aber es werden weniger produziert, daher teurer \n\nExport > Import \n\nFolgen/Auswirkungen: \n\nSchleichende Inflation: \nPreise steigen <5% / Jahr \nso langsam, dass man es fast nicht merkt \n" +
+                    "Geldkaufkraft sinkt langsam \nkein Problem für Wirtschaft / Menschen \n\nGaloppierende Inflation: \nPreise steigen > 10%, > 50% \nWirtschaft gehr kaputt & viele werden arm \n" +
+                    "Geld verliert ganz schnell seinen Wert. Die Kaufkraft sinkt sehr schnell \nGut bei Schulden / Krediten, aber nicht für Sparen \n" +
                     "Leute kaufen sich Wertgegenstände, werden trotzdem ärmer, Kapitalflucht"),
             new Term("Deflation",
-                    "Ursachen: \n\nSparen: \nFirmen / Leute wollen Geld nicht ausgeben, weniger Geld im Umlauf \n\nUnternehmen müssen Preise senken: \nWenn sie zu viel produziert haben / wenn der Markt gesättigt ist "+
-                    "(alle haben das Produkt schon) \n\nImport > Export \n\nFolgen / Auswirkungen: \n\nGut für Arbeiter mit festem Gehalt / Arbeitsstelle \nProdukte werden billiger \n"+
-                    "Arbeiter können mehr Güter von Geld kaufen \nUnternehmen müssen preise senken und amchen weniger Gewinn, müssen entlassen oder weniger Lohn bezahlen, "+
-                    "manchmal sogar Insolvenz anmelden, sehr viele verlieren Arbeitsplatz"),
-            new Term("Löhne","Lohnkosten EU \n2022: Arbeitskosten / Stunde: 30,5 Euro im Durschschnitt \nIn Luxemburg: 50,7 \nIn Bulgarien: nur 8,2 \nIn Deutschland "+
-                    "werden durchschnittlich 25% vom Lohn abgegeben \n\nLöhne aufgrund Lohnzusatzkosten hoch \n\nLohnzusatzkosten: \nbezahlter Urlaub \nWeihnachtsgeld \nUrlaubsgeld \nEntgeltfortzahlung bei Krankheit \nbezahlte Feiertage \nvermögendswirksame Leistung"+
-                    "\nArbeitgeberanteil Sozialversicherungsbeiträge \nbetriebliche Altersversorgung \nsonstige Personalzusatzkosten \n\nWettbewerbsfähigkeit kann so gefährdet werden, "+
+                    "Ursachen: \n\nSparen: \nFirmen / Leute wollen Geld nicht ausgeben, weniger Geld im Umlauf \n\nUnternehmen müssen Preise senken: \nWenn sie zu viel produziert haben / wenn der Markt gesättigt ist " +
+                            "(alle haben das Produkt schon) \n\nImport > Export \n\nFolgen / Auswirkungen: \n\nGut für Arbeiter mit festem Gehalt / Arbeitsstelle \nProdukte werden billiger \n" +
+                            "Arbeiter können mehr Güter von Geld kaufen \nUnternehmen müssen preise senken und amchen weniger Gewinn, müssen entlassen oder weniger Lohn bezahlen, " +
+                            "manchmal sogar Insolvenz anmelden, sehr viele verlieren Arbeitsplatz"),
+            new Term("Löhne", "Lohnkosten EU \n2022: Arbeitskosten / Stunde: 30,5 Euro im Durschschnitt \nIn Luxemburg: 50,7 \nIn Bulgarien: nur 8,2 \nIn Deutschland " +
+                    "werden durchschnittlich 25% vom Lohn abgegeben \n\nLöhne aufgrund Lohnzusatzkosten hoch \n\nLohnzusatzkosten: \nbezahlter Urlaub \nWeihnachtsgeld \nUrlaubsgeld \nEntgeltfortzahlung bei Krankheit \nbezahlte Feiertage \nvermögendswirksame Leistung" +
+                    "\nArbeitgeberanteil Sozialversicherungsbeiträge \nbetriebliche Altersversorgung \nsonstige Personalzusatzkosten \n\nWettbewerbsfähigkeit kann so gefährdet werden, " +
                     "aber durch Arbeitnehmerqualifikation und Produktqualität gehalten werden. \nLohnzusatzkostensenkung kann helfen um Unternehmen im Land zu halten."),
             //Ordner 6
-            new Term("Gerechte Entlohnung","Arbeitsbewertung AB durch Analytische und Summarische AB, \nZiel: Leistungsgerechter Lohn durch Einteilung in Lohngruppen \n"+
-                    "+ Sozialen Aspekte \n\nSummarische Arbeitsbewertung: \nDie Arbeitsaufgabe wird als ganzes (=Summe) gesehen \n"+
-                    "Wichtig dabei: \nWelche Ausbildung, wie viel Berufserfahrung, welches Können, wie viel Verantwortung braucht man? \n\n"+
-                    "Analytische Arbeitsbewegung: \nDie Arbeitsaufgabe wird nach einzelnen Arbeitsanforderungen bewertet \nwichtig dabei: \n"+
+            new Term("Gerechte Entlohnung", "Arbeitsbewertung AB durch Analytische und Summarische AB, \nZiel: Leistungsgerechter Lohn durch Einteilung in Lohngruppen \n" +
+                    "+ Sozialen Aspekte \n\nSummarische Arbeitsbewertung: \nDie Arbeitsaufgabe wird als ganzes (=Summe) gesehen \n" +
+                    "Wichtig dabei: \nWelche Ausbildung, wie viel Berufserfahrung, welches Können, wie viel Verantwortung braucht man? \n\n" +
+                    "Analytische Arbeitsbewegung: \nDie Arbeitsaufgabe wird nach einzelnen Arbeitsanforderungen bewertet \nwichtig dabei: \n" +
                     "Wie viel Können, Belastung, Verantwortung und welche Umwelteinflüsse?"),
-            new Term("Analytische AB","Bei der analytischen Arbeitsbewertung wird versucht die Arbeitsanforderungen zu beschreiben. Man untersucht dafür den Arbeitsplatz und bewertet die Anforderungen.\n\n" +
-                    "Der Ecklohn ist der Lohn eines 21 Jährigen \nIn Tarifverhandlungen wird normalerweise nur über die Höhe des Ecklohns verhandelt \n"+
+            new Term("Analytische AB", "Bei der analytischen Arbeitsbewertung wird versucht die Arbeitsanforderungen zu beschreiben. Man untersucht dafür den Arbeitsplatz und bewertet die Anforderungen.\n\n" +
+                    "Der Ecklohn ist der Lohn eines 21 Jährigen \nIn Tarifverhandlungen wird normalerweise nur über die Höhe des Ecklohns verhandelt \n" +
                     "Diese Lohngruppe wird gleich 100% gesetzt. \nDie anderen Lohngruppen werden durch Zuschläge oder Abzüge berechnet."),
-            new Term("Summarische AB","Hierbei werden die enzelnen Anforderungsarten einer Arbeit insgesamt als Ganzes (summarisch) bewertet.\n\n"+
-                    "Lohngruppe 1 - Einfache Arbeiten, die keine Arbeitskenntnisse und keine Ausbildung voraussetzen, sondern nur eine einmalige Anweisung. \n\n"+
+            new Term("Summarische AB", "Hierbei werden die enzelnen Anforderungsarten einer Arbeit insgesamt als Ganzes (summarisch) bewertet.\n\n" +
+                    "Lohngruppe 1 - Einfache Arbeiten, die keine Arbeitskenntnisse und keine Ausbildung voraussetzen, sondern nur eine einmalige Anweisung. \n\n" +
                     "Lohngruppe 8 - Besonders schwierige Arbeiten, die hervorragende Fachkenntnisse und Fähigkeiten und eine entsprechende Berufserfahrung voraussetzen"),
-            new Term("Soziale Aspekte","Benachteiligung Mancher bei bloser Leistungsbetrachtung, daher Berücksichtigung sozialer Aspekte. \n\n"+
-                    "Dauer der Betriebszugehörigkeit \nlangjährige Mitarbeiter haben Erfahrung und kennen sich im Betrieb aus. Treue Mitarbeiter sollen Belohnt werden \n\n"+
-                    "Alter \nAbsicherung durch die Firma. Es wird schwerer eine Arbeit zu finden. \n\nFamilienstand \nWer Familie hat, muss für weitere Personen sorgen. "+
-                    "Höhere Ausgaben für die Familie. \n\nDer Staat unterstützt besonderst die familiengerechte Entlohnung: \nFamilienstand bei Lohnsteuerklasse \n"+
+            new Term("Soziale Aspekte", "Benachteiligung Mancher bei bloser Leistungsbetrachtung, daher Berücksichtigung sozialer Aspekte. \n\n" +
+                    "Dauer der Betriebszugehörigkeit \nlangjährige Mitarbeiter haben Erfahrung und kennen sich im Betrieb aus. Treue Mitarbeiter sollen Belohnt werden \n\n" +
+                    "Alter \nAbsicherung durch die Firma. Es wird schwerer eine Arbeit zu finden. \n\nFamilienstand \nWer Familie hat, muss für weitere Personen sorgen. " +
+                    "Höhere Ausgaben für die Familie. \n\nDer Staat unterstützt besonderst die familiengerechte Entlohnung: \nFamilienstand bei Lohnsteuerklasse \n" +
                     "Kindergeld \nWohngeld \nstaatliche gefördertes Vermögenswirksames Sparen \nArbeitnehmersparzulagen"),
-            new Term("Sozialprodukt","Zur Berechnung ob ein Staat wirtschaftlich stärker oder schwächer wurde als letztes Jahr\n\n"+
-                    "2 Möglichkeiten: \n\nBerechnung des Bruttoinlandprodukts BIP \nWert aller Dientleistungen und Sachgüter, die innerhalb eines Landes produziert werden \n\n"+
-                    "Berechnung des Bruttonationaleinkommens \nWert aller Dienstleistungen & Sachgütern, die von einem Land erwirtschaftet werden. \n\n"+
-                    "Unterscheidung gering. In letzter Zeit wird meistens BIP berechnet. \n\nNominales BIP \nzeigt nur, ob der Wert aller Dienstleistungen sinkt oder steigt, egal warum\n\n"+
-                    "Reales BIP \nwenn man die Inflationsrate (Preissteigerung) wegnimmt, bekommt man das wirkliche Wachstum \n\nKritik an Bruttoinlandsprodukt BIP: \n"+
-                    "Soziale Ehrenamtliche Arbeit und Hausarbeit fehlt. Arbeit, die repariert, zB nach Umweltkatastrophen wird auch gezählt, obwohl sie keine Wohlstandsmeerung schafft, "+
+            new Term("Sozialprodukt", "Zur Berechnung ob ein Staat wirtschaftlich stärker oder schwächer wurde als letztes Jahr\n\n" +
+                    "2 Möglichkeiten: \n\nBerechnung des Bruttoinlandprodukts BIP \nWert aller Dientleistungen und Sachgüter, die innerhalb eines Landes produziert werden \n\n" +
+                    "Berechnung des Bruttonationaleinkommens \nWert aller Dienstleistungen & Sachgütern, die von einem Land erwirtschaftet werden. \n\n" +
+                    "Unterscheidung gering. In letzter Zeit wird meistens BIP berechnet. \n\nNominales BIP \nzeigt nur, ob der Wert aller Dienstleistungen sinkt oder steigt, egal warum\n\n" +
+                    "Reales BIP \nwenn man die Inflationsrate (Preissteigerung) wegnimmt, bekommt man das wirkliche Wachstum \n\nKritik an Bruttoinlandsprodukt BIP: \n" +
+                    "Soziale Ehrenamtliche Arbeit und Hausarbeit fehlt. Arbeit, die repariert, zB nach Umweltkatastrophen wird auch gezählt, obwohl sie keine Wohlstandsmeerung schafft, " +
                     "sondern wiederherstellt. Keine Aussage über Wohlstandsverteilung"),
-            new Term("Probleme Soz Marktw","Probleme der Sozialen Marktwirtschaft: \nFinanzierung sozialer Sicherungssysteme \nSubventionen \nÖffentliche Unternehmen -> Privatisierung \nKonjunkturschwankungen"),
-            new Term("Finanz soz Sichsys","Finanzierung sozialer Sicherungssysteme \nJe mehr Arbeitslose und Rentner, umso geringer Beitragseinnahmen \n"+
-                    "Arbeitslosenunterstützung und Renten Ausgaben steigen gleichzeitig \nDie Beiträge müssen erhöht und die Leistungen gekürzt werden, um dies zu bezahlen \n"+
-                    "dazu: Pflegeversicherungs und Krankenversicherungsausgaben steigen wegen Überalterung \nDie Folge: Wohlstand sinkt durch Beitragserhöhungen und Leistungskürzungen, "+
+            new Term("Probleme Soz Marktw", "Probleme der Sozialen Marktwirtschaft: \nFinanzierung sozialer Sicherungssysteme \nSubventionen \nÖffentliche Unternehmen -> Privatisierung \nKonjunkturschwankungen"),
+            new Term("Finanz soz Sichsys", "Finanzierung sozialer Sicherungssysteme \nJe mehr Arbeitslose und Rentner, umso geringer Beitragseinnahmen \n" +
+                    "Arbeitslosenunterstützung und Renten Ausgaben steigen gleichzeitig \nDie Beiträge müssen erhöht und die Leistungen gekürzt werden, um dies zu bezahlen \n" +
+                    "dazu: Pflegeversicherungs und Krankenversicherungsausgaben steigen wegen Überalterung \nDie Folge: Wohlstand sinkt durch Beitragserhöhungen und Leistungskürzungen, " +
                     "mehr private Vorsorge notwendig"),
-            new Term("Subventionen","Finanzielle gegenleistungslose Staatshilfe \nDamit Betriebe konkurenzfähig bleiben. Manche Betribe sind nur mit Hilfe von Zuschüssen überlebensfähig. \n\n"+
-                    "Die Staatsquote gibt an welchen Anteil die Staatsausgaben an der Wirtschaftsleistung (am BIP) haben. Eine hohe Staatsquote verfälscht das BIP. \n"+
-                    "Um sie zu senken will der Staat weniger subventionieren \n2020 lag sie bei 50,8% wegen Corona, Krankenversorgung, Kurzarbeitergeld, Unternehmensunterstützung \n"+
+            new Term("Subventionen", "Finanzielle gegenleistungslose Staatshilfe \nDamit Betriebe konkurenzfähig bleiben. Manche Betribe sind nur mit Hilfe von Zuschüssen überlebensfähig. \n\n" +
+                    "Die Staatsquote gibt an welchen Anteil die Staatsausgaben an der Wirtschaftsleistung (am BIP) haben. Eine hohe Staatsquote verfälscht das BIP. \n" +
+                    "Um sie zu senken will der Staat weniger subventionieren \n2020 lag sie bei 50,8% wegen Corona, Krankenversorgung, Kurzarbeitergeld, Unternehmensunterstützung \n" +
                     "1990 - 1995: Anstieg wegen Kosten der Wiedervereinigung"),
-            new Term("Privatisierung","Privatisierung öffentlicher Unternehmen \nVerkauf von Unternehmen des Staates an private Leute \nStaat spart Steuergeld und bekommt "+
-                    "dazu den Verkaufspreis als Staatseinnahme. Die Preise beim Unternehmen fallen (zB Telekom) oder steigen. \n\n"+
-                    "Probleme öffentlicher Unternehmen \nUnrentabilität, Ihre Güter sind teurer, brauchen häufig "+
-                    "Zuschüsse \nliegt an der Monopolstellung (fehlender Wettbewerb). Sie reagieren gleichgültiger auf Neuerungen. \nSteuerzahlen tragen Verluste, daher vielfach überhöhter "+
-                    "Kapital und Personeneinsatz. \n-> Immer größere Zuschüsse benötigt \n\n"+
-                    "Telekom wurde ganz verkauft, Post und Bahn zum Teil. Lufthansa und Energieunternehmen in Planung \n"+
+            new Term("Privatisierung", "Privatisierung öffentlicher Unternehmen \nVerkauf von Unternehmen des Staates an private Leute \nStaat spart Steuergeld und bekommt " +
+                    "dazu den Verkaufspreis als Staatseinnahme. Die Preise beim Unternehmen fallen (zB Telekom) oder steigen. \n\n" +
+                    "Probleme öffentlicher Unternehmen \nUnrentabilität, Ihre Güter sind teurer, brauchen häufig " +
+                    "Zuschüsse \nliegt an der Monopolstellung (fehlender Wettbewerb). Sie reagieren gleichgültiger auf Neuerungen. \nSteuerzahlen tragen Verluste, daher vielfach überhöhter " +
+                    "Kapital und Personeneinsatz. \n-> Immer größere Zuschüsse benötigt \n\n" +
+                    "Telekom wurde ganz verkauft, Post und Bahn zum Teil. Lufthansa und Energieunternehmen in Planung \n" +
                     "Zunehmend mehr Gemeinden lassen Müllabfuhr, Straßenreinigung und Abwasserbeseitigung von Privat machen"),
-            new Term("Konjunkturschwankungen","Konjunktur \nGrundmuster wirtschaftlicher Aktivität in der Volkswirtschaft von Auf und Ab, "+
-                    "über mehrere Jahre hinweg. Diese Welle heißt Konjunkturzyklus. \n\n"+
-                    "Staat will dass Konjunkturschwankungen gering sind, deshalb sind die Konjunkturpolitischen Maßnahmen antizyklisch. \n\n"+
-                    "Maßnahmen bei Tiefstand (Depression): \n\nMaßnahmen der Europäischen Zentralbank EZB / Geldpolitik: \n1. Senkung der Mindestreserve \n"+
-                    "Banken müssen weniger Geld bei der Bundesbank hinterlegen (zur Sicherheit, wenn sie pleite gehen) \nFolge: Die umlaufende Geldmenge steigt \n"+
-                    "2. Verkauf von Wertpapieren \nDie EZB kauft Staats-Aktien \nFolge: Die umlaufende Geldmenge wird größer \n3. Leitzinssenkung \n"+
-                    "Kredite von Banken kosten jetzt weniger Zinsen, man bekommt aber auch weniger Zinsen für gespartes Geld \nFolge: Privatleute sparen weniger, "+
-                    "nehmen mehr Kredite auf und haben mehr Geld zum Kaufen (=Nachfrage steigt) \n\nMaßnahmen vom Staat / Konjunkturpolitik: \n"+
-                    "1. Steuersenkung für Unternehmen \nFirmen müssen weniger Steuern zahlen \nFolge: Die Firmen investieren mehr (zB neue Machinen kaufen) "+
-                    "und schaffen neue Arbeitsplätze \n2. Erhöhung der Staatsaufträge \nFirmen bekommen mehr Staats-Aufträge \nFolge: Firmen machen mehr Gewinne und schaffen "+
-                    "neue Arbeitsplätze \n3. Subventionen für Unternehmen und private Haushalte \nFirmen und private Haushalte bekommen mehr Geld vom Staat \n"+
+            new Term("Konjunkturschwankungen", "Konjunktur \nGrundmuster wirtschaftlicher Aktivität in der Volkswirtschaft von Auf und Ab, " +
+                    "über mehrere Jahre hinweg. Diese Welle heißt Konjunkturzyklus. \n\n" +
+                    "Staat will dass Konjunkturschwankungen gering sind, deshalb sind die Konjunkturpolitischen Maßnahmen antizyklisch. \n\n" +
+                    "Maßnahmen bei Tiefstand (Depression): \n\nMaßnahmen der Europäischen Zentralbank EZB / Geldpolitik: \n1. Senkung der Mindestreserve \n" +
+                    "Banken müssen weniger Geld bei der Bundesbank hinterlegen (zur Sicherheit, wenn sie pleite gehen) \nFolge: Die umlaufende Geldmenge steigt \n" +
+                    "2. Verkauf von Wertpapieren \nDie EZB kauft Staats-Aktien \nFolge: Die umlaufende Geldmenge wird größer \n3. Leitzinssenkung \n" +
+                    "Kredite von Banken kosten jetzt weniger Zinsen, man bekommt aber auch weniger Zinsen für gespartes Geld \nFolge: Privatleute sparen weniger, " +
+                    "nehmen mehr Kredite auf und haben mehr Geld zum Kaufen (=Nachfrage steigt) \n\nMaßnahmen vom Staat / Konjunkturpolitik: \n" +
+                    "1. Steuersenkung für Unternehmen \nFirmen müssen weniger Steuern zahlen \nFolge: Die Firmen investieren mehr (zB neue Machinen kaufen) " +
+                    "und schaffen neue Arbeitsplätze \n2. Erhöhung der Staatsaufträge \nFirmen bekommen mehr Staats-Aufträge \nFolge: Firmen machen mehr Gewinne und schaffen " +
+                    "neue Arbeitsplätze \n3. Subventionen für Unternehmen und private Haushalte \nFirmen und private Haushalte bekommen mehr Geld vom Staat \n" +
                     "Folge: Firmen können mehr investieren und Privatleute können mehr kaufen \n4. Steuersenkungen für Verbraucher \nDie Nettolöhne steigen \n" +
-                    "Folge: Privatleute kaufen mehr \n\nMaßnahmen bei Hochkonjunktur (Boom): \n\nMaßnahmen der EZB / Geldpolitik: \n"+
-                    "1. Erhöhung der Mindestreserve \ndie Banken müssen mehr Geld bei der Bundesbank hinterlegen (zur Sicherheit, wenn sie pleite gehen) \n"+
-                    "Folge: Die umlaufende Geldmenge wird kleiner \n2. Kauf von Wertpapieren \nDie EZB verkaufen Staats-Aktien \nFolge: Die umlaufende Geldmenge wird kleiner \n"+
-                    "3. Die Leitzinserhöhung \nKredite von Banken kosten jetzt mehr Zinsen, man bekommt aber auch mehr Zinsen für gespartes Geld \nFolge: "+
-                    "Privatleute sparen mehr, nehmen weniger Kredite auf und ahben weniger Geld zum Kaufen (Nachfrage sinkt) \n\n"+
-                    "Maßnahmen vom Staat / Konjunkturpolitik: \n1. Steuererhöhungen für Unternehmen \nFirmen müssen mehr Steuern zahlen \nFolge: Die Firmen investieren weniger "+
-                    "zB neue Maschinen kaufen und schaffen keine neuen Arbeitsplätze \n2. Weniger Staatsaufträge \nFirmen bekommen weniger Staats-Aufträge \n"+
-                    "Folge: Firmen machen weniger Gewinne und schaffen keine neuen Arbeitsplätze \n3. Weniger Subventionen \nFirmen und private Haushalte bekommen weniger Geld vom Staat \n"+
+                    "Folge: Privatleute kaufen mehr \n\nMaßnahmen bei Hochkonjunktur (Boom): \n\nMaßnahmen der EZB / Geldpolitik: \n" +
+                    "1. Erhöhung der Mindestreserve \ndie Banken müssen mehr Geld bei der Bundesbank hinterlegen (zur Sicherheit, wenn sie pleite gehen) \n" +
+                    "Folge: Die umlaufende Geldmenge wird kleiner \n2. Kauf von Wertpapieren \nDie EZB verkaufen Staats-Aktien \nFolge: Die umlaufende Geldmenge wird kleiner \n" +
+                    "3. Die Leitzinserhöhung \nKredite von Banken kosten jetzt mehr Zinsen, man bekommt aber auch mehr Zinsen für gespartes Geld \nFolge: " +
+                    "Privatleute sparen mehr, nehmen weniger Kredite auf und ahben weniger Geld zum Kaufen (Nachfrage sinkt) \n\n" +
+                    "Maßnahmen vom Staat / Konjunkturpolitik: \n1. Steuererhöhungen für Unternehmen \nFirmen müssen mehr Steuern zahlen \nFolge: Die Firmen investieren weniger " +
+                    "zB neue Maschinen kaufen und schaffen keine neuen Arbeitsplätze \n2. Weniger Staatsaufträge \nFirmen bekommen weniger Staats-Aufträge \n" +
+                    "Folge: Firmen machen weniger Gewinne und schaffen keine neuen Arbeitsplätze \n3. Weniger Subventionen \nFirmen und private Haushalte bekommen weniger Geld vom Staat \n" +
                     "Folge: Firmen investieren weniger und Privatleute können weniger kaufen \n4. Steuererhöhung \nDie Nettolöhne sinken \nFolge: Privatleute kaufen weniger"),
-            new Term("Wirtschaftspolitische Ziele","Stabilitätsgesetz \nErfordernisse des gesamtwirtschaftlichen Gleichgewichts beachten \n"+
+            new Term("Wirtschaftspolitische Ziele", "Stabilitätsgesetz \nErfordernisse des gesamtwirtschaftlichen Gleichgewichts beachten \n" +
                     "Maßnahmen treffen, sodass gleichzeitig zu Preisstabilität, Beschäftigung, außenwirtschaftliches Gleichgewicht und Wirtschaftswachstum beigetragen wird, " +
-                    "im Rahmen der marktwirtschaftlichen Ordnung. \n\nDas magische Viereck \nPreisstabilität - Inflationsrate unter / am 2% \nVollbeschäftigung - Arbeitslosenquote kleiner als 3%"+
-                    "\nangemessenes Wirtschaftswachstum - um ca 3%\naußenwirtschaftliches Gleichgewicht - Import = Export \nIn der Wirtschaft ist es unmöglich alle 4 Ziele gleichzeitig zu erreichen. \n\n"+
-                    "Das magische Sechseck \nDas magische Viereck + \nNachhaltigkeit \nDie Wirtschaftsteilnehmer (AN & AG) sollen nachhaltig wirtschaften. Die Umwelt soll für die nachfolgenden Generationen "+
-                    "geschützt werden zB steuerliche Förderung von E-Autos \ngerechte Vermögensverteilung \nDie Einkommensverteilung erfolgt in D nach dem Leistungsprinzip. "+
+                    "im Rahmen der marktwirtschaftlichen Ordnung. \n\nDas magische Viereck \nPreisstabilität - Inflationsrate unter / am 2% \nVollbeschäftigung - Arbeitslosenquote kleiner als 3%" +
+                    "\nangemessenes Wirtschaftswachstum - um ca 3%\naußenwirtschaftliches Gleichgewicht - Import = Export \nIn der Wirtschaft ist es unmöglich alle 4 Ziele gleichzeitig zu erreichen. \n\n" +
+                    "Das magische Sechseck \nDas magische Viereck + \nNachhaltigkeit \nDie Wirtschaftsteilnehmer (AN & AG) sollen nachhaltig wirtschaften. Die Umwelt soll für die nachfolgenden Generationen " +
+                    "geschützt werden zB steuerliche Förderung von E-Autos \ngerechte Vermögensverteilung \nDie Einkommensverteilung erfolgt in D nach dem Leistungsprinzip. " +
                     "Der Staat greift deshalb ein. Er handelt nach dem Bedarfsprinzip. Es findet ein spezieller Ausgleich statt zB Wohngeld, Kindergeld"),
-            new Term("Gründung Unternehmen","Hilfen \nIHK, HWK, Fachverbände, Institute der Wirtschaft, Bundesministerium für Wirtschaft, \nkostenpflichtig: "+
-                    "Steuerberater, Kreditinstitute, freie Unternehmensberater, Rechtsanwälte / Notar \n\nPersönliche Vorraussetzungen \nSelbstbewusstsein, Risikobereitschaft, "+
-                    "Fleiß, Fachkenntnisse, Kreativität, soziale Fähigkeiten, Ordnung \n\nBerufliche Vorraussetzungen \nAlle voll geschäftsfähigen Deutschen dürfen in D ein Gewerbe gründen \n"+
-                    "Normalerweise ist für ein Gewerbe im Einzelhandel keine Erlaubnis notwendig \nArzneimittelherstellung, Wohnungsuntervermietung und Taxi-Unternehmesgründung nur mit offizieller Erlaubnis \n"+
-                    " Anmeldung erlaubnispflichtiger Gewerbe bei der Kreisverwaltungsbehörde \nErlaubnisbeantragung vor Beginn der Tätigkeit \n"+
-                    "Behörde überprüft persönliche Zuverlässigkeit durch deine Beantragung eines Führungszeugnisses beim Einwohneramt / Gewerbeamt und dadurch dass du eine Auskunft für Behörden aus dem Gewerbezentralregister erstellen lässt \n"+
-                    "Handwerkliches Gewerbe gründbar durch Eintrag Handwerksrolle, durch Handwerksmeister / technische Hochschule / Fachschule \n\n"+
-                    "Möglichkeiten bei der Firmengründung \n\nVertriebsfranchising \nFranchise-Nehmer hat Geschäft mit dem Franchise-Namen und verkauft Waren des Franchise-Gebers \nBsp: McDonalds in Winnenden, McDonalds in New York \n"+
-                    "Subway in London, Subway in Stuttgart \n\nDienstleistungsfranchising \nFranchise-Nehmer bieten Dienstleistungen unter dem Namen des Franchise-Gebers an \n"+
-                    "Bsp: Montana-Hotel ind Kassel, Montana-Hotel in Bremen \nVolkshochschule Stuttgart, Volkshochschule Heidelberg \n\nProduktfranchising \nFranchise-Nehmer stellt Waren "+
-                    "in seinem eigenen Geschäft selber her und verkauft diese Waren unter dem Namen (Warenzeichen) des Franchise-Gebers \nBsp: Verkauf von Cartige World-Produkten (Verbrauchsmaterialien für Drucker) "+
-                    "in den USA, Verkauf von Catridge World-Produkten in Deutschland \n\n"+
-                    "Rechtsform \nAuskunft über: \nWer bringt Kapital? Wer haftet für Schulden, in welchem Umfang? Wer leitet? Wer vertritt nach außen? "+
-                    "Wer bekommt den Gewinn? \nEinzelunternehmen <-> Gesellschaftsunternehmen (Personengesellschaft <-> Kapitalgesllschft) \n\n"+
+            },
+            {//Unternehmensgründung
+            new Term("Gründung Unternehmen", "Hilfen \nIHK, HWK, Fachverbände, Institute der Wirtschaft, Bundesministerium für Wirtschaft, \nkostenpflichtig: " +
+                    "Steuerberater, Kreditinstitute, freie Unternehmensberater, Rechtsanwälte / Notar \n\nPersönliche Vorraussetzungen \nSelbstbewusstsein, Risikobereitschaft, " +
+                    "Fleiß, Fachkenntnisse, Kreativität, soziale Fähigkeiten, Ordnung \n\nBerufliche Vorraussetzungen \nAlle voll geschäftsfähigen Deutschen dürfen in D ein Gewerbe gründen \n" +
+                    "Normalerweise ist für ein Gewerbe im Einzelhandel keine Erlaubnis notwendig \nArzneimittelherstellung, Wohnungsuntervermietung und Taxi-Unternehmesgründung nur mit offizieller Erlaubnis \n" +
+                    " Anmeldung erlaubnispflichtiger Gewerbe bei der Kreisverwaltungsbehörde \nErlaubnisbeantragung vor Beginn der Tätigkeit \n" +
+                    "Behörde überprüft persönliche Zuverlässigkeit durch deine Beantragung eines Führungszeugnisses beim Einwohneramt / Gewerbeamt und dadurch dass du eine Auskunft für Behörden aus dem Gewerbezentralregister erstellen lässt \n" +
+                    "Handwerkliches Gewerbe gründbar durch Eintrag Handwerksrolle, durch Handwerksmeister / technische Hochschule / Fachschule \n\n" +
+                    "Möglichkeiten bei der Firmengründung \n\nVertriebsfranchising \nFranchise-Nehmer hat Geschäft mit dem Franchise-Namen und verkauft Waren des Franchise-Gebers \nBsp: McDonalds in Winnenden, McDonalds in New York \n" +
+                    "Subway in London, Subway in Stuttgart \n\nDienstleistungsfranchising \nFranchise-Nehmer bieten Dienstleistungen unter dem Namen des Franchise-Gebers an \n" +
+                    "Bsp: Montana-Hotel ind Kassel, Montana-Hotel in Bremen \nVolkshochschule Stuttgart, Volkshochschule Heidelberg \n\nProduktfranchising \nFranchise-Nehmer stellt Waren " +
+                    "in seinem eigenen Geschäft selber her und verkauft diese Waren unter dem Namen (Warenzeichen) des Franchise-Gebers \nBsp: Verkauf von Cartige World-Produkten (Verbrauchsmaterialien für Drucker) " +
+                    "in den USA, Verkauf von Catridge World-Produkten in Deutschland \n\n" +
+                    "Rechtsform \nAuskunft über: \nWer bringt Kapital? Wer haftet für Schulden, in welchem Umfang? Wer leitet? Wer vertritt nach außen? " +
+                    "Wer bekommt den Gewinn? \nEinzelunternehmen <-> Gesellschaftsunternehmen (Personengesellschaft <-> Kapitalgesllschft) \n\n" +
                     "Wahl des Standortes: \nKosten, Kundennähe, Behördliche Auflagen, Verkehrsanbindung, Arbeitskräfte, Konkurenz \n\n"),
-            new Term("Rechtsformen Unternehmen","Legende: \nName, Abkürzung, Haftung, Geschäftsführung, Gewinnverteilung \n\n"+
-                    "Einzelunternehmen: \nDurch den Einzelunternehmer, haftet allein und unbeschränkt auch mit Privatvermögen, Einzelunternehmer hat die Geschäftsführung, Einzelunternehmer bekommt Gewinn allein \n\n"+
-                    "Personengesellschaften: \n\nOffene Handelsgesellschaft: OHG, \nDurch mind 2 Personen, Jeder Gesellschafter haftet unbeschränkt auch mit Privatvermögen, Jeder Gesellschafter hat die eigene Geschäftsführung, Jeder bekommt 4% "+
-                    "auf die Kapitaleinlage, der Rest wird je nach Anteilen verteilt \n\nGesellschaft des bürgerlichen Rechts: GbR, \ndurch mindestens 2 natürliche oder juristische Personen mit gemeinsamem Ziel, "+
-                    "Jeder Gesellschafter haftet unbeschränkt auch mit Privat, Alle Gesellschafter oder Vetrag wird gemacht, Jeder bekommt gleichen Anteil \n\nKapitalgesellschaften: \n\n"+
-                    "Gesellschaft mit beschränkter Haftung: GmbH, \nDurch min 1 Person mit min 25000 Grundkapital, Jeder Gesellschafter haftet nur mit Stammeinlage, Der Geschäftsführer, Aufteilung je nach Stammeinlage \n\n"+
-                    "Aktiengesellschaft: AG, \nDurch min 1 Person mit min 50K Grundkapital, Jeder Aktionär haftet mit dem Wert seiner Aktien, Der Vorstand hat die Geschäftsführung, Die Dividende (Gewinn) wird nach Aktie verteilt \n\n"+
-                    "Unternehmensgesellschaft: UG, \nDurch min 1 Person mit min 1Euro Grundkapital, Jeder Gesellschafter haftet nur mit Stammeinlage, der Geschäftsführer, Aufteilung je nach Stammeinlage \n\n"+
-                    "Vorteile & Nachteile: \n\nEinzelu.: \n(+) man ist selbst der Chef, kann alles bestimmen, gute Kreditwürdigkeit, ganzer Gewinn, schnell gründbar, einfach auflösbar \n(-) Entscheidungen alle allein, Verantwortung voll, "+
-                    "Firma pleite - eigenes Geld weg \nOHG: \n(+) sehr gute Kreditwürdigkeit, \n(-) Firma pleite - eigene Gelder weg \n"+
-                    "GbR: \n(+) sehr gute Kreditwürdigkeit \n(-) Firma pleite - eigene Gelder weg \nGmbH: \n(+) Haftung nicht mit privat \n(-) schlechte Kreidtwürdigkeit, Stammkapital 25K, Körperschaftssteuer \n"+
-                    "AG: \n(+) zusätzliche Gewinne durch Aktien, schnell große Geldmenge beschaffbar durch Aktienverkauf \n(-) Stammkapital 50K, Körperschaftssteuer, Aktienwert kann sinken, viel Kontrolle macht schwerfällig \n"+
+            new Term("Rechtsformen Unternehmen", "Legende: \nName, Abkürzung, Haftung, Geschäftsführung, Gewinnverteilung \n\n" +
+                    "Einzelunternehmen: \nDurch den Einzelunternehmer, haftet allein und unbeschränkt auch mit Privatvermögen, Einzelunternehmer hat die Geschäftsführung, Einzelunternehmer bekommt Gewinn allein \n\n" +
+                    "Personengesellschaften: \n\nOffene Handelsgesellschaft: OHG, \nDurch mind 2 Personen, Jeder Gesellschafter haftet unbeschränkt auch mit Privatvermögen, Jeder Gesellschafter hat die eigene Geschäftsführung, Jeder bekommt 4% " +
+                    "auf die Kapitaleinlage, der Rest wird je nach Anteilen verteilt \n\nGesellschaft des bürgerlichen Rechts: GbR, \ndurch mindestens 2 natürliche oder juristische Personen mit gemeinsamem Ziel, " +
+                    "Jeder Gesellschafter haftet unbeschränkt auch mit Privat, Alle Gesellschafter oder Vetrag wird gemacht, Jeder bekommt gleichen Anteil \n\nKapitalgesellschaften: \n\n" +
+                    "Gesellschaft mit beschränkter Haftung: GmbH, \nDurch min 1 Person mit min 25000 Grundkapital, Jeder Gesellschafter haftet nur mit Stammeinlage, Der Geschäftsführer, Aufteilung je nach Stammeinlage \n\n" +
+                    "Aktiengesellschaft: AG, \nDurch min 1 Person mit min 50K Grundkapital, Jeder Aktionär haftet mit dem Wert seiner Aktien, Der Vorstand hat die Geschäftsführung, Die Dividende (Gewinn) wird nach Aktie verteilt \n\n" +
+                    "Unternehmensgesellschaft: UG, \nDurch min 1 Person mit min 1Euro Grundkapital, Jeder Gesellschafter haftet nur mit Stammeinlage, der Geschäftsführer, Aufteilung je nach Stammeinlage \n\n" +
+                    "Vorteile & Nachteile: \n\nEinzelu.: \n(+) man ist selbst der Chef, kann alles bestimmen, gute Kreditwürdigkeit, ganzer Gewinn, schnell gründbar, einfach auflösbar \n(-) Entscheidungen alle allein, Verantwortung voll, " +
+                    "Firma pleite - eigenes Geld weg \nOHG: \n(+) sehr gute Kreditwürdigkeit, \n(-) Firma pleite - eigene Gelder weg \n" +
+                    "GbR: \n(+) sehr gute Kreditwürdigkeit \n(-) Firma pleite - eigene Gelder weg \nGmbH: \n(+) Haftung nicht mit privat \n(-) schlechte Kreidtwürdigkeit, Stammkapital 25K, Körperschaftssteuer \n" +
+                    "AG: \n(+) zusätzliche Gewinne durch Aktien, schnell große Geldmenge beschaffbar durch Aktienverkauf \n(-) Stammkapital 50K, Körperschaftssteuer, Aktienwert kann sinken, viel Kontrolle macht schwerfällig \n" +
                     "UG: \n(+) Gründung: 1Euro, Gesellschafter haften nicht Privat, Gründung schnell unkompliziert \n(-) schlechte Kreditwürdigkeit, Ansparpflicht (min 25% Überschüsse müssen in Stammeinlage bis 25K)"),
-            new Term("Marketing", "Marketing ist: wie kann ich möglichst viele Produkte verkaufen? \n\n"+
-                    "Marketing als Modell: \n\nMarktforschung: \nWie verhalten sich die Verbraucher? \nWie verhält sich die Konkurenz? \n\nZielformulierung: \nWas möchte die Firma in diesem Jahr erreichen? \n\n"+
-                    "Strategiefestlegung: \nWie erreicht die Firma die Ziele? \n\nMarketing-Mix: \nWelche Art von Werbung kann die Firma erreichen? \n\nMarketing-Controlling: \nÜberprüfung, ob die Ziele erreicht wurden \n\n\n"+
-                    "Marketing-Mix = Marketing Instrumente: \nzum erreichen von Ziel zB Verkaufszahl verdoppeln \n\nGute Produktpolitik und Sortimentpolitik: \nOrientierung an aktuellen Trends und Wünschen \nBei gutem Verkauf eines Produktes, werden Variationen produziert \n"+
-                    "Wenn sich eins schlecht verkauft, stoppt sie die Produktion \n\nGute Preisgestaltung: \nbesondere Kredite oder Rabatt oder verlängerte Garantie für bestimmte Kunden \ngute Lieferbedingungen für manche Lieferanten \n\n"+
-                    "Gute Kundenbetreuung: \nguter Kundendienst für telefonische oder persönliche Kundenberatung \nKundenberatung in Finanzierungsfragen (aktuelle Rabatte, geeignete Raten) \n\n"+
-                    "Gute Werbung: \nInvestitionen in Öffentlichkeitsarbeit um ein Produkt bekannt zu machen und in Absatzwerbung um möglichst vile von einem Produkt zu verkaufen \nKunden informieren über neue Waren, neu Kunden gewinnen und alte behalten \n\n"+
-                    "Ökomarketing: \nUmwelt-Gütesiegel bekommen (zB grüner Punkt, Bio) für Image-Besserung, neue Kunden und langfristige Wettbewerbsfähigkeit \n\n"+
+            new Term("Marketing", "Marketing ist: wie kann ich möglichst viele Produkte verkaufen? \n\n" +
+                    "Marketing als Modell: \n\nMarktforschung: \nWie verhalten sich die Verbraucher? \nWie verhält sich die Konkurenz? \n\nZielformulierung: \nWas möchte die Firma in diesem Jahr erreichen? \n\n" +
+                    "Strategiefestlegung: \nWie erreicht die Firma die Ziele? \n\nMarketing-Mix: \nWelche Art von Werbung kann die Firma erreichen? \n\nMarketing-Controlling: \nÜberprüfung, ob die Ziele erreicht wurden \n\n\n" +
+                    "Marketing-Mix = Marketing Instrumente: \nzum erreichen von Ziel zB Verkaufszahl verdoppeln \n\nGute Produktpolitik und Sortimentpolitik: \nOrientierung an aktuellen Trends und Wünschen \nBei gutem Verkauf eines Produktes, werden Variationen produziert \n" +
+                    "Wenn sich eins schlecht verkauft, stoppt sie die Produktion \n\nGute Preisgestaltung: \nbesondere Kredite oder Rabatt oder verlängerte Garantie für bestimmte Kunden \ngute Lieferbedingungen für manche Lieferanten \n\n" +
+                    "Gute Kundenbetreuung: \nguter Kundendienst für telefonische oder persönliche Kundenberatung \nKundenberatung in Finanzierungsfragen (aktuelle Rabatte, geeignete Raten) \n\n" +
+                    "Gute Werbung: \nInvestitionen in Öffentlichkeitsarbeit um ein Produkt bekannt zu machen und in Absatzwerbung um möglichst vile von einem Produkt zu verkaufen \nKunden informieren über neue Waren, neu Kunden gewinnen und alte behalten \n\n" +
+                    "Ökomarketing: \nUmwelt-Gütesiegel bekommen (zB grüner Punkt, Bio) für Image-Besserung, neue Kunden und langfristige Wettbewerbsfähigkeit \n\n" +
                     "Qualitätssicherung: \ndarauf achten keine mangelhafte Ware zu verkaufen \ngute Qualität spricht sich herum, also gutes Image und so Werbeeinsparungen möglich"),
-            new Term("Finanzierung Unternehmen","Kapitalbedarf: Geld für... \nGrundstück / Gebäude \nMaschinen \nMitarbeiteranstellung \nWerbung \n\n"+
-                    "Woher kann ich das Geld bekommen? \nEigenkapital: \neigenes Geld und Geld von Geschäftspartnern / Sponsoren \nFremdkapital: \nGeld, das ich ausleiehe und später zurückzahlen muss: Kredit / Darlehen von der Bank, \n"+
-                    "Investoren, \nFörderungsmittel (vom Staat), \nMikrokredite. \nJe mehr Eigenkapital, desto besser! (mindestens 20%, wenn ich eine Firma gründen will). Grund: nicht so viel Risiko und ich bekomme einfacher einen Kredit \n\n"+
-                    "Dispositionskredit \nmehr Gelf abheben als auf dem Konto ist \nKein neuer (Kredit)vertrag, als bei Kontoeröffnung \nZweck: Wenn man kurzfristig Geld braucht. \nKeine festgelegte Laufzeit. \nTilgung durch Einzahlung auf das Girokonto \n"+
-                    "Hohe Zinsen, abhängig vom Markt (=je nach Marktlage) \nkeine Gebühren \n\nRatenkredit / Darlehen \neinen Vertrag machen und Geld ausleihen \nneuer Vertrag in Schriftform \nZweck: Wenn man Güter anschaffen will \n"+
-                    "Festgelegte Laufzeit \nFestgelegte Raten, In der Regel immer gleiche Raten \nNiedrige Zinsen im Vertrag genau festgelegt \nIn der Regel 2% gebühren \n\n"+
-                    "Kredit Sicherung \nBei Ratenkredit / Darlehen ist Vertrag zu machen \nDie Bank will Sicherheit, dass ich das Geld zurück zahle \n1. Möglichkeit Bürgschaft \n"+
-                    "Eine dritte Person verpflichtet sich zu zahlen, wenn ich Schulden mache und das Geld nicht zurückzahlen kann \n2. Möglichkeit Verpfändung \nIch gebe dem Gläubiger zB der Bank "+
-                    "einen Gegenstand / eine Besitz-Urkunde. Der Gläubiger ist der Eigentümer bis ich das Geld zurück gezahlt habe \n3. Möglichkeit Sicherheitsübereignung \nzB Kredit für Auto. Der Gläubiger bekommt "+
-                    "Fahrzeugbrief, ist Eigentümer bis zur Rückzahlung \n4. Möglichkeit Hypothek / Grundschuld \nGläubiger bekommt Besitz-Urkunde für ein Gebäude. \n\n"+
-                    "Leasing \n\nLeasinggeber gibt Sache zum Gebrauch \nLeasingnehmer muss Leasingrate (~Miete) zahlen. \nAm Ende: Rückgabe der selben Sache oder Kauf \n"+
-                    "(+) Ich brauche keinen Kredit aufnehmen \n(+) Ich kann Sache haben auch wenn ich wenig Geld habe \n(+) Bei manchen Verträgen gibt es Betreuung und Beratung \n(+) Ich habe immer die neusten Sachen \n"+
-                    "(-) Ich bin während der Leasing-Zeit an den Hersteller gebungen \n(-) Es kann Streit geben, wie viel die Sache kosten darf, wenn ich die Sache später kaufen will \n"+
+            new Term("Finanzierung Unternehmen", "Kapitalbedarf: Geld für... \nGrundstück / Gebäude \nMaschinen \nMitarbeiteranstellung \nWerbung \n\n" +
+                    "Woher kann ich das Geld bekommen? \nEigenkapital: \neigenes Geld und Geld von Geschäftspartnern / Sponsoren \nFremdkapital: \nGeld, das ich ausleiehe und später zurückzahlen muss: Kredit / Darlehen von der Bank, \n" +
+                    "Investoren, \nFörderungsmittel (vom Staat), \nMikrokredite. \nJe mehr Eigenkapital, desto besser! (mindestens 20%, wenn ich eine Firma gründen will). Grund: nicht so viel Risiko und ich bekomme einfacher einen Kredit \n\n" +
+                    "Dispositionskredit \nmehr Gelf abheben als auf dem Konto ist \nKein neuer (Kredit)vertrag, als bei Kontoeröffnung \nZweck: Wenn man kurzfristig Geld braucht. \nKeine festgelegte Laufzeit. \nTilgung durch Einzahlung auf das Girokonto \n" +
+                    "Hohe Zinsen, abhängig vom Markt (=je nach Marktlage) \nkeine Gebühren \n\nRatenkredit / Darlehen \neinen Vertrag machen und Geld ausleihen \nneuer Vertrag in Schriftform \nZweck: Wenn man Güter anschaffen will \n" +
+                    "Festgelegte Laufzeit \nFestgelegte Raten, In der Regel immer gleiche Raten \nNiedrige Zinsen im Vertrag genau festgelegt \nIn der Regel 2% gebühren \n\n" +
+                    "Kredit Sicherung \nBei Ratenkredit / Darlehen ist Vertrag zu machen \nDie Bank will Sicherheit, dass ich das Geld zurück zahle \n1. Möglichkeit Bürgschaft \n" +
+                    "Eine dritte Person verpflichtet sich zu zahlen, wenn ich Schulden mache und das Geld nicht zurückzahlen kann \n2. Möglichkeit Verpfändung \nIch gebe dem Gläubiger zB der Bank " +
+                    "einen Gegenstand / eine Besitz-Urkunde. Der Gläubiger ist der Eigentümer bis ich das Geld zurück gezahlt habe \n3. Möglichkeit Sicherheitsübereignung \nzB Kredit für Auto. Der Gläubiger bekommt " +
+                    "Fahrzeugbrief, ist Eigentümer bis zur Rückzahlung \n4. Möglichkeit Hypothek / Grundschuld \nGläubiger bekommt Besitz-Urkunde für ein Gebäude. \n\n" +
+                    "Leasing \n\nLeasinggeber gibt Sache zum Gebrauch \nLeasingnehmer muss Leasingrate (~Miete) zahlen. \nAm Ende: Rückgabe der selben Sache oder Kauf \n" +
+                    "(+) Ich brauche keinen Kredit aufnehmen \n(+) Ich kann Sache haben auch wenn ich wenig Geld habe \n(+) Bei manchen Verträgen gibt es Betreuung und Beratung \n(+) Ich habe immer die neusten Sachen \n" +
+                    "(-) Ich bin während der Leasing-Zeit an den Hersteller gebungen \n(-) Es kann Streit geben, wie viel die Sache kosten darf, wenn ich die Sache später kaufen will \n" +
                     "(-) Dauernde Belastung durch monatliche Raten \n(-) Die Leasing-Sachen gehören mir nicht"),
-            new Term("Betriebliche Kosten","Kosten im Betrieb \n\nFixe Kosten (fix = fest): \nMiete für Gebäude, Steuern, Sozialversicherungsbeiträge, "+
-                    "Kreditkosten, Energiekosten, Kosten für Arbeiter, Kosten für Sekretärin (= immer gleich) \n\nVariable Kosten (variable = verschieden): \nRohstoffkosten, Verpackungskosten, Material, Werkzeuge, Energiekosten \n\n"+
-                    "Einzelkosten (direkte Kosten): \nRohstoffkosten, Verpackungskosten, Material, Kosten für Arbeiter, Werkzeug \n\nGemeinkosten (indirekte Kosten): \nMiete für Gebäude, "+
-                    "Steuern, Sozialversicherungsbeiträge, Kreditkosten, Energiekosten, Kosten für die Sekretärin \n\nGesamtkosten = Fixe + Variable Kosten \noder: \n"+
+            new Term("Betriebliche Kosten", "Kosten im Betrieb \n\nFixe Kosten (fix = fest): \nMiete für Gebäude, Steuern, Sozialversicherungsbeiträge, " +
+                    "Kreditkosten, Energiekosten, Kosten für Arbeiter, Kosten für Sekretärin (= immer gleich) \n\nVariable Kosten (variable = verschieden): \nRohstoffkosten, Verpackungskosten, Material, Werkzeuge, Energiekosten \n\n" +
+                    "Einzelkosten (direkte Kosten): \nRohstoffkosten, Verpackungskosten, Material, Kosten für Arbeiter, Werkzeug \n\nGemeinkosten (indirekte Kosten): \nMiete für Gebäude, " +
+                    "Steuern, Sozialversicherungsbeiträge, Kreditkosten, Energiekosten, Kosten für die Sekretärin \n\nGesamtkosten = Fixe + Variable Kosten \noder: \n" +
                     "Gesamtkosten = Einzelkosten + Gemeinkosten"),
-            new Term("Unternehmensziele","Ziele erwerbswirtschaftlicher Unternhemen (private): \nzB Bosch, Daimler AG \nhoher Gewinn und Gewinn steigern \nsichere Arbeit schaffen \n"+
-                    "moderne Maschinen kaufen \numweltfreundliche Waren verkaufen \n\nZiele öffentlicher Unternehmen (besitzt Staat, Land oder Gemeinde): \nzB Theater, Wasserwerk, Müllabfuhr \nBevölkerung "+
-                    "mit wichtigen Dienstleistungen und Gütern versorgen \nKostendeckung (= genügend verkaufen, damit die Firme nicht pleite geht) \n\n"+
-                    "Ziele genossenschaftlicher Unternhemen (Personenvereinigung (mehrere Personen schließen sich zusammen)): \nzB Volksbank \n"+
+            new Term("Unternehmensziele", "Ziele erwerbswirtschaftlicher Unternhemen (private): \nzB Bosch, Daimler AG \nhoher Gewinn und Gewinn steigern \nsichere Arbeit schaffen \n" +
+                    "moderne Maschinen kaufen \numweltfreundliche Waren verkaufen \n\nZiele öffentlicher Unternehmen (besitzt Staat, Land oder Gemeinde): \nzB Theater, Wasserwerk, Müllabfuhr \nBevölkerung " +
+                    "mit wichtigen Dienstleistungen und Gütern versorgen \nKostendeckung (= genügend verkaufen, damit die Firme nicht pleite geht) \n\n" +
+                    "Ziele genossenschaftlicher Unternhemen (Personenvereinigung (mehrere Personen schließen sich zusammen)): \nzB Volksbank \n" +
                     "bessere Wettbewerbsfähigkeit (=wirtschaftliche Vorteile bekommen, konkurenzfähig sein)")
-
+            }
     };
     private static Term[] termsLFGK = {
             //Ordner 1
@@ -2436,6 +2477,7 @@ public class Terms {
     public static String[] getKapitelLF2() {return kapitelLF2;}
     public static String[] getKapitelLF3() {return kapitelLF3;}
     public static String[] getKapitelLF5() {return kapitelLF5;}
+    public static String[] getKapitelLFWK() {return kapitelLFWK;}
 
     public static Term[][] getTermsLF1() {return termsLF1;}
     public static Term[][] getTermsLF2() {return termsLF2;}
@@ -2461,7 +2503,7 @@ public class Terms {
     public static Term[] getTermsLF10a() {return termsLF10a; }
     public static Term[] getTermsLF11() {return termsLF11; }
     public static Term[] getTermsLF12() {return termsLF12; }
-    public static Term[] getTermsLFWK() {
+    public static Term[][] getTermsLFWK() {
         return termsLFWK;
     }
     public static Term[] getTermsLFGK() { return termsLFGK; }
