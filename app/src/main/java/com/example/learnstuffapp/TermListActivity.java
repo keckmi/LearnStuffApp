@@ -30,6 +30,7 @@ public class TermListActivity extends AppCompatActivity {
     private final String [] kapitelLF2 = Terms.getKapitelLF2();
     private final String [] kapitelLF3 = Terms.getKapitelLF3();
     private final String [] kapitelLFWK = Terms.getKapitelLFWK();
+    private final String [] kapitelLFGK = Terms.getKapitelLFGK();
 
 
     private final Term[][] termsLF1 = Terms.getTermsLF1();
@@ -45,7 +46,7 @@ public class TermListActivity extends AppCompatActivity {
     private final Term[] termsLF11 = Terms.getTermsLF11();
     private final Term[] termsLF12 = Terms.getTermsLF12();
     private final Term[][] termsLFWK = Terms.getTermsLFWK();
-    private final Term[] termsLFGK = Terms.getTermsLFGK();
+    private final Term[][] termsLFGK = Terms.getTermsLFGK();
 
     //VERÄNDERUNG
 
@@ -91,10 +92,11 @@ public class TermListActivity extends AppCompatActivity {
             case "10a":
             case "11":
             case "12":
-            case "GK":
                 kapitelLF = kapitelLFYetUnpost; break;
             case "WK":
                 kapitelLF = kapitelLFWK; break;
+            case "GK":
+                kapitelLF = kapitelLFGK; break;
         }
 
         String [] kapitel = new String [1+kapitelLF.length];
@@ -183,6 +185,7 @@ public class TermListActivity extends AppCompatActivity {
             case "8": terms2D = termsLF8; break;
             case "9": terms2D = termsLF9; break;*/
             case "WK": terms2D = termsLFWK; break;
+            case "GK": terms2D = termsLFGK; break;
             default:
                 throw new IllegalStateException("Unexpected value: " + lernfeld);
         }
@@ -235,12 +238,13 @@ public class TermListActivity extends AppCompatActivity {
             case "11": terms = termsLF11; break;
             case "12": terms = termsLF12; break;
             case "WK": terms2D = termsLFWK; break;
-            case "GK": terms = termsLFGK; break;
+            case "GK": terms2D = termsLFGK; break;
             default:
                 throw new IllegalStateException("Unexpected value: " + lernfeld);
         }
 
-        if (lernfeld.equals("1") || lernfeld.equals("2") || lernfeld.equals("3") || lernfeld.equals("WK")){
+        if (lernfeld.equals("1") || lernfeld.equals("2") || lernfeld.equals("3") || lernfeld.equals("WK") ||
+            lernfeld.equals("GK")) {
             for (int i = 0; i < terms2D.length; i++) {
                 for (int j = 0; j < terms2D[i].length; j++) {
                     termList.add(terms2D[i][j].getTerm());
@@ -271,14 +275,15 @@ public class TermListActivity extends AppCompatActivity {
             case "10a":
             case "11":
             case "12":
-            case "GK":
                 chapter = "Chapter yet unknown"; break;
             case "WK": terms2D = termsLFWK; break;
+            case "GK": terms2D = termsLFGK; break;
             default:
                 throw new IllegalStateException("Unexpected value: " + lernfeld);
         }
 
-        if (lernfeld.equals("1") || lernfeld.equals("2") || lernfeld.equals("3") || lernfeld.equals("WK")){
+        if (lernfeld.equals("1") || lernfeld.equals("2") || lernfeld.equals("3") || lernfeld.equals("WK") ||
+            lernfeld.equals("GK")) {
             for (int i = 0; i < terms2D.length; i++) {
                 for (int j = 0; j < terms2D[i].length; j++) {
                     if (term.equals(terms2D[i][j].getTerm())) {
@@ -290,6 +295,7 @@ public class TermListActivity extends AppCompatActivity {
             if (lernfeld.equals("2")) {chapter = kapitelLF2[chapterNr];}
             if (lernfeld.equals("3")) {chapter = kapitelLF3[chapterNr];}
             if (lernfeld.equals("WK")) {chapter = kapitelLFWK[chapterNr];}
+            if (lernfeld.equals("GK")) {chapter = kapitelLFGK[chapterNr];}
         }
 
         return chapter;

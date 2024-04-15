@@ -41,7 +41,7 @@ public class TermActivity extends AppCompatActivity {
     private final Term[] termsLF11 = Terms.getTermsLF11();
     private final Term[] termsLF12 = Terms.getTermsLF12();
     private final Term[][] termsLFWK = Terms.getTermsLFWK();
-    private final Term[] termsLFGK = Terms.getTermsLFGK();
+    private final Term[][] termsLFGK = Terms.getTermsLFGK();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -89,11 +89,12 @@ public class TermActivity extends AppCompatActivity {
             case "11": terms = termsLF11; break;
             case "12": terms = termsLF12; break;
             case "WK": terms2D = termsLFWK; break;
-            case "GK": terms = termsLFGK; break;
+            case "GK": terms2D = termsLFGK; break;
             default:
                 throw new IllegalStateException("Unexpected value: " + lernfeld);
         }
-        if (lernfeld.equals("1") || lernfeld.equals("2") || lernfeld.equals("3") || lernfeld.equals("WK")){
+        if (lernfeld.equals("1") || lernfeld.equals("2") || lernfeld.equals("3") || lernfeld.equals("WK") ||
+            lernfeld.equals("GK")) {
             for (int i = 0; i < terms2D.length; i++) {
                 for (int j = 0; j < terms2D[i].length; j++) {
                     if (term.equals(terms2D[i][j].getTerm())) {

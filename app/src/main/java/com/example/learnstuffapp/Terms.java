@@ -27,6 +27,8 @@ public class Terms {
     private static String [] kapitelLFWK = {"▼ Berufsbildung und Arbeitswelt", "▼ Vertragsrecht", "▼ Verbraucherbewusstes Verhalten",
             "▼ Umgang mit Geld", "▼ Soziale Marktwirtschaft", "▼ Unternehmensgründung"};
 
+    private static String [] kapitelLFGK = {"▼ Leben in der Gesellschaft", "▼ Demoratie in Deutschland", "▼ Internationale Zusammenarbeit"};
+
     private static Term[][] termsLF1 = {
               {//Die Eigene Rolle im Betrieb beschreiben
                   new Term("Keine Fachbegriffe 1.1", "Für dieses Kapitel noch keine Fachbegriffe"),
@@ -1854,11 +1856,11 @@ public class Terms {
             new Term("Sparen - Ratenkauf", "Sparen \n\nVorteile: \nZinsen, \nBilliger: Keine Gebühren, keine Zinsen \n\nNachteile: \nWarten" +
                     "\n\nRatenkauf \n\nVorteile: \nKeine Wartezeit \n\nNachteile: \nregelmäßige Ratenzahlung, \nTeuer: Zinsen, Gebühren,\n Wenn Sache vor Ende der Ratenzahlung kaputt geht, muss man weiter zahlen. \n" +
                     "Auch bei unvorhergesehenen Kosten."),
-            new Term("Ratenkauf", "Muss man immer schriftlich machen. \n\nKann man 2 Wochen land wiederrufen \n(schreiben, dass man ihn doch nicht haben will:) " +
+            new Term("Ratenkauf", "Muss man immer schriftlich machen. \n\nKann man 2 Wochen lang wiederrufen \n(schreiben, dass man ihn doch nicht haben will:) " +
                     "auf Postkarte, brief (spätestens am 14t Tag bei Post(Poststempel))). Beweis für rechtzeitiges Verschicken auch durch Einschreiben (Empfasngsbestätigung) möglich \n\n" +
                     "Ratenkaufvertrag hat \n1. Barzahlungspreis \n2. Anzahl monatlicher Rate \n3. Wann und wie sind diese zu bezahlen \n4.Ratenpreis (Teilzahlungspreis): Diesen Preis muss man bei Ratenkauf insgesamt zahlen" +
                     "\n5. effektiver Jahreszins: Mehrkosten Ratenkauf als Barzahlung (Sofortzahlung) in % \n6. Höhe monatlicher Raten" +
-                    "\n\nBeispiel Rechnung: \nFlug \n1200 Barzahlungspreis \n12 monatliche Raten\n 0,5% monatlicher Zins \n 2% Bearbeitungsgebühr \n\nRatenpreis: \n+ (1200 * 0,05 * 12) \n1200 \n+ (1200 * 0,02) \n= 1296 \n\n" +
+                    "\n\nBeispiel Rechnung: \nFlug \n1200 Barzahlungspreis \n12 monatliche Raten\n 0,5% monatlicher Zins \n 2% Bearbeitungsgebühr \n\nRatenpreis: \n1200 \n+ (1200 * 0,005 * 12) \n+ (1200 * 0,02) \n= 1296 \n\n" +
                     "monatliche Rate: \n1296 / 12 \n= 108 \n\nPreis Differenz: \n1296 - 1200 \n= 96 \n\nEfffektiv(er) (Jahres) Zins: \n(100 : 1200) \n*96 \n= 8%"),
             new Term("Warenkennzeichnung", "Lebensmittelkennzeichnungsverordnung \nInhaltsstoffe haben auf Verpackung zu stehen \n\nVerbraucherinformationsgesetz \n" +
                     "Wenn Firma Verbraucher getäuscht / verdorbene Lebensmittel verkauft, müssen Behörden informieren \nSelbstnacvhfrage bei Behörden möglich" +
@@ -2016,7 +2018,7 @@ public class Terms {
                             "Öffentliche Unternehmen: \nAlle Bürger sollen mit allen lebenswichtigen Gütern und Dienstleistungen versorgt werden zB Wasserkraftwerke, Schulen, Krankenhäuser und Nachverkehr"),
             new Term("Verbraucherpreis-Index",
                     "Warenkorb: Summe der Kosten aller Waren (Menge mal Preis) \nWird regelmäßig aktualisiert, je nach Häufigkeit im aktuellen Konsumverhalten \n\n" +
-                            "Wert des Warenkorbs: \nJahr 1: 80 \nJahr 2: 88 \n\nPreisindex: \nJahr 1: 100 \nJahr 2: (88/80)*100=110 \nJahr 3: (92,4/80)*100=115,5 \noder: (92,4/88)*110=115,5 \n\nPreissteigerung gegenüber Vorjahr " +
+                            "Wert des Warenkorbs: \nJahr 1: 80 \nJahr 2: 88 \nJahr 3: 92,5 \n\nPreisindex: \nJahr 1: 100 \nJahr 2: (88/80)*100=110 \nJahr 3: (92,4/80)*100=115,5 \noder: (92,4/88)*110=115,5 \n\nPreissteigerung gegenüber Vorjahr " +
                             "(Inflationsrate): \nJahr 2: +10% \nJahr 3: ((115,5-110)/110)*100=5,5%" +
                             "\n\nGründe für Messung Preisindex: \nMit Warenkorb stellt man fest, um wie viel Euro und Protzent Preise gestiegen sind, wie viel Geld ein durchschnittlicher Mensch zum Leben braucht, wichtig für bspw. Verhandlungen " +
                             "über Lohnerhöhungen \n\nNominale Lohnsteigerung: \nzB Ein Arbeiter bekommt 1,5% mehr Nettolohn \n\nReale Lohnsteigerung: \nzB Die Preise sind um 1,7% gestiegen. \nObwohl der Arbeiter 1,5% nominale Lohnsteigerung hat, \n" +
@@ -2173,242 +2175,247 @@ public class Terms {
                     "bessere Wettbewerbsfähigkeit (=wirtschaftliche Vorteile bekommen, konkurenzfähig sein)")
             }
     };
-    private static Term[] termsLFGK = {
+    private static Term[][] termsLFGK = {
             //Ordner 1
-            new Term("Aufgaben der Familie","Lebensgemeinschaft \nSchutz \nSicherheit \nGeborgenheit \nLiebe \nFreizeitgestaltung \nUnternehmungen \nKümmern \nSorgen"+
-                    "\n\nWirtschaftsgemeinschaft \nTaschengeld \nWohnung/Haus \nNahrung \nKleidung \nUrlaub \nSorge für Alte/Kranke"+
+            {//Leben in der Gesellschaft
+            new Term("Aufgaben der Familie", "Lebensgemeinschaft \nSchutz \nSicherheit \nGeborgenheit \nLiebe \nFreizeitgestaltung \nUnternehmungen \nKümmern \nSorgen" +
+                    "\n\nWirtschaftsgemeinschaft \nTaschengeld \nWohnung/Haus \nNahrung \nKleidung \nUrlaub \nSorge für Alte/Kranke" +
                     "\n\nErziehungsinstanz \nKraft \nSprache \nAbschätzung (Werte) \nRechte & Pflichten \nmoralische Werte"),
-            new Term("Familienarten","Patchwork Familie \n Familie mit Kindern aus früher Ehe \nVor/Nachteile: \nmehr Artenreichtum / Verwandte \nBesuchszeiten zu beachten \nmögliche finanzielle Komplikationen"+
-                    "\n\nAlleinerziehend \nVor/Nachteile: \nkeine Diskussion mit anderem Erwachsenen \nweniger Zeit / möglicherweise weniger Geld"+
-                    "\nKinder werden früher erwachsen \nKinder müssen mehr mithelfen"+
-                    "\n\nRegenbogen Familie \nVor/Nachteile: \nInsgesamt mehr Verbindungs Variationen in der Gesellschaft \nToleranz gegenüber Homosexuellen \nGesellschaft verbietet weniger"+
+            new Term("Familienarten", "Patchwork Familie \n Familie mit Kindern aus früher Ehe \nVor/Nachteile: \nmehr Artenreichtum / Verwandte \nBesuchszeiten zu beachten \nmögliche finanzielle Komplikationen" +
+                    "\n\nAlleinerziehend \nVor/Nachteile: \nkeine Diskussion mit anderem Erwachsenen \nweniger Zeit / möglicherweise weniger Geld" +
+                    "\nKinder werden früher erwachsen \nKinder müssen mehr mithelfen" +
+                    "\n\nRegenbogen Familie \nVor/Nachteile: \nInsgesamt mehr Verbindungs Variationen in der Gesellschaft \nToleranz gegenüber Homosexuellen \nGesellschaft verbietet weniger" +
                     "\nmehr Adoptionen \nDiskriminierung"),
-            new Term("Nachteile Kinder","Zeit und Geld Kosten \nAdoption könnte bevorzugt werden (Moral) \nZeugungsunfähigkeit"),
-            new Term("Familien Politik","Ziele: \n\n1) finanzielle Stabilität von Familie \nKindergeld: bis 18 - 25 Jahre (solange in Ausbildung) 194 Euro / Monat"+
-                    " 2. Kind: 200, 4. Kind: 225 \nElterngeld: 12 Monate 65-67 % Einkommen max 1800 \n\n2) Vereinbarkeit Familie und Beruf "+
-                    "\nKindertagsbetreuung: Anspruch Betreuungsplatz \nwer sich Kindergrippe, garten ab 1 J nicht leisten kann, bekommt Geld vom Jugendamt "+
-                    "\n\n3) Wohlergehen & Förderung der Bildung von Kindern \nFörderung einkommensschwacher Familien \nArbeitslosengeld 2 + Kinderzuschlag (160 Euro je Kind) \n"+
-                    "Kinderwohngeld, Geld für Heizung \nBildungsgutscheine \nSchulausflüge \n10 Euro / Monat für Sportverein / Musikschule"+
+            new Term("Nachteile Kinder", "Zeit und Geld Kosten \nAdoption könnte bevorzugt werden (Moral) \nZeugungsunfähigkeit"),
+            new Term("Familien Politik", "Ziele: \n\n1) finanzielle Stabilität von Familie \nKindergeld: bis 18 - 25 Jahre (solange in Ausbildung) 194 Euro / Monat" +
+                    " 2. Kind: 200, 4. Kind: 225 \nElterngeld: 12 Monate 65-67 % Einkommen max 1800 \n\n2) Vereinbarkeit Familie und Beruf " +
+                    "\nKindertagsbetreuung: Anspruch Betreuungsplatz \nwer sich Kindergrippe, garten ab 1 J nicht leisten kann, bekommt Geld vom Jugendamt " +
+                    "\n\n3) Wohlergehen & Förderung der Bildung von Kindern \nFörderung einkommensschwacher Familien \nArbeitslosengeld 2 + Kinderzuschlag (160 Euro je Kind) \n" +
+                    "Kinderwohngeld, Geld für Heizung \nBildungsgutscheine \nSchulausflüge \n10 Euro / Monat für Sportverein / Musikschule" +
                     "\n\n1900 - 44 % leben in 5 Personen Haushalt, 7 % in 1 Person Haushalt \n 2007 - 41% leben in 1 Person Haushalt, 3 % in 3 Personen Haushalt"),
-            new Term("Ausbildung","Konflikte lösen durch... \nMitarbeiter, Vorgesetzte, Sozialdienst, Betriebsrat / Personalrat/abteilung, Gewerkschaften, Agentur für Arbeit"+
-                    "\n\nVerstöße gegen Pflichten des Azubi / Arbeitgebers \nAbmahnung, IHK, Kündigung, Arbeitsvertrag, Ausbildungsvertrag regeln"+
-                    "\n\nWarum bilden Betriebe aus \nLehren bildet, eigene Fachkräfte formen, kein einlernen nötig, mögliche Zuschüsse, Nachwuchs an Fachkräften"+
-                    "\n\nAbbruchgründe Ausbildung \nkörperliche / geistige Überforderung \nUnterforderung \nDifferenz zwischen Erwartung und Wirklichkeit \nLohn zu gering"+
+            new Term("Ausbildung", "Konflikte lösen durch... \nMitarbeiter, Vorgesetzte, Sozialdienst, Betriebsrat / Personalrat/abteilung, Gewerkschaften, Agentur für Arbeit" +
+                    "\n\nVerstöße gegen Pflichten des Azubi / Arbeitgebers \nAbmahnung, IHK, Kündigung, Arbeitsvertrag, Ausbildungsvertrag regeln" +
+                    "\n\nWarum bilden Betriebe aus \nLehren bildet, eigene Fachkräfte formen, kein einlernen nötig, mögliche Zuschüsse, Nachwuchs an Fachkräften" +
+                    "\n\nAbbruchgründe Ausbildung \nkörperliche / geistige Überforderung \nUnterforderung \nDifferenz zwischen Erwartung und Wirklichkeit \nLohn zu gering" +
                     "\nzu viel/ hohe Arbeitszeit \nArbeitsweg zu lang \nMobbing \nschlechte Arbeitsbedingungen \nGesundheitsgefährdung \nLeistungsdruck  "),
             //Ordner 2
-            new Term("Generationenvertrag","Abkommen Jung <-> Alt \nKein echter Vertrag, sondern sprichwörtlich \n<bürger Beiträge -> gesetzliche Rentenversicherung \n"+
+            new Term("Generationenvertrag", "Abkommen Jung <-> Alt \nKein echter Vertrag, sondern sprichwörtlich \n<bürger Beiträge -> gesetzliche Rentenversicherung \n" +
                     "damit wird Rentte heutiger Rentner finanziert "),
-            new Term("Renteneintritt","67"),
-            new Term("Fluchtursachen","Push Faktoren: \n(Bürger)Krieg \nNaturkatastrophen \nUnfreiheit \nStaatliche Verfolgung \nArmut \nDiskriminierung"),
-            new Term("Einwanderung", "Formen: \ngesteuert -> zB für Arbeiter (Fachkräfte) \nungesteuert -> EU-Bürger, Aufnahme von Flüchtenden aus menschlichen Gründen (legale Einwanderung)"+
-                    "\n\nProbleme: \nArbeitsknappheit, \nWohnungsknappheit, \nkurzfristige Überforderung durch Überraschungseffekt der Organisation, \nMöglicherweise Notwendigkeit der Ursachenforschung, Hilfe / Lösung"+
-                    "\n\nVeränderungen: \nArchitektur, Menschenfarben, Schrift / Sprache / Vielfalt \n\nPull Faktoren: \nKarriere, bessere Überlebensmöglichkeiten / Bedingungen, "+
+            new Term("Renteneintritt", "67"),
+            new Term("Fluchtursachen", "Push Faktoren: \n(Bürger)Krieg \nNaturkatastrophen \nUnfreiheit \nStaatliche Verfolgung \nArmut \nDiskriminierung"),
+            new Term("Einwanderung", "Formen: \ngesteuert -> zB für Arbeiter (Fachkräfte) \nungesteuert -> EU-Bürger, Aufnahme von Flüchtenden aus menschlichen Gründen (legale Einwanderung)" +
+                    "\n\nProbleme: \nArbeitsknappheit, \nWohnungsknappheit, \nkurzfristige Überforderung durch Überraschungseffekt der Organisation, \nMöglicherweise Notwendigkeit der Ursachenforschung, Hilfe / Lösung" +
+                    "\n\nVeränderungen: \nArchitektur, Menschenfarben, Schrift / Sprache / Vielfalt \n\nPull Faktoren: \nKarriere, bessere Überlebensmöglichkeiten / Bedingungen, " +
                     "medizinische & soziale Versorgung, besserer Verdienst, Beschäftigungsmöglichkeiten, Zukunftsperspektiven, Freiheit von sozialen Zwängen"),
-            new Term("Zuwanderungsgesetz","1.1.2005 \nhierin bekannte sich Deutschland Einwanderungsland zu sein"),
-            new Term("Migration","Mensch wechselt Wohnort in Staat oder von Staat zu Staat dauerhaft"),
-            new Term("Binnenwanderung","Mensch wechselt Wohnort innerhalb eines Staates \n\nUrsache: \nArbeit, Infrastruktur, Leerstand, Miete "+
-                    "\n\nVorteile: \nschrumpfende Region: \nmehr Raum (für Natur), Selbstständigkeit, günstiges Land (Wohnraum) \nwachsende Region: \nmehr Gesellschaft, "+
-                    "Selbstwertgefühl, Infrastruktur \n\nNachteile: \nschrumpfende Region: \nweniger Gesellschaft, lange Weile, Einsamkeit, fehlende Infrastruktur "+
+            new Term("Zuwanderungsgesetz", "1.1.2005 \nhierin bekannte sich Deutschland Einwanderungsland zu sein"),
+            new Term("Migration", "Mensch wechselt Wohnort in Staat oder von Staat zu Staat dauerhaft"),
+            new Term("Binnenwanderung", "Mensch wechselt Wohnort innerhalb eines Staates \n\nUrsache: \nArbeit, Infrastruktur, Leerstand, Miete " +
+                    "\n\nVorteile: \nschrumpfende Region: \nmehr Raum (für Natur), Selbstständigkeit, günstiges Land (Wohnraum) \nwachsende Region: \nmehr Gesellschaft, " +
+                    "Selbstwertgefühl, Infrastruktur \n\nNachteile: \nschrumpfende Region: \nweniger Gesellschaft, lange Weile, Einsamkeit, fehlende Infrastruktur " +
                     "\nwachsende Region: \nweniger Raum, teueres Land (Wohnraum), weniger Natur"),
-            new Term("2. Weltkrieg","1944/45 Flucht vor Roter Armee \n  45/46 Vertreibung aufgrund neuer Grenzziehung \n  49-61 bis 89/90 politische Unterdrückung und Verfolgung in DDR"+
-                    "  55-74 und seit 2004 Anwerbung von \"Gast\"Arbeitern \nab 1990 Konflikte in Herkunftsländern, Armut, Menschenrechtsverletzungen, Umweltprobleme \n"+
+            new Term("2. Weltkrieg", "1944/45 Flucht vor Roter Armee \n  45/46 Vertreibung aufgrund neuer Grenzziehung \n  49-61 bis 89/90 politische Unterdrückung und Verfolgung in DDR" +
+                    "  55-74 und seit 2004 Anwerbung von \"Gast\"Arbeitern \nab 1990 Konflikte in Herkunftsländern, Armut, Menschenrechtsverletzungen, Umweltprobleme \n" +
                     "2005 frie Wahl von Wohnsitz & Arbeitsplatz für EU-Bürger"),
+            },
             //Ordner 3
-            new Term("Monarchie - Republik","Monarchie \nAlleinherrschaft, Weitergabe meist in Familie \n\nRepublik \nPerson aus dem Volk regiert. Ursache unterschiedlich"),
-            new Term("Demokratie - Diktatur","Demokratie: \nHerrschaft von allen \nWahl durch Volk zwischen Parteien \nBefristete Regierungszeit \n"+
-                    "Gewaltenteilung: ausführende, Recht sprechende und Gesetz gebende. gegenseitige Kontrolle der Herrschenden \nGarantie von Menschen und Bürgerrechten "+
-                    "\nKontrolle durch Gerichte \nPresse und Meinungsfreiheit \n\nDiktatur \nvon einer Person / Gruppe \nWahl nur zum Schein \neine Partei \nMacht und Entscheidungshoheit "+
-                    "in einer Hand und wird nicht abgegeben \nUnterdrückung Presse und Meinungsfreiheit, Vorgabe \nKein/e ... Volkssouverränität, Pluralismus, Rechtstaat, "+
+            {//Demokratie in Deutschland
+            new Term("Monarchie - Republik", "Monarchie \nAlleinherrschaft, Weitergabe meist in Familie \n\nRepublik \nPerson aus dem Volk regiert. Ursache unterschiedlich"),
+            new Term("Demokratie - Diktatur", "Demokratie: \nHerrschaft von allen \nWahl durch Volk zwischen Parteien \nBefristete Regierungszeit \n" +
+                    "Gewaltenteilung: ausführende, Recht sprechende und Gesetz gebende. gegenseitige Kontrolle der Herrschenden \nGarantie von Menschen und Bürgerrechten " +
+                    "\nKontrolle durch Gerichte \nPresse und Meinungsfreiheit \n\nDiktatur \nvon einer Person / Gruppe \nWahl nur zum Schein \neine Partei \nMacht und Entscheidungshoheit " +
+                    "in einer Hand und wird nicht abgegeben \nUnterdrückung Presse und Meinungsfreiheit, Vorgabe \nKein/e ... Volkssouverränität, Pluralismus, Rechtstaat, " +
                     "Gewaltenteilung, Mehrheitsmacht, Grundrechte / Menschenrechte"),
-            new Term ("Representative Demokratie","4-5 Jahre = eine Wahl der bis zur nächsten Wahl politische Entscheidungen treffenden Represanten \n\n"+
-                    "Verhältniswahlrecht: \nParteien in Parlament je nach Stimmanteil. \nDirektkandidaten direkt in Parlament (meisten Stimmen in einem Wahlkreis) \n\n"+
-                    "Herrschaftsformen: \n   parlamentarisch: \n      Parlament regiert mit (Gesetzvorlagen brauchen Zustimmung vom Parlament). Dadurch Regierungskontrolle \n"+
-                    "      Parlament wählt Regierung, kann sie wieder absetzen \n      Volk wählt Parteien, die meistgewählte bestimmt Mehrheit \n   präsidentiell: \n      "+
-                    "Präsident (regierungschef) hat Starke Stellung gegenüber Parlament \n      Volk wählt Präsident in direkter Wahl \n      Präsident kann viel entscheiden ohne Parlament zu fragen \n"+
+            new Term("Representative Demokratie", "4-5 Jahre = eine Wahl der bis zur nächsten Wahl politische Entscheidungen treffenden Represanten \n\n" +
+                    "Verhältniswahlrecht: \nParteien in Parlament je nach Stimmanteil. \nDirektkandidaten direkt in Parlament (meisten Stimmen in einem Wahlkreis) \n\n" +
+                    "Herrschaftsformen: \n   parlamentarisch: \n      Parlament regiert mit (Gesetzvorlagen brauchen Zustimmung vom Parlament). Dadurch Regierungskontrolle \n" +
+                    "      Parlament wählt Regierung, kann sie wieder absetzen \n      Volk wählt Parteien, die meistgewählte bestimmt Mehrheit \n   präsidentiell: \n      " +
+                    "Präsident (regierungschef) hat Starke Stellung gegenüber Parlament \n      Volk wählt Präsident in direkter Wahl \n      Präsident kann viel entscheiden ohne Parlament zu fragen \n" +
                     "      Volk wählt Parlament unabhängig von Präsidentenwahl \n       zB Frankreich, Amerika2"),
-            new Term("Demokratie Prinzipien","regeläßige, freie allgemeine, gleiche und geheime Wahlen \n\nEntscheidungen nach Mehrheitsprinzip (bei Anerkennung & Schutz der Minderheiten) "+
+            new Term("Demokratie Prinzipien", "regeläßige, freie allgemeine, gleiche und geheime Wahlen \n\nEntscheidungen nach Mehrheitsprinzip (bei Anerkennung & Schutz der Minderheiten) " +
                     "\n\nStaatsgewalt ist an Verfassung gebunden und gewährleistet, \n\nGewaltenteilung (verschiedene Abstufungen)"),
-            new Term("Bundesverfassungsgericht","Überwachung, Einhaltung Grundgesetz \nRichter gewählt von Tag / Rat 50/50% und von Präsident ernannt \n"+
+            new Term("Bundesverfassungsgericht", "Überwachung, Einhaltung Grundgesetz \nRichter gewählt von Tag / Rat 50/50% und von Präsident ernannt \n" +
                     "oberstes Gericht in Deutschland \nVerfassungsklagen, Aufhebung von verfassungsfeindlichen Gesetzen"),
-            new Term("Bundesrat","Vertreter der Länder, kann Gesetze ablehnen, Wiederspruch einlegen \nMitwirkung Gesetzgebung (beraten, vorschlagen) \n"+
+            new Term("Bundesrat", "Vertreter der Länder, kann Gesetze ablehnen, Wiederspruch einlegen \nMitwirkung Gesetzgebung (beraten, vorschlagen) \n" +
                     "Alle Bundesgesetze müssen von Rat abgestimmt werden. Einige treten erst dann in Kraft."),
-            new Term("Bundespräsident","Prässentation Bundesrepublik Deutschland \ndiplomatische Vertretung im Ausland (Verträge unterschreiben) \n"+
+            new Term("Bundespräsident", "Prässentation Bundesrepublik Deutschland \ndiplomatische Vertretung im Ausland (Verträge unterschreiben) \n" +
                     "Vorschlag des Bundeskanzlers zur Wahl \nAuflösung Bundestag"),
-            new Term("Bundestag","vom Volk gewählt \nGesetzgebung (Beratung, vorschlagen, abstimmen) \nKontrolle Regierungssarbeit (Einsatz von Untersuchungsausschüssen) \n"+
+            new Term("Bundestag", "vom Volk gewählt \nGesetzgebung (Beratung, vorschlagen, abstimmen) \nKontrolle Regierungssarbeit (Einsatz von Untersuchungsausschüssen) \n" +
                     "Bundeshaushalt \nBundeswehreinsätze \nWahl Bundeskanzler/in"),
-            new Term("Bundesregierung","schlägt Gesetze vor, Kanzler, Minister (Fachberreiche), Umsetzung Gesetze (in Ministerien), \n"+
-                    "Kanzler auf Vorschlag des Bundespräsidenten vom Bundestag gewählt. kanzler/in wählt Minister/innen. Die werden vom Präsidenten ernannt.\n"+
+            new Term("Bundesregierung", "schlägt Gesetze vor, Kanzler, Minister (Fachberreiche), Umsetzung Gesetze (in Ministerien), \n" +
+                    "Kanzler auf Vorschlag des Bundespräsidenten vom Bundestag gewählt. kanzler/in wählt Minister/innen. Die werden vom Präsidenten ernannt.\n" +
                     "Leitung des Staates durch dieses Organ \nBundeskanzler bestimmt Richtlinie der Politik , Minister halten sich dran"),
-            new Term("Grundgesetz","Schutz Menschenwürde \nBerufsfreiheit \nPersönliche Freiheit / Recht auf körperliche Unversehrtheit \nGleicheit vor Gesetz \n"+
-                    "Glauben und Gewissensfreiheit \nfreie Meinungsäußerung \nSchutz von Ehe und Familie \nstaatliche Schulaufsicht \nVersammlungs und Vereinigungsfrieheit \n"+
-                    "Brief und Postgeheimnis \nWohnungsunverletzlichkeit \nFreizügigkeit \nRecht auf freie Wohnortwahl \nEigentumsgewährleistung \nStaatsangehörigkeit / Verbot von Ausbürgerung \n"+
+            new Term("Grundgesetz", "Schutz Menschenwürde \nBerufsfreiheit \nPersönliche Freiheit / Recht auf körperliche Unversehrtheit \nGleicheit vor Gesetz \n" +
+                    "Glauben und Gewissensfreiheit \nfreie Meinungsäußerung \nSchutz von Ehe und Familie \nstaatliche Schulaufsicht \nVersammlungs und Vereinigungsfrieheit \n" +
+                    "Brief und Postgeheimnis \nWohnungsunverletzlichkeit \nFreizügigkeit \nRecht auf freie Wohnortwahl \nEigentumsgewährleistung \nStaatsangehörigkeit / Verbot von Ausbürgerung \n" +
                     "Rechtliches Gehör vor Gerichten"),
-            new Term("Parteien - Verbände","Parteien: \nvertreten Interessen Ihrer Wähler \nmittl zwischen Bürger - Staat \nLösungsvorschläge zu Problemen "+
+            new Term("Parteien - Verbände", "Parteien: \nvertreten Interessen Ihrer Wähler \nmittl zwischen Bürger - Staat \nLösungsvorschläge zu Problemen " +
                     "der Gegenwart & Zukunft \nnehmen politischen Einfluss in der Gesellschaft \ngreifen die Interessen der Bürger auf und bringen sie in die politischen Entscheidungen ein" +
-                    "\n->Handeln unmittelbar in allen politischen Bereichen \n\nVerbände: \nVertreten Interessen ihrer Mitglieder \nNehmen Einfluss auf Politik "+
+                    "\n->Handeln unmittelbar in allen politischen Bereichen \n\nVerbände: \nVertreten Interessen ihrer Mitglieder \nNehmen Einfluss auf Politik " +
                     "\nHaben kein Mandat, nehmen nicht aktiv an Politik teil \n=>sie handeln mittelbar (nicht direkt, über dritte) in einem politischen Bereich"),
-            new Term("Lobbyismus","Lobbyisten sind Fachleute \nentlasten Staat \nThemenfeldaufbereitung \nMittler zwischen Staat und Gesellschaftsteil \n"+
-                    "Einflussnahme durch Beratung und direkten Kontakt zur Politik, Macht, Einfluss, Druck \n\n"+
-                    "PRO: \nLobbyisten sind Fachleute und bereiten ihren Standpunkte durch Argumente auf \nOrganisationen die sich für das Allgemeinwohl einsetzen, betrifft auch Lobbyismus \n"+
-                    "Gewerkschaften (zB Ver.di, IG Metall) vertreten die Berufsgruppen und setzen sich für höhere Löhne und Arbeitsbedingungen ein \n\n"+
-                    "CONTRA: \nInteressen einseitig und entsprechen nicht Meinung von allen \nLobbyismus bedeutet hohen Aufwand -> Größere und Reichere Firmen haben mehr Einfluss "+
+            new Term("Lobbyismus", "Lobbyisten sind Fachleute \nentlasten Staat \nThemenfeldaufbereitung \nMittler zwischen Staat und Gesellschaftsteil \n" +
+                    "Einflussnahme durch Beratung und direkten Kontakt zur Politik, Macht, Einfluss, Druck \n\n" +
+                    "PRO: \nLobbyisten sind Fachleute und bereiten ihren Standpunkte durch Argumente auf \nOrganisationen die sich für das Allgemeinwohl einsetzen, betrifft auch Lobbyismus \n" +
+                    "Gewerkschaften (zB Ver.di, IG Metall) vertreten die Berufsgruppen und setzen sich für höhere Löhne und Arbeitsbedingungen ein \n\n" +
+                    "CONTRA: \nInteressen einseitig und entsprechen nicht Meinung von allen \nLobbyismus bedeutet hohen Aufwand -> Größere und Reichere Firmen haben mehr Einfluss " +
                     "weil sie mehr Kapital haben \nLobbyismus oft intransparent, Korruptionsgefahr (Bestechlichkeit) \nWechsel von Politik -> Lobbyverein -> Ausnutzung Positionen / Kontakte möglich"),
-            new Term("Förderalismus","Vertikale Gewaltenteilung \n\nBundesebene: \npolitische Entscheidungen für alle in BRD \n\n"+
+            new Term("Förderalismus", "Vertikale Gewaltenteilung \n\nBundesebene: \npolitische Entscheidungen für alle in BRD \n\n" +
                     "Landesebene: \npolitische Entscheidungen für alle in Bundesland \n\nKommunale Ebene: \npolitische Entscheidung der Städte und Gemeinden"),
-            new Term("Gewaltenteilung","Legislative: \nBundestag, Bundesrat, Landtag, Kreistag, Gemeinderat "+
+            new Term("Gewaltenteilung", "Legislative: \nBundestag, Bundesrat, Landtag, Kreistag, Gemeinderat " +
                     "\n\nExecutive: \nBundespräsident, -kanzler, -regierung, Landesregierung, Landrat, Bürgermeister \n\nJudikative: \nBundesverfassungsgericht, Landesverfassungsgericht, Gerichte des Landes"),
-            new Term("Direkte Demokratie","5. & 4. Jahrhundert vor Christus Athen frühe Form \n1919 Weimarer Republik Volksentscheid & begehren, Eingriff in Gesetzgebung \n\nBürgerbeteiligung: \nBürgerforum: "+
-                    "Bürger sind zu aktiven Diskussionen von politischen Institutionen, Partien und Verbänden geladen \nDemonstrationen \nVolksentscheid: Abstimmung über Gestzentwurf nur auf kommunaler und Landesebene"+
-                    "\nBürgerinitiativen \nWahlen \n\n"+
-                    "Kein Problemlöser für moderne Demokratien: \nhohe komplexität politischer Prozesse \nGroßteil der Bevölkerung nicht bereit und keine Zeit \n"+
-                    "politische Gestalten wäre schwerer, Zustände unregierbar \ndirekte Demokratie eignet sich vor allem zur Legitimierung von Ja/Nein Entscheidungen \n\n"+
-                    "Hat repräsentative Demokratie ausgedient? \nNein, bleibt weiterhin wichtig, um in vielen einzelnen Sachfragen täglich zu einer Entscheidung zu kommen, für möglichst leistungsfähige politische Gestaltung "+
-                    "sowie ausgewogenes Verhältnis zwischen Beteiligung und Gestaltung \nMuss jedoch transparenter und für jeden Interessierten nachvollziehbar gegen Politikverdrossenheit "+
+            new Term("Direkte Demokratie", "5. & 4. Jahrhundert vor Christus Athen frühe Form \n1919 Weimarer Republik Volksentscheid & begehren, Eingriff in Gesetzgebung \n\nBürgerbeteiligung: \nBürgerforum: " +
+                    "Bürger sind zu aktiven Diskussionen von politischen Institutionen, Partien und Verbänden geladen \nDemonstrationen \nVolksentscheid: Abstimmung über Gestzentwurf nur auf kommunaler und Landesebene" +
+                    "\nBürgerinitiativen \nWahlen \n\n" +
+                    "Kein Problemlöser für moderne Demokratien: \nhohe komplexität politischer Prozesse \nGroßteil der Bevölkerung nicht bereit und keine Zeit \n" +
+                    "politische Gestalten wäre schwerer, Zustände unregierbar \ndirekte Demokratie eignet sich vor allem zur Legitimierung von Ja/Nein Entscheidungen \n\n" +
+                    "Hat repräsentative Demokratie ausgedient? \nNein, bleibt weiterhin wichtig, um in vielen einzelnen Sachfragen täglich zu einer Entscheidung zu kommen, für möglichst leistungsfähige politische Gestaltung " +
+                    "sowie ausgewogenes Verhältnis zwischen Beteiligung und Gestaltung \nMuss jedoch transparenter und für jeden Interessierten nachvollziehbar gegen Politikverdrossenheit " +
                     "und für politische Teilebene zB Petitionsrecht"),
             //Ordner 4
-            new Term("Kaiserreich","1848\n Revolutionsversuche, hinterlassen Spuren in der Gesellschaft\n\n"+
-                    "1871\n Reichsgründung mit dem preußischen König als Kaiser\n\n"+
-                    "1870 - 1871\n Deutsch-Französicher Krieg\n Wachsendes Nationalgefühl der deutschen Bevölkerung\n\n"+
-                    "Im Vorwort der Verfassung wird mit keinem Wort das deutsche Volk erwähnt.\n"+
-                    "Das Deutsche Reich wird von den herrschenden Königen und Herzögen gegründet. Das Volk tritt hierbei nicht in Erscheinung.\n\n"+
-                    "Wahlberechtigt: alle Männer > 25 Jahre.\nDer Bundesrat wird durch Bundesstaaten (Herzögen) bstimmt.\n"+
-                    "Ihm steht vor: Reichskanzler, vom Kaiser bestimmt, Mitglied des Reichstages.\n"+
-                    "Der Reichstag ist vom Kaiser, der ihn einberuft, eröffnet und schließen kann und vom Bundesrat abhängig.\n"+
-                    "Um ein Gesetz zustande zu bringen, muss sowohl im Reichstag, als auch im Bundesrat eine Mehrheit dafür zuStande kommen"+
-                    " und der Kaiser muss zustimmen. \nDamit kann nicht allein der Wille des Bevölkerung zu einer Gesetzänderung führen, "+
+            new Term("Kaiserreich", "1848\n Revolutionsversuche, hinterlassen Spuren in der Gesellschaft\n\n" +
+                    "1871\n Reichsgründung mit dem preußischen König als Kaiser\n\n" +
+                    "1870 - 1871\n Deutsch-Französicher Krieg\n Wachsendes Nationalgefühl der deutschen Bevölkerung\n\n" +
+                    "Im Vorwort der Verfassung wird mit keinem Wort das deutsche Volk erwähnt.\n" +
+                    "Das Deutsche Reich wird von den herrschenden Königen und Herzögen gegründet. Das Volk tritt hierbei nicht in Erscheinung.\n\n" +
+                    "Wahlberechtigt: alle Männer > 25 Jahre.\nDer Bundesrat wird durch Bundesstaaten (Herzögen) bstimmt.\n" +
+                    "Ihm steht vor: Reichskanzler, vom Kaiser bestimmt, Mitglied des Reichstages.\n" +
+                    "Der Reichstag ist vom Kaiser, der ihn einberuft, eröffnet und schließen kann und vom Bundesrat abhängig.\n" +
+                    "Um ein Gesetz zustande zu bringen, muss sowohl im Reichstag, als auch im Bundesrat eine Mehrheit dafür zuStande kommen" +
+                    " und der Kaiser muss zustimmen. \nDamit kann nicht allein der Wille des Bevölkerung zu einer Gesetzänderung führen, " +
                     "sondern nur Zusammenarbeit von Gewählten (Reichstag) und bestimmten (Bundesrat) Delegierten"),
-            new Term ("Kaisers Parlament","Der Kaiser äußerte sich abschätzig gegenüber dem Parlament\n"+
-                    "So zeigt sich auch ein abschätziges Verhältnis zum Volk, dessen Vertreter im Parlament sitzen.\n"+
-                    "Symbolisch ist, dass er siche gegen die Inschrift \"Dem Deutschen Volke\" auf dem Parlamentsgebäude"+
+            new Term("Kaisers Parlament", "Der Kaiser äußerte sich abschätzig gegenüber dem Parlament\n" +
+                    "So zeigt sich auch ein abschätziges Verhältnis zum Volk, dessen Vertreter im Parlament sitzen.\n" +
+                    "Symbolisch ist, dass er siche gegen die Inschrift \"Dem Deutschen Volke\" auf dem Parlamentsgebäude" +
                     "sträubte"),
-            new Term("Nachkriegslage","deutsche Verbündete kapitulierten. \nEnde September 1918 war der Krieg verloren."+
-                    "Es waren keine feindlichen Truppen im Lande.\nEs wurde über einen Frieden verhandelt. \n"+
-                    "Später entwickelte sich eine Inflation. \nStraßenschlachten um politische Richtung des Landes durch Freikorps, "+
-                    "die sich aus Kriegsheimkehrern bildeten.\n\"1918: Matrosen und Soldaten Aufstand: Befehlsverweigerung.\n"+
-                    "1920: Kapp Putsch. \nWeimarer Republik hatte 20 Regierungen in 14 Jahren, weil keine Person die absolute Mehrheit hatte. \n"+
-                    "Versailler Vertrag wurde als Demütigung empfunden. \nKaiser hat abgedankt und politische Lehre hinterlassen."+
-                    "Er wurde von Regierung auf Bevölkerungsdruck wegen Kriegsverlust dazu gezwungen. \nSchwierige politische Situation\nMilitärpropaganda"+
-                    "sorgt dafür, dass die Deutschen sich nicht wie Verlierer fühlen\n\n"+
-                    "Ziele Siegermächte: \nSicherheit durch Dauerhafte Schwächung Deutschlands \nDeutschland musste Land abtreten \n"+
-                    "Reperaturkosten bezahlen \nSchuld für den Krieg eingestehen \ndauerhaften Frieden \nSie wollten Deutschland zur Zustimmung zwingen \n\n"+
-                    "Kriegsschuld: Auch wenn Deutschland eine entscheidende Rolle spielte, war der Krieg letztendlich eher eine Folge der Eskalation einer "+
+            new Term("Nachkriegslage", "deutsche Verbündete kapitulierten. \nEnde September 1918 war der Krieg verloren." +
+                    "Es waren keine feindlichen Truppen im Lande.\nEs wurde über einen Frieden verhandelt. \n" +
+                    "Später entwickelte sich eine Inflation. \nStraßenschlachten um politische Richtung des Landes durch Freikorps, " +
+                    "die sich aus Kriegsheimkehrern bildeten.\n\"1918: Matrosen und Soldaten Aufstand: Befehlsverweigerung.\n" +
+                    "1920: Kapp Putsch. \nWeimarer Republik hatte 20 Regierungen in 14 Jahren, weil keine Person die absolute Mehrheit hatte. \n" +
+                    "Versailler Vertrag wurde als Demütigung empfunden. \nKaiser hat abgedankt und politische Lehre hinterlassen." +
+                    "Er wurde von Regierung auf Bevölkerungsdruck wegen Kriegsverlust dazu gezwungen. \nSchwierige politische Situation\nMilitärpropaganda" +
+                    "sorgt dafür, dass die Deutschen sich nicht wie Verlierer fühlen\n\n" +
+                    "Ziele Siegermächte: \nSicherheit durch Dauerhafte Schwächung Deutschlands \nDeutschland musste Land abtreten \n" +
+                    "Reperaturkosten bezahlen \nSchuld für den Krieg eingestehen \ndauerhaften Frieden \nSie wollten Deutschland zur Zustimmung zwingen \n\n" +
+                    "Kriegsschuld: Auch wenn Deutschland eine entscheidende Rolle spielte, war der Krieg letztendlich eher eine Folge der Eskalation einer " +
                     "Politik des kalkulierten Kriegsrisikos"),
-            new Term("Weimar","Die Stadt galt, anders als Berlin, als sicher (keine Straßenschlachten).\n"+
+            new Term("Weimar", "Die Stadt galt, anders als Berlin, als sicher (keine Straßenschlachten).\n" +
                     "Sie liegt in der Mitte des Reiches.\nSie hatte einen Versammlungsort: das Theater.\nSie war militärisch einfach zu sichern"),
-            new Term("Neu in WR","In der Weimarer Republik stammten die Politiker nicht nur aus dem Adel"+
-                    "oder Militär, sondern auch aus dem Volk selbst.\n Außerdem bekamen Frauen nun mehr Rechte zB das Wahlrecht\n"+
+            new Term("Neu in WR", "In der Weimarer Republik stammten die Politiker nicht nur aus dem Adel" +
+                    "oder Militär, sondern auch aus dem Volk selbst.\n Außerdem bekamen Frauen nun mehr Rechte zB das Wahlrecht\n" +
                     "und können auch selbst Teil des Parlamentes werden"),
             new Term("Inflation",
-                    "Preise steigen -> Geld weniger wert\n\nWeimarer Republik musste Kosten Weltkrieg 1, der durch Schulden finanziert wurde, zurück zahlen, durch Gelddruck.\n"+
-                    "Französiche und Belgische Truppen marschierten ins Ruhrgebiet ein\nDer passive Widerstand wurde durch Gelddruck bezahlt.\n\n1 Ei = 800 RM, 1/2 Jahr später: 320 Milliarden RM\n"+
-                    "1 Milch = 1440 RM, 1/2 Jahre später: 360 Milliarden RM\n1 Kg Kartoffeln = 5000 RM, 1/2 Jahre später: 90 Milliarden RM\n\nReichsmark ersetzt durch Mark\nStabilisiert durch US-Kredite"+
-                    "\n-> Konkjunkturelle Blüte Goldene Zwanziger\n\nFolgen des Crash: Großbanken wurden zahlungsunfähig,\nUnternehmen gingen bankrott\nviele Menschen wurden arbeitslos (1932: 6Mio)\n\n"+
-                    "Reaktion der Bevölkerung:\nNotverordnungen, Sparsamkeit"),
-            new Term("Probleme Weimarer Republik","Weltwirtschaftskrise und Inflation: \nExistenzängste, hohe Arbeitslosigkeit\n\ninstabile politische Lage:\nPutschversuche,\n"+
-                    "Demokratie noch nicht etabliert\nbürgerkriegsähnliche Zustände\n\nDer verlorene Weltkrieg:\ntraumatisierte Menschen (Soldaten)\nVersailler Vertrag: Reperationszahlungen,"+
+                    "Preise steigen -> Geld weniger wert\n\nWeimarer Republik musste Kosten Weltkrieg 1, der durch Schulden finanziert wurde, zurück zahlen, durch Gelddruck.\n" +
+                            "Französiche und Belgische Truppen marschierten ins Ruhrgebiet ein\nDer passive Widerstand wurde durch Gelddruck bezahlt.\n\n1 Ei = 800 RM, 1/2 Jahr später: 320 Milliarden RM\n" +
+                            "1 Milch = 1440 RM, 1/2 Jahre später: 360 Milliarden RM\n1 Kg Kartoffeln = 5000 RM, 1/2 Jahre später: 90 Milliarden RM\n\nReichsmark ersetzt durch Mark\nStabilisiert durch US-Kredite" +
+                            "\n-> Konkjunkturelle Blüte Goldene Zwanziger\n\nFolgen des Crash: Großbanken wurden zahlungsunfähig,\nUnternehmen gingen bankrott\nviele Menschen wurden arbeitslos (1932: 6Mio)\n\n" +
+                            "Reaktion der Bevölkerung:\nNotverordnungen, Sparsamkeit"),
+            new Term("Probleme Weimarer Republik", "Weltwirtschaftskrise und Inflation: \nExistenzängste, hohe Arbeitslosigkeit\n\ninstabile politische Lage:\nPutschversuche,\n" +
+                    "Demokratie noch nicht etabliert\nbürgerkriegsähnliche Zustände\n\nDer verlorene Weltkrieg:\ntraumatisierte Menschen (Soldaten)\nVersailler Vertrag: Reperationszahlungen," +
                     "Gebietsabtretung, Abrüstung, wirtschaftliche Einschränkungen"),
-            new Term("Weimarer Republik","Grundprinzipien:\nArt(1)\n->Deutsches Reich ist eine Republik\nDie Staatsgewalt geht vom Volke aus\n(Prinzipien der Volkssouveränität in Verfassung festgelegt)\n\n"+
-                    "Bürger wählen:\nLandesparlamente, Reichstag, Reichspräsident (Ersatzkaiser)\n\nBürger können nicht wählen:\nReichsrat, Reichskanzler*, Reichgericht*\n*werden vom Reichspräsident ernannt\n\n"+
-                    "Reichstag kann Reichsminister und Reichskanzler Vertrauen entziehen\n\nVergleich mit BRD:\nBundeskanzler von Volk gewählt (Volk hat direkten Einfluss auf Regierungsbildung)\n"+
+            new Term("Weimarer Republik", "Grundprinzipien:\nArt(1)\n->Deutsches Reich ist eine Republik\nDie Staatsgewalt geht vom Volke aus\n(Prinzipien der Volkssouveränität in Verfassung festgelegt)\n\n" +
+                    "Bürger wählen:\nLandesparlamente, Reichstag, Reichspräsident (Ersatzkaiser)\n\nBürger können nicht wählen:\nReichsrat, Reichskanzler*, Reichgericht*\n*werden vom Reichspräsident ernannt\n\n" +
+                    "Reichstag kann Reichsminister und Reichskanzler Vertrauen entziehen\n\nVergleich mit BRD:\nBundeskanzler von Volk gewählt (Volk hat direkten Einfluss auf Regierungsbildung)\n" +
                     "Bundespräsident hat wenig Macht bzw. nur repräsdentative FUnktion und wird von der Bundesversammlung und nicht direkt vom Volk gewählt"),
-            new Term("Erziehung Nationalsozialismus","Jugend wichtig, da:\nMachterhalt, gibt Ideologie weiter an nächste Generation, Zukunft der Gesellschaft, leicht beeinflussbar\n\n"+
-                    "Jugend möglichst wenig Zeit zu Hause:\nEinfluss der Eltern verringern, viel Zeit in nationalsozialistischen Gruppen, zur ideologischen Schulung & bediengungslosen Folgschaft von Führer und Staat\n\n"+
+            new Term("Erziehung Nationalsozialismus", "Jugend wichtig, da:\nMachterhalt, gibt Ideologie weiter an nächste Generation, Zukunft der Gesellschaft, leicht beeinflussbar\n\n" +
+                    "Jugend möglichst wenig Zeit zu Hause:\nEinfluss der Eltern verringern, viel Zeit in nationalsozialistischen Gruppen, zur ideologischen Schulung & bediengungslosen Folgschaft von Führer und Staat\n\n" +
                     "Jungen: Kriegsvorbereitung, Rassenlehre, Ideologische Schulung (Ziel -> treuer, gehorsamer Nationalsozialist)\nMädchen: Mutterrolle, Selbstdisziplin, Pflichterfüllung, Unterordnung vor Mann"),
-            new Term("Gründung BRD","Westliche Allierte gründeten Bundes Republik Deutschland (BRD)\n\nUneinigkeit des Siegermächte -> 2 Staaten\n\n"+
-                    "Vorgaben, die die Deutschen zu erfüllen hatten:\nDie Militärgouverneure frt westlichen Allierten beauftragten die 11 Ministerpräsidenten: Sie sollen eine gesetzgebende Versammlung einberufen"+
+            new Term("Gründung BRD", "Westliche Allierte gründeten Bundes Republik Deutschland (BRD)\n\nUneinigkeit des Siegermächte -> 2 Staaten\n\n" +
+                    "Vorgaben, die die Deutschen zu erfüllen hatten:\nDie Militärgouverneure frt westlichen Allierten beauftragten die 11 Ministerpräsidenten: Sie sollen eine gesetzgebende Versammlung einberufen" +
                     "und demokratischen und föderativen Staat gründen"),
-            new Term("Wehrhafte Demokratie","soll vor Feinden schützen und vor Diktaturwiederentstehung\n\nArtikel 1: Die Würde ist unantastbar\nsteht ganz vorne im Grundgesetz, damit sich der Nationalsozialismus\n"+
-                    "nicht wiederholt.\nDie Würde eines Menschen kann auch durch Anspucken, Beleidigung, Schläge oder Zwang gegen den Willen verletzt werden\n\n"+
-                    "Demoktatieschutz vor Feinden durch:\n\nArtikel1: \n(1) Würde, \n(2) Menschnrechte, \n(3) Grundrechte\n\nArtikel20: \n(1) BRD: demoktatisch, sozial, \n(2) Staatsgewalt vom Volk, \n(3) Gesetz und Recht bindend"+
-                    "\n(4) Recht auf Widerstand \n\nArtikel79: (3) [...] das was in den Arikeln 1 und 20 steht, darf nicht geändert werden\n\nweiterer Schutz:\n\nArtikel5: (2) Kunst, Wissenschaft, Forschung und Lehren frei "+
-                    "aber an Grundgesetz(GG) halten\n\nArtikel9: (2) Vereinigungs und Koalitionsfreiheit, eingeschränkt bei Gründung zum alleinigen Zweck der Straftat, Verstoß gegen das GG oder einer Richtung gegen die Völkerverständigung\n\n"+
-                    "Artikel18: Wenn man das GG zB die Pressefreiheit nutzt, um die freiheitliche demokratische Grundordnung zu bekämpfen, dann verwirkt man seine Grundrechte. Das kann aber nur das Verfassungsgericht beschließen, zB Fake News\n\n"+
-                    "Artikel21: (2) Eine politische Partei kann verboten werden, wenn sie die demokratisch freiheitliche Grundordnung bekämpft und abschaffen will zB AFD\n\n"+
-                    "Das Grundgesetz ist so ausgerichtet, dass keine Diktatur auf legalem Weg eingerichtet werden kann, kein verbrechen gegen die Menschlichkeit soll vom Staat ausgehen\n"+
+            new Term("Wehrhafte Demokratie", "soll vor Feinden schützen und vor Diktaturwiederentstehung\n\nArtikel 1: Die Würde ist unantastbar\nsteht ganz vorne im Grundgesetz, damit sich der Nationalsozialismus\n" +
+                    "nicht wiederholt.\nDie Würde eines Menschen kann auch durch Anspucken, Beleidigung, Schläge oder Zwang gegen den Willen verletzt werden\n\n" +
+                    "Demoktatieschutz vor Feinden durch:\n\nArtikel1: \n(1) Würde, \n(2) Menschnrechte, \n(3) Grundrechte\n\nArtikel20: \n(1) BRD: demoktatisch, sozial, \n(2) Staatsgewalt vom Volk, \n(3) Gesetz und Recht bindend" +
+                    "\n(4) Recht auf Widerstand \n\nArtikel79: (3) [...] das was in den Arikeln 1 und 20 steht, darf nicht geändert werden\n\nweiterer Schutz:\n\nArtikel5: (2) Kunst, Wissenschaft, Forschung und Lehren frei " +
+                    "aber an Grundgesetz(GG) halten\n\nArtikel9: (2) Vereinigungs und Koalitionsfreiheit, eingeschränkt bei Gründung zum alleinigen Zweck der Straftat, Verstoß gegen das GG oder einer Richtung gegen die Völkerverständigung\n\n" +
+                    "Artikel18: Wenn man das GG zB die Pressefreiheit nutzt, um die freiheitliche demokratische Grundordnung zu bekämpfen, dann verwirkt man seine Grundrechte. Das kann aber nur das Verfassungsgericht beschließen, zB Fake News\n\n" +
+                    "Artikel21: (2) Eine politische Partei kann verboten werden, wenn sie die demokratisch freiheitliche Grundordnung bekämpft und abschaffen will zB AFD\n\n" +
+                    "Das Grundgesetz ist so ausgerichtet, dass keine Diktatur auf legalem Weg eingerichtet werden kann, kein verbrechen gegen die Menschlichkeit soll vom Staat ausgehen\n" +
                     "Erinnerung, dass Frieden wichtig, deswegen bis heute immer erinnern."),
-            new Term("DDR","Deutschland wurde in 2 Staaten geteilt, weil sich die Allierten nicht einigen konnten.\n\nDie Westallierten wollten schnell politischen und witschaftlichen"+
-                    "Wiederaufbau, während die Sovietunion Reperationen für die erlittenen Kriegsschäden forderte\n\nDefinition Sozialismus: alle Menschen werden gleich behandelt. Sie haben gute Arbeitsbedingungen. "+
-                    "Wirtschaft (Privateigentum an Produktionsmittel + Prozess) ist verstaatlicht \n\nAlle Bürger über 18 Jahren konnten zwar die Volkskammer (Parlament der DDR) wählen"+
-                    ", allerdings war die Volkskammer schon von der (SED) vorbestimmt. Die Bürger konnten nur zustimmen oder ablehnen. Das Politbüro hatte in fast allen Angelegenheit das Sagen gehabt und bestimmte"+
+            new Term("DDR", "Deutschland wurde in 2 Staaten geteilt, weil sich die Allierten nicht einigen konnten.\n\nDie Westallierten wollten schnell politischen und witschaftlichen" +
+                    "Wiederaufbau, während die Sovietunion Reperationen für die erlittenen Kriegsschäden forderte\n\nDefinition Sozialismus: alle Menschen werden gleich behandelt. Sie haben gute Arbeitsbedingungen. " +
+                    "Wirtschaft (Privateigentum an Produktionsmittel + Prozess) ist verstaatlicht \n\nAlle Bürger über 18 Jahren konnten zwar die Volkskammer (Parlament der DDR) wählen" +
+                    ", allerdings war die Volkskammer schon von der (SED) vorbestimmt. Die Bürger konnten nur zustimmen oder ablehnen. Das Politbüro hatte in fast allen Angelegenheit das Sagen gehabt und bestimmte" +
                     "alle wichtige Ämter bzw. Positionen in der DDR. So gesehen ist DDR nur Scheindemokratie. Zwar mit Wahlen aber vorher festgelegten Ergebnissen."),
-            new Term("Einwohnerzahl DDR","->Diagramm\n\njährliche kontinuierliche Abnahme von 1949 -> 1961\n"),
-            new Term("Flüchtlinge DDR","->Diagramm\n\nvon 1949 -> 1961\nca/avg 300 000 (2,5 Mio gesamt)\n\nViele Jugendliche sahen keine Zukunft in der DDR\n"+
+            new Term("Einwohnerzahl DDR", "->Diagramm\n\njährliche kontinuierliche Abnahme von 1949 -> 1961\n"),
+            new Term("Flüchtlinge DDR", "->Diagramm\n\nvon 1949 -> 1961\nca/avg 300 000 (2,5 Mio gesamt)\n\nViele Jugendliche sahen keine Zukunft in der DDR\n" +
                     "oft aus politischen Gründen (eigene Meinung haben) oder wirtschaftlichen Gründen (guten Job selbst auswählen) oder beides, viele hatten Verwandte im Westen.\n+" +
-                    "Für den Staar bedeutete dies enorme verluste an menschlichem Potential\n\nmögliche Gegenmaßnamen:\nbessere Arbeitsbedingungen, höhere Löhne, mehr individuelle Freiheit,"+
-                    "Problem: dieses System praktisch kaum demokratisch\n\nEs wurde eine streng bewachte Grenze errichtet, kaum überwindbar. Besonderst sichtbar: In Berlin (durch Mauer getrennt)\n"+
+                    "Für den Staar bedeutete dies enorme verluste an menschlichem Potential\n\nmögliche Gegenmaßnamen:\nbessere Arbeitsbedingungen, höhere Löhne, mehr individuelle Freiheit," +
+                    "Problem: dieses System praktisch kaum demokratisch\n\nEs wurde eine streng bewachte Grenze errichtet, kaum überwindbar. Besonderst sichtbar: In Berlin (durch Mauer getrennt)\n" +
                     "Grenzer sollten Flcuhtversuche verhindern: Schißerlaubnis, viele Todesopfer auf Grenzstreifen\nGrenzanlagen erinnerten Menschen eher an Freiheitsbeschränkungen als an Schutz vor westlichen Einflüssen"),
-            new Term("Kalter Krieg","Konfrontation zwischen West & Otmächten 49-89, ohne dass ein Schuss abgefeuert wurde, sonst wäre es ein heißer Krieg geworden bis hin zur Atombombe. "+
+            new Term("Kalter Krieg", "Konfrontation zwischen West & Otmächten 49-89, ohne dass ein Schuss abgefeuert wurde, sonst wäre es ein heißer Krieg geworden bis hin zur Atombombe. " +
                     "Biede standen sich militärisch hoch gerüstet gegenüber."),
-            new Term("Eisener Vorhang","Ablehnung östlicher kommunistischer Länder gegen westliche, Grenze durch Europa, besodnerst durch Deutschland (BRD $ DDR)"),
-            new Term("Stasi","Ministeriumfür Staatssicherheit: Geheimdienst der DDR: für Machtsicherung der SED-Partei, Überwachung, Bestrafung jener, die lautzweifeln"),
-            new Term("IM","inoffizieller Mitarbeiter der Stasi, freiwillig oder gezwungen, der Stasi Infos zu liefern und Menschen beeinflussen, 189 000 IMs vor Mauerfall"),
-            new Term("Extremismus","lat.: extremus = das äußerste\n\nAbgrenzung von einem bestehenden Thema, einer Gruppe, einem Standart, Gesellschaftsordnung.\nVerbidnung oft mit Gewalt"+
-                    "gegen Menschen oder Einrichtungen bis hin zur Völkerunterdrückung\nRechts-,Links- & islamischer Extremismus\n\nWichtig für Leben in einer Gesellschaft:\n"+
-                    "Bedürfniss elitären Gruppe anzugehören, starkes Gemeinschaftsgefühl in Gruppe ohne Diskriminierung. Orientierung an konkreten Dingen, Werten & Mustern, Anerkennung und"+
+            new Term("Eisener Vorhang", "Ablehnung östlicher kommunistischer Länder gegen westliche, Grenze durch Europa, besodnerst durch Deutschland (BRD $ DDR)"),
+            new Term("Stasi", "Ministeriumfür Staatssicherheit: Geheimdienst der DDR: für Machtsicherung der SED-Partei, Überwachung, Bestrafung jener, die lautzweifeln"),
+            new Term("IM", "inoffizieller Mitarbeiter der Stasi, freiwillig oder gezwungen, der Stasi Infos zu liefern und Menschen beeinflussen, 189 000 IMs vor Mauerfall"),
+            new Term("Extremismus", "lat.: extremus = das äußerste\n\nAbgrenzung von einem bestehenden Thema, einer Gruppe, einem Standart, Gesellschaftsordnung.\nVerbidnung oft mit Gewalt" +
+                    "gegen Menschen oder Einrichtungen bis hin zur Völkerunterdrückung\nRechts-,Links- & islamischer Extremismus\n\nWichtig für Leben in einer Gesellschaft:\n" +
+                    "Bedürfniss elitären Gruppe anzugehören, starkes Gemeinschaftsgefühl in Gruppe ohne Diskriminierung. Orientierung an konkreten Dingen, Werten & Mustern, Anerkennung und" +
                     "gemeinser Ziele, Sinnhaftigkeit des eigenen Handelns"),
-            new Term("Motive Linksradikalisierung","Unzufriedenheit über politsche Lage,\n Glaube an Elite die Poleteriat zum besseren Leben verhilft,\n fehlende berufliche und schulische Erfolge,\n "+
+            new Term("Motive Linksradikalisierung", "Unzufriedenheit über politsche Lage,\n Glaube an Elite die Poleteriat zum besseren Leben verhilft,\n fehlende berufliche und schulische Erfolge,\n " +
                     "internationale Konflikte und Verstöße gegen die Menschen und Bürgerrechte,\n Drang und Abenteuer"),
-            new Term("radikal - extrem","erstes missachtet nicht demokratische Verfassung oder Grundrechte. jeder Bürger hat Recht auf radikale konstruktive Gedanken"),
-            new Term("Linksextremismus","eigene Interpretation von Freiheit & Gleichheit, vorallem im Hinblick auf wirtschaftliche & soziale Gleichheit & die Ablehnung "+
+            new Term("radikal - extrem", "erstes missachtet nicht demokratische Verfassung oder Grundrechte. jeder Bürger hat Recht auf radikale konstruktive Gedanken"),
+            new Term("Linksextremismus", "eigene Interpretation von Freiheit & Gleichheit, vorallem im Hinblick auf wirtschaftliche & soziale Gleichheit & die Ablehnung " +
                     "des Kapitalismus"),
-            new Term("Rechtsextremismus","eigenes Volk steht über allen anderen Völkern. Einzelner hat dem Volk zu dienen, Rassismus Führerkult, Einzelner gehört ethnisch &"+
+            new Term("Rechtsextremismus", "eigenes Volk steht über allen anderen Völkern. Einzelner hat dem Volk zu dienen, Rassismus Führerkult, Einzelner gehört ethnisch &" +
                     " kulturell dem Volk an"),
-            new Term("Islamischer Extremismus","Nur die Religion des Islam ist die wahre Religion, \nAusrichtung + Befolgung der islamischern Regeln (Koran)\n"+
+            new Term("Islamischer Extremismus", "Nur die Religion des Islam ist die wahre Religion, \nAusrichtung + Befolgung der islamischern Regeln (Koran)\n" +
                     "Einheit von Religion & Staat, \nAblehnung westlicher Gesellschaftsordnungen"),
-            new Term("Populismus","moralisch reines, homogenes Volk <-> unmoralische korrupte Elite (EU, Politiker anderer Parteien, Medien)\nletztere gehören nicht zum Volk\n" +
+            new Term("Populismus", "moralisch reines, homogenes Volk <-> unmoralische korrupte Elite (EU, Politiker anderer Parteien, Medien)\nletztere gehören nicht zum Volk\n" +
                     "Populisten bezeichnen sich als Representanten des Volkes. Nur sie wüssten, was das Volk wirklich will. Sie schüren Angst und greifen emotionale Themen auf.\n" +
                     "Fakten spielen untergeordnete Rolle. So werden Feindbilder geschaffen \n\n5 Goldene Regeln des Populismus: \nböse Elite oben, Volk unten \nMinderheiten spielen keine Rolle \nwir sind die Einzigen, die das Volk vertreten \n" +
-                    "Leuten Angst machen und einfache Lösungen versprechen\nSündenbock gebraucht, am besten Minderheiten\n\nWoher Stimmen: \ngute Parolen, Frust, rassistischer Stadtteil, -weil es mir nicht gut geht, soll es anderen auch nicht \n\n"+
-                    "und die Medien:\nstecken mit Elite unter einer Decke\nDaten und Fakten spielen keine Rolle\nMenschenverachtende Zitate und Posts sind Taktik zur Provokation, Tabubruch"+
-                    "für größeren Wahlerfolg\n\n"+  "Umgang: \nkonkrete politische Lösungen verlangen \nzu inhaltlichen Diskussionen auffordern \nEigene, weitere politische Themen vorschlagen\n\n"+
-                    "Umgang für Pateien:\nDaten und Fakten liefern,\n Transparenz\nLösungen anbieten, Unfähigkeit / Schwäche der Populisten aufzeigen\n\n"+
-                    "Umgang für Bürger:\nsich nicht von Gefühlen der Populisten leiten lassen\nRuhig, sachlich bleiben, nicht empört sein\n"+
-                    "Gründllich informieren und Daten & Fakten überprüfen\nKritisch nachfragen zB nach konkreten Lösungen\nhier informieren: forum-streitkultur.de/sieben-gegenstrategien.de\n\n"+
-                    "Umgang für Medien: sachlich und differenziert informieren\n\nUmgang (Maßnahhmen) für Regierung:\nSozialstaat ausbauen,\n"+
-                    "Parteien unter Umständen verbieten,\nAuf Einhaltung des Grundgesetzes & der Grundrechte achten\neinfache Sprache,\n Bildung ausbauen\n"+
+                    "Leuten Angst machen und einfache Lösungen versprechen\nSündenbock gebraucht, am besten Minderheiten\n\nWoher Stimmen: \ngute Parolen, Frust, rassistischer Stadtteil, -weil es mir nicht gut geht, soll es anderen auch nicht \n\n" +
+                    "und die Medien:\nstecken mit Elite unter einer Decke\nDaten und Fakten spielen keine Rolle\nMenschenverachtende Zitate und Posts sind Taktik zur Provokation, Tabubruch" +
+                    "für größeren Wahlerfolg\n\n" + "Umgang: \nkonkrete politische Lösungen verlangen \nzu inhaltlichen Diskussionen auffordern \nEigene, weitere politische Themen vorschlagen\n\n" +
+                    "Umgang für Pateien:\nDaten und Fakten liefern,\n Transparenz\nLösungen anbieten, Unfähigkeit / Schwäche der Populisten aufzeigen\n\n" +
+                    "Umgang für Bürger:\nsich nicht von Gefühlen der Populisten leiten lassen\nRuhig, sachlich bleiben, nicht empört sein\n" +
+                    "Gründllich informieren und Daten & Fakten überprüfen\nKritisch nachfragen zB nach konkreten Lösungen\nhier informieren: forum-streitkultur.de/sieben-gegenstrategien.de\n\n" +
+                    "Umgang für Medien: sachlich und differenziert informieren\n\nUmgang (Maßnahhmen) für Regierung:\nSozialstaat ausbauen,\n" +
+                    "Parteien unter Umständen verbieten,\nAuf Einhaltung des Grundgesetzes & der Grundrechte achten\neinfache Sprache,\n Bildung ausbauen\n" +
                     "Straftaten in sozialen Netzwerken ausbauen,\nStraftaten in sozialen Netzwerken verfolgen / verurteilen lassen"),
-            new Term("Populismus - Extremismus","Extremismus lehnt Demokratie ab (abschaffen)\nRechtsextremisten wollen Diktatur\nLiinksextremisten wollen Anarchie, Sozialismus oder Kommunismus"+
+            new Term("Populismus - Extremismus", "Extremismus lehnt Demokratie ab (abschaffen)\nRechtsextremisten wollen Diktatur\nLiinksextremisten wollen Anarchie, Sozialismus oder Kommunismus" +
                     "Extremisten versuchen Staat mit Gewalt zu stürzen\n\nPopulisten aktzeptieren Demokratie, versuchen darin an Macht zu kommen"),
-            new Term("Linksdemokraten","kritisch gegen Kapitalismus, Marktwirtschat, Globalismus, Neoliberalismus\n\n"+
+            new Term("Linksdemokraten", "kritisch gegen Kapitalismus, Marktwirtschat, Globalismus, Neoliberalismus\n\n" +
                     "achten freiheitlich demokratische Grundordnung (Verfassung)\nkeine Gewalt zum Zieldurchsatz\n"),
-            new Term("Rechtsdemokraten","zwischen konservativ und rechtspopulistisch\n\nAnsicht:\n Menschen sind verschieden,\n"+
-                    "Aktzeptanz gesellschaftlicher Ungleicheiten, wenn sie aus fairem Wettbewerb entstehen,\n\nAufrechterhaltung traditioneller gesellschaftlicher Ordnung\n"+
+            new Term("Rechtsdemokraten", "zwischen konservativ und rechtspopulistisch\n\nAnsicht:\n Menschen sind verschieden,\n" +
+                    "Aktzeptanz gesellschaftlicher Ungleicheiten, wenn sie aus fairem Wettbewerb entstehen,\n\nAufrechterhaltung traditioneller gesellschaftlicher Ordnung\n" +
                     "Ablehnung politisch geführter aktiver Gesellschaftsveränderung (zB Genderspreche)"),
-            new Term("EU Länder","seit 1958: \nBelgien, Deutschland, Frankreich, Italien, Luxemburg, Niederlande \n\nseit 1973 \nDänemark, Irland \n\nseit 1981: "+
-                    "\nGriechenland \n\nseit 1986: \nPortugal, Spanien \n\nseit 1995: \nFinnland, Österreich, Schweden \n\nseit 2004: \nEstland, Lettland, Litauen, Malta, Polen, Slowakei, Slowenien, "+
+            },
+            {//Internationale Zusammenarbeit
+            new Term("EU Länder", "seit 1958: \nBelgien, Deutschland, Frankreich, Italien, Luxemburg, Niederlande \n\nseit 1973 \nDänemark, Irland \n\nseit 1981: " +
+                    "\nGriechenland \n\nseit 1986: \nPortugal, Spanien \n\nseit 1995: \nFinnland, Österreich, Schweden \n\nseit 2004: \nEstland, Lettland, Litauen, Malta, Polen, Slowakei, Slowenien, " +
                     "Tschechien, Ungarn, Zypern \n\nseit 2007: \nBulgarien, Rumänien, \n\nseit 2013: \nKroatien"),
-            new Term("Euro Länder","Euro Länder \n\nseit 1999: \nDeutschland, Fankreich, Finnland, Italien, Irland, Belgien, Luxemburg, Österreich, Niederlande, Portugal, Spanien"+
+            new Term("Euro Länder", "Euro Länder \n\nseit 1999: \nDeutschland, Fankreich, Finnland, Italien, Irland, Belgien, Luxemburg, Österreich, Niederlande, Portugal, Spanien" +
                     "\n\nseit 2001: \nGriechenland, \n\nseit 2007: \nSlowenien \n\nseit 2008: \nZypern, Malta \n\nseit 2009: \nSlowakei \n\nseit 2011: \nEstland \n\nseit 2014: \nLettland, Litauen \n\nseit 2022: \nKroatien"),
-            new Term("EU Features","Euro \nFrüher: jedes EU Land hatte eigenes Geld \nHeute: 20 EU Länder haben das gleiche Geld: \"Euro\". \n\nkeine Grenz-Kontrolle \n"+
-                    "Früher: Reise-Pass, Perso zeigen, Stau an Grenzen \nHeute: keine Kontrollen, keine Staus mehr \n\nEU-Kranken-Versicherungs-Karte \nUnfall oder Krankheit in einem anderen EU-Land? "+
-                    "Krankenhaus oder Artzt hilft Ihnen, mit EU-Kranken-Versicherungskarte bezahlen \n\nsauberes Wasser \nAlle EU-Länder müssen sauberes Trink-Wasser, Meere, Seen, Flüsse haben. Das wird kontrolliert"+
-                    "\n\nE-Autos \nAbgase sind schlecht für die Luft. Menschen werden krank. EU-Plan für die Zukunft: E-Autos haben keine Abgase, sind gut für die Luft. Menschen bleiben gesund."+
-                    "\n\nUmweltfreundliche Haushaltsgeräte \nEU-weit gleiche Aufkleber auf Haushaltsgeräten: Grüne Farbe: gut für die Umwelt, wenig Stromverbrauch, Rote Farbe: schlecht für die Umwelt, "+
-                    "viel Stromverbrauch \n\nHandy-Gebühren \nDie Handy-Gebühren sind seit 2017 im EU-Ausland die selben wie im Inland. Die waren zuvor viel höher. \n\nVerbot Einweg-Plastik-Artikel \n"+
-                    "Weil viele Menschen oft Plastik in die Landschaft werfen, dürfen in der EU keine Einweg Plastik Artikel in den Geschäften verkauft werden. \n\nWohnen und Arrbeiten \n"+
-                    "Menschen in der EU dürfen selbst entscheiden, in welchem EU-Land sie wohnen, studieren oder arbeiten möchten. =\"Freizügigkeit\" \n\nFrieden \n"+
-                    "Früher: Viele Kriege in Europa \nHeute: seit 70 Jahren kein Krieg in Europa. EU Länder unterstützen sich gegenseitig und arbeiten zusammen \n\nEuropass \n"+
-                    "Bewerbungs-Mappe für das Bewerben auf Arbeitsplätze in allen EU-Ländern \n\nLebensmittel \nLebensmittel mit gleichem Zeichen für \"Bio\" oder \"Öko\", gleiche Bedeutung für saubere Lebensmittel"+
-                    "\n\nReiserechte \nin allen EU-Ländern Geldrückgabe bei Flug oder Bahn ausfall oder Verspätung \n\nGewährleistungsfrist bei Waren \nKauf von Waren in einem EU-Land: Warengarantie: 2 Jahre, Reperatur oder Ersatz"+
+            new Term("EU Features", "Euro \nFrüher: jedes EU Land hatte eigenes Geld \nHeute: 20 EU Länder haben das gleiche Geld: \"Euro\". \n\nkeine Grenz-Kontrolle \n" +
+                    "Früher: Reise-Pass, Perso zeigen, Stau an Grenzen \nHeute: keine Kontrollen, keine Staus mehr \n\nEU-Kranken-Versicherungs-Karte \nUnfall oder Krankheit in einem anderen EU-Land? " +
+                    "Krankenhaus oder Artzt hilft Ihnen, mit EU-Kranken-Versicherungskarte bezahlen \n\nsauberes Wasser \nAlle EU-Länder müssen sauberes Trink-Wasser, Meere, Seen, Flüsse haben. Das wird kontrolliert" +
+                    "\n\nE-Autos \nAbgase sind schlecht für die Luft. Menschen werden krank. EU-Plan für die Zukunft: E-Autos haben keine Abgase, sind gut für die Luft. Menschen bleiben gesund." +
+                    "\n\nUmweltfreundliche Haushaltsgeräte \nEU-weit gleiche Aufkleber auf Haushaltsgeräten: Grüne Farbe: gut für die Umwelt, wenig Stromverbrauch, Rote Farbe: schlecht für die Umwelt, " +
+                    "viel Stromverbrauch \n\nHandy-Gebühren \nDie Handy-Gebühren sind seit 2017 im EU-Ausland die selben wie im Inland. Die waren zuvor viel höher. \n\nVerbot Einweg-Plastik-Artikel \n" +
+                    "Weil viele Menschen oft Plastik in die Landschaft werfen, dürfen in der EU keine Einweg Plastik Artikel in den Geschäften verkauft werden. \n\nWohnen und Arrbeiten \n" +
+                    "Menschen in der EU dürfen selbst entscheiden, in welchem EU-Land sie wohnen, studieren oder arbeiten möchten. =\"Freizügigkeit\" \n\nFrieden \n" +
+                    "Früher: Viele Kriege in Europa \nHeute: seit 70 Jahren kein Krieg in Europa. EU Länder unterstützen sich gegenseitig und arbeiten zusammen \n\nEuropass \n" +
+                    "Bewerbungs-Mappe für das Bewerben auf Arbeitsplätze in allen EU-Ländern \n\nLebensmittel \nLebensmittel mit gleichem Zeichen für \"Bio\" oder \"Öko\", gleiche Bedeutung für saubere Lebensmittel" +
+                    "\n\nReiserechte \nin allen EU-Ländern Geldrückgabe bei Flug oder Bahn ausfall oder Verspätung \n\nGewährleistungsfrist bei Waren \nKauf von Waren in einem EU-Land: Warengarantie: 2 Jahre, Reperatur oder Ersatz" +
                     "\n\nWarenumtausch im Internet \n Bei einem Kauf von EU-Waren im Internet in einem EU-Land gibt es eine 14 Tage Warenumtauschmöglichkeit gegen neue Ware oder Geldrückgabe"),
-            new Term("EU 4 Freiheiten","Freier Personenverkehr \nAlle EU-Bürger können sich frei innerhalb der EU bewegen, sich niederlassen und eine Arbeit annehmen (bis zu 3 Monate) \n\n"+
-                    "Freier Warenverkehr \nKein Warengrenzkontrolle und keine Zölle. Das vereinfachte den Handel zwischen den Mitgliedstaaten und krubelte ihn an. \n\nFreier Dienstleistungsverkehr und Unternehmensgründungen "+
-                    "\nJede Privatperson kann zwischen eropäischen Handyanbietern, Stromversorgern oder Versicherungsgesellschaften wählen. Unternehmen dürfen sich auch in allen EU-Ländern niederlassen und Geschäfte betreiben \n\n"+
+            new Term("EU 4 Freiheiten", "Freier Personenverkehr \nAlle EU-Bürger können sich frei innerhalb der EU bewegen, sich niederlassen und eine Arbeit annehmen (bis zu 3 Monate) \n\n" +
+                    "Freier Warenverkehr \nKein Warengrenzkontrolle und keine Zölle. Das vereinfachte den Handel zwischen den Mitgliedstaaten und krubelte ihn an. \n\nFreier Dienstleistungsverkehr und Unternehmensgründungen " +
+                    "\nJede Privatperson kann zwischen eropäischen Handyanbietern, Stromversorgern oder Versicherungsgesellschaften wählen. Unternehmen dürfen sich auch in allen EU-Ländern niederlassen und Geschäfte betreiben \n\n" +
                     "Freier Kapitalverkehr \nEU-Bürger haben freie Wahl in welchem Land und bei welchem Kreidtinstitut sie ihr Geld anlegen"),
-            new Term("EU Organe","Eropäischer Rat in Brüssel\nStaats und Regierungschefs der Mitgliedstaaten & Präsident der europäischen Kommission \nTreffen sich 2x jährlich, bestimmen Ziele und Richtung,"+
-                    " legen politische Richtung der EU und ihre wirtschaftlichen Ziele fest \n\nEuropäische Kommision in Brüssel\nEin Politiker je Land. Einer von ihnen wird Präsident, die anderen Kommissare \n"+
-                    "Aufgaben je nach Kommissar, zB Agrarkommisar. Sie schlagen neue Gesetze vor und kontrollieren die Gesetzeinhaltung der EU Länder. \n\nMinisterrat (Rat der EU) in Brüssel \n"+
-                    "Minister der Mitgliedsländer zB Umweltminister beim Umweltpolitiktreffen \nEntscheidungen über Gesetze & über Verteilung von Geld (Plan dazu) \n\nEuropäisches Parlament in Straßburg \n"+
+            new Term("EU Organe", "Eropäischer Rat in Brüssel\nStaats und Regierungschefs der Mitgliedstaaten & Präsident der europäischen Kommission \nTreffen sich 2x jährlich, bestimmen Ziele und Richtung," +
+                    " legen politische Richtung der EU und ihre wirtschaftlichen Ziele fest \n\nEuropäische Kommision in Brüssel\nEin Politiker je Land. Einer von ihnen wird Präsident, die anderen Kommissare \n" +
+                    "Aufgaben je nach Kommissar, zB Agrarkommisar. Sie schlagen neue Gesetze vor und kontrollieren die Gesetzeinhaltung der EU Länder. \n\nMinisterrat (Rat der EU) in Brüssel \n" +
+                    "Minister der Mitgliedsländer zB Umweltminister beim Umweltpolitiktreffen \nEntscheidungen über Gesetze & über Verteilung von Geld (Plan dazu) \n\nEuropäisches Parlament in Straßburg \n" +
                     "Abgeordnete (gewählt von EU-Bürgern), oft in einer Partei \nEntscheidung über Gesetze, kontrolliert Geld - Ausgaben der Staaten, entscheidet welche Länder neu aufgenommen werden"),
-            new Term("Asyl Positionen","Zuwanderung nach Europa - der Streit um die Asylpolitik \n\n"+
+            new Term("Asyl Positionen", "Zuwanderung nach Europa - der Streit um die Asylpolitik \n\n" +
                     "Moria\n" + "Flüchtlingslager auf griechischer Insel Lesbos\n" + "wurde für 3000 gebaut, aber jahrelang lebten dort mehr 12000\n" +
                     "2020 Zerstörung durch Brand\n" + "Dannach nahmen einige (auch Deutschland) welche auf\n\n" +
                     "Rolle der EU\n" + "Keine Einigung über Flüchtlingsverteilung\n" + "Die betroffenen Länder wollten verpflichtenden Mechanismus zur Verteilung\n" +
-                    "Viele östlichen Länder lehnen sie weiterhin ab\n\n"+
+                    "Viele östlichen Länder lehnen sie weiterhin ab\n\n" +
                     "Rechtliche Grundlage\n" + "Laut Dublin-Verfahren:\n" + "Asyssuchende müssen sich in dem Staat, in dem sie den EU-Raum erstmals betreten,\n" +
                     "registrieren lassen und Asyl beantragen\n" + "Dann wird, nach rechtlicher Überprüfung, entschieden, wer tatsächlich Asyl und Schutz erhält.\n" +
                     "Das Recht auf Asyl ist in Deutschland im Grundgesetz und in der EU in der Charta der Grundrechte verankert.\n" +
-                    "Asyl kann z.B. bekommen, wer aus politischen oder religiösen Gründen oder wegen seiner ethnischen Herkunft verfolgt wird.\n\n\n"+
+                    "Asyl kann z.B. bekommen, wer aus politischen oder religiösen Gründen oder wegen seiner ethnischen Herkunft verfolgt wird.\n\n\n" +
                     "Frontex - ProAsyl\n\n" +
                     "Frontex: \nEuropäische Agentur für die Grenz & Küstenwache (seit 2015/16) davor Koordinierung der Grenze.\n" +
                     "Meinung: Die EU stockt den EU-Grenz- und Küstenschutz bis 2027 auf 10 000 Einsatzkräfte auf. \n" +
@@ -2417,59 +2424,60 @@ public class Terms {
                     "Meinung: Die EU versucht, ihre Grenzen abzuriegeln. An einigen Grenzabschnitten haben die Staaten meterhohe Stacheldrahtzäune errichtet.\n" +
                     "Die EU versucht, Flüchtlinge schon abzuwehren, bevor sie die Grenze der EU erreichen. (proasyl.de, 05.10.2020)"),
             //Ordner 6
-            new Term("Ukraine Krieg","Die EU verurteilt den Russischen Angriffskrieg auf die Ukraine und liefert militärische Güter und finanzielle Mittel an die Ukraine. \n\n"+
-                    "Die EU hat \"massive und beispiellose\" Sanktionen gegen Russland verhängt \nIndividuelle (zB gegen Putin und Lawrow, Banken, Unternehmen, Wagner-Gruppe) "+
-                    "wie Vermögen Einfrieren, Einreiseverbot \nWirtschaftliche / Handel \nEinfuhr / Ausfuhrbeschränkungen abgesehen von Essen betrifft etw 50% Aus und 60% Einfuhren \n\n"+
+            new Term("Ukraine Krieg", "Die EU verurteilt den Russischen Angriffskrieg auf die Ukraine und liefert militärische Güter und finanzielle Mittel an die Ukraine. \n\n" +
+                    "Die EU hat \"massive und beispiellose\" Sanktionen gegen Russland verhängt \nIndividuelle (zB gegen Putin und Lawrow, Banken, Unternehmen, Wagner-Gruppe) " +
+                    "wie Vermögen Einfrieren, Einreiseverbot \nWirtschaftliche / Handel \nEinfuhr / Ausfuhrbeschränkungen abgesehen von Essen betrifft etw 50% Aus und 60% Einfuhren \n\n" +
                     "hier noch Teil über Ukraine EU-Beitritts Status einfügen, frage nochmal nach"),
-            new Term("Kopenhager Kriterien","Welches Land darf in die EU? \n\nPolitisches Kriterium \nWahrung der Menschenrechte \nInstitutionelle Stabilität \nDamokratische und "+
-                    "rechtsstaatliche Grundordnung \nAchtung und Schutz von Minderheiten \n\nWirtschaftliches Kriterium \nDie Fähigkeit dem Wettbewerbsdruck innerhalb des EU-Binnenmarktes "+
-                    "standzuhalten \nFunktionsfähige und wettberwerbsfähige Marktwirtschaft \nOffenheit der Märkte gegenüber dem Ausland \n\nAcquis Kriterium \nDie Fähigkeit, sich aus einer EU-"+
+            new Term("Kopenhager Kriterien", "Welches Land darf in die EU? \n\nPolitisches Kriterium \nWahrung der Menschenrechte \nInstitutionelle Stabilität \nDamokratische und " +
+                    "rechtsstaatliche Grundordnung \nAchtung und Schutz von Minderheiten \n\nWirtschaftliches Kriterium \nDie Fähigkeit dem Wettbewerbsdruck innerhalb des EU-Binnenmarktes " +
+                    "standzuhalten \nFunktionsfähige und wettberwerbsfähige Marktwirtschaft \nOffenheit der Märkte gegenüber dem Ausland \n\nAcquis Kriterium \nDie Fähigkeit, sich aus einer EU-" +
                     "Mitgliederschaft erwachsenen Verpflichtungen und Ziele zu eigen zu machen. Dies bedeutet praktisch die Übernahme des \"gemeinschaftlichen Besitzstandes\" (Acquis communautaire)"),
-            new Term("Globalisierung","Wie bin ich betroffen? \nWirtschaft: weltweite/r (arbeits-teilige) Produktion, Handel, Finanz-Krisen, Forschung \nUmwelt: Klima-Wandel, Krankheiten "+
-                    "(Ebola, Vogelgrippe usw.) \nKultur u. Soziales: weltweiter Tourismus, internationale Sport-Ereignisse, weltweite verbreitung von Musik/Filmen, weltweite Kommunikation, "+
-                    "Angleichung von Konsum-Gewohnheiten und Lebens-Stilen \nPolitik: Nichtregierungsorganisationen (Amnesty International, usw.), internationale Organistationen, (Militär)bündnisse (NATO, usw.), "+
-                    "Sanktionen (=Strafen), Kriege \n\n"+
-                    "Ursachen \nWunsch nach ausländischen Produkten zB Wunsch nach Bananen verbindet Handelswege nach Chile \nUnternehmen sparen Geld wenn sie im Ausland "+
-                    "ganz oder teilweise produzieren lassen \nUnternehmen schließen sich mit ausländischen Unternehmen zusammen \nUnternehmen wandern ganz aus \nSo werden Kunden "+
-                    "weltweit gewonnen \nTransport ist einfacher und billiger geworden (Flugzeuge, Frachtcontainer, Eisenbahn) \nMärkte werden immer freier zugänglich \ninternationale "+
-                    "Handelsbeziehung weiten sich aus \nWelthandel kann sich mehr und mehr entfalten \nEs ist schnell bekannt wo günstige Güter und Dienstleistungen zu kaufen sind und welche "+
-                    "Neuheiten es gibt \nGlobale Arbeitsprozesse können verteilt und koordiniert werden \nGeldstöme können auch frei von allen Beschränkungen dorthin fließen wo der größte Profit "+
-                    "zu erwaten ist \n\nAuswirkungen \nmenschen-unwürdige Arbeitsbedingungen zB an der Nähmaschine im Akkord (Bezahlung nach Stück) in Billig-Lohn Ländern (China, Hongkong, Taiwan, Bangladesch) \n"+
-                    "7 Tage in der Woche für sehr wenig Lohn ohne soziale Absicherung \nAuch in Industrieländern gibt es zunehmend prekäre Arbeits-Verhältnisse, Lohn aus einer Vollzeit-Beschäftigung reicht "+
-                    "nicht aus, um eine Familie zu ernähren \nKäufer von Billig-Kleidung belastet durch Chemikalien / Farbstoffe, Allergien, Organablagerungen, Krebs, Unfruchtbarkeit \n"+
-                    "Multinationale Unternehmen profitieren und nutzen Macht und nehmen Einfluss auf Arbeitsaltag ihrer Beschäftigten. Sie spielen die Arbeitenden in unterschiedlichen Regionen gegen "+
-                    "einander aus. \n\nWer gewinnt? Wer verliert? \n(multi-nationale) Unternehmen \n(+) preiswerte Produkte, geringe Lohnkosten, mehr Gewinn durch billige Produktion \n"+
-                    "Arbeitnehmer \n(+) mehr Arbeitsplätze \n(-) keine sozialen Versicherungen, geringer Stundenlohn, 7 Tage Woche, In den Industriestaaten nur noch qualifizierte Arbeit möglich \n"+
+            new Term("Globalisierung", "Wie bin ich betroffen? \nWirtschaft: weltweite/r (arbeits-teilige) Produktion, Handel, Finanz-Krisen, Forschung \nUmwelt: Klima-Wandel, Krankheiten " +
+                    "(Ebola, Vogelgrippe usw.) \nKultur u. Soziales: weltweiter Tourismus, internationale Sport-Ereignisse, weltweite verbreitung von Musik/Filmen, weltweite Kommunikation, " +
+                    "Angleichung von Konsum-Gewohnheiten und Lebens-Stilen \nPolitik: Nichtregierungsorganisationen (Amnesty International, usw.), internationale Organistationen, (Militär)bündnisse (NATO, usw.), " +
+                    "Sanktionen (=Strafen), Kriege \n\n" +
+                    "Ursachen \nWunsch nach ausländischen Produkten zB Wunsch nach Bananen verbindet Handelswege nach Chile \nUnternehmen sparen Geld wenn sie im Ausland " +
+                    "ganz oder teilweise produzieren lassen \nUnternehmen schließen sich mit ausländischen Unternehmen zusammen \nUnternehmen wandern ganz aus \nSo werden Kunden " +
+                    "weltweit gewonnen \nTransport ist einfacher und billiger geworden (Flugzeuge, Frachtcontainer, Eisenbahn) \nMärkte werden immer freier zugänglich \ninternationale " +
+                    "Handelsbeziehung weiten sich aus \nWelthandel kann sich mehr und mehr entfalten \nEs ist schnell bekannt wo günstige Güter und Dienstleistungen zu kaufen sind und welche " +
+                    "Neuheiten es gibt \nGlobale Arbeitsprozesse können verteilt und koordiniert werden \nGeldstöme können auch frei von allen Beschränkungen dorthin fließen wo der größte Profit " +
+                    "zu erwaten ist \n\nAuswirkungen \nmenschen-unwürdige Arbeitsbedingungen zB an der Nähmaschine im Akkord (Bezahlung nach Stück) in Billig-Lohn Ländern (China, Hongkong, Taiwan, Bangladesch) \n" +
+                    "7 Tage in der Woche für sehr wenig Lohn ohne soziale Absicherung \nAuch in Industrieländern gibt es zunehmend prekäre Arbeits-Verhältnisse, Lohn aus einer Vollzeit-Beschäftigung reicht " +
+                    "nicht aus, um eine Familie zu ernähren \nKäufer von Billig-Kleidung belastet durch Chemikalien / Farbstoffe, Allergien, Organablagerungen, Krebs, Unfruchtbarkeit \n" +
+                    "Multinationale Unternehmen profitieren und nutzen Macht und nehmen Einfluss auf Arbeitsaltag ihrer Beschäftigten. Sie spielen die Arbeitenden in unterschiedlichen Regionen gegen " +
+                    "einander aus. \n\nWer gewinnt? Wer verliert? \n(multi-nationale) Unternehmen \n(+) preiswerte Produkte, geringe Lohnkosten, mehr Gewinn durch billige Produktion \n" +
+                    "Arbeitnehmer \n(+) mehr Arbeitsplätze \n(-) keine sozialen Versicherungen, geringer Stundenlohn, 7 Tage Woche, In den Industriestaaten nur noch qualifizierte Arbeit möglich \n" +
                     "Konusmenten \n(+) Billige Produkte, Internationale Kultur \n(-) schlechte, teilweise giftige Produkte wegen mangelnder Kontrolle"),
-            new Term("Nachhaltigkeit","Ökologische Dimension \nfür kommende Generationen soll ein intakte Natur und Umwelt erhalten bleiben \nErhalt der Artenvielfalt \nKlimaschutz "+
-                    "\nPflege & Erhalt der Naturräume \nRessourcenschutz \n\nWirtschaftliche Dimension \nMenschen und Unternehmen soll so wirtschaften, dass eine dauerhafte Grundlage für Arbeit und Wohlstand"+
-                    " geschaffen wird \nArmutsbekämpfung \nstabile Arbeitsverhältnisse \nRessourcenschutz \nausgewogene Mitarbeiterstruktur, \nAnsiedlung neuer Unternehmen in strukturschwachen Regionen, \ngeringe "+
-                    "soziale Ungleichheit \n\nSoziale Dimension \nEs soll auf Dauer eine zukünftsfähige, gerechte und lebenswerte Gesellschaft erreicht werden \nPersönliche Sicherheit \n"+
-                    "Politische Mitwirkung, \nGleichbehandlung der Geschlechter \n\nWie kann ich Globalisierung gerechter und nachhaltiger gestalten? \n"+
-                    "Ich spende Kleider, die ich nicht mehr tragen möchte in die Altkleidersammlung weil ich so in ärmeren Regionen dafür sorgen kann, dass die Menschen dort etwas zum Anziehen haben. \n"+
-                    "Ich boykottiere billige Kleidung von großen Ketten und Discountern weil es sich dann für die Ausbeuter Unternehmen nicht mehr lohnt auszubeuten \n"+
-                    "Ich übernehme eine Kinderpartnerschaft weil ich damit einem Kind in einem Entwicklungsland eine Perspektive auf Ausbildung und damit ein Chance auf ein gutes Leben ermögliche. \n"+
-                    "Ich verzichte auf Plastik(-beutel) beim Einkauf weil Plastik nicht verrottet und der Umwelt schadet  \nIch kaufe mir nicht alle 2 Jahre ein neues Smartphone weil ich so nicht den Abbau "+
-                    "von seltenen Rohstoffen fördere und die Umwelt schone \nDie lease ein Schwein weil ich so sicher sein kann, dass das Tier auf meinem Teller artgerecht gehalten und getötet wurde \n"+
-                    "Ich frage im Baumarkt nach der Herkunft der Steine weil ich so Druck auf den Händler ausüben kann, keine Kinderarbeit zu unterstützen und nachhaltig zu produzieren \n"+
-                    "Ich spende regelmäßig Geld an eine Hilfsorganisation weil ich dadurch langfristig angelegte Produkte fördere und so Lebensbedingungen in den unterstützten Regionen zu verbessern helfe.\n\n"+
-                    "Nachhaltigkeit kommt in den Entwicklungsländern nicht an \nAgenda 2030: UNO setzt sich für nachhaltige Entwicklung ein \nbildet noch nicht ab: "+
-                    "Wechsel-Wirkungen zwischen dem Tun und Lassen der Industrieländer und den Lebensbedingungen in den Entwicklungsländern, \"Spiellover\"-Effekte: selten in Statistik, nicht leicht nachweisbar. "+
-                    "zB Klimawandel: Industriestaaten verpulvern fossile Rohstoffe und heizen damit Erdatmosphäre auf. Folgen in Entwicklungsländern: Höhere Meeresspiegel in Küstenstädten, vermehrte Dürren, Überflutungen \n"+
-                    "Bertelsmann Stiftung und Forschernetzwerk SDSN machten Studie welche länder Artenvielfaltsverlust und Naturraubbau importieren: Platz 1: Luxemburg, dann: Singapur, Kuwait, Schweiz "+
-                    "und welche Länder Wasservorratsausbeutung importieren: Katar, Bahrain, Oman \nDas Konsumverhalten und die Geschäftspraktiken vieler reicher Länder können die nachhaltige Entwicklung in Entwicklungs und "+
-                    "Schwellenländern ernsthaft gefährden\", sagt der Ökonom Jeffrey Sachs, SDSN-Leiter. Gleichzeitig warnt Studie aber auch vor neuem Protektionismus, weil der auch eine nachhaltige Entwicklung bedroht. "+
-                    "Mitautor Kroll sagt, die Welt müsse enger zusammenwachsen aber die ungewollte Wechselwirkungen minimieren.\n"+
-                    "Deutschland steht in Ranking gut da bei Bildung und Infrastruktur aber nicht bei Einkommenslücke zwischen Männern und Frauen. \n"+
-                    "Je Einwohner in den Industrieländern werden 18Kg Elektroschrott jährlich hinterlassen. In Burundi, Kongo oder Malawi sind es nur 200g, allerdings wird dorthin aus reichen Ländern welcher exportiert, "+
+            new Term("Nachhaltigkeit", "Ökologische Dimension \nfür kommende Generationen soll ein intakte Natur und Umwelt erhalten bleiben \nErhalt der Artenvielfalt \nKlimaschutz " +
+                    "\nPflege & Erhalt der Naturräume \nRessourcenschutz \n\nWirtschaftliche Dimension \nMenschen und Unternehmen soll so wirtschaften, dass eine dauerhafte Grundlage für Arbeit und Wohlstand" +
+                    " geschaffen wird \nArmutsbekämpfung \nstabile Arbeitsverhältnisse \nRessourcenschutz \nausgewogene Mitarbeiterstruktur, \nAnsiedlung neuer Unternehmen in strukturschwachen Regionen, \ngeringe " +
+                    "soziale Ungleichheit \n\nSoziale Dimension \nEs soll auf Dauer eine zukünftsfähige, gerechte und lebenswerte Gesellschaft erreicht werden \nPersönliche Sicherheit \n" +
+                    "Politische Mitwirkung, \nGleichbehandlung der Geschlechter \n\nWie kann ich Globalisierung gerechter und nachhaltiger gestalten? \n" +
+                    "Ich spende Kleider, die ich nicht mehr tragen möchte in die Altkleidersammlung weil ich so in ärmeren Regionen dafür sorgen kann, dass die Menschen dort etwas zum Anziehen haben. \n" +
+                    "Ich boykottiere billige Kleidung von großen Ketten und Discountern weil es sich dann für die Ausbeuter Unternehmen nicht mehr lohnt auszubeuten \n" +
+                    "Ich übernehme eine Kinderpartnerschaft weil ich damit einem Kind in einem Entwicklungsland eine Perspektive auf Ausbildung und damit ein Chance auf ein gutes Leben ermögliche. \n" +
+                    "Ich verzichte auf Plastik(-beutel) beim Einkauf weil Plastik nicht verrottet und der Umwelt schadet  \nIch kaufe mir nicht alle 2 Jahre ein neues Smartphone weil ich so nicht den Abbau " +
+                    "von seltenen Rohstoffen fördere und die Umwelt schone \nDie lease ein Schwein weil ich so sicher sein kann, dass das Tier auf meinem Teller artgerecht gehalten und getötet wurde \n" +
+                    "Ich frage im Baumarkt nach der Herkunft der Steine weil ich so Druck auf den Händler ausüben kann, keine Kinderarbeit zu unterstützen und nachhaltig zu produzieren \n" +
+                    "Ich spende regelmäßig Geld an eine Hilfsorganisation weil ich dadurch langfristig angelegte Produkte fördere und so Lebensbedingungen in den unterstützten Regionen zu verbessern helfe.\n\n" +
+                    "Nachhaltigkeit kommt in den Entwicklungsländern nicht an \nAgenda 2030: UNO setzt sich für nachhaltige Entwicklung ein \nbildet noch nicht ab: " +
+                    "Wechsel-Wirkungen zwischen dem Tun und Lassen der Industrieländer und den Lebensbedingungen in den Entwicklungsländern, \"Spiellover\"-Effekte: selten in Statistik, nicht leicht nachweisbar. " +
+                    "zB Klimawandel: Industriestaaten verpulvern fossile Rohstoffe und heizen damit Erdatmosphäre auf. Folgen in Entwicklungsländern: Höhere Meeresspiegel in Küstenstädten, vermehrte Dürren, Überflutungen \n" +
+                    "Bertelsmann Stiftung und Forschernetzwerk SDSN machten Studie welche länder Artenvielfaltsverlust und Naturraubbau importieren: Platz 1: Luxemburg, dann: Singapur, Kuwait, Schweiz " +
+                    "und welche Länder Wasservorratsausbeutung importieren: Katar, Bahrain, Oman \nDas Konsumverhalten und die Geschäftspraktiken vieler reicher Länder können die nachhaltige Entwicklung in Entwicklungs und " +
+                    "Schwellenländern ernsthaft gefährden\", sagt der Ökonom Jeffrey Sachs, SDSN-Leiter. Gleichzeitig warnt Studie aber auch vor neuem Protektionismus, weil der auch eine nachhaltige Entwicklung bedroht. " +
+                    "Mitautor Kroll sagt, die Welt müsse enger zusammenwachsen aber die ungewollte Wechselwirkungen minimieren.\n" +
+                    "Deutschland steht in Ranking gut da bei Bildung und Infrastruktur aber nicht bei Einkommenslücke zwischen Männern und Frauen. \n" +
+                    "Je Einwohner in den Industrieländern werden 18Kg Elektroschrott jährlich hinterlassen. In Burundi, Kongo oder Malawi sind es nur 200g, allerdings wird dorthin aus reichen Ländern welcher exportiert, " +
                     " um ihn von Kinderhänden nach Verwertbarem durchsuchen zu lassen."),
-            new Term("Schaubildanalyse","Informationen für den ersten Abschnitt: \nTitel, Thema, Quelle, Herausgeber, Jahr, \n"+
-                    "Maßeinheiten (Millionen, %, Gramm, Stunden, usw.), Art der Darstellung (Diagrammart, usw.) \n\nWesentliche Informationen: \n"+
-                    "Spitzenwerte, Auffälligkeiten, Durchschnittswerte, Tendenzen / Entwicklungen \n\nErkenntnis / wichtigste Aussagen: \n"+
+            new Term("Schaubildanalyse", "Informationen für den ersten Abschnitt: \nTitel, Thema, Quelle, Herausgeber, Jahr, \n" +
+                    "Maßeinheiten (Millionen, %, Gramm, Stunden, usw.), Art der Darstellung (Diagrammart, usw.) \n\nWesentliche Informationen: \n" +
+                    "Spitzenwerte, Auffälligkeiten, Durchschnittswerte, Tendenzen / Entwicklungen \n\nErkenntnis / wichtigste Aussagen: \n" +
                     "Welche Informationen / Welches Wissen bekomme ich durch das Schaubild?"),
-            new Term("Umwelt Probleme","CO₂ Klimaerwärmung \nAnstieg von Meeresspiegel, Artensterben, Hungersnöte \n\nPlastik-Müll, Mikro-Plastik \n"+
-                    "Artensterben, Unabsehbare Folgen durch Mikro-Plastik, Krankheiten \n\nÖl-Pest \nArtensterben, Krankheit, Gifte für die Tiere \n\nLuftverschmutzung, "+
+            new Term("Umwelt Probleme", "CO₂ Klimaerwärmung \nAnstieg von Meeresspiegel, Artensterben, Hungersnöte \n\nPlastik-Müll, Mikro-Plastik \n" +
+                    "Artensterben, Unabsehbare Folgen durch Mikro-Plastik, Krankheiten \n\nÖl-Pest \nArtensterben, Krankheit, Gifte für die Tiere \n\nLuftverschmutzung, " +
                     "Feinstaub \nArtensterben, Atemwegserkrankungen, Krebs \n\nÜberdüngung, giftiges Grundwasser \nArtensterben, giftiges Grundwasser, Krankheiten, Krebs")
+            }
     };
 
     public static String[] getKapitelLFYetUnpost() {return kapitelLFYetUnpost;}
@@ -2478,6 +2486,7 @@ public class Terms {
     public static String[] getKapitelLF3() {return kapitelLF3;}
     public static String[] getKapitelLF5() {return kapitelLF5;}
     public static String[] getKapitelLFWK() {return kapitelLFWK;}
+    public static String[] getKapitelLFGK() {return kapitelLFGK;}
 
     public static Term[][] getTermsLF1() {return termsLF1;}
     public static Term[][] getTermsLF2() {return termsLF2;}
@@ -2506,6 +2515,6 @@ public class Terms {
     public static Term[][] getTermsLFWK() {
         return termsLFWK;
     }
-    public static Term[] getTermsLFGK() { return termsLFGK; }
+    public static Term[][] getTermsLFGK() { return termsLFGK; }
 
 }
